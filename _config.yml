@@ -6,16 +6,31 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: CAEPA
+name: Colorado Adult Education Professional Association
+logo: logo.png
+email: admin@caepa.org
+description: >
+  Providing Colorado Leadership in Adult Education and Literacy
+mission: >
+  The Colorado Adult Education Professional Association (CAEPA) provides leadership to the field of adult education and family literacy by offering opportunities for professional development, advocacy, and resource sharing to improve the quality of life for every Coloradan.
+  
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://caepa.github.io"
+
+social_media:
+# - name: dropbox url:  http://dropbox.com
+# - name: google-plus url:  http://plus.google.com/caepaboard
+  - name: linkedin
+    url:  https://www.linkedin.com/company/colorado-adult-education-professional-association-caepa-
+  - name: facebook
+    url:  https://www.facebook.com/caepa.co
+  - name: github
+    url:  http://github.com/caepa
+  - name: rss
+    url:  http://blog.caepa.org/rss
+  - name: twitter
+    url:  https://twitter.com/intent/follow?screen_name=caepa_co
 
 # Build settings
 markdown: kramdown

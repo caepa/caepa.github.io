@@ -2,11 +2,40 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="7giA2yYjj17eA4U3UGM3jsmcoT78xPMKdc_IEWgxU-M" />
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  
+  <link rel="shortcut icon" href="{{ "/img/favicon.png" | prepend: site.baseurl }}" />
+  
+  <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="{{ "/css/materialize.css" | prepend: site.baseurl }}" media="screen,projection">
+  <link rel="stylesheet" href="{{ "/css/my.materialize.css" | prepend: site.baseurl }}" media="screen,projection">
 
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+
+  <script type="application/ld+json">    
+    { "@context" : "http://schema.org",
+      "@type" : "Organization",
+      "logo": "{{ "/img/logo.png" | prepend: site.baseurl | prepend: site.url }}",
+      "name" : "{{ site.title }}",
+      "legalName" : "{{ site.name }}",
+      "description" : "{{ site.mission }}",
+      "foundingDate" : "1931",
+      "areaServed" : "Colorado",
+      "url" : "{{ site.baseurl | prepend: site.url }}",
+      "subOrganization" : [
+        "COABE",
+        "MPAEA"
+      ],
+      "sameAs" : [
+        "https://www.linkedin.com/company/colorado-adult-education-professional-association-caepa-",
+        "https://www.facebook.com/caepa.co",
+        "https://twitter.com/intent/follow?screen_name=caepa_co",
+        "http://github.com/caepa"
+      ]
+    }
+  </script>
 </head>
