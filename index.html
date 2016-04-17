@@ -7,26 +7,30 @@
 
   <body>
 
+    {% if jekyll.environment == 'production' %}
+    {% include tag_manager.html %}
+    {% endif %}
+
     {% include header.html %}
-    <!--
-    <main class="slider">
-      <ul class="slides">
-        <li>
-          <img src="{{ "/img/sunset.jpg" | prepend: site.baseurl }}">
-          <div class="caption center-align">
-            <div id="slide-logo" class="row container">
-              <img src="{{ "/img/logo.png" | prepend: site.baseurl }}" />
-              <h1 class="grey-text text-lighten-3">{{ site.title }}
-              </h1>
-            </div>
-            <div class="row">
-              <p class="flow-text light grey-text text-lighten-4">{{ site.name }}</p>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </main>
-    -->
+
+    <!--<main class="slider">
+<ul class="slides">
+<li>
+<img src="{{ "/img/sunset.jpg" | prepend: site.baseurl }}">
+<div class="caption center-align">
+<div id="slide-logo" class="row container">
+<img src="{{ "/img/logo.png" | prepend: site.baseurl }}" />
+<h1 class="grey-text text-lighten-3">{{ site.title }}
+</h1>
+</div>
+<div class="row">
+<p class="flow-text light grey-text text-lighten-4">{{ site.name }}</p>
+</div>
+</div>
+</li>
+</ul>
+</main>-->
+
     <main class="parallax-container valign-wrapper">
 
       <div class="container center-align">
