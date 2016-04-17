@@ -10,9 +10,12 @@
           {% for link in site.social_media %}
           {% if link.url != null %}
           <li class='left'>
-            <a class='social-btn icon-{{ link.name }}' href='{{ link.url }}'>
-              <span class='icon-text'>{{ link.name }}</span>
-            </a>
+            <span itemscope itemtype="http://schema.org/Organization">
+              <link itemprop="url" href="{{ site.url }}">
+              <a itemprop="sameAs" class='social-btn icon-{{ link.name }}' href='{{ link.url }}'>
+                <span class='icon-text'>{{ link.name }}</span>
+              </a>
+            </span>
           </li>
           {% endif %}
           {% endfor %}
