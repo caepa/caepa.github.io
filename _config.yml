@@ -34,3 +34,6 @@ social_media:
 
 # Build settings
 markdown: kramdown
+
+collections:
+  - events
