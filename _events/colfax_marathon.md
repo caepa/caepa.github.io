@@ -23,5 +23,5 @@ If you should have questions, please call George at [1-970-542-3238](phone:1-970
  
 Thank you for considering being a part of this activity.
  
-Anna Mae Lindsay
-CAEPA President, 2016
+> Anna Mae Lindsay <br />
+> CAEPA President, 2016
