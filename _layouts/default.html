@@ -3,22 +3,20 @@
 
   {% include head.html %}
 
-  <body>
+  <body style="background-color: ghostwhite;">
 
-    {% include header.html %}
+    {% if jekyll.environment == 'production' %}
+    {% include google_tag_manager.html %}
+    {% endif %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+    {% include nav.html %}
 
-    {% include footer.html %}
+    <main>
+      {{ content }}
+    </main>
 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
   </body>
-  
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-  <script type="text/javascript" src="js/materialize.js"></script>
-
 </html>

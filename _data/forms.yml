@@ -1,0 +1,23 @@
+- type: Event Forms
+  forms:
+  - title: Awards Nomination Form
+    description:
+    google_url: http://goo.gl/forms/yqWvguSyZw
+
+  - title: Presentation Proposal Form
+    description: 
+    google_url: http://goo.gl/forms/cp3TWCx0Di
+
+  - title: Scholarship Application
+    description: 
+    google_url: http://goo.gl/forms/fJTFYxWW6c
+
+- type: General Forms
+  forms:
+  - title: Board of Directors Application
+    description: 
+    google_url: http://goo.gl/forms/DdNCpeq0ZU
+
+  - title: Volunteer Interest Form
+    description: 
+    google_url: http://goo.gl/forms/WKOCWD6i1r

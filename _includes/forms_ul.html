@@ -1,0 +1,10 @@
+{% assign forms = include.items %}
+
+<ul>
+  {% for form in forms %}
+  <li class="waves-effect waves-dark">
+    <a href="{{ form.google_url }}?embedded=true" target="frame">{{ form.title }}</a>
+  </li>
+
+  {% endfor %}
+</ul>

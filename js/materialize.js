@@ -3,7 +3,7 @@
   'use strict';
   $(function () {
 
-    // Components
+    /*  Components */    
     // Badges
     // Buttons
     // Breadcrumbs
@@ -23,8 +23,9 @@
     // Pagination
     // Preloader
 
-    // JavaScript
+    /* JavaScript */    
     // Collapsible
+    $('.collapsible').collapsible();
     // Dialogs
     $('.tooltipped').tooltip({
       delay: 25

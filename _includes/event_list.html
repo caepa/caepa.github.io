@@ -1,0 +1,49 @@
+{% for post in site.posts %}
+  {% capture currentdate %}{{post.date | date: "%A, %B %d, %Y"}}{% endcapture %}
+  {% if currentdate != thedate %}
+    <h2>{{ currentdate }}</h2>
+    {% capture thedate %}{{currentdate}}{% endcapture %} 
+  {% endif %}
+    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+{% endfor %}
+
+<h2>Monday, April 30, 2012</h2>
+<h3><a href="/2012/04/30/foo/">Foo</a></h3>
+<h2>Friday, March 09, 2012</h2>
+<h3><a href="/2012/03/09/bar/">Bar</a></h3>
+<h3><a href="/2012/03/09/baz/">Baz</a></h3>
+
+{% for post in site.categories.session reversed %}
+    {% capture day %}{{ post.date | date: "%A" }}{% endcapture %}
+    {% if day == 'Saturday' %}
+        {% include schedule-day.html %}
+    {% endif %}
+{% endfor %}
+
+
+<div class="unit one-fifth hide-on-mobiles">
+  <aside>
+    {% for section in site.data.docs %}
+    <h4>{{ section.title }}</h4>
+    {% include docs_ul.html items=section.docs %}
+    {% endfor %}
+  </aside>
+</div>
+
+{% assign items = include.items %}
+
+<ul>
+{% for item in items %}
+  {% assign item_url = item | prepend:"/docs/" | append:"/" %}
+
+  {% if item_url == page.url %}
+    {% assign c = "current" %}
+  {% else %}
+    {% assign c = "" %}
+  {% endif %}
+
+  {% assign p = site.docs | where:"url",item_url | first %}
+  <li class="{{ c }}"><a href="{{ site.url }}{{ p.url }}">{{ p.title }}</a></li>
+
+{% endfor %}
+</ul>

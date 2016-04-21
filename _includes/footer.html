@@ -6,34 +6,33 @@
       </div>
       <div class="col s12 m5 l4 offset-l1 offset-m1 white-text">
         <h5>Connect</h5>
-        <ul class="social_media">
-          <span itemscope itemtype="http://schema.org/Organization">
-            <link itemprop="url" href="{{ site.url }}">
+        <div itemscope itemtype="http://schema.org/Organization">
+          <link itemprop="url" href="{{ site.url }}">
+          <ul class="social_media">
             {% for link in site.social_media %}
             {% if link.url != null %}
             <li class='left'>
-              <a itemprop="sameAs" class='social-btn icon-{{ link.name }}' href='{{ link.url }}'><span class='icon-text'>{{ link.name }}</span>
-              </a>
-          </span>
-          </li>
-        {% endif %}
-        {% endfor %}
-        </ul>
+              <a itemprop="sameAs" class='social-btn icon-{{ link.name }}' href='{{ link.url }}'><span class='icon-text'>{{ link.name }}</span></a>
+            </li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
-  </div>
-<div class="footer-copyright grey darken-4">
-  <div class="container">
-    <span class="left">&copy; {{ site.time | date: "%Y" }} {{ site.title }}, all rights reserved</span>
+  <div class="footer-copyright grey darken-4">
+    <div class="container">
+      <span class="left">&copy; {{ site.time | date: "%Y" }} {{ site.title }}, all rights reserved</span>
 
-    <span class="right">
-      <a>Developed by jason</a>
-      <a class="icon-jekyll ui-link" href="https://jekyllrb.com"><img src="/img/jekyll.png" /></a>
-      <a class="icon-materialize ui-link" href="https://materializecss.com"><img src="/img/materialize.png" /></a>
-      <a class="icon-ghost ui-link" href="https://ghost.org"><img src="/img/ghost.png" /></a>
-    </span>
+      <span class="right">
+        <a>Developed by jason</a>
+        <a class="icon-jekyll ui-link" href="https://jekyllrb.com"><img src="/img/jekyll.png" alt="thumbnail" /></a>
+        <a class="icon-materialize ui-link" href="https://materializecss.com"><img src="/img/materialize.png" alt="thumbnail"/></a>
+        <a class="icon-ghost ui-link" href="https://ghost.org"><img src="/img/ghost.png" alt="thumbnail"/></a>
+      </span>
 
-    <!-- include made with jekyll, materializecss, and ghost -->
+      <!-- include made with jekyll, materializecss, and ghost -->
+    </div>
   </div>
-</div>
 </footer>

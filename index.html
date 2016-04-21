@@ -52,17 +52,13 @@
 </main>-->
 
     <main class="parallax-container valign-wrapper">
-
       <div class="parallax">
-        <img src="http://www.caepa.org/img/sunset.jpg">
+        <img src="http://www.caepa.org/img/sunset.jpg" alt="background">
       </div>
-
       <div id="circle" class="circle"></div>
-
       <div id="logo" class="center-align">
-        <img src="http://www.caepa.org/img/logo.png" />
+        <img src="http://www.caepa.org/img/logo.png" alt="logo" />
       </div>
-
       <div id="name" class="container center-align">
         <h1 id="title" class="grey-text text-lighten-3">CAEPA</h1>
         <span id="subtitle" class="flow-text light grey-text text-lighten-4">Colorado Adult Education Professional Association</span>
@@ -72,50 +68,43 @@
     <div class="divider"></div>
 
     {% for event in site.events %}
-    <article class="section container row" itemscope itemtype="http://schema.org/Event">
+    <article itemscope itemtype="http://schema.org/Event" class="section container row">
       <meta itemprop="attendee" content="CAEPA">
-
       <div class="col s12 m5">
         <div class="card">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img itemprop="image" content="{{ event.image_path }}" src="{{ event.image_path }}" />
-
+          <div class="card-image">
+            <img itemprop="image" content="{{ event.image_path }}" src="{{ event.image_path }}" alt="thumbnail" />
           </div>
-
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">{{ event.name }}<i class="material-icons right">close</i></span>
-            <p itemprop="startDate" content="{{ event.start_date | date_to_xmlschema }}"><i class="material-icons left">event</i>{{ event.start_date }}</p>
-            <p itemprop="doorTime" content="{{ event.start_time | date_to_xmlschema }}"><i class="material-icons left">access_time</i>{{ event.start_time }}</p>
-
-            <div itemprop="location" itemscope itemtype="http://schema.org/Place">
-              <p itemprop="name" content="{{ event.venue }}"><i class="material-icons left">location_on</i>{{ event.venue }}</p>
+          <div class="card-content">
+            <span class="card-title grey-text text-darken-4">{{ event.name }}</span>
+            <p><a href="https://www.google.com/maps/place/{{ event.venue | replace: ' ','%20' }}+{{ event.address | replace: ' ','%20' }}%20+{{ event.city | replace: ' ','%20' }}+{{ event.state | replace: ' ','%20' }}%20+{{ event.zip-code  | replace: ' ','%20' }}" target="_blank"><i class="material-icons left">map</i>{{ event.venue }}</a></p>
+            <div itemprop="location" itemscope itemtype="http://schema.org/Place" class="hide">
+              <p itemprop="name" content="{{ event.venue }}">{{ event.venue }}</p>
               <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                <span itemprop="streetAddress">{{ event.address }}</span><br>
+                <span itemprop="streetAddress">{{ event.address }}</span><br />
                 <span itemprop="addressLocality">{{ event.city }}</span>,
                 <span itemprop="addressRegion">{{ event.state}}</span>
                 <span itemprop="postalCode">{{ event.zip-code }}</span>
               </div>
             </div>
           </div>
-
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">{{ event.name }}<i class="material-icons right">more_vert</i></span>
-            <a itemprop="url" href="{{ event.event_url }}">{{ event.event_url | remove: 'http://' }}</a>
-          </div>
-
           <div class="card-action">
+            <a itemprop="url" href="{{ event.event_url }}" target="_blank">{{ event.event_url | remove: 'http://' }}</a>
             <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
               <meta itemprop="price" content="{{ event.ticket_price | remove: '$' }}">
               <meta itemprop="priceCurrency" content="USD" />
-              <a itemprop="url" href="{{ event.ticket_url }}">Registration</a>
+              <a itemprop="url" href="{{ event.ticket_url }}" target="_blank">Registration</a>
             </span>
           </div>
         </div>
       </div>
-
       <div class="col s12 m7" align="justify">
         <h2 itemprop="name">{{ event.name }}</h2>
-        <span itemprop="description">{{ event.content }}</span>
+        <div class="row">
+        <span itemprop="startDate" content="{{ event.start_date | date_to_xmlschema }}" class="col s6"><i class="material-icons left">event</i>{{ event.start_date }}</span>
+        <span itemprop="doorTime" content="{{ event.start_time | date_to_xmlschema }}" class="col s6"><i class="material-icons left">access_time</i>{{ event.start_time }}</span>
+        </div>
+        <div itemprop="description">{{ event.content }}</div>
       </div>
     </article>
     {% endfor %}
@@ -124,10 +113,9 @@
 
     {% include footer.html %}
 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+
   </body>
-
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-  <script type="text/javascript" src="js/materialize.js"></script>
-
 </html>
