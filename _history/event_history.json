@@ -3,6 +3,9 @@ title: Event History Data
 ---
 {
   "title": {
+    "background": {
+      "color": "#212121"
+    },
     "media": {
       "url": "{{ site.logo | prepend: "img/" | prepend: sitebase.url | prepend: site.url }}",
       "caption": "",
@@ -33,7 +36,7 @@ title: Event History Data
       },
       {% endif %}
       "text": {
-        "headline": "{{ event.theme }}",
+        "headline": "{{ event.theme | xml_escape }}",
         "text": "<p>{{ event.location }}<br />{{ event.address }}<br />{{ event.city_state_zipcode }}</p>{% if event.price1 != null %}<p>Registration: {{ event.price1 }}</p>{% endif %}{% if event.price2 != null %}<p>Registration: {{ event.price2 }}</p>{% endif %}{% if event.membership != null %}<p>Membership Dues: {{ event.membership }}</p>{% endif %}"
       }
     }{% unless forloop.last %},{% endunless %}{% endfor %}
