@@ -18,6 +18,7 @@ title: Event History Data
   },
   "events": [{% for event in site.data.rendezvous %}
     {
+      "group": "{{ event.era }}",
       "media": {
         "url": "",
         "caption": "",
