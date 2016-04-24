@@ -37,7 +37,7 @@ markdown: kramdown
 
 collections:
   events:
-    output: false
+    output: true
   history:
     output: true
   
