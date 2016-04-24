@@ -1,9 +1,9 @@
 ---
-name: Colfax Marathon
-start_date: Saturday, May 13 - 15
-start_time: 9:00 am
+title: Colfax Marathon
+start_date: 2016-05-14 09:00
+end_date: 2016-05-15
 
-image_path: /img/colfax_marathon.jpg
+image_path: colfax_marathon.jpg
 event_url: http://www.runcolfax.org
 
 venue: City Park

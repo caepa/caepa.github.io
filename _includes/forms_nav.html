@@ -1,15 +1,13 @@
-<div class="side-nav fixed" style="top:64px;">
-  <ul class="collapsible" data-collapsible="expandable">
-    {% for section in site.data.forms %}
-    <li class="active">
-      <div class="collapsible-header active">
-        <i class="material-icons">expand_more</i>
-        <span>{{ section.type }}</span>
-      </div>
-      <div id="forms" class="collapsible-body">
-        {% include forms_ul.html items=section.forms %}          
-      </div>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
+<ul class="collapsible" data-collapsible="expandable">
+  {% for section in site.data.forms %}
+  <li class="active">
+    <div class="collapsible-header active">
+      <i class="material-icons">expand_more</i>
+      <span>{{ section.type }}</span>
+    </div>
+    <div id="forms" class="collapsible-body">
+      {% include forms_ul.html items=section.forms %}          
+    </div>
+  </li>
+  {% endfor %}
+</ul>

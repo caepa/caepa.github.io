@@ -73,13 +73,13 @@
       <div class="col s12 m5">
         <div class="card">
           <div class="card-image">
-            <img itemprop="image" content="{{ event.image_path }}" src="{{ event.image_path }}" alt="thumbnail" />
+            <img itemprop="image" content="{{ event.image_path | prepend: /img/events/ }}" src="{{ event.image_path | prepend: "/img/events/" }}" alt="thumbnail" />
           </div>
           <div class="card-content">
             <span class="card-title grey-text text-darken-4">{{ event.name }}</span>
             <p><a href="https://www.google.com/maps/place/{{ event.venue | replace: ' ','%20' }}+{{ event.address | replace: ' ','%20' }}%20+{{ event.city | replace: ' ','%20' }}+{{ event.state | replace: ' ','%20' }}%20+{{ event.zip-code  | replace: ' ','%20' }}" target="_blank"><i class="material-icons left">map</i>{{ event.venue }}</a></p>
             <div itemprop="location" itemscope itemtype="http://schema.org/Place" class="hide">
-              <p itemprop="name" content="{{ event.venue }}">{{ event.venue }}</p>
+              <p itemprop="title" content="{{ event.venue }}">{{ event.venue }}</p>
               <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                 <span itemprop="streetAddress">{{ event.address }}</span><br />
                 <span itemprop="addressLocality">{{ event.city }}</span>,
@@ -99,10 +99,10 @@
         </div>
       </div>
       <div class="col s12 m7" align="justify">
-        <h2 itemprop="name">{{ event.name }}</h2>
+        <h2 itemprop="name">{{ event.title }}</h2>
         <div class="row">
-        <span itemprop="startDate" content="{{ event.start_date | date_to_xmlschema }}" class="col s6"><i class="material-icons left">event</i>{{ event.start_date }}</span>
-        <span itemprop="doorTime" content="{{ event.start_time | date_to_xmlschema }}" class="col s6"><i class="material-icons left">access_time</i>{{ event.start_time }}</span>
+        <span itemprop="startDate" content="{{ event.start_date | date_to_xmlschema }}" class="col s6"><i class="material-icons left">event</i>{{ event.start_date | date: "%A, %B %-d, %Y" %}}</span>
+        <span itemprop="endDate" content="{{ event.end_date | date_to_xmlschema }}" class="col s6"><i class="material-icons left">event</i>{{ event.end_date | date: "%A, %B %-d, %Y"}}</span>
         </div>
         <div itemprop="description">{{ event.content }}</div>
       </div>
@@ -110,7 +110,7 @@
     {% endfor %}
 
     <div class="divider"></div>
-
+    
     {% include footer.html %}
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
