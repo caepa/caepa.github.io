@@ -4,7 +4,31 @@ title: Forms
 description:
 icon:
 ---
-<div class="side-nav fixed" style="top:64px;">
+<style>
+  iframe {
+    padding-left: 240px;
+  }
+  .side-nav.fixed {
+    top: 64px;
+  }
+
+  @media only screen and (max-width : 992px) {
+    iframe {
+      padding-left: 0;
+    }
+    .side-nav.fixed {
+      top: 0px;
+    }
+  }
+</style>
+<div id="slide-out" class="side-nav fixed">
   {% include forms_nav.html %}
 </div>
-<iframe name="frame" src="http://goo.gl/forms/WKOCWD6i1r?embedded=true" frameborder="0" marginheight="0" marginwidth="0" style="position:fixed; top:64px; padding-left:240px; height:100%; width:100%;">Loading...</iframe>
+
+<div class="fixed-action-btn hide-on-med-and-up" style="bottom: 45px; right: 24px;">
+  <a href="#" data-activates="slide-out" class="button-collapse btn-floating btn-large waves-effect waves-light red">
+    <i class="material-icons">add</i>
+  </a>
+</div>
+
+<iframe name="frame" src="http://goo.gl/forms/WKOCWD6i1r?embedded=true" frameborder="0" marginheight="0" marginwidth="0" style="position:fixed; height:100%; width:100%;">Loading...</iframe>

@@ -16,7 +16,7 @@
     // Icons
     // Navbar
     $('.button-collapse').sideNav({
-      menuWidth: 380,
+      menuWidth: 240,
       edge: 'left',
       closeOnClick: true
     });
