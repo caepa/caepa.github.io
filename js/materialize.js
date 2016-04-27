@@ -18,7 +18,7 @@
     $('.button-collapse').sideNav({
       menuWidth: 240,
       edge: 'left',
-      closeOnClick: true
+      closeOnClick: false
     });
     // Pagination
     // Preloader

@@ -62,8 +62,9 @@ $fa: (
       width: $button-height;
       padding: 0 !important;
       &:before { //Calls Font Awesome & Centers Icon
-        font: normal normal normal 14px/1 FontAwesome;
-        font-size: inherit; 
+        font: normal normal normal 18px/1 FontAwesome;
+        // font-size: inherit;
+        line-height: inherit;
         color: $button-raised-color;
         // display: block;
         // position: absolute; 
