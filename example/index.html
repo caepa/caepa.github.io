@@ -7,7 +7,7 @@ icon: event
 tabs: [Upcoming, Past, History]
 ---
 <article id="upcoming" class="container">
-  {% for post in site.categories.example %}  
+  {% for post in site.categories.example reversed %}  
     {% if post.date > site.time %}
       {% include event.html %}
     {% endif %}  

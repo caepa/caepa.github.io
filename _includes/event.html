@@ -3,7 +3,13 @@
   <div class="col s12 m5">
     <div class="card">
       <div class="card-image">
-        <img itemprop="image" content="{{ post.image_path | prepend: /img/events/ }}" src="{{ post.image_path | prepend: "/img/events/" }}" alt="thumbnail" />
+        <img itemprop="image"
+             {% if post.image_path != null %}
+             content="{{ post.image_path | prepend: /img/events/ }}" src="{{ post.image_path | prepend: "/img/events/" }}" alt="thumbnail" 
+             {% else %}
+             content="/img/events/default.jpg" src="/img/events/default.jpg" alt="thumbnail" style="padding:20px;"
+             {% endif %}
+             />
       </div>
       <div class="card-content">
         <span class="card-title grey-text text-darken-4">{{ post.name }}</span>
@@ -34,9 +40,11 @@
       <span class="col s12">
         <span itemprop="startDate" content="{{ post.start_date | date_to_xmlschema }}">
           <i class="material-icons left">event</i>
-          {{ post.start_date | date: "%A, %B %-d, %Y" %}}</span><br />
+          {{ post.start_date | date: "%A, %B %-d, %Y" %}}
+        </span><br />
         <span itemprop="endDate" content="{{ post.end_date | date_to_xmlschema }}">
-          {{ post.end_date | date: "%A, %B %-d, %Y"}}</span>
+          {{ post.end_date | date: "%A, %B %-d, %Y"}}
+        </span>
       </span>
     </div>
     <div itemprop="description" align="justify">{{ post.content | markdownify }}</div>
