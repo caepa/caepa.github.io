@@ -42,3 +42,5 @@ collections:
     output: true
   
 include: ["_pages"]
+future: true
+permalink: none
