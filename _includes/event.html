@@ -35,7 +35,7 @@
     </div>
   </div>
   <div class="col s12 m7">
-    <h2 itemprop="name">{{ post.title }}</h2>
+    <h2 itemprop="name"><a href="{{ post.url }}">{{ post.title }}</a></h2>
     <div class="row">
       <span class="col s12">
         <span itemprop="startDate" content="{{ post.start_date | date_to_xmlschema }}">
