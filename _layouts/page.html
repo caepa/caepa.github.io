@@ -20,7 +20,7 @@ layout: default
           <ul class="tabs">
             {% for tab in page.tabs %}
             <li class="tab waves-effect waves-light">
-              <a href="#{{ tab | downcase }}">{{ tab }}</a>
+              <a href="{% cycle '#tab1', '#tab2', '#tab3' %}">{{ tab }}</a>
             </li>
             {% endfor %}
           </ul>
@@ -30,7 +30,7 @@ layout: default
     </div>
   </header>
 
-  <div class="page-content">
+  <div class="page-content section">
     {{ content }}
   </div>
 

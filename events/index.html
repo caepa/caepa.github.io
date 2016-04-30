@@ -1,0 +1,27 @@
+---
+layout: page
+title: Events
+description:
+icon: event
+
+tabs: [Upcoming, Past, History]
+---
+<article id="tab1" class="container">
+  {% for post in site.categories.events reversed %}  
+    {% if post.date > site.time %}
+      {% include event.html %}
+    {% endif %}  
+  {% endfor %}
+</article>
+
+<article id="tab2" class="container">
+  {% for post in site.categories.events %}  
+    {% if site.time > post.date %}
+    <a href="{{ post.url }}">{{ post.title }}</a>
+    {% endif %}  
+  {% endfor %}
+</article>
+
+<article id="tab3" class="container">
+  <iframe src={{ "event_history.html" | prepend: site.baseurl }} frameborder="0" marginheight="0" marginwidth="0" width="100%" height="500">loading...</iframe>
+</article>

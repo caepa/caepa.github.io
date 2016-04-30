@@ -33,8 +33,6 @@ social_media:
 markdown: kramdown
 
 collections:
-  events:
-    output: true
   history:
     output: true
   
@@ -44,8 +42,8 @@ permalink: none
 
 defaults:
   - scope:
-      path: "example"
+      path: "events"
       type: "posts"
     values:
       layout: "post"
-      tabs: [Details, Events]
+      tabs: [Event Details, Upcoming Events]

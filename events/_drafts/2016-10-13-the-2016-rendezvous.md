@@ -1,12 +1,12 @@
 ---
-title: The 2016 Pre-Conference
+theme: TBA
 start_date: 2016-10-13 09:00:00
-end_date: 2016-10-13
+end_date: 2016-10-14
 
 image_path: 
 event_url: 
 
-venue: 
+venue:
 address:
 city: Westminster
 state: CO

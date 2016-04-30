@@ -67,54 +67,13 @@
 
     <div class="divider"></div>
 
-    {% for event in site.events %}
-    {% if event.start_date != null %}
-    <article itemscope itemtype="http://schema.org/Event" class="section container row">
-      <meta itemprop="attendee" content="CAEPA">
-      <div class="col s12 m5">
-        <div class="card">
-          <div class="card-image">
-            <img itemprop="image" content="{{ event.image_path | prepend: /img/events/ }}" src="{{ event.image_path | prepend: "/img/events/" }}" alt="thumbnail" />
-          </div>
-          <div class="card-content">
-            <span class="card-title grey-text text-darken-4">{{ event.name }}</span>
-            <p><a href="https://www.google.com/maps/place/{{ event.venue | replace: ' ','%20' }}+{{ event.address | replace: ' ','%20' }}%20+{{ event.city | replace: ' ','%20' }}+{{ event.state | replace: ' ','%20' }}%20+{{ event.zip-code  | replace: ' ','%20' }}" target="_blank"><i class="material-icons left">map</i>{{ event.venue }}</a></p>
-            <div itemprop="location" itemscope itemtype="http://schema.org/Place" class="hide">
-              <p itemprop="title" content="{{ event.venue }}">{{ event.venue }}</p>
-              <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                <span itemprop="streetAddress">{{ event.address }}</span><br />
-                <span itemprop="addressLocality">{{ event.city }}</span>,
-                <span itemprop="addressRegion">{{ event.state}}</span>
-                <span itemprop="postalCode">{{ event.zip-code }}</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-action">
-            <a itemprop="url" href="{{ event.event_url }}" target="_blank">{{ event.event_url | remove: 'http://' }}</a>
-            <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-              <meta itemprop="price" content="{{ event.ticket_price | remove: '$' }}">
-              <meta itemprop="priceCurrency" content="USD" />
-              <a itemprop="url" href="{{ event.ticket_url }}" target="_blank">Registration</a>
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="col s12 m7">
-        <h2 itemprop="name">{{ event.title }}</h2>
-        <div class="row">
-          <span class="col s12">
-            <span itemprop="startDate" content="{{ event.start_date | date_to_xmlschema }}">
-              <i class="material-icons left">event</i>
-              {{ event.start_date | date: "%A, %B %-d, %Y" %}}</span><br />
-            <span itemprop="endDate" content="{{ event.end_date | date_to_xmlschema }}">
-              {{ event.end_date | date: "%A, %B %-d, %Y"}}</span>
-          </span>
-        </div>
-        <div itemprop="description" align="justify">{{ event.content }}</div>
-      </div>
+    <article id="upcoming" class="section container">
+      {% for post in site.categories.events reversed %}  
+      {% if post.date > site.time %}
+      {% include event.html %}
+      {% endif %}  
+      {% endfor %}
     </article>
-    {% endif %}
-    {% endfor %}
 
     <div class="divider"></div>
 
