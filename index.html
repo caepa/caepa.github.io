@@ -1,87 +1,26 @@
 ---
+layout: default
 ---
-<!DOCTYPE html>
-<html>
-
-  {% include head.html %}
-
-  <body style="background-color: ghostwhite;">
-
-    {% if jekyll.environment == 'production' %}
-    {% include google_tag_manager.html %}
-    {% endif %}
-
-    {% include header.html %}
-
-    <!-- if using slider landing
-<main class="slider">
-<ul class="slides">
-<li>
-<img src="{{ "/img/sunset.jpg" | prepend: site.baseurl }}">
-<div class="caption center-align">
-<div id="slide-logo" class="row container">
-<img src="{{ "/img/logo.png" | prepend: site.baseurl }}" />
-<h1 class="grey-text text-lighten-3">{{ site.title }}
-</h1>
-</div>
-<div class="row">
-<p class="flow-text light grey-text text-lighten-4">{{ site.name }}</p>
-</div>
-</div>
-</li>
-</ul>
-</main>-->
-
-    <!-- if using simple logo landing
 <main class="parallax-container valign-wrapper">
+  <div class="parallax">
+    <img src="http://www.caepa.org/img/sunset.jpg" alt="background">
+  </div>
+  <div id="circle" class="circle"></div>
+  <div id="logo" class="center-align">
+    <img src="http://www.caepa.org/img/logo.png" alt="logo" />
+  </div>
+  <div id="name" class="container center-align">
+    <h1 id="title" class="grey-text text-lighten-3">CAEPA</h1>
+    <span id="subtitle" class="flow-text light grey-text text-lighten-4">Colorado Adult Education Professional Association</span>
+  </div>
+</main>
 
-<div class="container center-align">
-<div id="logo" class="row">
-<img src="{{ "/img/logo.png" | prepend: site.baseurl }}" />
-<h1 class="grey-text text-lighten-3">{{ site.title }}
-</h1>
-</div>
-<div class="row">
-<p class="flow-text light grey-text text-lighten-4">{{ site.name }}</p>
-</div>
-</div>
+<div class="divider"></div>
 
-<div class="parallax">
-<img src="{{ "/img/sunset.jpg" | prepend: site.baseurl }}">
-</div>
-</main>-->
-
-    <main class="parallax-container valign-wrapper">
-      <div class="parallax">
-        <img src="http://www.caepa.org/img/sunset.jpg" alt="background">
-      </div>
-      <div id="circle" class="circle"></div>
-      <div id="logo" class="center-align">
-        <img src="http://www.caepa.org/img/logo.png" alt="logo" />
-      </div>
-      <div id="name" class="container center-align">
-        <h1 id="title" class="grey-text text-lighten-3">CAEPA</h1>
-        <span id="subtitle" class="flow-text light grey-text text-lighten-4">Colorado Adult Education Professional Association</span>
-      </div>
-    </main>
-
-    <div class="divider"></div>
-
-    <article id="upcoming" class="section container">
-      {% for post in site.categories.events reversed %}  
-      {% if post.date > site.time %}
-      {% include event.html %}
-      {% endif %}  
-      {% endfor %}
-    </article>
-
-    <div class="divider"></div>
-
-    {% include footer.html %}
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-    <script type="text/javascript" src="/js/materialize.js"></script>
-
-  </body>
-</html>
+<article id="upcoming" class="section container">
+  {% for post in site.categories.events reversed %}  
+  {% if post.date > site.time %}
+  {% include event.html %}
+  {% endif %}  
+  {% endfor %}
+</article>
