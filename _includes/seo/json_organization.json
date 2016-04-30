@@ -1,7 +1,7 @@
 {
   "@context":"http://schema.org",
   "@type":"Organization",
-  "logo":"{{ "/img/logo.png" | prepend: site.baseurl | prepend: site.url }}",
+  "logo":"{{ site.logo | prepend: site.baseurl | prepend: site.url }}",
   "name":"{{ site.title }}",
   "legalName":"{{ site.legal_name }}",
   "description":"{{ site.mission }}",

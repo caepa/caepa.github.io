@@ -2,7 +2,7 @@
   <nav{% if page.url == "/" %} class="grey darken-4"{% endif %}>
     <div class="nav-wrapper container">
       <ul class="brand-logo">
-        <img class="left hide" style="height:64px; padding:5px 5px 0 15px;" alt="Logo" src="{{ "/img/" | append: site.logo | prepend: site.baseurl }}" />
+        <img class="left hide" style="height:64px; padding:5px 5px 0 15px;" alt="Logo" src="{{ site.logo | prepend: site.baseurl | prepend: site.url }}" />
         <li style="font-weight:900;">{{ site.title }}
           <span class="thin hide">&ensp;&#124;&ensp;{{ page.title }}</span>
         </li>        
