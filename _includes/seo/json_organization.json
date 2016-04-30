@@ -1,13 +1,13 @@
 {
   "@context":"http://schema.org",
   "@type":"Organization",
-  "logo":"{{ "img/logo.png" | prepend: site.baseurl | prepend: site.url }}",
+  "logo":"{{ "/img/logo.png" | prepend: site.baseurl | prepend: site.url }}",
   "name":"{{ site.title }}",
   "legalName":"{{ site.legal_name }}",
   "description":"{{ site.mission }}",
   "foundingDate":"1935",
   "areaServed":"Colorado",
-  "url":"{{ site.baseurl | prepend: site.url }}",
+  "url":"{{ page.url | prepend: site.baseurl | prepend: site.url }}",
   "sameAs":[
     "{{ site.baseurl | prepend: site.url }}",{% for social_media in site.social_media %}
     "{{ social_media.url}}"{% unless forloop.last %},{% endunless %}{% endfor %}
