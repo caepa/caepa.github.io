@@ -2,35 +2,32 @@
   "@context":"http://schema.org",
   "@type":"Organization",
   "logo":"{{ "/img/logo.png" | prepend: site.baseurl | prepend: site.url }}",
-  "name":"{{ site.name }}",
+  "name":"{{ site.title }}",
   "legalName":"{{ site.legal_name }}",
   "description":"{{ site.mission }}",
   "foundingDate":"1935",
   "areaServed":"Colorado",
-  "url":"{{ site.url }}",
-  "subOrganization":[  
+  "url":"{{ site.baseurl | prepend: site.url }}",
+  "subOrganization":[
     "COABE",
     "MPAEA"
   ],
-  "sameAs":[  
-    "https://www.linkedin.com/company/colorado-adult-education-professional-association-caepa-",
-    "https://www.facebook.com/caepa.co",
-    "https://twitter.com/caepa_co",
-    "http://github.com/caepa"
+  "sameAs":[{% for social_media in site.social_media %}
+    "{{ social_media.url}}"{% unless forloop.last %},{% endunless %}{% endfor %}
   ],
-  "event":[  
-    {  
+  "event":[
+    {
       "@type":"Event",
       "name":"{{ page.title }}",
       "alternateName":"{{ page.theme }}",
       "startDate":"{{ page.date }}",
       "endDate":"{{ page.end_date }}",
       "sameas":"{{ page.url }}",
-      "location":{  
+      "location":{
         "@type":"Place",
         "name":"{{ venue.location }}",
         "sameAs":"{{ venue.url }}",
-        "address":{  
+        "address":{
           "@type":"PostalAddress",
           "streetAddress":"{{ venue.location }}",
           "addressLocality":"{{ venue.city }}",
@@ -38,7 +35,7 @@
           "postalCode":"{{ venue.zipcode }}"
         }
       },
-      "offers":{  
+      "offers":{
         "@type":"AggregateOffer",
         "lowPrice":"{{ page.price1 }}",
         "highPrice":"{{ page.price2 }}",
