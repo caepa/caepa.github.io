@@ -15,7 +15,7 @@
         <span class="card-title grey-text text-darken-4">{{ post.title }}</span>
         <p><a href="https://www.google.com/maps/place/{{ post.venue.name | replace: ' ','%20' }}+{{ post.venue.address | replace: ' ','%20' }}%20+{{ post.venue.city | replace: ' ','%20' }}+{{ post.venue.state | replace: ' ','%20' }}%20+{{ post.venue.zipcode  | replace: ' ','%20' }}" target="_blank"><i class="material-icons left">map</i>{{ post.venue.name }}</a></p>
         <div itemprop="location" itemscope itemtype="http://schema.org/Place" class="hide">
-          <p itemprop="title" content="{{ post.venue }}">{{ post.venue.name }}</p>
+          <p itemprop="name" content="{{ post.venue.name }}">{{ post.venue.name }}</p>
           <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
             <span itemprop="streetAddress">{{ post.venue.address }}</span><br />
             <span itemprop="addressLocality">{{ post.venue.city }}</span>,
