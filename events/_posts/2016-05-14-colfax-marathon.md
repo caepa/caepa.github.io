@@ -1,19 +1,23 @@
 ---
 title: Colfax Marathon
-start_date: 2016-05-14 09:00:00
+start_date: 2016-05-14 09:00
 end_date: 2016-05-15
 
 image_path: colfax_marathon.jpg
 event_url: http://www.runcolfax.org
 
-venue: City Park
-address:
-city: Denver
-state: CO
-zip_code:
+venue: 
+  name: City Park
+  url: http://www.denver.org/listings/City-Park/6822/
+  address: City Park
+  city: Denver
+  state: CO
+  zipcode: 80205
 
-ticket_price: $22.00
-ticket_url: http://www.runcolfax.org/races/register
+offers:
+  price1: $22.00
+  price2: $145.00
+  payment_url: http://www.runcolfax.org/races/register
 ---
 You and your staff have the opportunity to raise awareness for CAEPA by running or walking the Colfax marathon on May 14 and May 15. George O'Clair has been doing this for years and is asking for your support. By signing up for the 5k walk (3.1 miles) you can help support our efforts in acquiring a spot and a tent to publicize CAEPA by purchasing a race spot. This is for Adult Education awareness around the entire state of Colorado. The runners will be provided t-shirts to wear to advertise CAEPA.
 

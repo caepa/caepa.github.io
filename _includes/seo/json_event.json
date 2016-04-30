@@ -21,27 +21,31 @@
       "@type":"Event",
       "name":"{{ page.title }}",
       "alternateName":"{{ page.theme }}",
-      "startDate":"{{ page.date }}",
+      "startDate":"{{ page.start_date }}",
       "endDate":"{{ page.end_date }}",
-      "sameas":"{{ page.url }}",
+      "image":"{{ page.image_path | prepend: "/img/events/" | prepend: site.baseurl | prepend: site.url }}",
+      "sameas":{% if page.event_url != null %}[
+        "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
+        "{{ page.event_url | prepend: site.baseurl | prepend: site.url }}"
+      ],{% else %}"{{ page.url | prepend: site.baseurl | prepend: site.url }}",{% endif %}
       "location":{
         "@type":"Place",
-        "name":"{{ venue.location }}",
-        "sameAs":"{{ venue.url }}",
+        "name":"{{ page.venue.name }}",
+        "sameAs":"{{ page.venue.url }}",
         "address":{
           "@type":"PostalAddress",
-          "streetAddress":"{{ venue.location }}",
-          "addressLocality":"{{ venue.city }}",
-          "addressRegion":"{{ venue.state }}",
-          "postalCode":"{{ venue.zipcode }}"
+          "streetAddress":"{{ page.venue.address }}",
+          "addressLocality":"{{ page.venue.city }}",
+          "addressRegion":"{{ page.venue.state }}",
+          "postalCode":"{{ page.venue.zipcode }}"
         }
       },
       "offers":{
         "@type":"AggregateOffer",
-        "lowPrice":"{{ page.price1 }}",
-        "highPrice":"{{ page.price2 }}",
+        "lowPrice":"{{ page.offers.price1 }}",
+        "highPrice":"{{ page.offers.price2 }}",
         "priceCurrency":"USD",
-        "url":"{{ page.payment_online }}"
+        "url":"{{ page.offers.payment_url }}"
       }
     }
   ]
