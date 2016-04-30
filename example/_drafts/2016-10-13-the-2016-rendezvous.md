@@ -1,5 +1,4 @@
 ---
-layout:
 title: TBA
 start_date: 2016-10-13 09:00:00
 end_date: 2016-10-14
@@ -16,4 +15,3 @@ zip_code:
 ticket_price: 
 ticket_url: 
 ---
-More information coming soon...

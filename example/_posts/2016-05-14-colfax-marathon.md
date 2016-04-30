@@ -1,5 +1,4 @@
 ---
-layout:
 title: Colfax Marathon
 start_date: 2016-05-14 09:00:00
 end_date: 2016-05-15
