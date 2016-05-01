@@ -56,6 +56,5 @@ defaults:
       type: "posts"
     values:
       layout: "post_rendezvous"
-      permalink: /:categories/:title
       tabs: [Details, Keynotes, Sessions, Vendors, Awards]
       author: "{{ site.legal_name }}"
