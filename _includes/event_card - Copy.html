@@ -1,0 +1,65 @@
+<article itemscope itemtype="http://schema.org/Event" class="section row">
+  <meta itemprop="attendee" content="CAEPA">
+  <div class="col s12 m5">
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img itemprop="image" class="activator" alt="thumbnail" {% if post.image_path != null %}content="{{ post.image_path | prepend: "/img/events/" }}" src="{{ post.image_path | prepend: "/img/events/" }}" {% else %}content="/img/events/default.jpg" src="/img/events/default.jpg" style="padding:20px;"{% endif %} />
+      </div>
+      <div class="card-content">
+        <span class="card-title truncate activator grey-text text-darken-4">{{ post.title }}<i class="material-icons right hide-on-med-and-up">more_vert</i></span>
+        <p><a href="https://www.google.com/maps/place/{{ post.venue.name | replace: ' ','%20' }}+{{ post.venue.address | replace: ' ','%20' }}%20+{{ post.venue.city | replace: ' ','%20' }}+{{ post.venue.state | replace: ' ','%20' }}%20+{{ post.venue.zipcode  | replace: ' ','%20' }}" target="_blank"><i class="material-icons left">map</i>{{ post.venue.name }}</a></p>
+        <div itemprop="location" itemscope itemtype="http://schema.org/Place" class="hide">
+          <p itemprop="name" content="{{ post.venue.name }}">{{ post.venue.name }}</p>
+          <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <span itemprop="streetAddress">{{ post.venue.address }}</span><br />
+            <span itemprop="addressLocality">{{ post.venue.city }}</span>,
+            <span itemprop="addressRegion">{{ post.venue.state}}</span>
+            <span itemprop="postalCode">{{ post.venue.zipcode }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-action">
+        <a itemprop="url" href="{{ post.event_url }}" target="_blank">{{ post.event_url | remove: 'http://' }}</a>
+        <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+          <meta itemprop="price" content="{{ post.offers.price1 | remove: '$' }}">
+          <meta itemprop="priceCurrency" content="USD" />
+          <a itemprop="url" href="{{ post.offers.payment_url }}" target="_blank">Registration</a>
+        </span>
+      </div>
+      <div class="card-reveal hide-on-med-and-up">
+        <span class="card-title btn-floating waves-effect waves-light red right"><i class="material-icons">close</i></span>
+        <h2 itemprop="name"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <div class="row">
+          <span class="col s12">
+            <span itemprop="startDate" content="{{ post.start_date | date_to_xmlschema }}">
+              <i class="material-icons left">event</i>
+              {{ post.start_date | date: "%A, %B %-d, %Y" %}}
+            </span><br />
+            <span itemprop="endDate" content="{{ post.end_date | date_to_xmlschema }}">
+              {{ post.end_date | date: "%A, %B %-d, %Y"}}
+            </span>
+          </span>
+        </div>
+        <div itemprop="description" align="justify">{{ post.content | markdownify }}</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col s12 m7 hide-on-small-only">
+    <h2 itemprop="name"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <div class="row">
+      <span class="col s12">
+        <span itemprop="startDate" content="{{ post.start_date | date_to_xmlschema }}">
+          <i class="material-icons left">event</i>
+          {{ post.start_date | date: "%A, %B %-d, %Y" %}}
+        </span><br />
+        <span itemprop="endDate" content="{{ post.end_date | date_to_xmlschema }}">
+          {{ post.end_date | date: "%A, %B %-d, %Y"}}
+        </span>
+      </span>
+    </div>
+    <div itemprop="description" align="justify">{{ post.content | markdownify }}</div>
+  </div>
+</article>
+
+<div class="divider"></div>
