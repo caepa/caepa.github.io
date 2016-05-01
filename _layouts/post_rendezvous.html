@@ -10,7 +10,11 @@ layout: page
   </header>
 
   <div class="post-content section" itemprop="articleBody">
-    {% include store.html %}
+    {% for data in site.data.rendezvous %}
+    {% if page.title contains data.year %}
+    {% include seo/json_event.json %}
+    {% endif %}
+    {% endfor %}
   </div>
 
 </article>

@@ -1,6 +1,6 @@
 ---
 theme: TBA
-start_date: 2016-10-13 09:00:00
+start_date: 2016-10-13 09:00
 end_date: 2016-10-14
 
 image_path: 
