@@ -20,7 +20,7 @@ layout: default
 <article id="upcoming" class="section container">
   {% for post in site.categories.events reversed %}  
   {% if post.date > site.time %}
-  {% include event.html %}
+  {% include event_card.html %}
   {% endif %}  
   {% endfor %}
 </article>

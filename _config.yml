@@ -48,5 +48,14 @@ defaults:
       path: "events"
       type: "posts"
     values:
-      layout: "post"
-      tabs: [Event Details, Upcoming Events]
+      layout: "post_event"
+      tabs: [Details, Upcoming]
+      author: "{{ site.legal_name }}"
+  - scope:
+      path: "events/rendezvous"
+      type: "posts"
+    values:
+      layout: "post_rendezvous"
+      permalink: /:categories/:title
+      tabs: [Details, Keynotes, Sessions, Vendors, Awards]
+      author: "{{ site.legal_name }}"

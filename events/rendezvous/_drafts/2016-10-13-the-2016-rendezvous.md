@@ -14,5 +14,4 @@ zip_code:
 
 ticket_price: 
 ticket_url: 
-tabs: [one, two, three, four]
 ---

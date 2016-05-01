@@ -9,7 +9,7 @@ tabs: [Upcoming, Past, History]
 <article id="tab1" class="container">
   {% for post in site.categories.events reversed %}  
     {% if post.date > site.time %}
-      {% include event.html %}
+      {% include event_card.html %}
     {% endif %}  
   {% endfor %}
 </article>
