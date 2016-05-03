@@ -6,7 +6,10 @@
       </div>
 
       <div class="card-content">
-        <span class="card-title truncate activator grey-text text-darken-4">{{ post.title }}<i class="material-icons right hide-on-med-and-up">more_vert</i></span>
+        <span class="card-title truncate activator grey-text text-darken-4">
+          <i class="material-icons right hide-on-med-and-up">more_vert</i>
+          {{ post.title }}
+        </span>
         <p>
           <a href="https://www.google.com/maps/place/{{ post.venue.name | replace: ' ','%20' }}+{{ post.venue.address | replace: ' ','%20' }}%20+{{ post.venue.city | replace: ' ','%20' }}+{{ post.venue.state | replace: ' ','%20' }}%20+{{ post.venue.zipcode  | replace: ' ','%20' }}" target="_blank">
             <i class="material-icons left">map</i>{{ post.venue.name }}
@@ -20,17 +23,22 @@
       </div>
 
       <div class="card-reveal hide-on-med-and-up">
-        <span class="card-title btn-floating waves-effect waves-light red right"><i class="material-icons">close</i></span>
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <span class="card-title">
+          <span class="btn-floating right waves-effect waves-light red">
+            <i class="material-icons">close</i>
+          </span>
+          <a href="/events/colfax-marathon.html">{{ post.title }}</a>
+        </span>
         <div align="justify">
           {{ post.content | markdownify }}
         </div>
       </div>
+      
     </div>
   </div>
 
   <div class="col s12 m7 hide-on-small-only">
-    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
     <div align="justify">
       {{ post.content | markdownify }}
     </div>
