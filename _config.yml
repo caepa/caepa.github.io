@@ -40,21 +40,25 @@ collections:
     output: true
   
 include: ["_pages"]
-future: true
-permalink: none
 
 defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: Colorado Adult Education Professional Association
+      permalink: /:categories/:title.html
   - scope:
       path: "events"
       type: "posts"
     values:
       layout: "post_event"
+      future: true
       tabs: [Details, Upcoming]
-      author: "{{ site.legal_name }}"
   - scope:
       path: "events/rendezvous"
       type: "posts"
     values:
       layout: "post_rendezvous"
       tabs: [Details, Keynotes, Sessions, Vendors, Awards]
-      author: "{{ site.legal_name }}"

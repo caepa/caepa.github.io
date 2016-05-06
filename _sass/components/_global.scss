@@ -20,6 +20,10 @@ main {
 ul {
   &.browser-default {
     list-style-type: initial;
+    margin-left: 1em;
+    & li {
+    list-style-type: initial;
+    }
   }
 
   list-style-type: none;
