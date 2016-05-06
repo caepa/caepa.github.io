@@ -33,7 +33,8 @@ What has been the impact of the new, more expensive version of the GED? Accordin
 
 This apparent drop of over 60% is of grave concern for incumbent workers who need this pathway to post-secondary certificate and workforce training programs leading to family sustainable wages. While data could not be found for Colorado, Washington state's data (http://restoregedfairness.org) would be comparable:
 
-![GEDs Earned in Washington State 2000 to 2014]()
+![GEDs Earned in Washington State 2000 to 2014](GEDs-Earned-in-Washington-State-2000-to-2014.png)
+{: .responsive-img .materialboxed }
 
 Our Colorado AEFLA-funded programs that responded to the 2015 CAEPA survey reported that 44% of the programs experienced a decline in GED student enrollment. The critical indicator of the impact of the new GED is that 81% of the programs reported a significant decrease (more than 15%) in the number of graduates compared to 2012. One director reported an 85% decrease in the number of graduates in 2014. 
 
@@ -49,7 +50,8 @@ Thus, the continued requirement of using only the new GED may well be the death 
 
 A "2014 Legislative Report on the Skills for Jobs Act" issued by Lt. Governor Joseph Garcia included the following chart to illustrate the current and future needs of Colorado's employers:
 
-![Colorado's Current Educational Attainment and Projected Job Requirements]()
+![Colorado's Current Educational Attainment and Projected Job Requirements](Colorados-Current-Educational-Attainment-and-Projected-Job-Requirements.png)
+{: .responsive-img .materialboxed }
 
 The report went on to clarify the two new categories:
 
