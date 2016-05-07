@@ -40,6 +40,7 @@ collections:
     output: true
   
 include: ["_pages"]
+future: true
 
 defaults:
   - scope:
@@ -54,7 +55,6 @@ defaults:
       type: "posts"
     values:
       layout: "post_event"
-      future: true
       tabs: [Details, Upcoming]
   - scope:
       path: "events/rendezvous"
