@@ -48,15 +48,16 @@ defaults:
     values:
       color: grey darken-4
       color_accent: grey darken-3
+      author: Colorado Adult Education Professional Association
+      permalink: /:categories/:title
   - scope:
-      path: ""
+      path: "fact-sheets"
       type: "posts"
     values:
       layout: "post"
       color: amber darken-4
       color_accent: amber darken-3
-      author: Colorado Adult Education Professional Association
-      permalink: /:categories/:title
+      tabs: [Article, PDF Versions]
   - scope:
       path: "events"
       type: "posts"
