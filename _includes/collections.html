@@ -1,0 +1,8 @@
+{% assign collection = include.items %}
+
+<ul class="collection with-header">
+  {% for item in collection | sort: 'date' %}
+  <li class="collection-header">{{ item.date | date: '%Y' }}</li>
+  <a href="{{ item.url }}" class="collection-item">{{ item.title | strip_html }}</a>
+  {% endfor %}
+</ul>

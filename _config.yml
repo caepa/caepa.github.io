@@ -61,7 +61,7 @@ defaults:
     values:
       color: amber darken-4
       color_accent: amber darken-3
-      tabs: [Article, PDF Versions]
+      tabs: [Article, Printable PDF]
   - scope:
       path: "events"
       type: "posts"
