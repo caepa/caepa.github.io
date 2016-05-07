@@ -13,7 +13,15 @@
       {{ content }}
     </main>
     
+    <div class="fixed-action-btn">
+      <a href="#share" class="modal-trigger btn-floating btn-large waves-effect waves-light tooltipped" data-position="left" data-tooltip="Share this page...">
+        <i class="material-icons right">share</i>
+      </a>
+    </div>
+    
     {% unless page.title == "Forms" %}{% include footer.html %}{% endunless %}
+    
+    {% include share.html %}
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
