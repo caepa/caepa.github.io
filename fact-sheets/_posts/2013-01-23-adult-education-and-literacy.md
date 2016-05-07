@@ -38,6 +38,8 @@ Note:  data as of 2012
   
 **Without appropriate funding, instructional offerings are limited, program wait lists are long, and critical industry sectors continue to hire from out-of-state due to lack of skilled workers!**
 
+Commissioned by the Colorado Adult Education Professional Association
+
 -----
 
 [^1]: "State Data Snapshot" Working Poor Families Project, www.workingpoorfamilies.org/states/popups/colorado.html

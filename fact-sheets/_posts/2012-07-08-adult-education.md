@@ -92,7 +92,9 @@ Social benefit to Colorado: [^20]
   * Encourage a local or national business to sponsor Adult Education programming or advocacy efforts
   * Join the conversation by joining CAEPA and attending CAEPA's annual conference
   {: .browser-default }
-  
+
+Commissioned by the Colorado Adult Education Professional Association
+
 -----
 
 [^1]: "Adult Education: A Good Investment in National Priorities." National Coalition For Literacy. 2012. Accessed June 2012. http://www.ncladvocacy.org/2012NationalPriorities.pdf

@@ -2,8 +2,6 @@
 title: The Impact of the 2014 GED on Adult Education in Colorado
 author: Paulette Church, MA; Past President of CAEPA
 ---
-Commissioned by the Colorado Adult Education Professional Association
-
 ## Summary:
 
 The GED has been the only test used to document a Colorado high school equivalency diploma for decades. Revised GED exams were released to be administered in 2002 and most recently in 2014. Because of computerized record-keeping by the WIA Adult Education and Family Literacy Act (AEFLA) grant recipient centers, the effect of the newest version can be studied in relationship to the previous version.
@@ -97,6 +95,7 @@ Likewise, CTB-McGraw-Hill, a for-profit corporation, has developed the Test Asse
 
 Offering a choice of three exams to earn a Colorado high school equivalency diploma will open the doors for tens of thousands of Colorado incumbent workers who have given up the hope of ever being able to enter a public post-secondary education or certificate workforce program to become economically self-sufficient and end the cycle of poverty for their families. The research is compelling. The time to change is now.
 
+Commissioned by the Colorado Adult Education Professional Association
 -----
 
 [^1]: http://www.ged.com
