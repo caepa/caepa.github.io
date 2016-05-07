@@ -1,5 +1,7 @@
 ---
 title: Colfax Marathon
+author: Anna Mae Lindsay, CAEPA President 2016
+
 start_date: 2016-05-14 09:00
 end_date: 2016-05-15
 
@@ -26,6 +28,3 @@ Please go to [www.runcolfax.org](http://www.runcolfax.org) and select CAEPA when
 If you should have questions, please call George at [1-970-542-3238](phone:1-970-542-3238).
 
 Thank you for considering being a part of this activity.
-
-> Anna Mae Lindsay\\
-> CAEPA President, 2016
