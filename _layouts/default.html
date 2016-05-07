@@ -7,13 +7,13 @@
 
     {% if jekyll.environment == 'production' %}{% include seo/google_tag_manager.html %}{% endif %}
 
-    {% include nav.html %}
+    {% include header.html %}
 
-    <main>
+    <main role="main">
       {{ content }}
     </main>
     
-    <div class="fixed-action-btn">
+    <div class="fixed-action-btn" role="button">
       <a href="#share" class="modal-trigger btn-floating btn-large waves-effect waves-light tooltipped" data-position="left" data-tooltip="Share this page...">
         <i class="material-icons right">share</i>
       </a>

@@ -1,13 +1,21 @@
-<header>
-
+<header role="banner">
   <div class="navbar-fixed">
-    <nav class="grey darken-4">
+    <nav class="{{ page.color }}">
       <div class="nav-wrapper container">
-        <ul class="right">
+        <ul class="brand-logo">
+          <li style="font-weight:900;">{{ site.title }}
+            {% if page.url == "/" %}
+            {% elsif page.categories != null %}
+            <span class="light">&ensp;&#124;&ensp;{{ page.categories | join: ', ' }}</span>
+            {% else %}
+            <span class="light"><!--&ensp;&#124;&ensp;{{ page.title | downcase }}--></span>
+            {% endif %}
+          </li>        
+        </ul>
+        <ul class="right hide-on-med-and-down">
           <li><a><i class="material-icons right">build</i>Under Construction!</a></li>
         </ul>
       </div>
     </nav>
   </div>
-
 </header>
