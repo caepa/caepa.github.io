@@ -5,7 +5,7 @@ author: Anna Mae Lindsay, CAEPA President 2016
 start_date: 2016-05-14 09:00
 end_date: 2016-05-15
 
-image_path: colfax_marathon.jpg
+image_path: /img/events/colfax_marathon.jpg
 event_url: http://www.runcolfax.org
 
 venue: 

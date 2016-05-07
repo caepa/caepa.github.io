@@ -2,7 +2,7 @@
   <div class="col s12 m5">
     <div class="card">
       <div class="card-image waves-effect waves-block waves-light">
-        <img class="activator" alt="thumbnail" {% if post.image_path != null %} src="{{ post.image_path | prepend: "/img/events/" }}" {% else %} src="/img/events/default.jpg" style="padding:20px;"{% endif %} />
+        <img class="activator" alt="thumbnail" {% if post.image_path != null %} src="{{ post.image_path | prepend: site.baseurl | prepend: site.url }}" {% else %} src="/img/events/default.jpg" style="padding:20px;"{% endif %} />
       </div>
 
       <div class="card-content">

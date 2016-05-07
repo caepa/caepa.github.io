@@ -11,8 +11,8 @@ layout: default
             <h1 class="left thin">{{ page.title }}</h1>
           </div>
           <div class="col m3 hide-on-small-only" style="padding:2.1rem; padding-bottom:0;">{% if page.image_path != null %}
-            <img src="{{ page.image_path | prepend: "/img/events/" }}" alt="thumbnail" class="responsive-img z-depth-1" />{% else %}
-            <img src="{{ site.logo }}" alt="thumbnail" class="circle responsive-img z-depth-1" style="background-color:ghostwhite; padding:1rem;" />{% endif %}
+            <img src="{{ page.image_path | prepend: site.baseurl | prepend: site.url }}" alt="thumbnail" class="responsive-img z-depth-1" />{% else %}
+            <img src="{{ site.logo | prepend: site.baseurl | prepend: site.url }}" alt="thumbnail" class="circle responsive-img z-depth-1" style="background-color:ghostwhite; padding:1rem;" />{% endif %}
           </div>
         </div>
       </div>
