@@ -10,7 +10,7 @@ layout: default
           <h1 class="left thin">{{ page.title }}</h1>
         </div>
         <div class="col s2 no-padding">
-          {% include share.html %}
+          {% if page.logo != null %}<img src="{{ page.logo | prepend: "img/" }}" alt="thumbnail" /> {% else %}{% endif %}
         </div>
       </div>
       {% if page.tabs != null %}
