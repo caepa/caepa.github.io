@@ -1,12 +1,12 @@
-<div class="fixed-action-btn" style="bottom:33%; left:27.75px;">
-  {% if page.previous.url %}
-  <a class="prev btn-floating btn-large" href="{{page.previous.url}}">
-    <i class="large material-icons">chevron_left</i>{{ page.previous.title }}</a>
-  {% endif %}
-</div>
-<div class="fixed-action-btn" style="bottom:33%; right:27.75px;">
-  {% if page.next.url %}
-  <a class="next btn-floating btn-large" href="{{page.next.url}}">
-    <i class="large material-icons">chevron_right</i>{{ page.next.title }}</a>
-  {% endif %}
+<div class="row container" role="button">
+  <div class="col s12 no-padding">
+    {% if page.previous.url %}
+    <a class="btn-flat waves-effect left" href="{{page.previous.url}}">
+      <i class="material-icons left">chevron_left</i>Previous</a>
+    {% endif %}
+    {% if page.next.url %}
+    <a class="btn-flat waves-effect right" href="{{page.next.url}}">
+      <i class="material-icons right">chevron_right</i>Next</a>
+    {% endif %}
+  </div>
 </div>

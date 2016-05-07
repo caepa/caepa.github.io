@@ -25,10 +25,12 @@ layout: default
     </div>
   </header>
 
+  {% include navigation.html %}
+
   <div class="post-content section container flow-text" itemprop="articleBody">
     {{ content }}
   </div>
 
-</article>
+  {% include navigation.html %}
 
-{% include navigation.html %}
+</article>
