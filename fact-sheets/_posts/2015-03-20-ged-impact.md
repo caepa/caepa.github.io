@@ -96,6 +96,7 @@ Likewise, CTB-McGraw-Hill, a for-profit corporation, has developed the Test Asse
 Offering a choice of three exams to earn a Colorado high school equivalency diploma will open the doors for tens of thousands of Colorado incumbent workers who have given up the hope of ever being able to enter a public post-secondary education or certificate workforce program to become economically self-sufficient and end the cycle of poverty for their families. The research is compelling. The time to change is now.
 
 Commissioned by the Colorado Adult Education Professional Association
+
 -----
 
 [^1]: http://www.ged.com
