@@ -4,7 +4,12 @@
       <ul class="brand-logo">
         <img class="left hide" style="height:64px; padding:5px 5px 0 15px;" alt="Logo" src="{{ site.logo | prepend: site.baseurl | prepend: site.url }}" />
         <li style="font-weight:900;">{{ site.title }}
-          <span class="thin hide">&ensp;&#124;&ensp;{{ page.title }}</span>
+          {% if page.url == "/" %}
+          {% elsif page.categories != null %}
+          <span class="light">&ensp;&#124;&ensp;{{ page.categories | join: ', ' }}</span>
+          {% else %}
+          <span class="light">&ensp;&#124;&ensp;{{ page.title | downcase }}</span>
+          {% endif %}
         </li>        
       </ul>
       <ul class="right hide-on-med-and-down">
