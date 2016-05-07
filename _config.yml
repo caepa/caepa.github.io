@@ -45,11 +45,9 @@ future: true
 defaults:
   - scope:
       path: ""
-      type: "pages"
     values:
       color: grey darken-4
-      color_accent: grey darken-3      
-      permalink: /:categories/:title
+      color_accent: grey darken-3
   - scope:
       path: ""
       type: "posts"
