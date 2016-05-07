@@ -1,15 +1,34 @@
 ---
 layout: default
 ---
-<article class="post container flow-text" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+  <header class="post-header {{ page.color_accent }} white-text">
+    <div class="container">
+      <div class="row">
+        <h1 class="col s12 no-padding post-title thin" itemprop="name headline">{{ page.title }}</h1>
+        <p class="col s12 no-padding post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+      </div>
+      {% if page.tabs != null %}
+      <div class="row">
+        <div class="col s12 m9 l7 no-padding">
+          <ul class="tabs">
+            {% for tab in page.tabs %}
+            <li class="tab waves-effect waves-light">
+              <a href="{% cycle '#tab1', '#tab2', '#tab3', '#tab4', '#tab5' %}">{{ tab }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      {% endif %}
+    </div>
   </header>
 
-  <div class="post-content" itemprop="articleBody">
+  <div class="post-content section container flow-text" itemprop="articleBody">
     {{ content }}
   </div>
 
 </article>
+
+{% include navigation.html %}
