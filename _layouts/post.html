@@ -3,11 +3,26 @@ layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header {{ page.color_accent }} white-text">
+  <header class="post-header {{ page.color_accent }} white-text z-depth-1">
     <div class="container">
-      <div class="row">
-        <h1 class="col s12 no-padding post-title thin" itemprop="name headline">{{ page.title }}</h1>
-        <p class="col s12 no-padding post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+      <div class="section">
+        <div class="row /*valign-wrapper*/">
+          <div class="col s12 m9 no-padding">
+            <h1 class="post-title thin" itemprop="name headline">{{ page.title }}</h1>
+            <p class="post-meta">
+              <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                {{ page.date | date: "%B %-d, %Y" }}
+              </time>{% if page.author %} • 
+              <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                <span itemprop="name">{{ page.author }}</span>
+              </span>{% endif %}
+            </p>
+          </div>
+          <div class="col m3 hide-on-small-only" style="padding:2.1rem; padding-bottom:0;">{% if page.image_path != null %}
+            <img src="{{ page.image_path | prepend: "/img/events/" }}" alt="thumbnail" class="responsive-img z-depth-1" itemprop="image" />{% else %}
+            <img src="{{ site.logo }}" alt="thumbnail" class="circle responsive-img z-depth-1" style="background-color:ghostwhite; padding:1rem;" itemprop="image" />{% endif %}
+          </div>
+        </div>
       </div>
       {% if page.tabs != null %}
       <div class="row">
