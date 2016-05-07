@@ -48,7 +48,7 @@ defaults:
     values:
       layout: "post"
       author: Colorado Adult Education Professional Association
-      permalink: /:categories/:title.html
+      permalink: /:categories/:title
   - scope:
       path: "events"
       type: "posts"
