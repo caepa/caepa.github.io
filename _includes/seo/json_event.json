@@ -28,6 +28,7 @@
         "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
         "{{ page.event_url }}"
       ],{% else %}"{{ page.url | prepend: site.baseurl | prepend: site.url }}",{% endif %}
+      "description":"{{ page.content | strip_html | truncatewords: 50 }}",
       "location":{
         "@type":"Place",
         "name":"{{ page.location }}",
@@ -42,8 +43,8 @@
       },
       "offers":{
         "@type":"AggregateOffer",
-        "lowPrice":"{{ page.price1 }}",
-        "highPrice":"{{ page.price2 }}",
+        "lowPrice":"{{ page.price1 | remove: '$' }}",
+        "highPrice":"{{ page.price2 | remove: '$' }}",
         "priceCurrency":"USD",
         "url":"{{ page.registration }}"
       }
