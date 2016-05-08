@@ -20,7 +20,7 @@ layout: default
           </div>
           <div class="col m3 hide-on-small-only" style="padding:2.1rem; padding-bottom:0;">{% if page.image_path != null %}
             <img src="{{ page.image_path | prepend: site.baseurl | prepend: site.url }}" alt="thumbnail" class="responsive-img z-depth-1" itemprop="image" />{% else %}
-            <img src="{{ site.logo | prepend: site.baseurl | prepend: site.url }}" alt="thumbnail" class="circle responsive-img z-depth-1" style="background-color:ghostwhite; padding:1rem;" itemprop="image" />{% endif %}
+            <img src="{{ site.logo | prepend: site.baseurl | prepend: site.url }}" alt="thumbnail" class=" responsive-img z-depth-1" style="background-color:ghostwhite; padding:1rem;" itemprop="image" />{% endif %}
           </div>
         </div>
       </div>
@@ -35,13 +35,18 @@ layout: default
             {% endfor %}
           </ul>
         </div>
+        <div class="col m3 offset-l2 no-padding center-align hide-on-small-only" role="button" style="height:30.375px; margin-top:17.625px">
+          <a href="#share" class="modal-trigger btn-floating btn-large grey darken-1 waves-effect waves-light tooltipped" data-position="left" data-tooltip="Share this page...">
+            <i class="material-icons right">share</i>
+          </a>
+        </div>
       </div>
       {% endif %}
     </div>
   </header>
-
+<!--
   {% include navigation.html %}
-
+-->
   <div class="post-content section container flow-text" itemprop="articleBody">
     {{ content }}
   </div>
