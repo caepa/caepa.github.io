@@ -23,29 +23,29 @@
       "alternateName":"{{ page.theme }}",
       "startDate":"{{ page.start_date }}",
       "endDate":"{{ page.end_date }}",
-      "image":"{{ page.image_path | prepend: "/img/events/" | prepend: site.baseurl | prepend: site.url }}",
+      "image":{% if page.image_path != null %}"{{ page.image_path | prepend: site.baseurl | prepend: site.url }}",{% else %}"{{ site.logo | prepend: site.baseurl | prepend: site.url }}",{% endif %}
       "sameas":{% if page.event_url != null %}[
         "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
-        "{{ page.event_url | prepend: site.baseurl | prepend: site.url }}"
+        "{{ page.event_url }}"
       ],{% else %}"{{ page.url | prepend: site.baseurl | prepend: site.url }}",{% endif %}
       "location":{
         "@type":"Place",
-        "name":"{{ page.venue.name }}",
-        "sameAs":"{{ page.venue.url }}",
+        "name":"{{ page.location }}",
+        "sameAs":"{{ page.website }}",
         "address":{
           "@type":"PostalAddress",
-          "streetAddress":"{{ page.venue.address }}",
-          "addressLocality":"{{ page.venue.city }}",
-          "addressRegion":"{{ page.venue.state }}",
-          "postalCode":"{{ page.venue.zipcode }}"
+          "streetAddress":"{{ page.address }}",
+          "addressLocality":"{{ page.city }}",
+          "addressRegion":"{{ page.state }}",
+          "postalCode":"{{ page.zipcode }}"
         }
       },
       "offers":{
         "@type":"AggregateOffer",
-        "lowPrice":"{{ page.offers.price1 }}",
-        "highPrice":"{{ page.offers.price2 }}",
+        "lowPrice":"{{ page.price1 }}",
+        "highPrice":"{{ page.price2 }}",
         "priceCurrency":"USD",
-        "url":"{{ page.offers.payment_url }}"
+        "url":"{{ page.registration }}"
       }
     }
   ]

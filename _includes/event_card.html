@@ -11,15 +11,15 @@
           {{ post.title }}
         </span>
         <p>
-          <a href="https://www.google.com/maps/place/{{ post.venue.name | replace: ' ','%20' }}+{{ post.venue.address | replace: ' ','%20' }}%20+{{ post.venue.city | replace: ' ','%20' }}+{{ post.venue.state | replace: ' ','%20' }}%20+{{ post.venue.zipcode  | replace: ' ','%20' }}" target="_blank">
-            <i class="material-icons left">map</i>{{ post.venue.name }}
+          <a href="https://www.google.com/maps/place/{{ post.location | replace: ' ','%20' }}+{{ post.address | replace: ' ','%20' }}%20+{{ post.city | replace: ' ','%20' }},%20+{{ post.state | replace: ' ','%20' }}%20+{{ post.zipcode  | replace: ' ','%20' }}" target="_blank">
+            <i class="material-icons left">map</i>{{ post.location }}
           </a>
         </p>
       </div>
 
       <div class="card-action">
         <a href="{{ post.event_url }}" target="_blank">{{ post.event_url | remove: 'http://' }}</a>
-        <a href="{{ post.offers.payment_url }}" target="_blank">Registration</a>
+        <a href="{{ post.registration }}" target="_blank">Registration</a>
       </div>
 
       <div class="card-reveal hide-on-med-and-up">

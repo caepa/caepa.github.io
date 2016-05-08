@@ -15,7 +15,9 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
+  <script type="application/ld+json">{% include seo/json_website.json %}</script>
   <script type="application/ld+json">{% include seo/json_organization.json %}</script>
+  {% if page.url contains 'events' %}<script type="application/ld+json">{% include seo/json_event.json %}</script>{% endif %}
   
   {% if jekyll.environment == 'production' %}{% include seo/google_analytics.html %}{% endif %}
   
