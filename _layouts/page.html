@@ -27,12 +27,17 @@ layout: default
             {% endfor %}
           </ul>
         </div>
+        <div class="col m3 offset-l2 no-padding center-align hide-on-small-only" role="button" style="height:30.375px; margin-top:17.625px">
+          <a href="#share" class="modal-trigger btn-floating btn-large grey darken-1 waves-effect waves-light tooltipped" data-position="left" data-tooltip="Share this page...">
+            <i class="material-icons right">share</i>
+          </a>
+        </div>
       </div>
       {% endif %}
     </div>
   </header>
 
-  <div class="page-content section">
+  <div class="page-content section container">
     {{ content }}
   </div>
 

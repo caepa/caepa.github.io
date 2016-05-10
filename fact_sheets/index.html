@@ -1,11 +1,13 @@
 ---
 layout: page
-title: Forms
-icon:
+title: Fact Sheets
+color: amber darken-4
+color_accent: amber darken-3
+icon: 
 
-tabs: [Events, General]
+tabs: [Articles, Printable PDF]
 ---
-{% assign cat = page.title | downcase %}
+{% assign cat = page.title | replace: ' ','_' | downcase %}
 <section id="tab1">
   {% for post in site.categories.[cat] %}
     {% assign currentdate = post.date | date: "%Y" %}
@@ -17,4 +19,11 @@ tabs: [Events, General]
     {% include post_card.html %}
 
   {% endfor %}
+</section>
+
+<section id="tab2">
+  <h2 class="grey-text text-darken-1">{{ page.tabs[1] }}
+    <span class="thin"> | {{ page.title }}</span>
+  </h2>
+  
 </section>

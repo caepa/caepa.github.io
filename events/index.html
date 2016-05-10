@@ -7,24 +7,33 @@ icon: event
 
 tabs: [Upcoming, Past, History]
 ---
-<section id="tab1" class="container">
+<section id="tab1">
   <h2 class="grey-text text-darken-1">{{ page.tabs[0] }}
     <span class="thin"> | {{ page.title }}</span>
   </h2>
   {% for post in site.categories.events reversed %}  
     {% if post.date > site.time %}
+  
       {% include event_card.html %}
+  
     {% endif %}  
   {% endfor %}
 </section>
 
-<section id="tab2" class="container">
+<section id="tab2">
   <h2 class="grey-text text-darken-1">{{ page.tabs[1] }}
     <span class="thin"> | {{ page.title }}</span>
   </h2>
-  {% for post in site.categories.events %}  
+  {% for post in site.categories.events %}
     {% if site.time > post.date %}
-      {% include collections.html items=site.categories.events %}
+      {% assign currentdate = post.date | date: "%Y" %}
+        {% if currentdate != date %}
+          <h2 class="grey-text text-darken-1">{{ currentdate }}</h2>
+          {% assign date = currentdate %}
+        {% endif %}
+
+      {% include post_card.html %}
+  
     {% endif %}  
   {% endfor %}
 </section>

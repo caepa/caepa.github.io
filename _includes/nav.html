@@ -1,0 +1,11 @@
+<section class="section container">
+  <h2 class="grey-text text-darken-1">Pages<span class="thin"> | Articles</span></h2>
+  <div class="collection">
+    {% for category in site.categories %}
+      <a href="{{ category[0] }}" class="collection-item">
+        {{ category[0] | replace: '_',' ' | capitalize }}
+        <span class="badge">{{ category[1].size }}</span>
+      </a>
+    {% endfor %} 
+  </div>
+</section>

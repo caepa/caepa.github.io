@@ -1,3 +1,4 @@
+<!--http://stackoverflow.com/questions/18669143/how-to-group-posts-by-date-on-home-page-in-jekyll-->
 {% for post in site.posts %}
   {% capture currentdate %}{{post.date | date: "%A, %B %d, %Y"}}{% endcapture %}
   {% if currentdate != thedate %}
@@ -47,3 +48,33 @@
 
 {% endfor %}
 </ul>
+
+<!-- Lists posts by category...
+<section class="section container">
+  {% for category in site.categories %}
+    {% assign pages_list = category[1] %}
+    {% for post in pages_list %}
+      {% if forloop.first %}
+        <h2 class="grey-text text-darken-1">{{ category[0] | replace: '_',' ' | capitalize }}</h2>
+      {% endif %}
+
+    {% include post_card.html %}
+
+    {% endfor %}
+  {% endfor %}
+</section>
+-->
+
+<!-- list posts by year
+<section id="tab2" class="section container">
+  {% for post in site.posts %}
+    {% assign currentdate = post.date | date: "%Y" %}
+      {% if currentdate != date %}
+        <h2 class="grey-text text-darken-1">{{ currentdate }}</h2>
+        {% assign date = currentdate %}
+      {% endif %}
+
+    {% include post_card.html %}
+
+  {% endfor %}
+</section>

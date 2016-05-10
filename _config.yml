@@ -37,7 +37,13 @@ markdown: kramdown
 
 collections:
   history:
-    output: true
+    output: false
+  events:
+    output: false
+  fact_sheets:
+    output: false
+  forms:
+    output: false
   
 include: ["_pages"]
 future: true
@@ -56,13 +62,6 @@ defaults:
       author: Colorado Adult Education Professional Association
       permalink: /:categories/:title.html
   - scope:
-      path: "fact-sheets"
-      type: "posts"
-    values:
-      color: amber darken-4
-      color_accent: amber darken-3
-      tabs: [Article, Printable PDF]
-  - scope:
       path: "events"
       type: "posts"
     values:
@@ -76,3 +75,17 @@ defaults:
       color: deep-purple darken-4
       color_accent: deep-purple darken-3
       tabs: [Details, Keynotes, Sessions, Vendors, Awards]
+  - scope:
+      path: "fact_sheets"
+      type: "posts"
+    values:
+      color: amber darken-4
+      color_accent: amber darken-3
+      tabs: [Article, Printable PDF]
+  - scope:
+      path: "forms"
+      type: "posts"
+    values:
+      color: brown darken-4
+      color_accent: brown darken-3
+      tabs: [Details, List]

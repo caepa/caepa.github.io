@@ -15,13 +15,13 @@ layout: default
   </div>
 </header>
 
-<div class="divider"></div>
+{% include nav.html %}
 
 <section class="section container">
   <h2 class="grey-text text-darken-1">Upcoming<span class="thin"> | Events</span></h2>
   {% for post in site.categories.events reversed %}  
-    {% if post.date > site.time %}
-      {% include event_card.html %}
-    {% endif %}  
+  {% if post.date > site.time %}
+  {% include event_card.html %}
+  {% endif %}  
   {% endfor %}
 </section>
