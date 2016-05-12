@@ -7,19 +7,10 @@ icon:
 
 tabs: [Articles, Printable PDF]
 ---
-{% assign cat = page.title | replace: ' ','_' | downcase %}
-<section id="tab1">
-  {% for post in site.categories.[cat] %}
-    {% assign currentdate = post.date | date: "%Y" %}
-      {% if currentdate != date %}
-        <h2 class="grey-text text-darken-1">{{ currentdate }}</h2>
-        {% assign date = currentdate %}
-      {% endif %}
-
-    {% include post_card.html %}
-
-  {% endfor %}
-</section>
+<article id="tab1">
+  {% capture url %}{{ page.url | remove: '/' }}{% endcapture%}
+  {% include post_card.html category = url %}
+</article>
 
 <section id="tab2">
   <h2 class="grey-text text-darken-1">{{ page.tabs[1] }}

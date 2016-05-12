@@ -1,4 +1,4 @@
-{% assign cat = page.title | downcase %}
+{% assign cat = include.category %}
 {% for post in site.categories.[cat] %}
 
 {% assign currentdate = post.date | date: "%Y" %}
@@ -19,7 +19,7 @@
     </div>
     <div class="col s12 m10 flow-text">
       <a href="{{ post.url }}" class="card-title truncate">
-        <h4>{{ post.title | strip_html }}</h4>
+        <h4>{{ post.title | replace: '_',' ' | strip_html }}</h4>
       </a>
       <span>{{ post.content | strip_html | truncatewords: 33 }}</span>
       <a href="{{ post.url }}" class="light">read more</a>

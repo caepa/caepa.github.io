@@ -61,38 +61,30 @@ defaults:
       layout: "post"
       author: Colorado Adult Education Professional Association
       permalink: /:categories/:title.html
+      tabs: [Article, Related Articles]
   - scope:
       path: "events"
-      type: "posts"
     values:
       color: indigo darken-4
       color_accent: indigo darken-3
-      tabs: [Details, Upcoming Events]
   - scope:
       path: "events/rendezvous"
-      type: "posts"
     values:
       color: deep-purple darken-4
       color_accent: deep-purple darken-3
       tabs: [Details, Keynotes, Sessions, Vendors, Awards]
   - scope:
       path: "fact_sheets"
-      type: "posts"
     values:
       color: amber darken-4
       color_accent: amber darken-3
-      tabs: [Article, Printable PDF]
   - scope:
       path: "forms"
-      type: "posts"
     values:
       color: brown darken-4
       color_accent: brown darken-3
-      tabs: [Details, List]
   - scope:
       path: "news"
-      type: "posts"
     values:
       color: blue darken-4
       color_accent:  blue darken-3
-      tabs: [Article, Video]

@@ -22,7 +22,7 @@ layout: default
           <ul class="tabs">
             {% for tab in page.tabs %}
             <li class="tab waves-effect waves-light">
-              <a href="{% cycle '#tab1', '#tab2', '#tab3', '#tab4', '#tab5' %}">{{ tab }}</a>
+              <a href="#tab{{ forloop.index }}">{{ tab }}</a>
             </li>
             {% endfor %}
           </ul>
@@ -36,9 +36,7 @@ layout: default
       {% endif %}
     </div>
   </header>
-
   <div class="page-content section container">
     {{ content }}
   </div>
-
 </section>

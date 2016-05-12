@@ -30,7 +30,7 @@ layout: default
           <ul class="tabs">
             {% for tab in page.tabs %}
             <li class="tab waves-effect waves-light">
-              <a href="{% cycle '#tab1', '#tab2', '#tab3', '#tab4', '#tab5' %}">{{ tab }}</a>
+              <a href="#tab{{ forloop.index }}">{{ tab }}</a>
             </li>
             {% endfor %}
           </ul>
@@ -44,11 +44,15 @@ layout: default
       {% endif %}
     </div>
   </header>
-<!--
-  {% include navigation.html %}
--->
-  <div class="post-content section container flow-text" itemprop="articleBody">
-    {{ content }}
+
+  <div class="section container" itemprop="articleBody">
+    <article id="tab1" class="post-content flow-text">
+      {{ content }}
+    </article>
+    <article id="tab2">
+      {% capture categories %}{{ page.categories }}{% endcapture%}
+      {% include post_card.html category = categories %}
+    </article>
   </div>
 
   {% include navigation.html %}

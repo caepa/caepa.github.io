@@ -2,9 +2,9 @@
 layout: page
 title: News
 icon:
-
-tabs: [Recent, Past]
+tabs: [Recent]
 ---
-<section id="tab1">
-    {% include post_card.html %}
-</section>
+<article id="tab1">
+  {% capture url %}{{ page.url | remove: '/' }}{% endcapture%}
+  {% include post_card.html category = url %}
+</article>
