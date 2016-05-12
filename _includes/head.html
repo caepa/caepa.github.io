@@ -20,6 +20,7 @@
 
   <script type="application/ld+json">{% include seo/json_website.json %}</script>
   <script type="application/ld+json">{% include seo/json_organization.json %}</script>
+  {% if page.layout == 'post' %}<script type="application/ld+json">{% include seo/json_article.json %}</script>{% endif %}
   {% if page.url contains 'events' %}<script type="application/ld+json">{% include seo/json_event.json %}</script>{% endif %}
   
   {% if jekyll.environment == 'production' %}{% include seo/google_analytics.html %}{% endif %}
