@@ -5,6 +5,12 @@ icon:
 tabs: [Events, General]
 ---
 <article id="tab1">
+  <h2 class="hide grey-text text-darken-1">{{ page.tabs[0] }}</h2>
   {% capture url %}{{ page.url | remove: '/' }}{% endcapture%}
   {% include post_card.html category = url %}
+</article>
+
+<article id="tab2">
+  <h2 class="hide grey-text text-darken-1">{{ page.tabs[1] }}</h2>
+  <p class="flow-text">Coming Soon...</p>
 </article>

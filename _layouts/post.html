@@ -8,7 +8,9 @@ layout: default
       <div class="section">
         <div class="row /*valign-wrapper*/">
           <div class="col s12 m9 no-padding">
-            <h1 class="post-title thin" itemprop="name headline">{{ page.title }}</h1>
+            <h1 class="post-title thin" itemprop="name headline">
+              {{ page.title | replace: '_',' ' | titleize }}
+            </h1>
             <p class="post-meta flow-text">
               <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
                 {{ page.date | date: "%B %-d, %Y" }}
@@ -49,10 +51,10 @@ layout: default
     <article id="tab1" class="post-content flow-text">
       {{ content }}
     </article>
-    <article id="tab2">
+    <aside id="tab2">
       {% capture categories %}{{ page.categories }}{% endcapture%}
       {% include post_card.html category = categories %}
-    </article>
+    </aside>
   </div>
 
   {% include navigation.html %}

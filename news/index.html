@@ -5,6 +5,7 @@ icon:
 tabs: [Recent]
 ---
 <article id="tab1">
+  <h2 class="hide grey-text text-darken-1">{{ page.tabs[0] }}</h2>
   {% capture url %}{{ page.url | remove: '/' }}{% endcapture%}
   {% include post_card.html category = url %}
 </article>
