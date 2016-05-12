@@ -52,6 +52,7 @@ layout: default
       {{ content }}
     </article>
     <aside id="tab2">
+      <h2 class="hide grey-text text-darken-1">{{ page.tabs[1] }}</h2>
       {% capture categories %}{{ page.categories }}{% endcapture%}
       {% include post_card.html category = categories %}
     </aside>
