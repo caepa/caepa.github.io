@@ -46,18 +46,16 @@ layout: default
       {% endif %}
     </div>
   </header>
-
   <div class="section container" itemprop="articleBody">
     <div id="tab1" class="post-content flow-text">
       {{ content }}
     </div>
-    <aside id="tab2">
-      <h2 class="hide grey-text text-darken-1">{{ page.tabs[1] }}</h2>
-      {% capture categories %}{{ page.categories }}{% endcapture%}
-      {% include post_card.html category = categories %}
-    </aside>
   </div>
-
-  {% include navigation.html %}
-
 </article>
+<aside id="tab2">
+  <h2 class="hide grey-text text-darken-1">{{ page.tabs[1] }}</h2>
+  {% capture categories %}{{ page.categories }}{% endcapture%}
+  {% include post_card.html category = categories %}
+</aside>
+
+{% include navigation.html %}
