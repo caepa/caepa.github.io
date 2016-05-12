@@ -1,6 +1,6 @@
-<div class="card-panel">
-  <div class="row">
-    <div class="col s2 center-align">
+<div class="card">
+  <div class="card-content row">
+    <div class="col s12 m2 center-align">
       <div class="circle container {{ post.color_accent }} white-text" style="height:76px; width:76px; padding-top:9px;">
         <span class="month" style="display:block; line-height:26px; font-siz:16px;">
           {{ post.date | date: "%b" }}</span>
@@ -8,9 +8,9 @@
           {{ post.date | date: "%d" }}</span>
       </div>
     </div>
-    <div class="col s10 flow-text">
+    <div class="col s12 m10 flow-text">
       <a href="{{ post.url }}" class="card-title truncate">
-        <b>{{ post.title | strip_html }}</b>
+        <h4>{{ post.title | strip_html }}</h4>
       </a>
       <span>{{ post.content | strip_html | truncatewords: 33 }}</span>
       <a href="{{ post.url }}" class="light">read more</a>
