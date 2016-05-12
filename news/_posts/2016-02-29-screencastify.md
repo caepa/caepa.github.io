@@ -1,14 +1,14 @@
 ---
 author: Adult Education Initiatives
 image_path: cde_logo.png
-youtube: "https://youtu.be/m9btbV6Kamk"
-tags: [#TechTipTuesday]
+embed_id: m9btbV6Kamk
+tags: #TechTipTuesday
 ---
 ## [screencastify](https://www.screencastify.com/)
 
 This tool will allow you to create videos/tutorials of work you are doing on your computer.
 
-<iframe width="560" height="315" src="{{ page.youtube }}" frameborder="0" allowfullscreen></iframe>
+{% include youtube.html id=page.embed_id %}
 
 Items to consider while watching:
 

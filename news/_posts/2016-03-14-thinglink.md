@@ -1,14 +1,14 @@
 ---
 author: Adult Education Initiatives
 image_path: cde_logo.png
-youtube: "https://youtu.be/vUA1jZVZYBw"
-tags: [#TechTipTuesday]
+embed_id: vUA1jZVZYBw
+tags: #TechTipTuesday
 ---
 ## [Thinglink](http://www.thinglink.com/)
 
 Today's #TechTipTuesday video will show you a great way to make interactive images that can act as a teaching/training tool. The tool is Thinglink and it allows you to tag images with text boxes, more images, videos, and web links.  All of these tags are embedded directly into the image; which makes it come to life with your explanations and scaffolds learning with links to outside sources.
 
-<iframe width="560" height="315" src="{{ page.youtube }}" frameborder="0" allowfullscreen></iframe>
+{% include youtube.html id=page.embed_id %}
 
 Items to consider while watching:
   

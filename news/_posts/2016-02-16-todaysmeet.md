@@ -1,14 +1,14 @@
 ---
 author: Adult Education Initiatives
 image_path: cde_logo.png
-youtube: "https://youtu.be/7i41Mjjazhc"
-tags: [#TechTipTuesday]
+embed_id: 7i41Mjjazhc
+tags: #TechTipTuesday
 ---
 ## [TodaysMeet](http://todaysmeet.com/)
 
 Free, online backchannel chat service called TodaysMeet.  Backchannel chats are great for conferences, large classrooms, or classes that are connecting from different areas/rooms.  
 
-<iframe width="560" height="315" src="{{ page.youtube }}" frameborder="0" allowfullscreen></iframe>
+{% include youtube.html id=page.embed_id %}
 
 Items to consider while watching:
 

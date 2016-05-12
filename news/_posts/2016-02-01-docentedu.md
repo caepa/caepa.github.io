@@ -1,14 +1,14 @@
 ---
 author: Adult Education Initiatives
 image_path: cde_logo.png
-youtube: "https://youtu.be/SZuoxh5KFMs"
-tags: [#TechTipTuesday]
+embed_id: SZuoxh5KFMs
+tags: #TechTipTuesday
 ---
 ## [DocentEDU](http://docentedu.com/)
 
 This web-tool is a reimagined version of the old-fashioned webquest. You can take any webpage and add your content in the form of text-based instructions, quizzes, embedded videos, inserted images, and even discussion threads.  This could be a powerful tool for teachers and trainers!
 
-<iframe width="560" height="315" src="{{ page.youtube }}" frameborder="0" allowfullscreen></iframe>
+{% include youtube.html id=page.embed_id %}
 
 Items to consider while watching:
 

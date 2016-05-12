@@ -1,14 +1,14 @@
 ---
 author: Adult Education Initiatives
 image_path: cde_logo.png
-youtube: "https://youtu.be/M4hNhuWr6Cs"
-tags: [#TechTipTuesday]
+embed_id: M4hNhuWr6Cs
+tags: #TechTipTuesday
 ---
 ## [Breakout EDU](http://www.breakoutedu.com/)
 
 I am going to show you a gamified “research” project using a wooden box with multiple padlocks. It is called Breakout EDU. In the video, you will see a great way to add elements of challenge, competitiveness, fun, and rewards to a traditional way of doing research. More information about the box, games, and an educational community that develops games can be found by visiting [breakoutedu.com](http://www.breakoutedu.com/).
 
-<iframe width="560" height="315" src="{{ page.youtube }}" frameborder="0" allowfullscreen></iframe>
+{% include youtube.html id=page.embed_id %}
 
 Items to consider while watching:
 

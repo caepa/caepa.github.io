@@ -1,14 +1,14 @@
 ---
 author: Adult Education Initiatives
 image_path: cde_logo.png
-youtube: "https://www.youtube.com/watch?v=YPD5f9llGds"
-tags: [#TechTipTuesday]
+embed_id: YPD5f9llGds
+tags: #TechTipTuesday
 ---
 ## [Parallax News](http://parallax.news/)
 
 This tool allows you to see current news topics through the lens of three different viewpoints.  This is different than similar news services because the perspective articles are selected by real people (instead of roboservices). The articles should give you valuable insights into the different viewpoints on a particular topic!
 
-<iframe width="560" height="315" src="{{ page.youtube }}" frameborder="0" allowfullscreen></iframe>
+{% include youtube.html id=page.embed_id %}
 
 Items to consider while watching:
 

@@ -1,5 +1,14 @@
-<div class="card">
-  <div class="card-content row">
+{% assign cat = page.title | downcase %}
+{% for post in site.categories.[cat] %}
+
+{% assign currentdate = post.date | date: "%Y" %}
+{% if currentdate != date %}
+<h3 class="grey-text text-darken-1">{{ currentdate }}</h3>
+{% assign date = currentdate %}
+{% endif %}
+
+<div class="card-panel">
+  <div class="row">
     <div class="col s12 m2 center-align">
       <div class="circle container {{ post.color_accent }} white-text" style="height:76px; width:76px; padding-top:9px;">
         <span class="month" style="display:block; line-height:26px; font-siz:16px;">
@@ -17,3 +26,5 @@
     </div>
   </div>
 </div>
+
+{% endfor %}
