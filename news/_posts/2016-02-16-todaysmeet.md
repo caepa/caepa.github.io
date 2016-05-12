@@ -1,6 +1,6 @@
 ---
 author: Adult Education Initiatives
-image_path: cde_logo.png
+image_path: /img/logos/cde_logo.png
 embed_id: 7i41Mjjazhc
 tags: #TechTipTuesday
 ---

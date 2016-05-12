@@ -89,3 +89,10 @@ defaults:
       color: brown darken-4
       color_accent: brown darken-3
       tabs: [Details, List]
+  - scope:
+      path: "news"
+      type: "posts"
+    values:
+      color: blue darken-4
+      color_accent:  blue darken-3
+      tabs: [Article, Video]
