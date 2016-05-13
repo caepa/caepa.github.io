@@ -4,6 +4,7 @@
   "mainEntityOfPage": {
     "@type":"id",
     "url":"{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}",
+  },
   "publisher": {
     "@type":"Organization",
     "logo": {
