@@ -2,11 +2,8 @@
   "@context":"http://schema.org",
   "@type":"Article",
   "mainEntityOfPage": {
-    "@type":"website",
-    "name":"{{ site.title }}",
-    "alternateName":"{{ site.legal_name}}",
-    "url":"{{ site.baseurl | prepend: site.url }}"
-  },
+    "@type":"id",
+    "url":"{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}",
   "publisher": {
     "@type":"Organization",
     "logo": {
@@ -35,7 +32,6 @@
     "name":"{{ page.author }}"
   },
   "headline":"{{ page.title | replace: '_',' ' | strip_html }}",
-  "url":"{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}",
   "datePublished":"{{ page.date | date_to_xmlschema }}",
   "image": {
     "@type":"ImageObject",
