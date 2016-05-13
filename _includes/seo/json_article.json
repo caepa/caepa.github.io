@@ -3,8 +3,8 @@
   "@context":"http://schema.org",
   "@type":"Article",
   "mainEntityOfPage": {
-    "@type":"id",
-    "url":"{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+    "@type":"WebPage",
+    "@id":"{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
   },
   "publisher": {
     "@type":"Organization",
@@ -35,6 +35,7 @@
   },
   "headline":"{{ page.title | replace: '_',' ' | strip_html }}",
   "datePublished":"{{ page.date | date_to_xmlschema }}",
+  "dateModified":"{{ site.time | date_to_xmlschema }}",
   "image": {
     "@type":"ImageObject",
     "url":"{{ '/img/logo-696px.png' | prepend: site.baseurl | prepend: site.url }}",
