@@ -2,19 +2,23 @@
   <div class="navbar-fixed">
     <nav class="{{ page.color }}">
       <div class="nav-wrapper container">
-        <ul class="brand-logo">
-          <li style="font-weight:900;">{{ site.title }}
-            {% if page.url == "/" %}
-            {% elsif page.categories != null %}
-            <span class="light">&ensp;&#124;&ensp;{{ page.categories }}</span>
-            {% else %}
-            <span class="light"><!--&ensp;&#124;&ensp;{{ page.title | downcase }}--></span>
-            {% endif %}
-          </li>        
-        </ul>
+
+        <a class="brand-logo" style="font-weight:900;">{{ site.title }}{% if page.categories != null %}<span class="light">&ensp;&#124;&ensp;{{ page.categories }}</span>{% endif %}</a>
+
+        <a data-activates="menu" class="button-collapse"><i class="material-icons">menu</i></a>
+<!--
         <ul class="right hide-on-med-and-down">
-          <li><a><i class="material-icons right">build</i>Under Construction!</a></li>
+          {% for category in site.categories %}
+          <li><a href="{{ '/' | append: category[0] | prepend: site.baseurl | prepend: site.url }}" class="waves-effect">{{ category[0] | replace: '_',' ' | upcase }}<span class="badge">{{ category[1].size }}</span></a></li>
+          {% endfor %}
         </ul>
+
+        <ul id="menu" class="side-nav">
+          {% for category in site.categories %}
+          <li><a href="{{ '/' | append: category[0] | prepend: site.baseurl | prepend: site.url }}" class="waves-effect"><i class="material-icons left">{{ category.icon }}</i>{{ category[0] | replace: '_',' ' | upcase }}<span class="badge">{{ category[1].size }}</span></a></li>
+          {% endfor %}          
+        </ul>
+-->
       </div>
     </nav>
   </div>
