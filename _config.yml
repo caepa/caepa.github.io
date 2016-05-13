@@ -9,7 +9,7 @@
 title: CAEPA
 legal_name: Colorado Adult Education Professional Association
 icon: /img/icon-1x.png
-logo: /img/caepa-60px.png
+logo: /img/logo-60px.png
 email: admin@caepa.org
 description: Providing Colorado Leadership in Adult Education and Literacy since 1935
 mission: The Colorado Adult Education Professional Association, CAEPA, provides leadership to the field of adult education and family literacy by offering opportunities for professional development, advocacy, and resource sharing to improve the quality of life for every Coloradan.
@@ -29,7 +29,7 @@ social:
   - name: github
     url:  http://github.com/caepa
   - name: rss
-    url:  http://blog.caepa.org/rss
+    url:  http://www.caepa.org/feed.xml
   - name: twitter
     url:  https://twitter.com/caepa_co
 
