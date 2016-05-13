@@ -7,16 +7,12 @@
 
         <a data-activates="menu" class="button-collapse"><i class="material-icons">menu</i></a>
 <!--
-        <ul class="right hide-on-med-and-down">
-          {% for category in site.categories %}
-          <li><a href="{{ '/' | append: category[0] | prepend: site.baseurl | prepend: site.url }}" class="waves-effect">{{ category[0] | replace: '_',' ' | upcase }}<span class="badge">{{ category[1].size }}</span></a></li>
-          {% endfor %}
+        <ul class="right hide-on-med-and-down">{% for category in site.categories %}
+          <li><a href="{{ '/' | append: category[0] | prepend: site.baseurl | prepend: site.url }}" class="waves-effect">{{ category[0] | replace: '_',' ' | upcase }}<span class="badge">{{ category[1].size }}</span></a></li>{% endfor %}
         </ul>
 
-        <ul id="menu" class="side-nav">
-          {% for category in site.categories %}
-          <li><a href="{{ '/' | append: category[0] | prepend: site.baseurl | prepend: site.url }}" class="waves-effect"><i class="material-icons left">{{ category.icon }}</i>{{ category[0] | replace: '_',' ' | upcase }}<span class="badge">{{ category[1].size }}</span></a></li>
-          {% endfor %}          
+        <ul id="menu" class="side-nav">{% for category in site.categories %}
+          <li><a href="{{ '/' | append: category[0] | prepend: site.baseurl | prepend: site.url }}" class="waves-effect"><i class="material-icons left">{{ category.icon }}</i>{{ category[0] | replace: '_',' ' | upcase }}<span class="badge">{{ category[1].size }}</span></a></li>{% endfor %}          
         </ul>
 -->
       </div>
