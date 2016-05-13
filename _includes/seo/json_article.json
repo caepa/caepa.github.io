@@ -1,53 +1,48 @@
 {
-  "@context": "http://schema.org",
-  "@type": "Article",
+  "@context":"http://schema.org",
+  "@type":"Article",
   "mainEntityOfPage": {
-    "@type": "website",
-    "name" : "{{ site.title }}",
-    "alternateName" : "{{ site.legal_name}}",
-    "url" : "{{ site.baseurl | prepend: site.url }}"
+    "@type":"website",
+    "name":"{{ site.title }}",
+    "alternateName":"{{ site.legal_name}}",
+    "url":"{{ site.baseurl | prepend: site.url }}"
   },
   "publisher": {
     "@type":"Organization",
-    "logo":"{{ site.logo | prepend: site.baseurl | prepend: site.url }}",
+    "logo": {
+      "@type":"ImageObject",
+      "url":"{{ site.logo | prepend: site.baseurl | prepend: site.url }}",
+      "width":254,
+      "height":60
+    },
     "name":"{{ site.title }}",
     "legalName":"{{ site.legal_name }}",
     "description":"{{ site.mission }}",
     "foundingDate":"1935",
     "areaServed":"Colorado",
     "url":"{{ page.url | prepend: site.baseurl | prepend: site.url }}",
-    "sameAs":[
+    "sameAs": [
       "{{ site.baseurl | prepend: site.url }}",{% for media in site.social %}
       "{{ media.url}}"{% unless forloop.last %},{% endunless %}{% endfor %}
     ],
-    "subOrganization":[  
+    "subOrganization": [  
       "COABE",
       "MPAEA"
     ]
   },
   "author": {
-    "@type": "Person",
-    "name": "{{ page.author }}",
-    "image": {
-      "@type": "ImageObject",
-      "url": "{{ site.logo | prepend: site.baseurl | prepend: site.url }}",
-      "width": 256,
-      "height": 256
-    },
-    "url": "{{ site.baseurl | prepend: site.url }}",
-    "sameAs": "{{ site.baseurl | prepend: site.url }}",
-    "description": "{{ site.description }}"
+    "@type":"Person",
+    "name":"{{ page.author }}"
   },
-  "headline": "{{ page.title | replace: '_',' ' | strip_html }}",
-  "url": "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}",
-  "datePublished": "{{ page.date | date_to_xmlschema }}",
-  "dateModified": "{{ page.date | date_to_xmlschema }}",
+  "headline":"{{ page.title | replace: '_',' ' | strip_html }}",
+  "url":"{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}",
+  "datePublished":"{{ page.date | date_to_xmlschema }}",
   "image": {
-    "@type": "ImageObject",
-    "url": "{{ site.logo | prepend: site.baseurl | prepend: site.url }}",
-    "width": 256,
-    "height": 256
+    "@type":"ImageObject",
+    "url":"{{ '/img/logo-696px.png' | prepend: site.baseurl | prepend: site.url }}",
+    "width":696,
+    "height":165
   },
-  "keywords": "{{ page.categories }}",
-  "description": "{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.mission }}{% endif %}"
+  "keywords":"{{ page.categories }}",
+  "description":{% if page.excerpt %}"{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}"{% else %}"{{ site.mission }}"{% endif %}
 }

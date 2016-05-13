@@ -1,53 +1,55 @@
 {  
   "@context":"http://schema.org",
-  "@type":"Organization",
-  "logo":"{{ site.logo | prepend: site.baseurl | prepend: site.url }}",
-  "name":"{{ site.title }}",
-  "legalName":"{{ site.legal_name }}",
-  "description":"{{ site.mission }}",
-  "foundingDate":"1935",
-  "areaServed":"Colorado",
+  "@type":"Event",
+  "name":"{{ page.title }}",
+  "alternateName":"{{ page.theme }}",
+  "startDate":"{{ page.start_date }}",
+  "endDate":"{{ page.end_date }}",
   "url":"{{ page.url | prepend: site.baseurl | prepend: site.url }}",
-  "sameAs":[
-    "{{ site.baseurl | prepend: site.url }}",{% for media in site.social %}
-    "{{ media.url}}"{% unless forloop.last %},{% endunless %}{% endfor %}
-  ],
-  "subOrganization":[  
-    "COABE",
-    "MPAEA"
-  ],
-  "event":[
-    {
-      "@type":"Event",
-      "name":"{{ page.title }}",
-      "alternateName":"{{ page.theme }}",
-      "startDate":"{{ page.start_date }}",
-      "endDate":"{{ page.end_date }}",
-      "image":{% if page.image_path != null %}"{{ page.image_path | prepend: site.baseurl | prepend: site.url }}",{% else %}"{{ site.logo | prepend: site.baseurl | prepend: site.url }}",{% endif %}
-      "sameas":{% if page.event_url != null %}[
-        "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
-        "{{ page.event_url }}"
-      ],{% else %}"{{ page.url | prepend: site.baseurl | prepend: site.url }}",{% endif %}
-      "description":"{{ page.content | strip_html | truncatewords: 50 }}",
-      "location":{
-        "@type":"Place",
-        "name":"{{ page.location }}",
-        "sameAs":"{{ page.website }}",
-        "address":{
-          "@type":"PostalAddress",
-          "streetAddress":"{{ page.address }}",
-          "addressLocality":"{{ page.city }}",
-          "addressRegion":"{{ page.state }}",
-          "postalCode":"{{ page.zipcode }}"
-        }
+  "sameas":"{{ page.event_url }}",
+  "description":"{{ page.content | strip_html | strip_newlines | truncatewords: 50 }}",
+  "location":{
+    "@type":"Place",
+    "name":"{{ page.location }}",
+    "sameAs":"{{ page.website }}",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"{{ page.address }}",
+      "addressLocality":"{{ page.city }}",
+      "addressRegion":"{{ page.state }}",
+      "postalCode":"{{ page.zipcode }}"
+    }
+  },
+  "offers":{
+    "@type":"AggregateOffer",
+    "lowPrice":"{{ page.price1 | remove: '$' }}",
+    "highPrice":"{{ page.price2 | remove: '$' }}",
+    "priceCurrency":"USD",
+    "url":"{{ page.registration }}"
+  },
+  "organizer":[  
+    {  
+      "@type":"Organization",
+      "logo": {
+        "@type":"ImageObject",
+        "url":"{{ site.logo | prepend: site.baseurl | prepend: site.url }}",
+        "width":254,
+        "height":60
       },
-      "offers":{
-        "@type":"AggregateOffer",
-        "lowPrice":"{{ page.price1 | remove: '$' }}",
-        "highPrice":"{{ page.price2 | remove: '$' }}",
-        "priceCurrency":"USD",
-        "url":"{{ page.registration }}"
-      }
+      "name":"{{ site.title }}",
+      "legalName":"{{ site.legal_name }}",
+      "description":"{{ site.mission }}",
+      "foundingDate":"1935",
+      "areaServed":"Colorado",
+      "url":"{{ page.url | prepend: site.baseurl | prepend: site.url }}",
+      "sameAs":[
+        "{{ site.baseurl | prepend: site.url }}",{% for media in site.social %}
+        "{{ media.url}}"{% unless forloop.last %},{% endunless %}{% endfor %}
+      ],
+      "subOrganization":[  
+        "COABE",
+        "MPAEA"
+      ]
     }
   ]
 }

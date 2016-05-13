@@ -2,11 +2,11 @@
   <hr />
   <div class="col s12 no-padding">
     {% if page.previous.url %}
-    <a class="btn-flat btn-large waves-effect left" href="{{page.previous.url}}">
+    <a rel="prev" class="btn-flat btn-large waves-effect left" href="{{page.previous.url}}">
       <i class="material-icons left">chevron_left</i>Previous</a>
     {% endif %}
     {% if page.next.url %}
-    <a class="btn-flat btn-large waves-effect right" href="{{page.next.url}}">
+    <a rel="next" class="btn-flat btn-large waves-effect right" href="{{page.next.url}}">
       <i class="material-icons right">chevron_right</i>Next</a>
     {% endif %}
   </div>
