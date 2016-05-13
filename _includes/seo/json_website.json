@@ -19,7 +19,7 @@
       "description":"{{ site.mission }}",
       "foundingDate":"1935",
       "areaServed":"Colorado",
-      "url":"{{ page.url | prepend: site.baseurl | prepend: site.url }}",
+      "url":"{{ site.baseurl | prepend: site.url }}",
       "sameAs":[
         "{{ site.baseurl | prepend: site.url }}",{% for media in site.social %}
         "{{ media.url}}"{% unless forloop.last %},{% endunless %}{% endfor %}

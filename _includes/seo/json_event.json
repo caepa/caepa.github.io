@@ -33,7 +33,7 @@
       "@type":"Organization",
       "logo": {
         "@type":"ImageObject",
-        "url":"{{ site.logo | prepend: site.baseurl | prepend: site.url }}",
+        "url":"{{ site.baseurl | prepend: site.url }}",
         "width":254,
         "height":60
       },
