@@ -19,7 +19,7 @@
     </div>
     <div class="col s12 m10 flow-text">
       <a href="{{ post.url }}" class="card-title truncate">
-        <h4>{{ post.title | replace: '_',' ' | strip_newlines | strip_html }}</h4>
+        <h4>{{ post.title | strip_html | strip_newlines | replace: '_',' ' }}</h4>
       </a>
       <span>{{ post.content | strip_html | strip_newlines | truncatewords: 33 }}</span>
       <a href="{{ post.url }}" class="light">read more</a>
