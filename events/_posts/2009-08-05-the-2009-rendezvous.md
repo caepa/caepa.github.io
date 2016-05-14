@@ -15,7 +15,7 @@ city: Breckenridge
 state: CO
 zipcode: 80424
 phone: (970) 453-6000
-website: http://www.beaverrun.com/
+website: http://www.beaverrun.com
 
 # offers:
 price1: $180.00

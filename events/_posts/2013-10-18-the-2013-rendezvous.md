@@ -15,7 +15,7 @@ city: Colorado Springs
 state: CO
 zipcode: 80903
 phone: (719) 955-5600
-website: http://antlers.com/
+website: http://antlers.com
 
 # offers:
 price1: 0

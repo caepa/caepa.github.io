@@ -15,7 +15,7 @@ city: Denver
 state: CO
 zipcode: 80237
 phone: (303) 779-1100
-website: https://www.denvermarriotttechcenter.com/
+website: https://www.denvermarriotttechcenter.com
 
 # offers:
 price1: $115.00

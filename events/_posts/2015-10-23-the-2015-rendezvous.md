@@ -15,7 +15,7 @@ city: Westminster
 state: CO
 zipcode: 80020
 phone: (303) 410-5000
-website: http://www.westindenverboulder.com/
+website: http://www.westindenverboulder.com
 
 # offers:
 price1: $125.00

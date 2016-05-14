@@ -15,7 +15,7 @@ city: Lakewood
 state: CO
 zipcode: 80228
 phone:(303) 987-2000
-website: http://www.sheratondenverwest.com/
+website: http://www.sheratondenverwest.com
 
 # offers:
 price1: 0
