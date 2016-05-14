@@ -14,7 +14,7 @@ address: 360 Union Blvd
 city: Lakewood
 state: CO
 zipcode: 80228
-phone:(303) 987-2000
+phone: (303) 987-2000
 website: http://www.sheratondenverwest.com
 
 # offers:
