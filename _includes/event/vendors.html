@@ -1,0 +1,5 @@
+{% assign year = include.year %}
+
+{% for session in site.data[year]vendors %}
+{{ session }}
+{% endfor %}

@@ -1,4 +1,7 @@
 ---
+layout: event_page
+year: 2009
+
 title: "Partnering For a Better Colorado"
 author: Glenda Sinks, CAEPA President
 

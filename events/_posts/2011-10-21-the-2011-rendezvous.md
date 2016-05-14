@@ -1,4 +1,7 @@
 ---
+layout: event_page
+year: 2011
+
 title: "Maximizing Resources in Challenging Time"
 author: Jolene Goerend, CAEPA President
 

@@ -1,4 +1,7 @@
 ---
+layout: event_page
+year: 2007
+
 title: "Engaging Diverse Learners"
 author: Bryan Holinka, CAEPA President
 

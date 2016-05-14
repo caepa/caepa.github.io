@@ -70,9 +70,9 @@ defaults:
       color: indigo darken-4
       color_accent: indigo darken-3
   - scope:
-      path: "events/rendezvous"
+      layout: "events_page"
     values:
-      color: deep-purple darken-4
+      color: green darken-4
       color_accent: deep-purple darken-3
       tabs: [Details, Keynotes, Sessions, Vendors, Awards]
   - scope:

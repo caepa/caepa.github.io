@@ -1,4 +1,7 @@
 ---
+layout: event_page
+year: 2013
+
 title: "Adult Education: Imagine the Possibilities"
 author:
 
@@ -22,3 +25,4 @@ price1: 0
 price2: 0
 registration: 
 ---
+No Letter Available...

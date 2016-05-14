@@ -1,4 +1,7 @@
 ---
+layout: event_page
+year: 2006
+
 title: "Leading Learners to a Higher Level"
 author:
 
@@ -22,3 +25,4 @@ price1: $245.00
 price2: $245.00
 registration: 
 ---
+No Letter Available...

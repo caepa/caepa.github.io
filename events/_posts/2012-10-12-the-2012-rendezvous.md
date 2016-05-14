@@ -1,4 +1,7 @@
 ---
+layout: event_page
+year: 2012
+
 title: "Gearing Up for Change"
 author: 
 
@@ -22,3 +25,4 @@ price1: 0
 price2: 0
 registration: 
 ---
+No Letter Available...

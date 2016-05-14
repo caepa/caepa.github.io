@@ -1,4 +1,7 @@
 ---
+layout: event_page
+year: 2016
+
 title: "To Be Announced"
 author: Anna Mae Lindsay, CAEPA President
 

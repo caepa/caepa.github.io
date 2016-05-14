@@ -17,7 +17,7 @@
           {{ post.date | date: "%d" }}</span>
       </div>
     </div>
-    <div class="col s12 m10 flow-text">
+    <div class="col s12 m10 flow-text" style="text-align:justify;">
       <a href="{{ post.url }}" class="card-title truncate">
         <h4>{{ post.title | strip_html | strip_newlines | replace: '_',' ' }}</h4>
       </a>

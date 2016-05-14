@@ -1,0 +1,11 @@
+{% assign year = include.year %}
+
+{% for award in site.data[year]awards %}
+{{ award }}
+{% endfor %}
+
+<div class="divider"></div>
+
+{% for session in site.data[year]scholarship %}
+{{ session }}
+{% endfor %}

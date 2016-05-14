@@ -1,4 +1,7 @@
 ---
+layout: event_page
+year: 2015
+
 title: "Moving Forward with Innovation, Opportunity, and Action"
 author: Karen Carr, CAEPA President
 
