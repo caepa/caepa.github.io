@@ -1,5 +1,5 @@
 ---
-title: "Sharing Success: Adult Learners in Transition!"
+title: "Sharing Success: Adult Learners in Transition"
 author: Margie Wgner, CAEPA President
 
 start_date: 2008-03-08
