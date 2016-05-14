@@ -1,6 +1,26 @@
 ---
 title: "Engaging Diverse Learners"
 author: Bryan Holinka, CAEPA President
+
+start_date: 2007-02-07
+end_date: 2007-02-09
+
+image_path:
+event_url: 
+
+# venue:
+location: Omni Interlocken Resort
+address: 500 Interlocken Blvd
+city: Broomfield
+state: CO
+zipcode: 80021
+phone: (303) 438-6600
+website: https://www.omnihotels.com/hotels/denver-interlocken
+
+# offers:
+price1: 0
+price2: 0
+registration: 
 ---
 Welcome to Rendezvous 2007 and “Engaging Diverse Learners.” The CAEPA Board is
 pleased that you have chosen to join us and your Colorado colleagues at the premier professional

@@ -1,6 +1,6 @@
 ---
 title: Colfax Marathon
-author: Anna Mae Lindsay, CAEPA President 2016
+author: Anna Mae Lindsay, CAEPA President
 
 start_date: 2016-05-14 09:00
 end_date: 2016-05-15

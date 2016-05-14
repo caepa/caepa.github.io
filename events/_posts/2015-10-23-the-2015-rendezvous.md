@@ -1,6 +1,26 @@
 ---
 title: "Moving Forward with Innovation, Opportunity, and Action"
 author: Karen Carr, CAEPA President
+
+start_date: 2015-10-23
+end_date: 2015-10-24
+
+image_path:
+event_url: 
+
+# venue:
+location: Westin Westminster
+address: 10600 Westminster Blvd
+city: Westminster
+state: CO
+zipcode: 80020
+phone: (303) 410-5000
+website: http://www.westindenverboulder.com/
+
+# offers:
+price1: $125.00
+price2: $175.00
+registration: https://www.mkt.com/caepa
 ---
 Welcome to the 2015 CAEPA Rendezvous! Thank you for taking time from your busy schedule to learn, refresh, and connect with colleagues. This conference is about and for you.
 
