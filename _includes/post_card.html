@@ -21,7 +21,7 @@
       <a href="{{ post.url }}" class="card-title truncate">
         <h4>{{ post.title | replace: '_',' ' | strip_newlines | strip_html }}</h4>
       </a>
-      <span>{{ post.content | truncatewords: 33 | strip_newlines | strip_html }}</span>
+      <span>{% raw %}{{ post.content | truncatewords: 33 | strip_newlines | strip_html }}{% endraw %}</span>
       <a href="{{ post.url }}" class="light">read more</a>
     </div>
   </div>
