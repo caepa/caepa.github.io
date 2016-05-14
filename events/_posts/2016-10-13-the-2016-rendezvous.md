@@ -2,8 +2,8 @@
 title: "To Be Announced"
 author: Anna Mae Lindsay, CAEPA President
 
-start_date: 2016-10-14
-end_date: 2016-10-15
+start_date: 2016-10-13
+end_date: 2016-10-14
 
 image_path: 
 event_url: 
@@ -22,3 +22,4 @@ price1: 0
 price2: 0
 registration: https://www.mkt.com/caepa
 ---
+More information coming soon...
