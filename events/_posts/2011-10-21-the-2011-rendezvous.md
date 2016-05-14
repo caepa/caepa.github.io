@@ -6,7 +6,7 @@ start_date: 2011-10-21
 end_date: 2011-10-22
 
 image_path:
-event_url: 
+event_url:
 
 # venue:
 location: Marriott Denver Tech Center
@@ -20,7 +20,7 @@ website: https://www.denvermarriotttechcenter.com
 # offers:
 price1: $115.00
 price2: $195.00
-registration: 
+registration:
 ---
 Welcome to the 2011 CAEPA Conference – Maximizing Resources in Challenging Times! Each year
 colleagues from across this great state take the opportunity to come together to share knowledge and  talents, develop new skills and exchange ideas. We are especially excited to hear our dynamic keynote speakers – Bethanie Tucker, EdD and Temple Grandin, PhD – who will share their wisdom, experience and true passion for lifelong learning.

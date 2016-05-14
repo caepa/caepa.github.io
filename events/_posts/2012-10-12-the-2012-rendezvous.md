@@ -5,7 +5,7 @@ start_date: 2012-10-12
 end_date: 2012-10-13
 
 image_path:
-event_url: 
+event_url:
 
 # venue:
 location: Omni Interlocken Resort
@@ -19,5 +19,5 @@ website: https://www.omnihotels.com/hotels/denver-interlocken
 # offers:
 price1: 0
 price2: 0
-registration: 
+registration:
 ---

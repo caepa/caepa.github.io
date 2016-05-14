@@ -6,7 +6,7 @@ start_date: 2016-10-14
 end_date: 2016-10-15
 
 image_path:
-event_url: 
+event_url:
 
 # venue:
 location: Westin Westminster
