@@ -1,12 +1,12 @@
 ---
-title: "Sharing Success Adult: Learners in Transition"
+title: "Sharing Success: Adult Learners in Transition"
 author: Margie Wagner, CAEPA President
 
 start_date: 2008-03-08
 end_date: 2008-03-10
 
-image_path:
-event_url:
+image_path: 
+event_url: 
 
 # venue:
 location: Sheraton Denver West
@@ -20,7 +20,7 @@ website: http://www.sheratondenverwest.com
 # offers:
 price1: 0
 price2: 0
-registration:
+registration: 
 ---
 On behalf of the CAEPA Board of Directors, welcome to Rendezvous 2008 – Sharing Success: Adult Learners in Transition! Each year colleagues from across the state take this opportunity to come together to share knowledge and talents, develop new skills, and exchange ideas. We are eager to present another excellent professional conference!
 

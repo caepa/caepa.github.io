@@ -5,8 +5,8 @@ author: Karen Carr, CAEPA President
 start_date: 2015-10-23
 end_date: 2015-10-24
 
-image_path:
-event_url:
+image_path: 
+event_url: 
 
 # venue:
 location: Westin Westminster

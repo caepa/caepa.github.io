@@ -5,8 +5,8 @@ author:
 start_date: 2013-10-18
 end_date: 2013-10-09
 
-image_path:
-event_url:
+image_path: 
+event_url: 
 
 # venue:
 location: The Antlers Hilton
@@ -20,5 +20,5 @@ website: http://antlers.com
 # offers:
 price1: 0
 price2: 0
-registration:
+registration: 
 ---

@@ -5,8 +5,8 @@ author: Jolene Goerend, CAEPA President
 start_date: 2010-10-22
 end_date: 2010-10-23
 
-image_path:
-event_url:
+image_path: 
+event_url: 
 
 # venue:
 location: Marriott Denver Tech Center
@@ -20,7 +20,7 @@ website: https://www.denvermarriotttechcenter.com
 # offers:
 price1: $195.00
 price2: $195.00
-registration:
+registration: 
 ---
 Welcome to the 2010 CAEPA Conference – The Power of Adult Learning! Each year colleagues from
 across the state take this opportunity to come together to share knowledge and talents, develop new skills, and exchange ideas. This year’s conference features an assorted collection of presentations representative of the diversity of students and programs in Colorado. We owe a debt of gratitude to our presenters, who have spent significant time and effort to share their expertise with us. We are also thankful for our vendors and exhibitors for bringing their materials and making donations to our programs and to this conference.

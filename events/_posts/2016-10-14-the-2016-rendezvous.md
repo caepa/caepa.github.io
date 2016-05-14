@@ -5,8 +5,8 @@ author: Anna Mae Lindsay, CAEPA President
 start_date: 2016-10-14
 end_date: 2016-10-15
 
-image_path:
-event_url:
+image_path: 
+event_url: 
 
 # venue:
 location: Westin Westminster
