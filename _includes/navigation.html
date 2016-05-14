@@ -1,12 +1,17 @@
-<footer class="row section grey lighten-3" role="button">
-  <div class="col s12">
-    {% if page.previous.url %}
-    <a rel="prev" class="btn-flat btn-large waves-effect left" href="{{page.previous.url}}">
-      <i class="material-icons left">chevron_left</i>Previous</a>
-    {% endif %}
-    {% if page.next.url %}
-    <a rel="next" class="btn-flat btn-large waves-effect right" href="{{page.next.url}}">
-      <i class="material-icons right">chevron_right</i>Next</a>
-    {% endif %}
+<nav class="{{ page.color }}">
+  <div class="nav-wrapper container">
+
+    <a class="brand-logo" style="font-weight:900;">{{ site.title }}{% if page.categories != null %}<span class="light">&ensp;&#124;&ensp;{{ page.categories }}</span>{% endif %}</a>
+
+    <a data-activates="menu" class="button-collapse"><i class="material-icons">menu</i></a>
+
+    <ul class="right hide-on-med-and-down">{% for category in site.categories %}
+      <li><a href="{{ '/' | append: category[0] | prepend: site.baseurl | prepend: site.url }}" class="waves-effect">{{ category[0] | replace: '_',' ' | upcase }}<span class="badge">{{ category[1].size }}</span></a></li>{% endfor %}
+    </ul>
+
+    <ul id="menu" class="side-nav">{% for category in site.categories %}
+      <li><a href="{{ '/' | append: category[0] | prepend: site.baseurl | prepend: site.url }}" class="waves-effect"><i class="material-icons left">{{ category.icon }}</i>{{ category[0] | replace: '_',' ' | upcase }}<span class="badge">{{ category[1].size }}</span></a></li>{% endfor %}          
+    </ul>
+
   </div>
-</footer>
+</nav>

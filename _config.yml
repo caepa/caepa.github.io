@@ -48,6 +48,7 @@ collections:
   
 include: ["_pages"]
 future: true
+timezone: America/Denver
 
 defaults:
   - scope:

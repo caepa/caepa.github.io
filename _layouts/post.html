@@ -1,16 +1,32 @@
 ---
 layout: default
 ---
-<article id="tab0" class="post section container">
-  <header>{% for tag in page.tags %}
-    <span class="chip">{{ tag }}</span>{% endfor %}
-  </header>
+<article class="post">
 
-  <section class="post-content flow-text">
-    {{ content }}
-  </section>
+  {% include header.html %}
 
-  {% include navigation.html %}
+  <main class="post-content section container flow-text">
+    <div id="tab0">
+      
+      {% for tag in page.tags %}<span class="chip">{{ tag }}</span>{% endfor %}
+
+      {{ content }}
+      
+    </div>
+  </main>
+
+  <footer class="row section container grey lighten-3">
+    <div class="col s12" role="button">
+      {% if page.previous.url %}
+      <a rel="prev" class="btn-flat btn-large waves-effect left" href="{{page.previous.url}}">
+        <i class="material-icons left">chevron_left</i>Previous</a>
+      {% endif %}
+      {% if page.next.url %}
+      <a rel="next" class="btn-flat btn-large waves-effect right" href="{{page.next.url}}">
+        <i class="material-icons right">chevron_right</i>Next</a>
+      {% endif %}
+    </div>
+  </footer>
 
 </article>
 
@@ -18,8 +34,8 @@ layout: default
   <header>
     <h2 class="hide grey-text text-darken-1">{{ page.tabs[1] }}</h2>
   </header>
-  
+
   {% capture categories %}{{ page.categories }}{% endcapture%}
   {% include post_card.html category = categories %}
-  
+
 </aside>
