@@ -1,5 +1,6 @@
 ---
 title: Presentation Proposal
+tags: [Events, Presenters]
 ---
 The Colorado Adult Education Professional Association, CAEPA, invites you to submit a proposal for the 2016 Rendezvous Conference. This year's theme is yet to be determined...
 

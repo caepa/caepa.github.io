@@ -1,5 +1,6 @@
 ---
 title: The Ann Deditz Scholarship
+tags: [Events, Scholarship]
 ---
 The winner of the Ann Deditz scholarship will receive paid registration to the 2016 Rendezvous Conference on October 14–15, 2016. Conference registration includes a year’s membership in CAEPA, breakfast and lunch both conference days and parking during the event.Transportation and hotel costs are not included in the scholarship.
 
