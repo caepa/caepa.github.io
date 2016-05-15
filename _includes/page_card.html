@@ -1,5 +1,6 @@
 <!-- card circle displays page icon -->
-
+{% for page in site.[include.items] %}
+{% if page.tags contains include.tab %}
 
 {% assign currentdate = page.date | date: "%Y" %}
 {% if currentdate != date %}
@@ -25,3 +26,6 @@
     </div>
   </div>
 </div>
+
+{% endif %}
+{% endfor %}

@@ -61,18 +61,26 @@ defaults:
   - scope:
       path: "events"
     values:
-      color: indigo darken-4
-      color_accent: indigo darken-3
+      color: red darken-4
+      color_accent: red darken-3
       icon: date_range
   - scope:
       path: "fact_sheets"
     values:
-      color: pink  darken-4
-      color_accent: pink  darken-3
+      color: pink darken-4
+      color_accent: pink darken-3
       icon: info
   - scope:
       path: "forms"
     values:
+      color: purple darken-4
+      color_accent: purple darken-3
+      icon: description
+  - scope:
+      type: "forms"
+    values:
+      color: purple darken-4
+      color_accent: purple darken-3
       icon: description
   - scope:
       path: "news"
