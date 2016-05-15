@@ -44,7 +44,7 @@ collections:
   fact_sheets:
     output: false
   forms:
-    output: false
+    output: true
   
 include: ["_pages"]
 future: true
@@ -69,25 +69,20 @@ defaults:
     values:
       color: indigo darken-4
       color_accent: indigo darken-3
-      text_color: indigo-text text-darken-4
-  - scope:
-      path: "events/details"
-    values:
-      color: green darken-4
-      color_accent: deep-purple darken-3
-      tabs: [Details, Keynotes, Sessions, Vendors, Awards]
+      icon: date_range
   - scope:
       path: "fact_sheets"
     values:
-      color: amber darken-4
-      color_accent: amber darken-3
+      color: pink  darken-4
+      color_accent: pink  darken-3
+      icon: info
   - scope:
       path: "forms"
     values:
-      color: brown darken-4
-      color_accent: brown darken-3
+      icon: description
   - scope:
       path: "news"
     values:
-      color: blue darken-4
-      color_accent:  blue darken-3
+      color: deep-purple darken-4
+      color_accent:  deep-purple darken-3
+      icon: chrome_reader_mode
