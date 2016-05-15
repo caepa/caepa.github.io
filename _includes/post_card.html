@@ -3,7 +3,11 @@
 
 {% assign currentdate = post.date | date: "%Y" %}
 {% if currentdate != date %}
-<h3 class="grey-text text-darken-3 light">{{ currentdate }}</h3>
+<div class="collection with-header">
+  <div class="collection-item">
+    <h3 class="grey-text text-darken-3 light truncate">{{ currentdate }}<span class="thin"> | {{ page.tabs[1] }}</span></h3>    
+  </div>
+</div>
 {% assign date = currentdate %}
 {% endif %}
 
