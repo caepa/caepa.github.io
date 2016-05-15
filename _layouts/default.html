@@ -12,9 +12,9 @@
       {% include navigation.html %}
     </div>
 
-    <div class="site-wrapper">
+    <main class="site-wrapper">
       {{ content }}
-    </div>
+    </main>
 
     <div class="fixed-action-btn hide-on-med-and-up" role="button">
       <a href="#share" class="modal-trigger btn-floating btn-large waves-effect waves-light tooltipped" data-position="left" data-tooltip="Share this page...">
@@ -22,7 +22,7 @@
       </a>
     </div>
 
-    {% unless page.layout == "iframe" %}{% include footer.html %}{% endunless %}
+    {% unless page.layout == "forms_frame" %}{% include footer.html %}{% endunless %}
 
     {% include share.html %}
 

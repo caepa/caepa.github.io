@@ -78,3 +78,47 @@
 
   {% endfor %}
 </section>
+
+<!-- post categories with count -->
+<section class="section container">
+  <h2 class="grey-text text-darken-1">Page Categories<span class="thin"> & Article Count</span></h2>
+  <div class="collection">
+    {% for category in site.categories %}
+    <a href="{{ category[0] }}" class="collection-item">
+      <i class="material-icons left">{{ category.icon }}</i>
+      {{ category[0] | replace: '_',' ' | capitalize }}
+      <span class="badge">{{ category[1].size }}</span>
+    </a>
+    {% endfor %} 
+  </div>
+</section>
+
+<!-- pages only with count for collection -->
+<section class="section container">
+  <h2 class="grey-text text-darken-1">Pages<span class="thin"> & Collection Count</span></h2>
+  <div class="collection">
+    {% for page in site.pages %}{% if page.title != null %}
+    <a href="{{ page.url }}" class="collection-item">
+      <i class="material-icons left">{{ page.icon }}</i>
+      <span>{{ page.title }}</span>
+      <span class="badge">
+        {% if page.title == "Forms Collection" %}{{ site.forms | size }}{% endif %}
+      </span>
+    </a>
+    {% endif %}{% endfor %} 
+  </div>
+</section>
+
+<!-- collections only -->
+<section class="section container">
+  <h2 class="grey-text text-darken-1">Collections<span class="thin"> & Loop Count</span></h2>
+  <div class="collection">
+    {% for collection in site.collections %}
+    <a href="{{ collection.url }}" class="collection-item">
+      <i class="material-icons left">{{ collection.icon }}</i>
+      <span>{{ collection.label }}</span>
+      <span class="badge">{{ forloop.length }}</span>
+    </a>
+    {% endfor %} 
+  </div>
+</section>

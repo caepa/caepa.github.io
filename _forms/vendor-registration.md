@@ -1,5 +1,7 @@
 ---
+layout: forms_frame
 title: Vendor Registration
+
 tags: [Events, Vendors]
 ---
 Thank you for your interest in becoming a vendor. If you wish to apply for this status, please fill out our Vendor Registration form. We will then contact you with additional information and payment instructions.

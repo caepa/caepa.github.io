@@ -1,5 +1,7 @@
 ---
+layout: forms_frame
 title: Awards Nomination
+
 tags: [Events, Awards]
 ---
 The Colorado Adult Education Professional Association honors outstanding achievement, innovation, and contribution to the field annually at its Rendezvous Conference. Nominations are solicited from the field-at-large.

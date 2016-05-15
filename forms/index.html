@@ -1,16 +1,31 @@
 ---
 layout: page
 title: Forms
-icon:
 tabs: [Events, General]
 ---
 <article id="tab0">
-  <h2 class="hide grey-text text-darken-1">{{ page.tabs[0] }}</h2>
-  {% capture url %}{{ page.url | remove: '/' }}{% endcapture%}
-  {% include post_card.html category = url %}
+  {% for page in site.forms %}
+  {% for tag in page.tags %}
+  {% if tag contains "Events" %}
+    
+  {% include page_card.html items="site.forms" tabs="Events" %}
+
+
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
+
 </article>
 
 <article id="tab1">
-  <h2 class="hide grey-text text-darken-1">{{ page.tabs[1] }}</h2>
-  <p class="flow-text">Coming Soon...</p>
+  {% for page in site.forms %}
+  {% for tag in page.tags %}
+  {% if tag contains "General" %}
+    
+  {% include page_card.html items="site.forms" tabs="General" %}
+
+
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
 </article>

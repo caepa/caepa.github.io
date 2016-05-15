@@ -1,5 +1,7 @@
 ---
+layout: forms_frame
 title: Volunteer Intrests
+
 tags: [General, Survey]
 ---
 Thank you for your interest in volunteering with us! By volunteering with the Colorado Adult Education Professional Association (CAEPA) you have the opportunity to help the adult learners with whom you work even more. There are a variety of opportunities and levels of commitment.

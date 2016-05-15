@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<style>
+  iframe {
+    position:fixed;
+    width:100%;
+    height:100%;
+    height: calc(100% - 56px);
+    padding-left: 240px;
+  }
+  @media only screen and (min-width: 601px) {
+    iframe {
+      height: calc(100% - 64px);
+    }
+  }
+  @media only screen and (max-width : 992px) {
+    iframe {
+      padding-left: 0;
+    }
+  }
+</style>
+<div id="slide-out" class="side-nav fixed">
+  {% include forms_nav.html %}
+</div>
+
+{% for type in site.data.forms %}
+{% for form in type.forms %}
+{% if page.url contains form.title %}
+<iframe name="frame" src="{{ form.google_url }}?embedded=true" frameborder="0" marginheight="0" marginwidth="0">
+  <a href="{{ form.google_url }}">External Link</a>
+</iframe>
+{% endif %}
+{% endfor %}
+{% endfor %}

@@ -37,15 +37,9 @@ social:
 markdown: kramdown
 
 collections:
-  history:
-    output: false
-  events:
-    output: false
-  fact_sheets:
-    output: false
   forms:
     output: true
-  
+
 include: ["_pages"]
 future: true
 timezone: America/Denver

@@ -1,11 +1,11 @@
 ---
 layout: default
 ---
-<article class="post">
+<section class="post">
 
   {% include header.html %}
 
-  <main class="post-content section container">
+  <article class="post-content section container">
     <div id="tab0" class="flow-text" style="text-align:justify;">
       
       {% for tag in page.tags %}<span class="chip">{{ tag }}</span>{% endfor %}
@@ -13,7 +13,7 @@ layout: default
       {{ content }}
       
     </div>
-  </main>
+  </article>
 
   <footer class="row section container grey lighten-3">
     <div class="col s12" role="button">
@@ -28,7 +28,7 @@ layout: default
     </div>
   </footer>
 
-</article>
+</section>
 
 <aside id="tab1" class="section container">
 

@@ -1,5 +1,7 @@
 ---
+layout: forms_frame
 title: Board of Directors Application
+
 tags: [General, Application]
 ---
 Board Terms are three-years with a limit of two-terms.
