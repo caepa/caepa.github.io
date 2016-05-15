@@ -16,7 +16,7 @@
       </div>
       <div class="col s12 m10">
         <h3 class="light">{{ page.title }}</h3>
-        <ul class="flow-text" style="line-height:110%;">
+        <ul class="flow-text" style="line-height:1.5">
           <li>{{ event.start_date | date: "%A, %B %-d, %Y" }}</li>
           {% if event.end_date != event.start_date %}<li>{{ event.end_date | date: "%A, %B %-d, %Y" }}</li>{% endif %}
         </ul>
@@ -33,7 +33,7 @@
       </div>
       <div class="col s12 m10">
         <h3 class="light">{{ event.location }}</h3>
-        <ul class="flow-text" style="line-height:110%;">
+        <ul class="flow-text" style="line-height:1.5">
           <li>{{ event.address }}</li>
           <li>{{ event.city_state_zipcode }}</li>
           <li>{{ event.phone }}</li>
@@ -52,7 +52,7 @@
       </div>
       <div class="col s12 m10">
         <h3 class="light">Reservations</h3>
-        <ul class="flow-text" style="line-height:110%;">
+        <ul class="flow-text" style="line-height:1.5">
           <li>{{ event.reservations }}</li>
         </ul>
       </div>
@@ -68,7 +68,7 @@
       </div>
       <div class="col s12 m10">
         <h3 class="light">Registration</h3>
-        <ul class="flow-text" style="line-height:110%;">
+        <ul class="flow-text" style="line-height:1.5">
           <li>Earlybird Registration Ends: {{ event.end_offer | date: "%A, %B %-d, %Y" }}</li>
           <li>Friday, October 14, 2016</li>
         </ul>
@@ -109,7 +109,7 @@
       </div>
       <div class="col s12 m10">
         <h3 class="light">Payment</h3>
-        <ul class="flow-text" style="line-height:110%;">
+        <ul class="flow-text" style="line-height:1.5">
           <li>Mail-in: {{ event.registration_mail }}</li>
           <li>Online: <a href="{{ event.registration }}">{{ event.registration }}</a></li>
         </ul>
