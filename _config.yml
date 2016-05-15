@@ -69,6 +69,7 @@ defaults:
     values:
       color: indigo darken-4
       color_accent: indigo darken-3
+      text_color: indigo-text text-darken-4
   - scope:
       path: "events/details"
     values:

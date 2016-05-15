@@ -4,19 +4,19 @@
   {% for event in site.data.rendezvous %}
   {% if event.year == year %}
   <li class="collection-header">
-    <h2 class="{{ page.color_accent }}-text light">The {{ year }} Rendezvous</h2>
+    <h2 class="{{ page.text_color }} light">The {{ year }} Rendezvous</h2>
   </li>
   <!-- event -->
-  <li class="collection-item" style="line-height:110%rem;">
+  <li class="collection-item">
     <div class="row">
       <div class="col s12 m2 center-align " style="margin:1.46rem 0 1.168rem 0;">
         <div class="container {{ page.color_accent }} circle" style="height:76px; width:76px; padding-top:9px;">
           <i class="medium material-icons white-text" style="display:block; line-height:4rem; font-size:3rem;">event</i>
         </div>
       </div>
-      <div class="col s12m10">
+      <div class="col s12 m10">
         <h3 class="light">{{ page.title }}</h3>
-        <ul class="flow-text">
+        <ul class="flow-text" style="line-height:110%;">
           <li>{{ event.start_date | date: "%A, %B %-d, %Y" }}</li>
           {% if event.end_date != event.start_date %}<li>{{ event.end_date | date: "%A, %B %-d, %Y" }}</li>{% endif %}
         </ul>
@@ -24,16 +24,16 @@
     </div>
   </li>
   <!-- place -->
-  <li class="collection-item" style="line-height:110%rem;">
+  <li class="collection-item">
     <div class="row">
       <div class="col s12 m2 center-align " style="margin:1.46rem 0 1.168rem 0;">
         <div class="container {{ page.color_accent }} circle" style="height:76px; width:76px; padding-top:9px;">
           <i class="medium material-icons white-text" style="display:block; line-height:4rem; font-size:3rem;">place</i>
         </div>
       </div>
-      <div class="col s12m10">
+      <div class="col s12 m10">
         <h3 class="light">{{ event.location }}</h3>
-        <ul class="flow-text">
+        <ul class="flow-text" style="line-height:110%;">
           <li>{{ event.address }}</li>
           <li>{{ event.city_state_zipcode }}</li>
           <li>{{ event.phone }}</li>
@@ -43,32 +43,32 @@
     </div>
   </li>
   <!-- reservations -->
-  <li class="collection-item" style="line-height:110%rem;">
+  <li class="collection-item">
     <div class="row">
       <div class="col s12 m2 center-align " style="margin:1.46rem 0 1.168rem 0;">
         <div class="container {{ page.color_accent }} circle" style="height:76px; width:76px; padding-top:9px;">
           <i class="medium material-icons white-text" style="display:block; line-height:4rem; font-size:3rem;">hotel</i>
         </div>
       </div>
-      <div class="col s12m10">
+      <div class="col s12 m10">
         <h3 class="light">Reservations</h3>
-        <ul class="flow-text">
+        <ul class="flow-text" style="line-height:110%;">
           <li>{{ event.reservations }}</li>
         </ul>
       </div>
     </div>
   </li>
   <!-- registration -->
-  <li class="collection-item" style="line-height:110%rem;">
+  <li class="collection-item">
     <div class="row">
       <div class="col s12 m2 center-align " style="margin:1.46rem 0 1.168rem 0;">
         <div class="container {{ page.color_accent }} circle" style="height:76px; width:76px; padding-top:9px;">
           <i class="medium material-icons white-text" style="display:block; line-height:4rem; font-size:3rem;">loyalty</i>
         </div>
       </div>
-      <div class="col s12m10">
+      <div class="col s12 m10">
         <h3 class="light">Registration</h3>
-        <ul class="flow-text">
+        <ul class="flow-text" style="line-height:110%;">
           <li>Earlybird Registration Ends: {{ event.end_offer | date: "%A, %B %-d, %Y" }}</li>
           <li>Friday, October 14, 2016</li>
         </ul>
@@ -100,18 +100,18 @@
     </div>
   </li>
   <!-- payment -->
-  <li class="collection-item" style="line-height:110%rem;">
+  <li class="collection-item">
     <div class="row">
       <div class="col s12 m2 center-align " style="margin:1.46rem 0 1.168rem 0;">
         <div class="container {{ page.color_accent }} circle" style="height:76px; width:76px; padding-top:9px;">
           <i class="medium material-icons white-text" style="display:block; line-height:4rem; font-size:3rem;">payment</i>
         </div>
       </div>
-      <div class="col s12m10">
+      <div class="col s12 m10">
         <h3 class="light">Payment</h3>
-        <ul class="flow-text">
+        <ul class="flow-text" style="line-height:110%;">
           <li>Mail-in: {{ event.registration_mail }}</li>
-          <li>Online: <a href="{{ event.registration }}"></a>{{ event.registration }}</li>
+          <li>Online: <a href="{{ event.registration }}">{{ event.registration }}</a></li>
         </ul>
         {% capture current_date %}{{ site.time | date: "%Y" }}{% endcapture %}
         {% if current_date == year %}
