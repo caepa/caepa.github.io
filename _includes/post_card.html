@@ -3,7 +3,7 @@
 
 {% assign currentdate = post.date | date: "%Y" %}
 {% if currentdate != date %}
-<h3 class="grey-text text-darken-1">{{ currentdate }}</h3>
+<h3 class="grey-text text-darken-3 light">{{ currentdate }}</h3>
 {% assign date = currentdate %}
 {% endif %}
 
@@ -18,9 +18,9 @@
       </div>
     </div>
     <div class="col s12 m10">
-      <h4><a href="{{ post.url }}" class="card-title truncate">{{ post.title | strip_html | strip_newlines | replace: '_',' ' }}</a></h4>
+      <h4><a href="{{ post.url }}" class="truncate">{{ post.title | strip_html | strip_newlines | replace: '_',' ' }}</a></h4>
       <p class="flow-text" style="line-height:1.5; text-align:justify;">{{ post.content | strip_html | strip_newlines | truncatewords: 25 }}</p>
-      <strong><a href="{{ post.url }}" class="light">read more...</a></strong>
+      <strong><a href="{{ post.url }}">read more...</a></strong>
     </div>
   </div>
 </div>
