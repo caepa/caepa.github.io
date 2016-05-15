@@ -70,7 +70,7 @@ defaults:
       color: indigo darken-4
       color_accent: indigo darken-3
   - scope:
-      layout: "events_page"
+      path: "events/details"
     values:
       color: green darken-4
       color_accent: deep-purple darken-3
