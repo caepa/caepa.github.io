@@ -5,7 +5,7 @@
 {% if currentdate != date %}
 <div class="collection with-header">
   <div class="collection-item">
-    <h3 class="grey-text text-darken-3 light truncate">{{ currentdate }}<span class="thin"> | {{ page.tabs[1] }}</span></h3>    
+    <h3 class="grey-text text-darken-3 light truncate">{{ currentdate }}{% if page.categories != null %}<span class="thin"> | {{ page.categories | replace: '_',' ' | upcase }}</span>{% endif %}</h3>
   </div>
 </div>
 {% assign date = currentdate %}

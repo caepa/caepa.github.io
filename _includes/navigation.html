@@ -1,7 +1,7 @@
 <nav class="{{ page.color }}">
   <div class="nav-wrapper container">
 
-    <a class="brand-logo" style="font-weight:900;">{{ site.title }}{% if page.categories != null %}<span class="light">&ensp;&#124;&ensp;{{ page.categories }}</span>{% endif %}</a>
+    <a class="brand-logo" style="font-weight:900;">{{ site.title }}{% if page.categories != null %}<span class="light"> | {{ page.categories | replace: '_',' ' | upcase }}</span>{% endif %}</a>
 
     <a data-activates="menu" class="button-collapse"><i class="material-icons">menu</i></a>
 
