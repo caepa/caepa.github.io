@@ -1,6 +1,9 @@
 <!-- this loops through page.data... use same loop to retrieve google_url in layout: forms_frame -->
 <ul class="collapsible" data-collapsible="expandable">
-  <li class="center-align"><a class="brand-logo" style="font-weight:900; font-size:2.1rem;">{{ site.title }}</a>
+  <li class="center-align">
+    <a class="brand-logo" style="font-weight:900; font-size:2.1rem;">
+      <span>{{ site.title }}</span>
+    </a>
   </li>
   {% for type in site.data.forms %}
   <li class="active">
@@ -13,12 +16,17 @@
       <ul>
         {% for form in type.forms %}
         <li class="{% if page.url contains form.title %}active {% endif %}waves-effect waves-dark" style="width:100%;">
-          <a href="{{ form.title | prepend: "/forms/" }}.html">{{ form.title | replace: "-"," " | upcase }}</a>
+          {% for page in site.forms %}
+          {% if page.url contains form.title %}
+          <a href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">
+            <span>{{ page.title  | remove: "The" | titleize }}</span>
+          </a>
+          {% endif %}
+          {% endfor %}
         </li>
         {% endfor %}
       </ul>
     </div>
   </li>
   {% endfor %}
-  <li style="position: fixed; bottom: 64px;"><a href="#share" class="modal-trigger btn white-text waves-effect waves-light"><i class="material-icons right">share</i>Share this page</a></li>
 </ul>
