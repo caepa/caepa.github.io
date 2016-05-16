@@ -41,7 +41,7 @@
           <li class="{% if page.url contains menu.url %}active {% endif %}waves-effect waves-dark" style="width:100%;">
             <a href="{{ menu.url | prepend: site.baseurl | prepend: site.url }}">
               <span>{{ menu.title | titleize }}</span>
-              <span class="badge">
+              <span class="badge new">
                 {% if menu.title == "Forms" %}{{ site.forms | size }}
                 {% endif %}
                 {% for category in site.categories %}
