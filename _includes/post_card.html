@@ -14,7 +14,7 @@
 
 <article class="card-panel hoverable">
   <div class="row">
-    <time datetime="{{ page.date | date_to_xmlschema}}" class="col s12 m2 center-align " style="margin:1.46rem 0 1.168rem 0;">
+    <time datetime="{{ post.date | date_to_xmlschema}}" class="col s12 m2 center-align " style="margin:1.46rem 0 1.168rem 0;">
       <div class="container {{ page.color_accent }} circle" style="height:76px; width:76px; padding-top:9px;">
         <span class="month grey-text text-lighten-4" style="display:block; line-height:26px; font-siz:16px;">
           {{ post.date | date: "%b" }}</span>
