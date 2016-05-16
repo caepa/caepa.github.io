@@ -2,7 +2,7 @@
 {% if site.data[year]sessions != null %}
 <!-- card circle displays page icon -->
 <style>
-  span.badge.new:after {
+  span.badge.new.sessions:after {
     content: " sessions";
   }
 </style>
@@ -11,7 +11,7 @@
 <div class="collection with-header">
   <div class="collection-item">
     <h3 class="grey-text text-darken-3 light truncate">{{ strand.name }}
-      <span class="badge new">{{ strand.name | size }}</span>
+      <span class="badge new sessions">{{ strand.name | size }}</span>
     </h3>
   </div>
 </div>
