@@ -1,3 +1,8 @@
+<style>
+  span.badge.new:after {
+    content: " posts";
+  }
+</style>
 <nav class="{{ page.color }}">
   <div class="nav-wrapper row">
     <div class="col s12">
@@ -9,7 +14,7 @@
       <a href="" data-activates="forms-menu" class="button-collapse show-on-large right"><i class="material-icons">more_vert</i></a>
 
       <ul class="right hide-on-med-and-down">{% for category in site.categories %}
-        <li class="{% if page.url contains category[0] %}active {% endif %}waves-effect"><a href="{{ '/' | append: category[0] | prepend: site.baseurl | prepend: site.url }}"><span>{{ category[0] | replace: '_',' ' | upcase }}</span><span class="badge">{{ category[1].size }}</span></a></li>{% endfor %}
+        <li class="{% if page.url contains category[0] %}active {% endif %}waves-effect"><a href="{{ '/' | append: category[0] | prepend: site.baseurl | prepend: site.url }}"><span>{{ category[0] | replace: '_',' ' | upcase }}</span><span class="badge new">{{ category[1].size }}</span></a></li>{% endfor %}
       </ul>
 
     </div>
