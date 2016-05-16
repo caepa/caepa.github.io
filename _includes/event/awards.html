@@ -1,11 +1,19 @@
 {% assign year = include.year %}
+{% if site.data[year]awards != null %}
 
 {% for award in site.data[year]awards %}
+
 {{ award }}
+
 {% endfor %}
+{% endif %}
 
 <div class="divider"></div>
 
-{% for session in site.data[year]scholarship %}
-{{ session }}
+{% if site.data[year]scholarship != null %}
+{% for scholarship in site.data[year]scholarship %}
+
+{{ scholarship }}
+
 {% endfor %}
+{% endif %}

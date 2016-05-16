@@ -22,11 +22,17 @@
     <div class="row">
       <div class="col s12 m9 l7 no-padding">
         <ul class="tabs">
-          {% for tab in page.tabs %}
+          {% if layout.tabs != null %}{% for tab in layout.tabs %}
           <li class="tab waves-effect waves-light">
             <a href="#tab{{ forloop.index0 }}">{{ tab }}</a>
           </li>
           {% endfor %}
+          {% else %}{% for tab in page.tabs %}
+          <li class="tab waves-effect waves-light">
+            <a href="#tab{{ forloop.index0 }}">{{ tab }}</a>
+          </li>
+          {% endfor %}
+          {% endif %}
         </ul>
       </div>
       <div class="col m3 offset-l2 no-padding center-align hide-on-small-only" style="height:30.375px; margin-top:17.625px" role="button">

@@ -1,5 +1,9 @@
 {% assign year = include.year %}
+{% if site.data[year]vendors != null %}
 
-{% for session in site.data[year]vendors %}
-{{ session }}
+{% for vendor in site.data[year]vendors %}
+
+{{ vendor }}
+
 {% endfor %}
+{% endif %}

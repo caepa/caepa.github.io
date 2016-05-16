@@ -1,5 +1,34 @@
 {% assign year = include.year %}
+{% if site.data[year]sessions != null %}
+<!-- card circle displays page icon -->
 
-{% for session in site.data[year]sessions %}
-{{ session }}
+{% assign sorted_strand = site.data[year]sessions | group_by: "Conference-Strand" | sort: "name" %}
+{% for strand in sorted_strand %}
+<div class="collection with-header">
+  <div class="collection-item">
+    <h3 class="grey-text text-darken-3 light truncate">{{ strand.name }}
+      <span class="badge new">{{ strand.name | size }}</span>
+    </h3>
+  </div>
+</div>
+{% assign sorted_session = strand.items %}
+{% for session in sorted_session %}
+<div class="card-panel hoverable">
+  <div class="row">
+    <div class="col s12 m2 center-align " style="margin:1.46rem 0 1.168rem 0;">
+      <div class="container {{ page.color_accent }} circle" style="height:76px; width:76px; padding-top:9px;">
+        <i class="medium material-icons white-text" style="display:block; line-height:4rem; font-size:3rem;">filter_{{ session."Availabilty-Notes" | replace: "Session ","" }}</i>
+      </div>
+    </div>
+    <div class="col s12 m10">
+      <h4><a href="#{{ session.Name }}{{ forloop.index0 }}" class="truncate">{{ session."Presentation-Title" | strip_html | strip_newlines | replace: '_',' ' }}</a></h4>
+      <p class="flow-text" style="line-height:1.5; text-align:justify;">{{ session."Presentation-Abstract" | strip_html | strip_newlines | truncatewords: 25 }}</p>
+      <strong><a href="#{{ session.Name }}{{ forloop.index0 }}">read more...</a></strong>
+    </div>
+  </div>
+</div>
+
+
 {% endfor %}
+{% endfor %}
+{% endif %}
