@@ -7,7 +7,7 @@ tabs: [Upcoming, Past, History]
 <section id="tab0">
   <div class="collection with-header">
     <div class="collection-item">
-      <h2 class="grey-text text-darken-3 light truncate">{{ page.tabs[0] }} {{ page.title }}</h2>
+      <h2 class="light grey-text text-darken-1 truncate">{{ page.tabs[0] }} {{ page.title }}</h2>
     </div>
   </div>
   {% for post in site.categories.events reversed %}  
@@ -19,16 +19,11 @@ tabs: [Upcoming, Past, History]
   {% endfor %}
 </section>
 
-<section id="tab1"> 
-  {% for post in site.categories.events reversed %}  
-  {% if site.time > post.date %}
-  {% continue %}
+<section id="tab1">
 
   {% capture url %}{{ page.url | remove: '/' }}{% endcapture%}
   {% include post_card.html category = url %}
 
-  {% endif %}
-  {% endfor %}
 </section>
 
 <aside id="tab2">
