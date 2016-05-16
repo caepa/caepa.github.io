@@ -1,7 +1,11 @@
 {% assign year = include.year %}
 {% if site.data[year]sessions != null %}
 <!-- card circle displays page icon -->
-
+<style>
+span.badge.new:after {
+    content: " sessions";
+}
+</style>
 {% assign sorted_strand = site.data[year]sessions | group_by: "Conference-Strand" | sort: "name" %}
 {% for strand in sorted_strand %}
 <div class="collection with-header">
