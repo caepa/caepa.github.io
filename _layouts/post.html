@@ -1,38 +1,31 @@
 ---
 layout: default
 ---
-<section class="post">
+<article class="post">
 
   {% include header.html %}
 
-  <article class="post-content section container">
-    <div id="tab0" class="flow-text" style="text-align:justify;">
-      
+  <div id="tab0" class="post-content section container">
+    <div class="flow-text" style="text-align:justify;">
       {% for tag in page.tags %}<span class="chip">{{ tag }}</span>{% endfor %}
-
       {{ content }}
-      
     </div>
-  </article>
+    <footer class="row section container grey lighten-3">
+      <div class="col s12" role="button">
+        {% if page.previous.url %}
+        <a rel="prev" class="btn-flat btn-large waves-effect left" href="{{page.previous.url}}">
+          <i class="material-icons left">chevron_left</i>Previous</a>
+        {% endif %}
+        {% if page.next.url %}
+        <a rel="next" class="btn-flat btn-large waves-effect right" href="{{page.next.url}}">
+          <i class="material-icons right">chevron_right</i>Next</a>
+        {% endif %}
+      </div>
+    </footer>
+  </div>
+  <aside id="tab1" class="section container">
+    {% capture categories %}{{ page.categories }}{% endcapture%}
+    {% include post_card.html category = categories %}
+  </aside>
+</article>
 
-  <footer class="row section container grey lighten-3">
-    <div class="col s12" role="button">
-      {% if page.previous.url %}
-      <a rel="prev" class="btn-flat btn-large waves-effect left" href="{{page.previous.url}}">
-        <i class="material-icons left">chevron_left</i>Previous</a>
-      {% endif %}
-      {% if page.next.url %}
-      <a rel="next" class="btn-flat btn-large waves-effect right" href="{{page.next.url}}">
-        <i class="material-icons right">chevron_right</i>Next</a>
-      {% endif %}
-    </div>
-  </footer>
-
-</section>
-
-<aside id="tab1" class="section container">
-
-  {% capture categories %}{{ page.categories }}{% endcapture%}
-  {% include post_card.html category = categories %}
-
-</aside>

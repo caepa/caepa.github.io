@@ -8,15 +8,15 @@
     {% if jekyll.environment == 'production' %}{% include seo/google_tag_manager.html %}{% endif %}
     {% if jekyll.environment == 'production' %}{% include seo/facebook.html %}{% endif %}
 
-    <div class="navbar-fixed">
+    <header class="navbar-fixed">
       {% include navigation.html %}
-    </div>
+    </header>
 
     <main class="site-wrapper">
       {{ content }}
     </main>
 
-    <div class="fixed-action-btn{% unless page.layout == "forms_frame" %} hide-on-med-and-up{% endunless %}" role="button">
+    <div class="fixed-action-btn{% unless page.layout == 'forms_frame' %} hide-on-med-and-up{% endunless %}" role="button">
       <a href="#share" class="modal-trigger btn-floating btn-large waves-effect waves-light tooltipped" data-position="left" data-tooltip="Share this page...">
         <i class="material-icons right">share</i>
       </a>

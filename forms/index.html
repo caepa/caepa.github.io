@@ -13,7 +13,7 @@ tabs: [Events, General]
 {% capture tab5 %}{{ page.tabs[5] }}{% endcapture %}
 
 {% for tab in page.tabs %}
-<article id="tab{{ forloop.index0 }}">
+<section id="tab{{ forloop.index0 }}">
   {% if forloop.index0 == 0 %}
   {% include page_card.html items=url tab=tab0 %}
   
@@ -33,5 +33,5 @@ tabs: [Events, General]
   {% include page_card.html items=url tab=tab5 %}
   
   {% endif %}
-</article>
+</section>
 {% endfor %}

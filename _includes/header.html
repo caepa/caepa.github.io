@@ -5,7 +5,7 @@
         <div class="col s12 m9 no-padding">
           <h1 class="post-title thin">{{ page.title | replace: '_',' ' | titleize }}</h1>
           <p class="post-meta flow-text">
-            {% if page.date %}<time>{{ page.date | date: "%B %-d, %Y" }}</time>{% endif %}
+            {% if page.date %}<time datetime="{{ page.date | date_to_xmlschema}}">{{ page.date | date: "%B %-d, %Y" }}</time>{% endif %}
             {% if page.author %} • <span>{{ page.author }}</span>{% endif %}
           </p>
         </div>

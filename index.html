@@ -1,29 +1,27 @@
 ---
 layout: default
 ---
-<main>
-  <header class="parallax-container valign-wrapper">
-    <div class="parallax">
-      <img src="http://www.caepa.org/img/sunset.jpg" alt="background">
-    </div>
-    <div id="circle" class="circle"></div>
-    <div id="logo" class="center-align">
-      <img src="{{ '/img/icon-8x.png' | prepend: site.baseurl | prepend: site.url }}" alt="logo" />
-    </div>
-    <div id="name" class="container center-align">
-      <h1 id="title" class="grey-text text-lighten-3">CAEPA</h1>
-      <span id="subtitle" class="flow-text light grey-text text-lighten-4">Colorado Adult Education Professional Association</span>
-    </div>
-  </header>
+<header class="parallax-container valign-wrapper">
+  <div class="parallax">
+    <img src="http://www.caepa.org/img/sunset.jpg" alt="background">
+  </div>
+  <div id="circle" class="circle"></div>
+  <div id="logo" class="center-align">
+    <img src="{{ '/img/icon-8x.png' | prepend: site.baseurl | prepend: site.url }}" alt="logo" />
+  </div>
+  <div id="name" class="container center-align">
+    <h1 id="title" class="grey-text text-lighten-3">CAEPA</h1>
+    <span id="subtitle" class="flow-text light grey-text text-lighten-4">Colorado Adult Education Professional Association</span>
+  </div>
+</header>
 
-  {% include nav.html %}
+{% include nav.html %}
 
-  <section class="section container">
-    <h2 class="grey-text text-darken-1">Upcoming<span class="thin"> | Events</span></h2>
-    {% for post in site.categories.events reversed %}  
-    {% if post.date > site.time %}
-    {% include event_card.html %}
-    {% endif %}
-    {% endfor %}
-  </section>
-</main>
+<section class="section container">
+  <h2 class="grey-text text-darken-1">Upcoming<span class="thin"> | Events</span></h2>
+  {% for post in site.categories.events reversed %}  
+  {% if post.date > site.time %}
+  {% include event_card.html %}
+  {% endif %}
+  {% endfor %}
+</section>
