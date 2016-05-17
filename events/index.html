@@ -5,18 +5,7 @@ title: Events
 tabs: [Upcoming, Past, History]
 ---
 <section id="tab0">
-  <div class="collection with-header">
-    <div class="collection-item">
-      <h2 class="light grey-text text-darken-1 truncate">{{ page.tabs[0] }} {{ page.title }}</h2>
-    </div>
-  </div>
-  {% for post in site.categories.events reversed %}  
-  {% if post.date > site.time %}
-
-  {% include event_card.html %}
-
-  {% endif %}
-  {% endfor %}
+  {% include upcoming_events.html %}  
 </section>
 
 <section id="tab1">

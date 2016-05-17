@@ -1,3 +1,10 @@
+<div class="collection with-header">
+  <div class="collection-item">
+    <h2 class="light grey-text text-darken-1 truncate">{{ "Upcoming Events" | titleize }}</h2>
+  </div>
+</div>
+{% for post in site.categories.events reversed %}
+{% if post.date > site.time %}
 <article class="section row">
   <div class="col s12 m5">
     <div class="card">
@@ -49,3 +56,6 @@
 </article>
 
 <div class="divider"></div>
+
+{% endif %}
+{% endfor %}

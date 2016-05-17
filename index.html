@@ -18,16 +18,7 @@ layout: default
 
   {% include nav.html %}
 
-  <article class="section container">
-  <div class="collection with-header">
-    <div class="collection-item">
-    <h2 class="light grey-text text-darken-1 truncate">Upcoming Events</h2>
-    </div>
-  </div>
-    {% for post in site.categories.events reversed %}  
-    {% if post.date > site.time %}
-    {% include event_card.html %}
-    {% endif %}
-    {% endfor %}
-  </article>
+  <section class="section container">
+    {% include upcoming_events.html %}
+  </section>
 </section>

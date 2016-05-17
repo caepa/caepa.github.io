@@ -1,11 +1,12 @@
+<div class="collection with-header">
+  <div class="collection-item">
+    <h2 class="light grey-text text-darken-1 truncate">{{ "Sessions" }}</h2>
+  </div>
+</div>
 {% assign year = include.year %}
 {% if site.data[year]sessions != null %}
+
 <!-- card circle displays page icon -->
-<style>
-  span.badge.new.sessions:after {
-    content: " sessions";
-  }
-</style>
 {% assign sorted_strand = site.data[year]sessions | group_by: "Conference-Strand" | sort: "name" %}
 {% for strand in sorted_strand %}
 <div class="collection with-header">
