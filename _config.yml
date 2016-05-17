@@ -85,7 +85,11 @@ defaults:
   - scope:
       path: "news"
     values:
-      permalink: /:categories/:year/:title.html
       color: deep-purple darken-4
       color_accent:  deep-purple darken-3
       icon: chrome_reader_mode
+  - scope:
+      path: "news"
+      type: "posts"
+    values:
+      permalink: /:categories/:year/:title.html
