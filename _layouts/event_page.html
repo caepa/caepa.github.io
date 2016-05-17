@@ -16,25 +16,26 @@ tabs: [Details, Keynotes, Sessions, Vendors, Awards]
 
 {% capture y %}{{ page.year }}{% endcapture%}
 
-<section id="tab0">
+{% for tab in page.tabs %}
+<section id="tab{{ forloop.index0 }}">
+  {% if forloop.index0 == 0 %}
   {% include event/details.html year = y %}
-</section>
 
-<section id="tab1">
-{% include event/keynotes.html year = y %}
-</section>
+  {% elsif forloop.index0 == 1 %}
+  {% include event/keynotes.html year = y %}
 
-<section id="tab2">
-{% include event/sessions.html year = y %}
-</section>
+  {% elsif forloop.index0 == 2 %}
+  {% include event/sessions.html year = y %}
 
-<section id="tab3">
-{% include event/vendors.html year = y %}
-</section>
+  {% elsif forloop.index0 == 3 %}
+  {% include event/vendors.html year = y %}
 
-<section id="tab4">
-{% include event/awards.html year = y %}
+  {% elsif forloop.index0 == 4 %}
+  {% include event/awards.html year = y %}
+
+  {% endif %}
 </section>
+{% endfor %}
 
 <footer class="row section container grey lighten-3">
   <div class="col s12" role="button">
