@@ -1,0 +1,8 @@
+---
+tags: [Newsletter, Biography]
+---
+Sylvie Ingabire is a student at Cargill/Morgan Community College Workplace Education in Fort Morgan, Colorado. She is currently studying in the Learning Center and working to complete her high school equivalency exams. She only has one test left social studies. Sylvie is a refugee from Democratic Republic of Congo, Africa. She came to the United States in December 2010 and started working for Cargill Meat Solutions in January 2011. Understanding the importance of education, Sylvie registered for Workplace Education classes within three days of her hire date.
+
+Sylvie has three brothers who currently reside and work in Denver, CO. Her brothers would like her to move to Denver so that they could all be together as a family. Sylvie has told them, “I want to stay in Fort Morgan and keep working at Cargill because I can go to school there and work on my GED. Since I get to go to school after work, I feel that my job is not so hard and I am moving forward.” Workplace Education is a benefit to Cargill employees and their families. They can attend classes onsite, either before or after their shift. Workplace Education offers three levels of ESL, reading, and high school equivalency instruction. Some companies might not want to have workplace education available to their employees, for fear of them leaving the company when they become educated. Cargill believes that education will improve their employees and make them more valuable.
+
+Obviously, employees like Sylvie understand the power of education, too, and are willing to sacrifice living with family in order to achieve it.

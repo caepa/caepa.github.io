@@ -2,7 +2,7 @@
 author: Adult Education Initiatives
 image_path: /img/logos/cde_logo.png
 embed_id: vUA1jZVZYBw
-tags: #TechTipTuesday
+tags: [#TechTipTuesday, CDE]
 ---
 ## [Thinglink](http://www.thinglink.com/)
 

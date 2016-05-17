@@ -1,0 +1,6 @@
+---
+tags: [Newsletter, Event]
+---
+In order to raise awareness about Adult Education, several local residents along with their family and friends volunteered or ran in the Colfax Marathon. They all ran in support of CAEPA (Colorado Adult Education Professional Association) which is dedicated to helping adult learners improve their lives and fulfill their dreams. The Colfax Marathon is touted as Denver’s ultimate urban tour and is also renowned as one of the country’s largest Charity Partners Programs. This year marked the first year that CAEPA members participated with the Colfax Marathon’s Da Vita Charity Partners Program.
+
+CAEPA’s main purpose in participating in the marathon was to make sure people know about the need for programs that can help adult learners learn how to speak English, learn to read, or earn their high school equivalency certificates. Volunteers at the CAEPA booth reported that several people stopped to ask questions about adult education and showed interest in volunteering at local adult education learning centers. Join us in 2015.
