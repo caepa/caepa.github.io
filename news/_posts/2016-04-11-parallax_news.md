@@ -2,7 +2,7 @@
 author: Adult Education Initiatives
 image_path: /img/logos/cde_logo.png
 embed_id: YPD5f9llGds
-tags: [#TechTipTuesday, CDE]
+tags: [Tech Tip Tuesday, CDE]
 ---
 This tool allows you to see current news topics through the lens of three different viewpoints.  This is different than similar news services because the perspective articles are selected by real people (instead of roboservices). The articles should give you valuable insights into the different viewpoints on a particular topic!
 

@@ -2,7 +2,7 @@
 author: Adult Education Initiatives
 image_path: /img/logos/cde_logo.png
 embed_id: M4hNhuWr6Cs
-tags: [#TechTipTuesday, CDE]
+tags: [Tech Tip Tuesday, CDE]
 ---
 I am going to show you a gamified “research” project using a wooden box with multiple padlocks. It is called Breakout EDU. In the video, you will see a great way to add elements of challenge, competitiveness, fun, and rewards to a traditional way of doing research. More information about the box, games, and an educational community that develops games can be found by visiting [breakoutedu.com](http://www.breakoutedu.com/).
 

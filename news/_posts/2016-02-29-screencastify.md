@@ -2,7 +2,7 @@
 author: Adult Education Initiatives
 image_path: /img/logos/cde_logo.png
 embed_id: m9btbV6Kamk
-tags: [#TechTipTuesday, CDE]
+tags: [Tech Tip Tuesday, CDE]
 ---
 This tool will allow you to create videos/tutorials of work you are doing on your computer.
 
