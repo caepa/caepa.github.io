@@ -1,12 +1,10 @@
 <!-- page naviation -->
 {% assign sorted_pages = site.pages | sort: "title" %}
-<section class="section container">
-  <div class="row center-align">{% for page in sorted_pages %}{% if page.title != null and page.title != "Event History" %}
-    <div class="col s3 no-padding">
-      <a href="{{ page.url }}" class="btn-floating {{ page.color_accent }}" style="height:76px; width:76px; padding-top:9px;">
-        <i class="medium material-icons white-text" style="line-height:4rem; font-size:3rem;">{{ page.icon }}</i>
-      </a>
-      <h5 class="grey-text text-darken-1">{{ page.title }}</h5>
-    </div>{% endif %}{% endfor %}
-  </div>
-</section>
+<div class="row center-align">{% for page in sorted_pages %}{% if page.title != null and page.title != "Event History" %}
+  <div class="col s3 no-padding">
+    <a href="{{ page.url }}" class="btn-floating {{ page.color_accent }}" style="height:76px; width:76px; padding-top:9px;">
+      <i class="medium material-icons white-text" style="line-height:4rem; font-size:3rem;">{{ page.icon }}</i>
+    </a>
+    <h5 class="grey-text text-darken-1">{{ page.title }}</h5>
+  </div>{% endif %}{% endfor %}
+</div>
