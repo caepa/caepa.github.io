@@ -19,7 +19,7 @@ Adult education programs serve individuals, 17 years of age and older, who are i
 **Cost to Colorado:** More than $200 billion over the lifetime of current non-graduates
 
 -----
-  
+
 **Almost 300,000 adult immigrants have insufficient English skills for meaningful integration** [^6]
 
   * 34% of Colorado's children in non-English speaking immigrant families live in poverty and 11% suffer extreme poverty [^7]
@@ -55,8 +55,19 @@ Adult education programs serve individuals, 17 years of age and older, who are i
   * Colorado does not set aside any state dollars for Adult Education (47 other states do!), leaving programs with only limited federal funding to provide adequate, quality services (federal funding comes from the Workforce Investment Act [WIA], Title II)
   * Programs receiving federal Adult Education and literacy dollars must independently match 40% of their grant with private sources and in-kind donations
   {: .browser-default }
+
+### Closing the wage gap between current wages and self-sufficiency requires raising incomes by enhancing skills and improving access to jobs that pay self-sufficiency wages and have career potential.
+
+![The Self-Sufficiency Standard For Colorado 2011](img/The-Self-Sufficiency-Standard-For-Colorado.png)[^17]
+{: .responsive-img }
+
+Adult Education Goals:
   
-![The Self-Sufficiency Standard For Colorado 2011]()
+  * Expand educational offerings and recapture dropout population
+  * Align with workforce and increase employability
+  * Promote integration and parent engagement
+  * Support self-sufficiency through health and financial literacy programs
+  {: .browser-default }
 
 ### Adult Education is a good investment in Colorado
 
@@ -73,7 +84,7 @@ Social benefit to Colorado: [^20]
   * Increased charitable giving
   * Increased quality of civic life
   {: .browser-default }
-  
+
 ### Adult Education programs are cost effective
 
   * 14,298 adults obtained education and training in 2010 with $5.2 million in grant funds from the U.S. Department of Education's Office of Adult and Vocational Education (WIA, Title II) – a yearly average cost of only $364 per student It costs Colorado 80x more to incarcerate than to educate an adult!
