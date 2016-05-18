@@ -20,7 +20,7 @@
       edge: 'left',
       closeOnClick: false
     });
-    $('.button-sessions').sideNav({
+    $('.event-info').sideNav({
       menuWidth: 300,
       edge: 'right',
       closeOnClick: false
