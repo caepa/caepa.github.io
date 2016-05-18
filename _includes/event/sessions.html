@@ -26,12 +26,17 @@
       </div>
     </div>
     <div class="col s12 m10">
-      <h4><a href="#{{ session.Name }}{{ forloop.index0 }}" class="truncate">{{ session."Presentation-Title" | strip_html | strip_newlines | replace: '_',' ' }}</a></h4>
+      <h4><a href="" data-activates="#{{ session.Name }}{{ forloop.index0 }}" class="button-sessions truncate">{{ session."Presentation-Title" | strip_html | strip_newlines | replace: '_',' ' }}</a></h4>
       <p class="flow-text" style="line-height:1.5; text-align:justify;">{{ session."Presentation-Abstract" | strip_html | strip_newlines | truncatewords: 25 }}</p>
-      <strong><a href="#{{ session.Name }}{{ forloop.index0 }}">read more...</a></strong>
+      <strong><a href="" data-activates="#{{ session.Name }}{{ forloop.index0 }}" class="button-sessions">read more...</a></strong>
     </div>
   </div>
 </div>
+
+<ul id="{{ session.Name }}{{ forloop.index0 }}" class="side-nav grey darken-3 white-text">
+  <li><a href="#!">First Sidebar Link</a></li>
+  <li><a href="#!">Second Sidebar Link</a></li>
+</ul>
 
 
 {% endfor %}
