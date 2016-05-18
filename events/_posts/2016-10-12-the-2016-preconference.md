@@ -1,7 +1,7 @@
 ---
 title: Preconference
 start_date: 2016-10-12
-end_date: 2016-10-12
+end_date: 
 
 image_path: /img/logos/cde_logo-400px.png
 event_url: 
