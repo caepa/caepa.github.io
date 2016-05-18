@@ -26,9 +26,9 @@
       </div>
     </div>
     <div class="col s12 m10">
-      <h4><a href="" data-activates="#{{ session.Name }}{{ forloop.index0 }}" class="button-sessions truncate">{{ session."Presentation-Title" | strip_html | strip_newlines | replace: '_',' ' }}</a></h4>
+      <h4><a href="" data-activates="{{ session.Name }}{{ forloop.index0 }}" class="button-sessions truncate">{{ session."Presentation-Title" | strip_html | strip_newlines | replace: '_',' ' }}</a></h4>
       <p class="flow-text" style="line-height:1.5; text-align:justify;">{{ session."Presentation-Abstract" | strip_html | strip_newlines | truncatewords: 25 }}</p>
-      <strong><a href="" data-activates="#{{ session.Name }}{{ forloop.index0 }}" class="button-sessions">read more...</a></strong>
+      <strong><a href="" data-activates="{{ session.Name }}{{ forloop.index0 }}" class="button-sessions">read more...</a></strong>
     </div>
   </div>
 </div>
