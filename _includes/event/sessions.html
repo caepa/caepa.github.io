@@ -26,14 +26,14 @@
       </div>
     </div>
     <div class="col s12 m10">
-      <h4><a href="" data-activates="{{ session.Name }}{{ forloop.index0 }}" class="button-collapse truncate">{{ session."Presentation-Title" | strip_html | strip_newlines | replace: '_',' ' }}</a></h4>
+      <h4><a href="" data-activates="{{ forloop.index0 | prepend: session.Name | replace: ' ','-' }}" class="button-collapse truncate">{{ session."Presentation-Title" | strip_html | strip_newlines | replace: '_',' ' }}</a></h4>
       <p class="flow-text" style="line-height:1.5; text-align:justify;">{{ session."Presentation-Abstract" | strip_html | strip_newlines | truncatewords: 25 }}</p>
-      <strong><a href="" data-activates="{{ session.Name }}{{ forloop.index0 }}" class="button-collapse">read more...</a></strong>
+      <strong><a href="" data-activates="{{ session.Name }}{{ forloop.index0 }}" class="button-sessions">read more...</a></strong>
     </div>
   </div>
 </div>
 
-<ul id="{{ session.Name }}{{ forloop.index0 }}" class="side-nav grey darken-3 white-text">
+<ul id="{{ forloop.index0 | prepend: session.Name | replace: ' ','-' }}" class="side-nav grey darken-3 white-text">
   <li>First Sidebar Link</li>
   <li>Second Sidebar Link</li>
 </ul>

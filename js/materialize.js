@@ -20,6 +20,11 @@
       edge: 'left',
       closeOnClick: false
     });
+    $('.button-sessions').sideNav({
+      menuWidth: 300,
+      edge: 'right',
+      closeOnClick: false
+    });
     // Pagination
     // Preloader
 
