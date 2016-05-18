@@ -2,7 +2,7 @@
 layout: event_page
 year: 2012
 
-title: "Gearing Up for Change"
+theme: "Gearing Up for Change"
 author: 
 
 start_date: 2012-10-12

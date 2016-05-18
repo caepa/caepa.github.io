@@ -2,7 +2,7 @@
 layout: event_page
 year: 2006
 
-title: "Leading Learners to a Higher Level"
+theme: "Leading Learners to a Higher Level"
 author:
 
 start_date: 2006-04-26

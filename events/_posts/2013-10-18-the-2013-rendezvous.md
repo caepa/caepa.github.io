@@ -2,7 +2,7 @@
 layout: event_page
 year: 2013
 
-title: "Adult Education: Imagine the Possibilities"
+theme: "Adult Education: Imagine the Possibilities"
 author:
 
 start_date: 2013-10-18

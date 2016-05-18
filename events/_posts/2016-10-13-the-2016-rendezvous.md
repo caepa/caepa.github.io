@@ -2,7 +2,7 @@
 layout: event_page
 year: 2016
 
-title: "To Be Announced"
+theme: "To Be Announced"
 author: Anna Mae Lindsay, CAEPA President
 
 start_date: 2016-10-13

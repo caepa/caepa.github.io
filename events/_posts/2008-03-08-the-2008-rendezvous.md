@@ -2,7 +2,7 @@
 layout: event_page
 year: 2008
 
-title: "Sharing Success: Adult Learners in Transition"
+theme: "Sharing Success: Adult Learners in Transition"
 author: Margie Wagner, CAEPA President
 
 start_date: 2008-03-08
