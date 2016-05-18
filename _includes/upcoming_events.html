@@ -37,11 +37,11 @@
           <a href="/events/colfax-marathon.html">{{ post.title }}</a>
         </span>
         <span>
-          {% if post.start_date and post.end_date%}
+          {% if post.start_date and post.end_date %}
           <time datetime="{{ post.start_date | date_to_xmlschema }}" style="display:block">{{ post.start_date | date: "%A, %B %-d, %Y" }} through</time>
           <time datetime="{{ post.end_date | date_to_xmlschema }}" style="display:block">{{ post.end_date | date: "%A, %B %-d, %Y" }}</time>
           {% elsif post.start_date %}
-          <time datetime="{{ post.start_date | date_to_xmlschema }}" style="display:block">{{ post.end_date | date: "%A, %B %-d, %Y" }}</time>
+          <time datetime="{{ post.start_date | date_to_xmlschema }}" style="display:block">{{ post.start_date | date: "%A, %B %-d, %Y" }}</time>
           {% else %}
           <time datetime="{{ post.date | date_to_xmlschema}}" style="display:block">{{ post.date | date: "%A, %B %-d, %Y" }}</time>
           {% endif %}
