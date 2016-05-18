@@ -26,7 +26,7 @@
   {% include seo/json_article.json %}
   </script>{% endif %}
   
-  {% if page.url contains 'events/' %}<script type="application/ld+json">
+  {% if page.url contains 'events/' and page.layout == 'post' %}<script type="application/ld+json">
   {% include seo/json_event.json %}
   </script>{% endif %}
   
