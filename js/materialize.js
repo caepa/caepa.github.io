@@ -49,13 +49,28 @@
     // Parallax
     $('.parallax').parallax();
     // Pushpin
+    $('.tabs-wrapper').pushpin({
+      top: $('.tabs-wrapper').offset().top,
+      offset: 64
+    });
     // Scrollfire
     // Scrollspy
     // Sidenav
     // Tabs
     // Transitions
     // Waves
+    var wrap = $(".tabs-wrapper").offset().top;
+    var hdr = $('header .navbar-fixed').height();
 
+    $(window).on('scroll', function () {
+      if ($(window).scrollTop() + 64 >= wrap) {
+        $('.site-wrapper article header').css({marginBottom: '68px'
+            });
+      } else {
+        $('.site-wrapper article header').css({marginBottom: '0'
+            });
+      }
+    });
 
   }); // end of document ready
 }(jQuery)); // end of jQuery name space
