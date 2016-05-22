@@ -6,8 +6,12 @@ layout: default
   {% include header.html %}
 
   <div id="tab0" class="post-content section container">
-    <div class="flow-text" style="text-align:justify;">
+    <div class="post-meta flow-text">
+      {% if page.date %}<time datetime="{{ page.date | date_to_xmlschema}}">{{ page.date | date: "%B %-d, %Y" }}</time>{% endif %}
+      {% if page.author %}<address>{{ page.author }}</address>{% endif %}
       {% for tag in page.tags %}<span class="chip">{{ tag }}</span>{% endfor %}
+    </div>
+    <div class="flow-text" style="text-align:justify;">
       {{ content }}
     </div>
     <footer class="row section grey lighten-3">
