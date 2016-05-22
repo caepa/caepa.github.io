@@ -1,0 +1,80 @@
+<div class="collection with-header">
+  <div class="collection-item">
+    <h2 class="light grey-text text-darken-1 truncate">{{ "Upcoming Events" | titleize }}</h2>
+  </div>
+</div>
+{% for post in site.categories.events reversed %}
+{% if post.date > site.time %}
+<article class="section row">
+  <div class="col s12 m5">
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" alt="thumbnail" {% if post.image_path != null %} src="{{ post.image_path | prepend: site.baseurl | prepend: site.url }}" {% else %} src="/img/events/default.jpg" style="padding:20px;"{% endif %} />
+      </div>
+
+      <div class="card-content">
+        <span class="card-title truncate activator grey-text text-darken-4">
+          <i class="material-icons right hide-on-med-and-up">more_vert</i>
+          {{ post.title }}
+        </span>
+        <p>
+          <a href="https://www.google.com/maps/place/{{ post.location | replace: ' ','%20' }}+{{ post.address | replace: ' ','%20' }}%20+{{ post.city | replace: ' ','%20' }},%20+{{ post.state | replace: ' ','%20' }}%20+{{ post.zipcode  | replace: ' ','%20' }}" target="_blank">
+            <i class="material-icons left">map</i>{{ post.location }}
+          </a>
+        </p>
+      </div>
+
+      <div class="card-action">
+        <a href="{{ post.event_url }}" target="_blank">{{ post.event_url | remove: 'http://' }}</a>
+        <a href="{{ post.registration }}" target="_blank">Registration</a>
+      </div>
+
+      <div class="card-reveal hide-on-med-and-up">
+        <span class="card-title">
+          <span class="btn-floating right waves-effect waves-light red">
+            <i class="material-icons">close</i>
+          </span>
+          <a href="/events/colfax-marathon.html">{{ post.title }}</a>
+        </span>
+        <span>
+          {% if post.start_date and post.end_date %}
+          <time datetime="{{ post.start_date | date_to_xmlschema }}" style="display:block">{{ post.start_date | date: "%A, %B %-d, %Y" }} through</time>
+          <time datetime="{{ post.end_date | date_to_xmlschema }}" style="display:block">{{ post.end_date | date: "%A, %B %-d, %Y" }}</time>
+          {% elsif post.start_date %}
+          <time datetime="{{ post.start_date | date_to_xmlschema }}" style="display:block">{{ post.start_date | date: "%A, %B %-d, %Y" }}</time>
+          {% else %}
+          <time datetime="{{ post.date | date_to_xmlschema}}" style="display:block">{{ post.date | date: "%A, %B %-d, %Y" }}</time>
+          {% endif %}
+        </span>
+        <div class="flow-text">
+          {{ post.content | strip_html | truncatewords: 100 }}
+          <a href="{{ post.url }}">read more</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="col s12 m7 hide-on-small-only">
+    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <span>
+      {% if post.start_date and post.end_date %}
+      <time datetime="{{ post.start_date | date_to_xmlschema }}" style="display:block">{{ post.start_date | date: "%A, %B %-d, %Y" }} through</time>
+      <time datetime="{{ post.end_date | date_to_xmlschema }}" style="display:block">{{ post.end_date | date: "%A, %B %-d, %Y" }}</time>
+      {% elsif post.start_date %}
+      <time datetime="{{ post.start_date | date_to_xmlschema }}" style="display:block">{{ post.start_date | date: "%A, %B %-d, %Y" }}</time>
+      {% else %}
+      <time datetime="{{ post.date | date_to_xmlschema}}" style="display:block">{{ post.date | date: "%A, %B %-d, %Y" }}</time>
+      {% endif %}
+    </span>
+    <div class="flow-text">
+      {{ post.content | strip_html | truncatewords: 50 }}
+      <a href="{{ post.url }}">read more</a>
+    </div>
+  </div>
+</article>
+
+<div class="divider"></div>
+
+{% endif %}
+{% endfor %}

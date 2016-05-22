@@ -6,30 +6,38 @@
 {% if currentdate != date %}
 <div class="collection with-header">
   <div class="collection-item">
-    <h3 class="grey-text text-darken-3 light truncate">{{ currentdate }}{% if page.categories != null %}<span class="thin"> {{ page.categories[0] | replace: '_',' ' | titleize }}</span>{% endif %}</h3>
+    <h3 class="light grey-text text-darken-1 flow-text truncate">{{ currentdate }}{% if page.categories != null %}<span class="thin"> {{ page.categories[0] | replace: '_',' ' | titleize }}</span>{% endif %}</h3>
   </div>
 </div>
 {% assign date = currentdate %}
 {% endif %}
 
-<article class="card-panel hoverable">
-  <div class="row">
+<article class="card hoverable">
+  
+  <div class="card-content row grey-text text-darken-3">
+    
     <div class="col s12 m2 center-align " style="margin:1.46rem 0 1.168rem 0;">
       <div class="container {{ page.color_accent }} circle" style="height:76px; width:76px; padding-top:9px;">
         <time datetime="{{ post.date | date_to_xmlschema }}">
-          <span class="month grey-text text-lighten-4" style="display:block; line-height:26px; font-siz:16px;">
+          <span class="month grey-text text-lighten-4" style="display:block; line-height:26px; font-size:16px;">
             {{ post.date | date: "%b" }}</span>
           <span class="day white-text" style="display:block; line-height:26px; font-size:27px;">
             {{ post.date | date: "%d" }}</span>
         </time>
       </div>
     </div>
-    <div class="col s12 m10">
-      <h4><a href="{{ post.url }}" class="truncate">{{ post.title | strip_html | strip_newlines | replace: '_',' ' }}</a></h4>
+    
+    <div class="col s12 m10 flow-text">
+      <h4 class="truncate"><a href="{{ post.url }}">{{ post.title | strip_html | strip_newlines | replace: '_',' ' }}</a></h4>
       <p class="flow-text" style="line-height:1.5; text-align:justify;">{{ post.content | strip_html | strip_newlines | truncatewords: 25 }}</p>
-      <strong><a href="{{ post.url }}">read more...</a></strong>
     </div>
+    
   </div>
+  
+  <div class="card-action">
+    <a href="{{ post.url }}"><i class="material-icons left">exit_to_app</i>read more...</a>
+  </div>
+  
 </article>
 
 {% endfor %}
