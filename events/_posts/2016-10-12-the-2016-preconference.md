@@ -1,5 +1,6 @@
 ---
 title: Preconference
+author: Adult Education Initiatives
 start_date: 2016-10-12
 end_date: 
 
