@@ -4,11 +4,9 @@
 
 {% assign currentdate = page.date | date: "%Y" %}
 {% if currentdate != date %}
-<div class="collection with-header">
-  <div class="collection-item">
-    <h3 class="light grey-text text-darken-1 flow-text truncate">{{ currentdate }}{% if page.tags != null %}<span class="thin"> {{ page.tags[0] | replace: '_',' ' | titleize }}</span>{% endif %}</h3>
-  </div>
-</div>
+
+<h3 class="light grey-text text-darken-1 flow-text truncate">{{ currentdate }}{% if page.tags != null %}<span class="thin"> {{ page.tags[0] | replace: '_',' ' | titleize }}</span>{% endif %}</h3>
+
 {% assign date = currentdate %}
 {% endif %}
 

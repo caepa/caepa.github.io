@@ -1,21 +1,17 @@
-<div class="collection with-header">
-  <div class="collection-item">
-    <h2 class="light grey-text text-darken-1 truncate">{{ "Sessions" }}</h2>
-  </div>
-</div>
+<!-- sessions -->
+<h2 class="light grey-text text-darken-1 flow-text truncate">{{ "Sessions" }}</h2>
+
 {% assign year = include.year %}
 {% if site.data[year]sessions != null %}
 
 <!-- card circle displays page icon -->
 {% assign sorted_strand = site.data[year]sessions | group_by: "Conference-Strand" | sort: "name" %}
 {% for strand in sorted_strand %}
-<div class="collection with-header">
-  <div class="collection-item">
-    <h3 class="grey-text text-darken-3 light truncate">{{ strand.name }}
-      <span class="badge new sessions">{{ strand.name | size }}</span>
-    </h3>
-  </div>
-</div>
+
+<h3 class="grey-text text-darken-3 light flow-text truncate">{{ strand.name }}
+  <span class="badge new sessions" style="margin-left:20px;">{{ strand.name | size }}</span>
+</h3>
+
 {% assign sorted_session = strand.items %}
 {% for session in sorted_session %}
 <div class="card-panel hoverable">
