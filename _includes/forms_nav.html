@@ -6,7 +6,7 @@
     </a>
   </li>
   {% for type in site.data.forms %}
-  <li class="active">
+  <li class="waves-effect waves-dark active" style="width:100%;">
     <div class="collapsible-header active">
       <i class="material-icons">expand_more</i>
       <span style="font-weight: 500;">{{ type.type | upcase }}</span>
@@ -15,7 +15,7 @@
       <!-- change href to "item.google_url" and add target="iframe" to have zero page reload but no url change -->
       <ul>
         {% for form in type.forms %}
-        <li class="{% if page.url contains form.title %}active {% endif %}waves-effect waves-dark" style="width:100%;">
+        <li class="waves-effect waves-dark{% if page.url contains form.title %} active{% endif %}" style="width:100%;">
           {% for page in site.forms %}
           {% if page.url contains form.title %}
           <a href="{{ page.url | prepend: site.baseurl | prepend: site.url }}">
