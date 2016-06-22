@@ -12,9 +12,6 @@
     <h2 class="grey-text text-darken-2 light truncate">{{ "Awards" }}</h2>
   </div>
 </div>
-{% assign year = include.year %}
-{% if site.data[year]awards != null %}
-
 {% for award in site.data[year]awards %}
 
 {{ award }}
