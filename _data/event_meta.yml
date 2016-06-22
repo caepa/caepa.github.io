@@ -1,0 +1,29 @@
+# each event has YAML front matter describing the event details
+# this information is displayed in post and for SEO purposes
+# all fields are required:
+
+layout: post_event
+year: # event year
+
+theme: # can be a subtitle for event
+author: # host for the event
+
+start_date: # format YYYY-MM-DD HH-MM-SS
+end_date: # format YYYY-MM-DD HH-MM-SS
+
+image_path: # host icon
+event_url: # host url for event
+
+# venue:
+location: # name
+address: 
+city: 
+state: 
+zipcode: 
+phone: 
+website: # informational website
+
+# offers:
+price1: # low price
+price2: # high price
+registration: # url to register
