@@ -12,9 +12,9 @@
     <h2 class="grey-text text-darken-2 light truncate">{{ "Keynote Speakers" }}</h2>
   </div>
 </div>
-{% for vendor in site.data[year]keynotes %}
+{% for keynote in site.data[year]keynotes %}
 
-{{ vendor }}
+{{ keynote }}
 
 {% endfor %}
 {% endif %}
