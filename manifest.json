@@ -1,0 +1,15 @@
+{
+  "name": "{{ site.title }}",
+  "description": "{{ site.description }}",
+  "start_url": "index.html",
+  "theme_color": "#4527a0",
+  "background_color": "ghostwhite",
+  "display": "standalone",
+  "icons": [
+    {
+    "src": "{{ '/img/icon-4x.png' | prepend: sitebase.url | prepend: site.url }}",
+    "sizes": "240x240",
+    "type": "image/png"
+    }
+  ]
+}
