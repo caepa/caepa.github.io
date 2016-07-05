@@ -1,9 +1,9 @@
 language: ruby
 rvm:
   - 2.1.7
-install: gem install -v 1.10.6 bundler --no-rdoc --no-ri
+install: gem install bundler --no-rdoc --no-ri
 script:
-  - bundle _1.10.6_ install
+  - bundle install
   - bundle exec jekyll build
   - bundle exec htmlproofer ./_site --only-4xx
 env:
