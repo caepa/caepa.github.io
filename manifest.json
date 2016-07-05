@@ -1,14 +1,29 @@
 {
-  "name": "{{ site.title }}",
-  "description": "{{ site.description }}",
+  "name": "CAEPA",
+  "description": "Providing Colorado Leadership in Adult Education and Literacy since 1935",
   "start_url": "index.html",
-  "theme_color": "#4527a0",
+  "theme_color": "#212121",
   "background_color": "ghostwhite",
   "display": "standalone",
   "icons": [
     {
-    "src": "{{ '/img/icon-4x.png' | prepend: sitebase.url | prepend: site.url }}",
+    "src": "/img/icon-1x.png",
+    "sizes": "60x60",
+    "type": "image/png"
+    },
+    {
+    "src": "/img/icon-2x.png",
+    "sizes": "120x120",
+    "type": "image/png"
+    },
+    {
+    "src": "/img/icon-4x.png",
     "sizes": "240x240",
+    "type": "image/png"
+    },
+    {
+    "src": "/img/icon-8x.png",
+    "sizes": "400x400",
     "type": "image/png"
     }
   ]
