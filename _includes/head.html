@@ -18,7 +18,7 @@
   <!-- mobile tag allows page to run like native-app from homescreen -->
   <meta name="mobile-web-app-capable" content="yes">
   <link rel="icon" sizes="240x240" href="{{ '/img/icon-4x.png' | prepend: sitebase.url | prepend: site.url }}">
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="{{ '/manifest.json' | prepend: sitebase.url | prepend: site.url }}">
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
