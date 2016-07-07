@@ -65,7 +65,7 @@ defaults:
       color_accent: red darken-3
       icon: date_range
   - scope:
-      path: "fact_sheets"
+      path: "fact-sheets"
     values:
       color: pink darken-4
       color_accent: pink darken-3
