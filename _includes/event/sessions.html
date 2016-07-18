@@ -6,23 +6,20 @@
 <p class="grey-text text-darken-2 light flow-text">No Session Information Available</p>
 
 {% else %}
-<ul class="collection with-header">
+<div class="collection with-header">
   <span class="collection-header truncate">
     <h3 class="grey-text text-darken-2 light">{{ "Sessions" }}</h3>
   </span>
   {% assign sorted_strand = site.data[year]sessions | group_by: "Conference-Strand" | sort: "name" %}
 
   <!-- session navigation list -->
-  <!-- // change to a href="" data-activates="{{ strand.name | slugify }}" -->
   {% for strand in sorted_strand %}
-  <li class="collection-item event-info truncate">{{ strand.name }}
+  <a href="" data-activates="{{ strand.name | slugify }}" class="collection-item event-info truncate">{{ strand.name }}
     <span class="badge new sessions">{{ strand.items | size }}</span>
-  </li>
+  </a>
   {% endfor %}
-</ul>
+</div>
 
-{% comment %}
-<!-- // Why is there conflict with multiple model-triggers for one model -->
 <!-- begin session sidenav -->
 {% for strand in sorted_strand %}
 <!-- session sidenav / listed by time / linked to session details modals -->
@@ -60,7 +57,5 @@
   </ul>
 </ul>
 {% endfor %}
-{% endcomment %}
-
 
 {% endif %}
