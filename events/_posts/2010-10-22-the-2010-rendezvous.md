@@ -1,6 +1,6 @@
 ---
 layout: event_page
-year: 2011
+year: 2010
 
 theme: "The Power of Adult Learners"
 author: Jolene Goerend, CAEPA President
