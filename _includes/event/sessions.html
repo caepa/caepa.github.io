@@ -3,23 +3,26 @@
 <!-- begin session navigation  -->
 
 {% if site.data[year]sessions == null %}
-<p class="grey-text text-darken-2 light flow-text">No Information Available</p>
+<p class="grey-text text-darken-2 light flow-text">No Session Information Available</p>
 
 {% else %}
-<div class="collection with-header">
+<ul class="collection with-header">
   <span class="collection-header truncate">
-    <h2 class="grey-text text-darken-2 light">{{ "Sessions" }}</h2>
+    <h3 class="grey-text text-darken-2 light">{{ "Sessions" }}</h3>
   </span>
   {% assign sorted_strand = site.data[year]sessions | group_by: "Conference-Strand" | sort: "name" %}
 
   <!-- session navigation list -->
+  <!-- // change to a href="" data-activates="{{ strand.name | slugify }}" -->
   {% for strand in sorted_strand %}
-  <a href="" data-activates="{{ strand.name | slugify }}" class="collection-item event-info flow-text truncate">{{ strand.name }}
+  <li class="collection-item event-info truncate">{{ strand.name }}
     <span class="badge new sessions">{{ strand.items | size }}</span>
-  </a>
+  </li>
   {% endfor %}
-</div>
+</ul>
 
+{% comment %}
+<!-- // Why is there conflict with multiple model-triggers for one model -->
 <!-- begin session sidenav -->
 {% for strand in sorted_strand %}
 <!-- session sidenav / listed by time / linked to session details modals -->
@@ -47,7 +50,7 @@
           {% assign sessions = time.items %}
           {% for session in sessions %}
           <li class="waves-effect waves-light" style="width:100%;">
-            <a href="#{{ session.Availabilty-Notes | prepend: '-' | prepend: session.Name | prepend: '-' | prepend: session.Conference-Strand | slugify }}" class="modal-trigger grey-text text-lighten-3">{{ session."Presentation-Title" | strip_html | strip_newlines | replace: '_',' ' }}</a>
+            <a href="#{{ session.Name | append: '-' | append: session.Availabilty-Notes | slugify }}" class="modal-trigger grey-text text-lighten-3">{{ session."Presentation-Title" | strip_html | strip_newlines | replace: '_',' ' }}</a>
           </li>
           {% endfor %}
         </ul>
@@ -56,40 +59,8 @@
     {% endfor %}
   </ul>
 </ul>
+{% endfor %}
+{% endcomment %}
 
-<!-- session details modals / id by strand-presentar-time / circle session number  -->
-{% assign sorted_sessions = strand.items %}
-{% for session in sorted_sessions %}
-<div id="{{ session.Availabilty-Notes | prepend: '-' | prepend: session.Name | prepend: '-' | prepend: session.Conference-Strand | slugify }}" class="modal modal-fixed-footer">
-  <div class="modal-content">
-    <!--session number -->
-    <div class="center-align " style="margin:1.46rem 0 1.168rem 0;">
-      <div class="container {{ page.color_accent }} circle" style="height:76px; width:76px; padding-top:9px;">
-        <i class="medium material-icons white-text" style="display:block; line-height:4rem; font-size:3rem;">filter_{{ session."Availabilty-Notes" | replace: "Session ","" }}</i>
-      </div>
-    </div>
-    <!-- session details -->
-    <span class="flow-text">
-      <!-- session title -->
-      <h4 class="grey-text text-darken-1">{{ session."Presentation-Title" | strip_html | strip_newlines | replace: '_',' ' }}</h4>
-      <!-- session presentar / email / organization -->
-      {% if session.Email %}
-      <address><a href="mailto:{{ session.Email }}">{{ session."Name" }}</a></address>
-      {% else %}
-      <address>{{ session.Name }}</address>
-      {% endif %}
-      <label>{{ session."Employer" }}, {{ session."Job-Title" }}</label>
-      <!-- session abstract -->
-      <p style="text-align:justify;">{{ session."Presentation-Abstract" | strip_html | strip_newlines }}</p>
-    </span>
-  </div>
-  <div class="modal-footer">
-    <a class="modal-action modal-close waves-effect btn-flat">Close</a>
-    {% if session.Organization-Website != null %}
-    <a href="{{ session.'Organization-Website' }}" class="waves-effect btn-flat" target="_blank">{{ session."Organization" }}</a>
-    {% endif %}
-  </div>
-</div>
-{% endfor %}
-{% endfor %}
+
 {% endif %}

@@ -17,23 +17,36 @@ tabs: [Details, Keynotes, Sessions, Vendors, Awards]
 {% capture y %}{{ page.year }}{% endcapture%}
 
 <section id="tab0">
-  {% include event/details.html year = y %}
+  <div class="col s12 l7 offset-l1">
+    {% include event/details.html year = y %}
+  </div>
+  <div class="col s12 l3">
+    {% include event/sessions.html year = y %}
+  </div>
 </section>
 
 <section id="tab1">
-  {% include event/keynotes.html year = y %}
+  <div class="col s12 l10 offset-l1">
+    {% include event/keynotes.html year = y %}
+  </div>
 </section>
 
 <section id="tab2">
-  {% include event/sessions.html year = y %}
+  <div class="col s12 l10 offset-l1">
+    {% include event/sessions-list.html year = y %}
+  </div>
 </section>
 
 <section id="tab3">
-  {% include event/vendors.html year = y %}
+  <div class="col s12 l10 offset-l1">
+    {% include event/vendors.html year = y %}
+  </div>
 </section>
 
 <section id="tab4">
-  {% include event/awards.html year = y %}
+  <div class="col s12 l10 offset-l1">
+    {% include event/awards.html year = y %}
+  </div>
 </section>
 <!-- post navigation
 <footer class="row section grey lighten-3">
@@ -48,3 +61,6 @@ tabs: [Details, Keynotes, Sessions, Vendors, Awards]
     {% endif %}
   </div>
 </footer>-->
+
+
+{% include event/sessions-modal.html year = y %}

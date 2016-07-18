@@ -2,13 +2,13 @@
 layout: page
 title: Events
 
-tabs: [Upcoming, Past]
+tabs: [Upcoming, All]
 ---
-<section id="tab0">
+<section id="tab0" class="container">
   {% include upcoming_events.html %}  
 </section>
 
-<section id="tab1">
+<section id="tab1" class="container">
 
   {% capture url %}{{ page.url | remove: '/' }}{% endcapture%}
   {% include post_card.html category = url %}

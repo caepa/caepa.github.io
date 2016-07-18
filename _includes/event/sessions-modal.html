@@ -1,0 +1,34 @@
+<!-- session details modals / id by presentar-session-# -->
+{% assign year = include.year %}
+
+{% if site.data[year]sessions != null %}
+{% for session in site.data[year]sessions %}
+<div id="{{ session.Name | append: '-' | append: session.Availabilty-Notes | slugify }}" class="modal modal-fixed-footer">
+  
+  <!-- session details -->
+  <div class="modal-content">
+    <span class="flow-text">
+      <!-- session title -->
+      <h4 class="grey-text text-darken-1">{{ session."Presentation-Title" | strip_html | strip_newlines | replace: '_',' ' }}</h4>
+      <!-- session presentar / email / organization -->
+      {% if session.Email %}
+      <address><a href="mailto:{{ session.Email }}">{{ session."Name" }}</a></address>
+      {% else %}
+      <address>{{ session.Name }}</address>
+      {% endif %}
+      <small>{{ session."Employer" }}, {{ session."Job-Title" }}</small>
+      <!-- session abstract -->
+      <p style="text-align:justify;">{{ session."Presentation-Abstract" | strip_html | strip_newlines }}</p>
+    </span>
+  </div>
+  
+  <div class="modal-footer">
+    <a class="modal-action modal-close waves-effect btn-flat">Close</a>
+    {% if session.Organization-Website != null %}
+    <a href="{{ session.'Organization-Website' }}" class="waves-effect btn-flat" target="_blank">{{ session."Organization" }}</a>
+    {% endif %}
+  </div>
+  
+</div>
+{% endfor %}
+{% endif %}

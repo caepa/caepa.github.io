@@ -1,0 +1,68 @@
+<!-- sessions -->
+{% assign year = include.year %}
+
+{% if site.data[year]sessions == null %}
+<p class="grey-text text-darken-2 light flow-text">No Information Available</p>
+
+{% else %}
+<!-- begin session navigation  -->
+<div id="sessions">
+  
+  <div class="row">
+    <div class="input-field col s12">
+      <input id="search" class="search" type="text" />
+      <label for="search"><i class="material-icons left">search</i>Search by Presenter, Title, Strand, or Session #</label>
+    </div>
+  </div>
+  
+  <div class="row">
+    
+    <div class="collection with-header">
+      
+      <!-- list header -->
+      <span class="collection-header flow-text col s12">
+        <span class="col s2 waves-effect" >
+          <input name="group1" type="radio" id="presenter" checked />
+          <label for="presenter" class="sort" data-sort="name" >Presenter</label>
+        </span>
+        <span class="col s6 waves-effect" >          
+          <input name="group1" type="radio" id="title" />
+          <label for="title" class="sort" data-sort="title">Title</label>
+        </span>
+        <span class="col s2 waves-effect" >
+          <input name="group1" type="radio" id="strand" />
+          <label for="strand" class="sort" data-sort="strand">Strand</label>
+        </span>        
+        <span class="col s2 waves-effect" >
+          <input name="group1" type="radio" id="session" />
+          <label for="session" class="sort" data-sort="session">Session</label>
+        </span>
+      </span>
+      
+      <!-- IMPORTANT, class="list" have to be at tbody -->
+      <span class="list">
+        {% for session in site.data[year]sessions %}
+        <a href="#{{ session.Name | append: '-' | append: session.Availabilty-Notes | slugify }}" class="modal-trigger collection-item waves-effect col s12">
+          <p class="col s2 name">{{ session.Name }}</p>
+          <p class="col s6 title">{{ session.Presentation-Title }}</p>
+          <p class="col s2 strand">{{ session.Conference-Strand }}</p>
+          <p class="col s2 session">{{ session.Availabilty-Notes }}</p>
+        </a>
+        {% endfor %}
+      </span>
+      
+    </div>
+  </div>
+  
+</div>
+{% endif %}
+
+<!-- JS -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.2.0/list.min.js"></script>
+<script>
+var options = {
+  valueNames: [ 'name', 'title', 'strand', 'session' ]
+};
+
+var userList = new List('sessions', options);
+</script>

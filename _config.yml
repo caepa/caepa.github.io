@@ -39,6 +39,8 @@ markdown: kramdown
 collections:
   forms:
     output: true
+  sessions:
+    output: false
 
 include: ["_pages"]
 future: true
