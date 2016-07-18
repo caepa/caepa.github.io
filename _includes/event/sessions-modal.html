@@ -9,23 +9,48 @@
   <div class="modal-content">
     <span class="flow-text">
       <!-- session title -->
-      <h4 class="grey-text text-darken-1">{{ session."Presentation-Title" | strip_html | strip_newlines | replace: '_',' ' }}</h4>
-      <!-- session presentar / email / organization -->
+      <h4 class="grey-text text-darken-1">{{ session.Presentation-Title | strip_newlines }}</h4>
+      
+      <!-- session presentar / email -->
       {% if session.Email %}
-      <address><a href="mailto:{{ session.Email }}">{{ session."Name" }}</a></address>
+      <address><a href="mailto:{{ session.Email }}">{{ session.Name }}</a></address>
       {% else %}
       <address>{{ session.Name }}</address>
       {% endif %}
-      <small>{{ session."Employer" }}, {{ session."Job-Title" }}</small>
+      
+      <!-- organization -->
+      {% if session.Employer and session.Job-Title %}
+      <small>{{ session.Employer }}, {{ session.Job-Title }}</small>
+      {% elsif session.Employer %}
+      <small>{{ session.Employer }}</small>
+      {% elsif session.Job-Title %}
+      <small>{{ session.Job-Title }}</small>
+      {% endif %}
+      
       <!-- session abstract -->
-      <p style="text-align:justify;">{{ session."Presentation-Abstract" | strip_html | strip_newlines }}</p>
+      <p style="text-align:justify;">{{ session.Presentation-Abstract | strip_html | strip_newlines }}</p>
+      
+      <!-- session objectives -->
+      {% if session.Objectives %}
+      <strong class="grey-text text-darken-1">Objectives</strong>
+      <ul>
+        <li>{{ session.Objectives }}</li>
+      </ul>
+      {% endif %}
+      
+      <!-- session presentar -->
+      {% if session.Biography %}
+      <strong class="grey-text text-darken-1">About the presenter:</strong>
+      <p>{{ session.Biography }}</p>
+      {% endif %}
+      
     </span>
   </div>
   
   <div class="modal-footer">
     <a class="modal-action modal-close waves-effect btn-flat">Close</a>
     {% if session.Organization-Website != null %}
-    <a href="{{ session.'Organization-Website' }}" class="waves-effect btn-flat" target="_blank">{{ session."Organization" }}</a>
+    <a href="{{ session.Organization-Website }}" class="waves-effect btn-flat" target="_blank">{{ session.Organization }}</a>
     {% endif %}
   </div>
   

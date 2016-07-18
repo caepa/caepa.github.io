@@ -1,6 +1,6 @@
 ---
 layout: page
-tabs: [Details, Keynotes, Sessions, Vendors, Awards]
+tabs: [Details, Awards, Keynotes, Sessions, Vendors]
 ---
 <!-- Welcome Message Structure -->
 <section id="welcome" class="modal modal-fixed-footer">
@@ -21,8 +21,17 @@ tabs: [Details, Keynotes, Sessions, Vendors, Awards]
     {% include event/details.html year = y %}
   </div>
   <div class="col s12 l3">
+    <!-- program download -->
+    <a href="" class="btn-large disabled" style="width:100%;">
+      <i class="material-icons left">cloud_download</i>
+      <span>Program Download</span>
+    </a>
+    <!-- awards -->
+    <!-- keynote speakers -->
+    <!-- session count -->
     {% include event/sessions.html year = y %}
-  </div>
+  </div>  
+    <!-- vendors -->
 </section>
 
 <section id="tab1">
