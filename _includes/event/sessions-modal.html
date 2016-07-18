@@ -8,8 +8,6 @@
   <!-- session details -->
   <div class="modal-content">
     <span class="flow-text">
-      <!-- session title -->
-      <h4 class="grey-text text-darken-1">{{ session.Presentation-Title | strip_newlines }}</h4>
       
       <!-- session presentar / email -->
       {% if session.Email %}
@@ -27,24 +25,23 @@
       <small>{{ session.Job-Title }}</small>
       {% endif %}
       
-      <!-- session abstract -->
-      <strong class="grey-text text-darken-1">Session abstract:</strong>
-      <p style="text-align:justify;">{{ session.Presentation-Abstract | strip_html | strip_newlines }}</p>
+      <!-- session title -->
+      <h4 class="grey-text text-darken-1">{{ session.Presentation-Title | strip_newlines }}</h4>
       
       <!-- session objectives -->
       {% if session.Objectives %}
-      <strong class="grey-text text-darken-1">Objectives</strong>
+      <strong class="grey-text text-darken-1">Objectives: </strong>
       <ul class="browser-default">
-        <li>{{ session.Objectives }}</li>
+        <li>{{ session.Objectives | strip_newlines }}</li>
       </ul>
       {% endif %}
       
+      <!-- session abstract -->
+      <p style="text-align:justify;"><strong class="grey-text text-darken-1">Session abstract: </strong>{{ session.Presentation-Abstract | strip_newlines }}</p>
+      
       <!-- session presentar -->
       {% if session.Biography %}
-      <strong class="grey-text text-darken-1">About the presenter:</strong>
-      <ul class="browser-default">
-        <li>{{ session.Biography }}</li>
-      </ul>
+      <p style="text-align:justify;"><strong class="grey-text text-darken-1">About the presenter: </strong>{{ session.Biography | strip_newlines }}</p>
       {% endif %}
       
     </span>
