@@ -28,12 +28,13 @@
       {% endif %}
       
       <!-- session abstract -->
+      <strong class="grey-text text-darken-1">Session abstract:</strong>
       <p style="text-align:justify;">{{ session.Presentation-Abstract | strip_html | strip_newlines }}</p>
       
       <!-- session objectives -->
       {% if session.Objectives %}
       <strong class="grey-text text-darken-1">Objectives</strong>
-      <ul>
+      <ul class="browser-default">
         <li>{{ session.Objectives }}</li>
       </ul>
       {% endif %}
@@ -41,7 +42,9 @@
       <!-- session presentar -->
       {% if session.Biography %}
       <strong class="grey-text text-darken-1">About the presenter:</strong>
-      <p>{{ session.Biography }}</p>
+      <ul class="browser-default">
+        <li>{{ session.Biography }}</li>
+      </ul>
       {% endif %}
       
     </span>
