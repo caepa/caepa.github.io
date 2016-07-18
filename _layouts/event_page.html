@@ -36,27 +36,28 @@ tabs: [Details, Awards, Keynotes, Sessions, Vendors]
 
 <section id="tab1">
   <div class="col s12 l10 offset-l1">
-    {% include event/keynotes.html year = y %}
+    {% include event/awards.html year = y %}
   </div>
 </section>
 
 <section id="tab2">
   <div class="col s12 l10 offset-l1">
-    {% include event/sessions-list.html year = y %}
+    {% include event/keynotes.html year = y %}
   </div>
 </section>
 
 <section id="tab3">
   <div class="col s12 l10 offset-l1">
-    {% include event/vendors.html year = y %}
+    {% include event/sessions-list.html year = y %}
   </div>
 </section>
 
 <section id="tab4">
   <div class="col s12 l10 offset-l1">
-    {% include event/awards.html year = y %}
+    {% include event/vendors.html year = y %}
   </div>
 </section>
+
 <!-- post navigation
 <footer class="row section grey lighten-3">
   <div class="col s12" role="button">
