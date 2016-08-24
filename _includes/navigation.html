@@ -8,9 +8,12 @@
 
       <a href="" data-activates="forms-menu" class="button-collapse show-on-large right"><i class="material-icons">more_vert</i></a>
 
-      <ul class="right hide-on-med-and-down">{% for category in site.categories %}
-        <li class="{% if page.url contains category[0] %}active {% endif %}waves-effect"><a href="{{ '/' | append: category[0] | prepend: site.baseurl | prepend: site.url }}"><span>{{ category[0] | replace: '_',' ' | upcase }}</span><span class="badge new">{{ category[1].size }}</span></a></li>{% endfor %}
-        <li class="waves-effect"><a href="http://blog.caepa.org">Blog</a></li>
+      <ul class="right hide-on-med-and-down">
+        <li class="waves-effect"><a href="http://blog.caepa.org">{{ "Blog" | upcase }}</a></li>
+        
+        {% for category in site.categories %}
+        <li class="{% if page.url contains category[0] %}active {% endif %}waves-effect"><a href="{{ '/' | append: category[0] | prepend: site.baseurl | prepend: site.url }}"><span>{{ category[0] | replace: '_',' ' | upcase }}</span><!--span class="badge new">{{ category[1].size }}</span--></a></li>
+        {% endfor %}
       </ul>
 
     </div>
@@ -31,13 +34,15 @@
       </div>
       <div class="collapsible-body">
         <ul>
+          <li class="waves-effect"><a href="http://blog.caepa.org">{{ "Blog" | upcase }}</a></li>
+          
           {% assign sorted_pages = site.pages | sort: "title" %}
           {% for menu in sorted_pages %}
           {% if menu.title != null %}
           <li class="waves-effect waves-dark{% if page.url contains menu.url %} active{% endif %}" style="width:100%;">
             <a href="{{ menu.url | prepend: site.baseurl | prepend: site.url }}">
               <span>{{ menu.title | titleize }}</span>
-              <span class="badge">
+              <!--span class="badge">
                 {% if menu.title == "Forms" %}{{ site.forms | size }}
                 {% endif %}
                 {% for category in site.categories %}
@@ -46,12 +51,11 @@
                 {{ category[1] | size }}{% endunless %}
                 {% endif %}
                 {% endfor %}
-              </span>
+              </span-->
             </a>
           </li>
           {% endif %}
           {% endfor %}
-          <li class="waves-effect"><a href="http://blog.caepa.org">Blog</a></li>
         </ul>
       </div>
     </li>
