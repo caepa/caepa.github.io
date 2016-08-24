@@ -34,7 +34,7 @@
       </div>
       <div class="collapsible-body">
         <ul>
-          <li class="waves-effect"><a href="http://blog.caepa.org">{{ "Blog" | upcase }}</a></li>
+          <li class="waves-effect waves-dark" style="width:100%;"><a href="http://blog.caepa.org">{{ "Blog" }}</a></li>
           
           {% assign sorted_pages = site.pages | sort: "title" %}
           {% for menu in sorted_pages %}
