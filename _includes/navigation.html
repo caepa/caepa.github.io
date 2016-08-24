@@ -10,6 +10,7 @@
 
       <ul class="right hide-on-med-and-down">{% for category in site.categories %}
         <li class="{% if page.url contains category[0] %}active {% endif %}waves-effect"><a href="{{ '/' | append: category[0] | prepend: site.baseurl | prepend: site.url }}"><span>{{ category[0] | replace: '_',' ' | upcase }}</span><span class="badge new">{{ category[1].size }}</span></a></li>{% endfor %}
+        <li class="waves-effect"><a href="http://blog.caepa.org">Blog</a></li>
       </ul>
 
     </div>
@@ -50,6 +51,7 @@
           </li>
           {% endif %}
           {% endfor %}
+          <li class="waves-effect"><a href="http://blog.caepa.org">Blog</a></li>
         </ul>
       </div>
     </li>
