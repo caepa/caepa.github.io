@@ -17,52 +17,52 @@ tabs: [Details, Awards, Keynotes, Sessions, Vendors]
 {% capture y %}{{ page.year }}{% endcapture%}
 
 <section id="tab0">
-  <div class="col s12 l7 offset-l1">
+  <!-- main tab -->
+  <div class="col s12 m7 l6 offset-m1">
     {% include event/details.html year = y %}
   </div>
-  <div class="col s12 l3">
+  <!-- main tab aside -->
+  <aside class="col s12 m3 l4">
+    <div class="collection">
     <!-- forms -->
-    <li>
-      <a href="http://www.caepa.org/forms/" class="btn-large" style="width:100%;">
+      <a href="http://www.caepa.org/forms/" class="collection-item" style="width:100%;">
         <i class="material-icons left">description</i>
-        <span>Forms</span>
+        <span>Rendezvous Forms</span>
       </a>
-    </li>
-    <!-- program download -->
-    <li>
-      <a href="" class="btn-large disabled" style="width:100%;">
+    <!-- program download
+      <a href="" class="collection-item" style="width:100%;">
         <i class="material-icons left">cloud_download</i>
         <span>Program</span>
-      </a>
-    </li>
+      </a> -->
+    </div>
     <!-- awards -->
     <!-- keynote speakers -->
     <!-- session count -->
     {% include event/sessions.html year = y %}
-  </div>  
+  </aside>  
     <!-- vendors -->
 </section>
 
 <section id="tab1">
-  <div class="col s12 l10 offset-l1">
+  <div class="col s12 m10 offset-m1">
     {% include event/awards.html year = y %}
   </div>
 </section>
 
 <section id="tab2">
-  <div class="col s12 l10 offset-l1">
+  <div class="col s12 m10 offset-m1">
     {% include event/keynotes.html year = y %}
   </div>
 </section>
 
 <section id="tab3">
-  <div class="col s12 l10 offset-l1">
+  <div class="col s12 m10 offset-m1">
     {% include event/sessions-list.html year = y %}
   </div>
 </section>
 
 <section id="tab4">
-  <div class="col s12 l10 offset-l1">
+  <div class="col s12 m10 offset-m1">
     {% include event/vendors.html year = y %}
   </div>
 </section>
