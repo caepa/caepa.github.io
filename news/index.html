@@ -3,13 +3,13 @@ layout: page
 title: News
 tabs: [Recent, Tags]
 ---
-<section id="tab0" class="container">
+<section id="tab0" class="col s12 l10 offset-l1">
   <h2 class="hide grey-text text-darken-1">{{ page.tabs[0] }}</h2>
   {% capture url %}{{ page.url | remove: '/' }}{% endcapture%}
   {% include post_card.html category = url %}
 </section>
 
-<section id="tab1" class="container">
+<section id="tab1" class="col s12 l10 offset-l1">
   <div class="collection with-header">
     <div class="collection-item">
       <h2 class="grey-text text-darken-3 light truncate">{{ page.title }} by {{ page.tabs[1] }}</h2>

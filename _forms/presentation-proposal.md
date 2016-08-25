@@ -18,6 +18,6 @@ You will be asked for the following information:
 
 If you are submitting multiple proposals, we will skip the collection of your contact and personal  information after your first submission.
 
-Submissions are due August 31, 2016
+Submissions are due September 23, 2016
 
 If you have questions, please contact [admin@caepa.org](mailto:admin@caepa.org).

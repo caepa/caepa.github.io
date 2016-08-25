@@ -13,6 +13,6 @@ Thank you for your interest in becoming a vendor. If you wish to apply for this 
   * Representative Information: number, name(s), email(s)
   {: .browser-default }
  
-Submissions are due August 31, 2016
+Submissions are due September 23, 2016
 
 If you have questions, please contact [admin@caepa.org](mailto:admin@caepa.org).

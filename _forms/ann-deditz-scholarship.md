@@ -24,6 +24,6 @@ You will be asked for the following information:
   * Application response (300 words max), see application for description
   {: .browser-default }
 
-Submissions are due August 31, 2016
+Submissions are due September 23, 2016
 
 If you have questions, please contact [admin@caepa.org](mailto:admin@caepa.org).

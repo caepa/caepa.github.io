@@ -24,6 +24,6 @@ You will be asked for the following information:
   * Your contact information
   {: .browser-default }
 
-Submissions are due August 31, 2016
+Submissions are due September 23, 2016
 
 If you have questions, please contact [admin@caepa.org](mailto:admin@caepa.org).
