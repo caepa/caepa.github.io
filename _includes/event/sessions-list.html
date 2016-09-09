@@ -42,11 +42,11 @@
       <!-- IMPORTANT, class="list" have to be at tbody -->
       <span class="list">
         {% for session in site.data[year]sessions %}
-        <a href="#{{ session.Name | append: '-' | append: session.Availabilty-Notes | slugify }}" class="modal-trigger collection-item waves-effect col s12">
+        <a href="#{{ session.Name | append: '-' | append: session.Session | slugify }}" class="modal-trigger collection-item waves-effect col s12">
           <p class="col s2 name">{{ session.Name }}</p>
           <p class="col s6 title">{{ session.Presentation-Title }}</p>
           <p class="col s2 strand">{{ session.Conference-Strand }}</p>
-          <p class="col s2 session">{{ session.Availabilty-Notes }}</p>
+          <p class="col s2 session">{{ session.Session }}</p>
         </a>
         {% endfor %}
       </span>

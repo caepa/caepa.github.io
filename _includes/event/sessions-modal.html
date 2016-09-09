@@ -3,7 +3,7 @@
 
 {% if site.data[year]sessions != null %}
 {% for session in site.data[year]sessions %}
-<div id="{{ session.Name | append: '-' | append: session.Availabilty-Notes | slugify }}" class="modal modal-fixed-footer">
+<div id="{{ session.Name | append: '-' | append: session.Session | slugify }}" class="modal modal-fixed-footer">
   
   <!-- session details -->
   <div class="modal-content">

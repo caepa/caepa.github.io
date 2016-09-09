@@ -35,7 +35,7 @@
     </h3>
   </li>
   <ul class="collapsible" data-collapsible="accordion">
-    {% assign sorted_time = strand.items | group_by: "Availabilty-Notes" | sort: "name" %}
+    {% assign sorted_time = strand.items | group_by: "Session" | sort: "name" %}
     {% for time in sorted_time %}
     <li class="waves-effect waves-light active" style="width:100%;">
       <a class="collapsible-header grey-text text-lighten-2 active">
@@ -47,7 +47,7 @@
           {% assign sessions = time.items %}
           {% for session in sessions %}
           <li class="waves-effect waves-light" style="width:100%;">
-            <a href="#{{ session.Name | append: '-' | append: session.Availabilty-Notes | slugify }}" class="modal-trigger grey-text text-lighten-3">{{ session."Presentation-Title" | strip_html | strip_newlines | replace: '_',' ' }}</a>
+            <a href="#{{ session.Name | append: '-' | append: session.Session | slugify }}" class="modal-trigger grey-text text-lighten-3">{{ session."Presentation-Title" | strip_html | strip_newlines | replace: '_',' ' }}</a>
           </li>
           {% endfor %}
         </ul>
