@@ -47,7 +47,7 @@
           {% assign sessions = time.items %}
           {% for session in sessions %}
           <li class="waves-effect waves-light" style="width:100%;">
-            <a href="#{{ session.Name | append: '-' | append: session.Session | slugify }}" class="modal-trigger grey-text text-lighten-3">{{ session."Presentation-Title" | strip_html | strip_newlines | replace: '_',' ' }}</a>
+            <a href="#{{ session.Timestamp | slugify }}-{{ session.Name | append: '-' | append: session.Session | slugify }}" class="modal-trigger grey-text text-lighten-3">{{ session."Presentation-Title" | strip_html | strip_newlines | replace: '_',' ' }}</a>
           </li>
           {% endfor %}
         </ul>

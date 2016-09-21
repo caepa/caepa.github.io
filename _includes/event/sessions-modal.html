@@ -3,7 +3,7 @@
 
 {% if site.data[year]sessions != null %}
 {% for session in site.data[year]sessions %}
-<div id="{{ session.Name | append: '-' | append: session.Session | slugify }}" class="modal modal-fixed-footer">
+<div id="{{ session.Timestamp | slugify }}-{{ session.Name | append: '-' | append: session.Session | slugify }}" class="modal modal-fixed-footer">
   
   <!-- session details -->
   <div class="modal-content">
@@ -32,12 +32,12 @@
       {% if session.Objectives %}
       <strong class="grey-text text-darken-1">Objectives: </strong>
       <ul class="browser-default">
-        <li>{{ session.Objectives | strip_newlines }}</li>
+        <li>{{ session.Objectives | strip_newlines | capitalize }}</li>
       </ul>
       {% endif %}
       
       <!-- session abstract -->
-      <p style="text-align:justify;"><strong class="grey-text text-darken-1">Session abstract: </strong>{{ session.Presentation-Abstract | strip_newlines }}</p>
+      <p style="text-align:justify;"><strong class="grey-text text-darken-1">Session abstract: </strong>{{ session.Presentation-Abstract | strip_newlines | capitalize }}</p>
       
       <!-- session presentar -->
       {% if session.Biography %}
