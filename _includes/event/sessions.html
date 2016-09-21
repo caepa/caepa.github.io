@@ -31,7 +31,9 @@
   </li>
   <li style="padding:0 30px;">
     <h3 class="grey-text text-lighten-1 light flow-text truncate">{{ strand.name }}
-      <span class="badge new sessions" style="margin-left:20px; right:'null';">{{ strand.items | size }}</span>
+      {% comment%}
+      <!-- span class="badge new sessions" style="margin-left:20px; right:'null';">{{ strand.items | size }}</span-->
+      {% endcomment %}
     </h3>
   </li>
   <ul class="collapsible" data-collapsible="accordion">
