@@ -4,7 +4,7 @@ tabs: [Details, Awards, Keynotes, Sessions, Vendors]
 ---
 <!-- Welcome Message Structure -->
 <section id="welcome" class="modal modal-fixed-footer">
-  <div class="modal-content flow-text" style="text-align:justify;">
+  <div class="modal-content flow-text">
     <h4>Letter from the President</h4>
     {{ content }}
     <p><strong>{{ page.author }}</strong></p>
@@ -36,22 +36,25 @@ tabs: [Details, Awards, Keynotes, Sessions, Vendors]
       </a> -->
     </div>
     <!-- awards -->
-    <!-- keynote speakers -->
+    {% include event/awards-aside.html year = y %}
+    <!-- keynote speakers -->    
+    {% include event/keynotes-aside.html year = y %}
     <!-- session count -->
-    {% include event/sessions.html year = y %}
-  </aside>  
+    {% include event/sessions-aside.html year = y %}
     <!-- vendors -->
+    {% include event/vendors-aside.html year = y %}
+  </aside>
 </section>
 
 <section id="tab1">
   <div class="col s12 l10 offset-l1">
-    {% include event/awards.html year = y %}
+    {% include event/awards-list.html year = y %}
   </div>
 </section>
 
 <section id="tab2">
   <div class="col s12 l10 offset-l1">
-    {% include event/keynotes.html year = y %}
+    {% include event/keynotes-list.html year = y %}
   </div>
 </section>
 
@@ -63,7 +66,7 @@ tabs: [Details, Awards, Keynotes, Sessions, Vendors]
 
 <section id="tab4">
   <div class="col s12 l10 offset-l1">
-    {% include event/vendors.html year = y %}
+    {% include event/vendors-list.html year = y %}
   </div>
 </section>
 

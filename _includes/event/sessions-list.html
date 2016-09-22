@@ -7,71 +7,73 @@
 {% else %}
 <!-- begin session navigation  -->
 <div id="sessions">
-  
   <div class="row">
-    <div class="input-field col s12">
+    <!-- list search -->
+    <div class="input-field col s12 m8">
       <input id="search" class="search" type="text" />
-      <label for="search"><i class="material-icons left">search</i>Search by Presenter, Title, Strand, or Session #</label>
+      <label for="search"><i class="material-icons left">search</i>Search by keyword</label>
+    </div>
+    <!-- list sort -->
+    <div class="input-field col s12 m4">
+      <select id="sort-sessions" onchange="changeValue();">
+        <option value="presenter" class="active selected">Presenter</option>
+        <option value="session">Session</option>
+        <option value="strand">Strand</option>
+        <option value="title">Title</option>
+        <option value="vendor">Vendor</option>
+      </select>
+      <label>Sort by:</label>
     </div>
   </div>
-  
   <div class="row">
-    
-    <div class="collection with-header">
-      
-      <!-- list header -->
-      <span class="collection-header col s12">
-        <div class="col s1 waves-effect" >
-          <input name="group1" type="radio" id="vendor" checked />
-          <label for="vendor" class="sort" data-sort="vendor" >Vendor</label>
-        </div>
-        <span class="col s2 waves-effect" >
-          <input name="group1" type="radio" id="presenter" checked />
-          <label for="presenter" class="sort" data-sort="name" >Presenter</label>
-        </span>
-        <span class="col s5 waves-effect" >          
-          <input name="group1" type="radio" id="title" />
-          <label for="title" class="sort" data-sort="title">Title</label>
-        </span>
-        <span class="col s2 waves-effect" >
-          <input name="group1" type="radio" id="strand" />
-          <label for="strand" class="sort" data-sort="strand">Strand</label>
-        </span>        
-        <span class="col s2 waves-effect" >
-          <input name="group1" type="radio" id="session" />
-          <label for="session" class="sort" data-sort="session">Session</label>
-        </span>
-      </span>
-      
+    <div class="collection">
       <!-- IMPORTANT, class="list" have to be at tbody -->
       <span class="list">
         {% for session in site.data[year]sessions %}
-        <a href="#{{ session.Timestamp | slugify }}-{{ session.Name | append: '-' | append: session.Session | slugify }}" class="modal-trigger collection-item waves-effect col s12">
+        <a href="#{{ session.Timestamp | slugify }}-{{ session.Name | append: '-' | append: session.Session | slugify }}" class="modal-trigger collection-item avatar waves-effect">
           {% if session.Vendor == 'Yes' %}
-          <p class="col s1 vendor"><i class="material-icons left col s1">store</i></p>
-          {% else %}
-          <p class="col s1 vendor"></p>
+          <i class="material-icons circle vendor">store</i>
           {% endif %}
-          <p class="col s2 name">{{ session.Name }}</p>
-          <p class="col s5 title">{{ session.Presentation-Title }}</p>
-          <p class="col s2 strand">{{ session.Conference-Strand }}</p>
-          <p class="col s2 session">{{ session.Session }}</p>
+          <p class="strand"><strong>{{ session.Conference-Strand }}</strong></p>
+          <p class="title">{{ session.Presentation-Title }}</p>          
+          <p class="presenter"><em>{{ session.Name }}</em></p>
+          <span class="secondary-content session">{{ session.Session }}</span>
+          <span class="hide abstract">{{ session.Presentation-Abstract | strip_newlines }}</span>
+          <span class="hide description">{{ session.Presentation-Description | strip_newlines }}</span>
         </a>
         {% endfor %}
       </span>
-      
     </div>
   </div>
-  
 </div>
 {% endif %}
 
 <!-- JS -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.2.0/list.min.js"></script>
 <script>
-var options = {
-  valueNames: [ 'vendor', 'name', 'title', 'strand', 'session' ]
-};
+  var options = {
+    valueNames: [ 'abstract', 'description', 'presenter', 'session', 'strand', 'title', 'vendor' ]
+  };
 
-var userList = new List('sessions', options);
+  var userList = new List('sessions', options);
+</script>
+<script>
+  function changeValue(){
+    var option=document.getElementById('sort-sessions').value;	
+    if(option=="presenter"){
+      userList.sort('presenter', { order: "asc" });
+    }
+    else if(option=="session"){
+      userList.sort('session', { order: "asc" });
+    }
+    else if(option=="strand"){
+      userList.sort('strand', { order: "asc" });
+    }
+    else if(option=="title"){
+      userList.sort('title', { order: "asc" });
+    }
+    else if(option=="vendor"){
+      userList.sort('vendor', { order: "desc" });
+    }
+  }
 </script>

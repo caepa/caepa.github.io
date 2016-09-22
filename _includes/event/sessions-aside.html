@@ -1,18 +1,18 @@
 <!-- sessions -->
 {% assign year = include.year %}
-<!-- begin session navigation  -->
-
-{% if site.data[year]sessions == null %}
-<p class="grey-text text-darken-2 light flow-text">No Session Information Available</p>
-
-{% else %}
 <div class="collection with-header">
   <span class="collection-header truncate">
     <h3 class="grey-text text-darken-2 light">{{ "Sessions" }}</h3>
   </span>
+
+  {% if site.data[year]sessions == null %}
+  <div class="collection-item">
+    <p class="grey-text text-darken-2 light flow-text">No Session Information Available</p>
+  </div>
+  {% else %}
+  <!-- session navigation list -->
   {% assign sorted_strand = site.data[year]sessions | group_by: "Conference-Strand" | sort: "name" %}
 
-  <!-- session navigation list -->
   {% for strand in sorted_strand %}
   <a href="" data-activates="{{ strand.name | slugify }}" class="collection-item event-info truncate">{{ strand.name }}
     <span class="badge new sessions">{{ strand.items | size }}</span>

@@ -1,0 +1,28 @@
+<!-- keynotes -->
+{% assign year = include.year %}
+<ul class="collection">
+  {% if site.data[year]keynotes == null %}
+  <li class="collection-item">
+    <p class="grey-text text-darken-2 light">To be announced</p>
+  </li>
+  {% else %}
+  <!-- keynotes list -->
+  {% assign sorted_data = site.data[year]keynotes | sort: "Timestamp" %}
+
+  {% for a in sorted_data %}
+  <li class="collection-item avatar">
+    <i class="material-icons circle">grade</i>
+    <span class="title"><strong>{{ a }}</strong></span>
+    <p><em>{{ a }}</em></p>
+    <p>{{ | strip_newlines | captialize }}</p>
+
+    {% if a %}
+    <a href="mailto:{{ a }}" class="secondary-content">
+      <i class="material-icons">email</i>
+    </a>
+    {% endif %}
+
+  </li>
+  {% endfor %}
+  {% endif %}
+</ul>

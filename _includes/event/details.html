@@ -69,7 +69,9 @@
       <div class="col s12 m10">
         <p class="flow-text grey-text text-darken-1" style="font-weight:900">Registration</p>
         <ul class="flow-text" style="line-height:1.5;">
-          <li>Earlybird Registration Ends: {{ event.end_offer | date: "%A, %B %-d, %Y" }}</li>
+          <li>Earlybird Registration Ends:<br />
+            {{ event.end_offer | date: "%A, %B %-d, %Y" }}
+          </li>
         </ul>
         <table class="striped responsive-table">
           <thead>
@@ -117,7 +119,9 @@
 
         {% include store.html %}
 
-        <em>NOTE: You will be redirected to a SSL at checkout.</em>
+        <small>
+          <em>NOTE: You will be redirected to a SSL at checkout.</em>
+        </small>
 
       </div>
     </div>

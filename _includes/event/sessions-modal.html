@@ -37,11 +37,18 @@
       {% endif %}
       
       <!-- session abstract -->
-      <p style="text-align:justify;"><strong class="grey-text text-darken-1">Session abstract: </strong>{{ session.Presentation-Abstract | strip_newlines | capitalize }}</p>
+      {% if session.Presentation-Abstract %}
+      <p><strong class="grey-text text-darken-1">Session abstract: </strong>{{ session.Presentation-Abstract | strip_newlines | capitalize }}</p>
+      {% endif %}
+      
+      <!-- session description -->
+      {% if session.Presentation-Description %}
+      <p><strong class="grey-text text-darken-1">Session description: </strong>{{ session.Presentation-Description | strip_newlines | capitalize }}</p>
+      {% endif %}
       
       <!-- session presentar -->
       {% if session.Biography %}
-      <p style="text-align:justify;"><strong class="grey-text text-darken-1">About the presenter: </strong>{{ session.Biography | strip_newlines }}</p>
+      <p><strong class="grey-text text-darken-1">About the presenter: </strong>{{ session.Biography | strip_newlines }}</p>
       {% endif %}
       
     </span>

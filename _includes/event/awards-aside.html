@@ -1,0 +1,25 @@
+<!-- awards -->
+{% assign year = include.year %}
+<div class="collection with-header">
+  <div class="collection-header truncate">
+    <h3 class="grey-text text-darken-2 light">{{ "Awards" }}</h3>
+  </div>
+  {% if site.data[year]awards == null %}
+  <div class="collection-item">
+    <p class="grey-text text-darken-2 light">To be announced</p>
+  </div>
+  {% else %}
+  <!-- awards list -->
+  {% assign sorted_data = site.data[year]awards | sort: "form" %}
+
+  {% for a in sorted_data %}
+  {% if a.timestamp != null %}
+  <div class="collection-item truncate">
+    <span class="title"><strong>{{ a.form }}</strong><br/>
+      <em>{{ a.name }}</em>
+    </span>
+  </div>
+  {% endif %}
+  {% endfor %}
+  {% endif %}
+</div>

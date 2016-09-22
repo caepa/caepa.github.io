@@ -1,0 +1,31 @@
+<!-- vendors -->
+{% assign year = include.year %}
+<!-- begin session navigation  -->
+
+{% if site.data[year]vendors == null %}
+<p class="grey-text text-darken-2 light">No Vendor Information Available</p>
+
+{% else %}
+<ul class="collection">
+  {% assign sorted_data = site.data[year]vendors | sort: "Organization" %}
+
+  <!-- vendor list -->
+  {% for a in sorted_data %}
+  <li class="collection-item avatar">
+    <i class="material-icons circle">store</i>
+    <a href="{{ a.Organization-Website }}" class="title" target="_blank">
+      <strong>{{ a.Organization }}</strong>
+    </a>
+    <p>
+      <em>{{ a.Name }}, {{ a.Job-Title }}</em>
+    </p>
+    <p>{{ a.Description | strip_newlines | captialize }}</p>
+    {% if a.Email %}
+    <a href="mailto:{{ a.Email }}" class="secondary-content">
+      <i class="material-icons">email</i>
+    </a>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
