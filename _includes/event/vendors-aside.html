@@ -13,7 +13,7 @@
   {% assign sorted_data = site.data[year]vendors | sort: "Organization" %}
   
   {% for a in sorted_data %}
-  <a href="{{ a.Organization-Website }}" class="collection-item event-info truncate" target="_blank">{{ a.Organization }}</a>
+  <a href="{{ a.Organization-Website }}" class="collection-item truncate" target="_blank">{{ a.Organization }}</a>
   {% endfor %}  
   {% endif %}
 </div>
