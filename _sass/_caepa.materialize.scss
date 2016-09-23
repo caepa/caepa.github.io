@@ -24,7 +24,7 @@ main #circle {
   -ms-filter: blur(25px);
   filter: blur(25px);
 
-  /* animation */
+  /* animation
   -webkit-animation: circle-fadein 8s;
   -moz-animation: circle-fadein 8s;
   -o-animation: circle-fadein 8s;  
@@ -44,7 +44,7 @@ main #circle {
 }
 @keyframes circle-fadein {
   0% { opacity: 0; padding: 0%; }
-  100% { opacity: 1; padding: 100%; }
+  100% { opacity: 1; padding: 100%; } */
 }
 
 main #logo {
@@ -62,7 +62,7 @@ main #logo img {
   -ms-filter: brightness(0);
   filter: brightness(0);
 
-  /* animation */
+  /* animation
   -webkit-animation: logo-fadein 3s;
   -moz-animation: logo-fadein 3s;
   -o-animation: logo-fadein 3s;  
@@ -82,7 +82,7 @@ main #logo img {
 }
 @keyframes logo-fadein {
   0% { opacity: 0; width: 0vw; }
-  100% { opacity: 1; width: 34vw; }
+  100% { opacity: 1; width: 34vw; } */
 }
 
 main #name {
@@ -96,7 +96,7 @@ main #title {
   font-weight: 900;
   text-shadow: 1px 1px 38.2px black;
 
-  /* animation */
+  /* animation
   -webkit-animation: title-fadein 1s;
   -moz-animation: title-fadein 1s;
   -o-animation: title-fadein 1s;  
@@ -116,14 +116,14 @@ main #title {
 }
 @keyframes title-fadein {
   0% { opacity: 0; font-size: 0vw; }
-  100% { opacity: 1; font-size: 13vw; }
+  100% { opacity: 1; font-size: 13vw; } */
 }
 
 main #subtitle {
   font-size: 3vw;
   text-shadow: 1px 1px 61.8px black;
 
-  /* animation */
+  /* animation
   -webkit-animation: subtitle-fadein 2s;
   -moz-animation: subtitle-fadein 2s;
   -o-animation: subtitle-fadein 2s;  
@@ -143,7 +143,7 @@ main #subtitle {
 }
 @keyframes subtitle-fadein {
   0% { opacity: 0; font-size: 0vw; }
-  100% { opacity: 1; font-size: 3vw; }
+  100% { opacity: 1; font-size: 3vw; } */
 }
 
 /* footer *//*
