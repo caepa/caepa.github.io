@@ -39,9 +39,6 @@
       &:hover {
         color: lighten($tabs-text-color, 20%);
       }
-      &.active {
-        color: lighten($tabs-text-color, 20%);
-      }
     }
 
     &.disabled a {
