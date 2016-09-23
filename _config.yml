@@ -36,6 +36,8 @@ social:
 
 # Build settings
 markdown: kramdown
+sass:
+  style: compressed
 
 collections:
   forms:
