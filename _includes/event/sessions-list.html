@@ -26,20 +26,25 @@
     </div>
   </div>
   <div class="row">
+    <button class="btn waves-effect waves-light" onclick="window.print()">
+      <i class="material-icons left">print</i>Print Full Session List</button>
+  </div>
+  <div class="row">
     <div class="collection">
       <!-- IMPORTANT, class="list" have to be at tbody -->
       <span class="list">
-        {% for session in site.data[year]sessions %}
-        <a href="#{{ session.Timestamp | slugify }}-{{ session.Name | append: '-' | append: session.Session | slugify }}" class="modal-trigger collection-item avatar waves-effect">
-          {% if session.Vendor == 'Yes' %}
+        {% for data in site.data[year]sessions %}
+        <a href="#{{ data.Timestamp | slugify }}-{{ data.Name | append: '-' | append: data.Session | slugify }}" class="modal-trigger collection-item avatar waves-effect">
+          {% if data.Vendor == 'Yes' %}
           <i class="material-icons circle vendor">store</i>
           {% endif %}
-          <p class="strand"><strong>{{ session.Conference-Strand }}</strong></p>
-          <p class="title">{{ session.Presentation-Title }}</p>          
-          <p class="presenter"><em>{{ session.Name }}</em></p>
-          <span class="secondary-content session">{{ session.Session }}</span>
-          <span class="hide abstract">{{ session.Presentation-Abstract | strip_newlines }}</span>
-          <span class="hide description">{{ session.Presentation-Description | strip_newlines }}</span>
+          <p class="strand"><strong>{{ data.Conference-Strand }}</strong></p>
+          <p class="title">{{ data.Presentation-Title }}</p>          
+          <p class="presenter"><em>{{ data.Name }}</em></p>
+          <span class="secondary-content session">{{ data.Session | prepend: "Session " }}</span>
+          <span class="hide abstract">{{ data.Presentation-Abstract | strip_newlines }}</span>
+          <span class="hide description">{{ data.Presentation-Description | strip_newlines }}</span>
+          <span class="hide objectives">{{ data.Objectives | markdownify }}</span>
         </a>
         {% endfor %}
       </span>

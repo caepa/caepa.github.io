@@ -2,53 +2,57 @@
 {% assign year = include.year %}
 
 {% if site.data[year]sessions != null %}
-{% for session in site.data[year]sessions %}
-<div id="{{ session.Timestamp | slugify }}-{{ session.Name | append: '-' | append: session.Session | slugify }}" class="modal modal-fixed-footer">
+{% for data in site.data[year]sessions %}
+<div id="{{ data.Timestamp | slugify }}-{{ data.Name | append: '-' | append: data.Session | slugify }}" class="modal modal-fixed-footer">
   
   <!-- session details -->
   <div class="modal-content">
-    <span class="flow-text">
+    <span class="grey-text text-darken-2">
+      <!-- session number -->
+      <span class="light">{{ data.Session | prepend: "Session " }}</span>
+      
+      <!-- session title -->
+      <h4>{{ data.Presentation-Title }}</h4>
       
       <!-- session presentar / email -->
-      {% if session.Email %}
-      <address><a href="mailto:{{ session.Email }}">{{ session.Name }}</a></address>
+      {% if data.Email %}
+      <address><a href="mailto:{{ data.Email }}">{{ data.Name }}</a></address>
       {% else %}
-      <address>{{ session.Name }}</address>
+      <address>{{ data.Name }}</address>
       {% endif %}
       
       <!-- organization -->
-      {% if session.Employer and session.Job-Title %}
-      <small>{{ session.Employer }}, {{ session.Job-Title }}</small>
-      {% elsif session.Employer %}
-      <small>{{ session.Employer }}</small>
-      {% elsif session.Job-Title %}
-      <small>{{ session.Job-Title }}</small>
+      {% if data.Employer and data.Job-Title %}
+      <small>{{ data.Employer }}, {{ data.Job-Title }}</small>
+      {% elsif data.Employer %}
+      <small>{{ data.Employer }}</small>
+      {% elsif data.Job-Title %}
+      <small>{{ data.Job-Title }}</small>
       {% endif %}
       
-      <!-- session title -->
-      <h4 class="grey-text text-darken-2">{{ session.Presentation-Title | strip_newlines }}</h4>
       
       <!-- session objectives -->
-      {% if session.Objectives %}
-      <strong class="grey-text text-darken-1">Objectives: </strong>
-      <ul class="browser-default">
-        <li>{{ session.Objectives | strip_newlines | capitalize }}</li>
-      </ul>
+      {% if data.Objectives %}
+      <p><strong>Objectives:</strong></p>
+      <p class="browser-default">{{ data.Objectives | markdownify }}</p>
       {% endif %}
       
       <!-- session abstract -->
-      {% if session.Presentation-Abstract %}
-      <p><strong class="grey-text text-darken-1">Session abstract: </strong>{{ session.Presentation-Abstract | strip_newlines | capitalize }}</p>
+      {% if data.Presentation-Abstract %}
+      <p><strong>Session abstract:</strong></p>
+      <p>{{ data.Presentation-Abstract }}</p>
       {% endif %}
       
       <!-- session description -->
-      {% if session.Presentation-Description %}
-      <p><strong class="grey-text text-darken-1">Session description: </strong>{{ session.Presentation-Description | strip_newlines | capitalize }}</p>
+      {% if data.Presentation-Description %}
+      <p><strong>Session description:</strong></p>
+      <p>{{ data.Presentation-Description }}</p>
       {% endif %}
       
       <!-- session presentar -->
-      {% if session.Biography %}
-      <p><strong class="grey-text text-darken-1">About the presenter: </strong>{{ session.Biography | strip_newlines }}</p>
+      {% if data.Biography %}
+      <p><strong>About the presenter:</strong></p>
+      <p>{{ data.Biography }}</p>
       {% endif %}
       
     </span>
@@ -56,8 +60,8 @@
   
   <div class="modal-footer">
     <a class="modal-action modal-close waves-effect btn-flat">Close</a>
-    {% if session.Organization-Website != null %}
-    <a href="{{ session.Organization-Website }}" class="waves-effect btn-flat" target="_blank">{{ session.Organization }}</a>
+    {% if data.Organization-Website != null %}
+    <a href="{{ data.Organization-Website }}" class="waves-effect btn-flat" target="_blank">{{ data.Organization }}</a>
     {% endif %}
   </div>
   

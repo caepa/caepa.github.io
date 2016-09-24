@@ -1,0 +1,15 @@
+@media print {
+  
+  body {
+    background-color: transparent !important;
+  }
+  
+  header, footer, #share, .fixed-action-btn, .modal-trigger, .modal-footer, #sessions {
+    display: none !important;
+  }
+  
+  .modal-content {
+    page-break-after: always;
+  }
+  
+}

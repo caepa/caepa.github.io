@@ -4,6 +4,15 @@ span.badge.new:after {
 span.badge.new.sessions:after {
   content: " ";
 }
+/* list reset */
+span.browser-default ul {
+  margin: 0 1em;
+  
+  li {
+    list-style-type: disc;
+  }
+}
+
 /* landing page with animations
 main #circle {
   position: absolute;
