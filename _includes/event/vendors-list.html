@@ -1,27 +1,31 @@
-<!-- vendors -->
 {% assign year = include.year %}
-<!-- begin session navigation  -->
-
-{% if site.data[year]vendors == null %}
-<p class="grey-text text-darken-2 light">No Vendor Information Available</p>
-
-{% else %}
-<ul class="collection">
+<!-- begin vendor-list  -->
+<ul id="page-content" class="collection with-header z-depth-1">
+  <li id="accent" class="{{ page.color }} accent-1"></li>
+  <li class="collection-header">
+    <h4>{{ page.year }} Vendors</h4>
+  </li>
+  
+  {% if site.data[year]vendors == null %}
+  <li class="collection-item">    
+    <p class="grey-text text-darken-2 light">To be announced</p>
+  </li>
+  
+  {% else %}
+  
+  <!-- vendor list -->  
   {% assign sorted_data = site.data[year]vendors | sort: "Organization" %}
-
-  <!-- vendor list -->
-  {% for a in sorted_data %}
+  
+  {% for data in sorted_data %}
   <li class="collection-item avatar">
-    <i class="material-icons circle">store</i>
-    <a href="{{ a.Organization-Website }}" class="title" target="_blank">
-      <strong>{{ a.Organization }}</strong>
-    </a>
-    <p>
-      <em>{{ a.Name }}, {{ a.Job-Title }}</em>
+    <i class="material-icons circle {{ page.color }} accent-1">store</i>
+    <a href="{{ data.Organization-Website }}" class="flow-text" target="_blank"><b>{{ data.Organization }}</b></a>
+    <p class="title">
+      <strong>{{ data.Name }}, {{ data.Job-Title }}</strong>
     </p>
-    <p>{{ a.Description | strip_newlines | captialize }}</p>
-    {% if a.Email %}
-    <a href="mailto:{{ a.Email }}" class="secondary-content">
+    <p>{{ data.Description | strip_newlines }}</p>
+    {% if data.Email %}
+    <a href="mailto:{{ data.Email }}" class="secondary-content">
       <i class="material-icons">email</i>
     </a>
     {% endif %}

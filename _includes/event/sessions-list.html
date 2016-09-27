@@ -1,63 +1,72 @@
-<!-- sessions -->
 {% assign year = include.year %}
+<!-- begin session-list  -->
+<ul id="page-content" class="collection with-header z-depth-1">
+  <li id="accent" class="{{ page.color }} accent-1"></li>
+  <li class="collection-header">
+    <h4>{{ page.year }} Sessions</h4>
+  </li>
 
-{% if site.data[year]sessions == null %}
-<p class="grey-text text-darken-2 light flow-text">No Information Available</p>
+  {% if site.data[year]sessions == null %}
+  <li class="collection-item">    
+    <p class="grey-text text-darken-2 light">To be announced</p>
+  </li>
 
-{% else %}
-<!-- begin session navigation  -->
-<div id="sessions">
-  <div class="row">
-    <!-- list search -->
-    <div class="input-field col s12 m8">
-      <input id="search" class="search" type="text" />
-      <label for="search"><i class="material-icons left">search</i>Search by keyword</label>
+  {% else %}
+
+  <!-- begin session navigation -->
+  <li class="collection-item">
+    <div class="row">
+
+      <!-- list search -->
+      <div class="input-field col s12 m8">
+        <input id="search" class="search" type="text" />
+        <label for="search"><i class="material-icons left">search</i>Search by keyword</label>
+      </div>
+
+      <!-- list sort -->
+      <div class="input-field col s12 m4">
+        <select id="sort-sessions" onchange="changeValue();">
+          <option value="presenter" class="active selected">Presenter</option>
+          <option value="session">Session</option>
+          <option value="strand">Strand</option>
+          <option value="p-title">Title</option>
+          <option value="vendor">Vendor</option>
+        </select>
+        <label>Sort by:</label>
+      </div>
     </div>
-    <!-- list sort -->
-    <div class="input-field col s12 m4">
-      <select id="sort-sessions" onchange="changeValue();">
-        <option value="presenter" class="active selected">Presenter</option>
-        <option value="session">Session</option>
-        <option value="strand">Strand</option>
-        <option value="title">Title</option>
-        <option value="vendor">Vendor</option>
-      </select>
-      <label>Sort by:</label>
-    </div>
-  </div>
-  <div class="row">
     <button class="btn waves-effect waves-light" onclick="window.print()">
       <i class="material-icons left">print</i>Print Full Session List</button>
-  </div>
-  <div class="row">
-    <div class="collection">
-      <!-- IMPORTANT, class="list" have to be at tbody -->
-      <span class="list">
-        {% for data in site.data[year]sessions %}
-        <a href="#{{ data.Timestamp | slugify }}-{{ data.Name | append: '-' | append: data.Session | slugify }}" class="modal-trigger collection-item avatar waves-effect">
-          {% if data.Vendor == 'Yes' %}
-          <i class="material-icons circle vendor">store</i>
-          {% endif %}
-          <p class="strand"><strong>{{ data.Conference-Strand }}</strong></p>
-          <p class="title">{{ data.Presentation-Title }}</p>          
-          <p class="presenter"><em>{{ data.Name }}</em></p>
-          <span class="secondary-content session">{{ data.Session | prepend: "Session " }}</span>
-          <span class="hide abstract">{{ data.Presentation-Abstract | strip_newlines }}</span>
-          <span class="hide description">{{ data.Presentation-Description | strip_newlines }}</span>
-          <span class="hide objectives">{{ data.Objectives | markdownify }}</span>
-        </a>
-        {% endfor %}
-      </span>
-    </div>
-  </div>
-</div>
+  </li>
+
+  <!-- IMPORTANT, class="list" have to be at tbody -->
+  <span class="list">
+    {% for data in site.data[year]sessions %}
+    <li class="collection-item avatar">
+      <!-- IMPORTANT, classes used to sort -->
+      {% if data.Vendor == 'Yes' %}
+      <i class="vendor material-icons circle {{ page.color }} accent-1">store</i>
+      {% endif %}
+      <span class="session right">{{ data.Session | prepend: "Session " }}</span>
+      <p class="strand"><em>{{ data.Conference-Strand }}</em></p>
+      <a href="#{{ data.Timestamp | slugify }}-{{ data.Name | append: '-' | append: data.Session | slugify }}" class="modal-trigger">
+        <span class="p-title flow-text"><b>{{ data.Presentation-Title }}</b></span>
+      </a>
+      <p class="presenter"><strong>{{ data.Name }}</strong></p>
+      <span class="hide abstract">{{ data.Presentation-Abstract | strip_newlines }}</span>
+      <span class="hide description">{{ data.Presentation-Description | strip_newlines }}</span>
+      <span class="hide objectives">{{ data.Objectives | markdownify }}</span>
+    </li>
+    {% endfor %}
+  </span>
+</ul>
 {% endif %}
 
 <!-- JS -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.2.0/list.min.js"></script>
 <script>
   var options = {
-    valueNames: [ 'abstract', 'description', 'presenter', 'session', 'strand', 'title', 'vendor' ]
+    valueNames: [ 'abstract', 'description', 'presenter', 'session', 'strand', 'p-title', 'vendor' ]
   };
 
   var userList = new List('sessions', options);
@@ -74,8 +83,8 @@
     else if(option=="strand"){
       userList.sort('strand', { order: "asc" });
     }
-    else if(option=="title"){
-      userList.sort('title', { order: "asc" });
+    else if(option=="p-title"){
+      userList.sort('p-title', { order: "asc" });
     }
     else if(option=="vendor"){
       userList.sort('vendor', { order: "desc" });

@@ -1,3 +1,38 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: ghostwhite;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+nav .brand-logo.left {
+  left: 0.75rem;
+}
+
+.nav-wrapper {
+  padding: 0 0.75rem;
+}
+
+header .tabs .indicator{
+  height: 4px;
+}
+
+header #toc a {
+  color: rgba(255,255,255,0.7);
+}
+
+header #toc a:active {
+  color: #fff;
+}
+
+.collection #accent {
+  height: 8px;
+}
+
 span.badge.new:after {
   content: " posts";
 }
@@ -7,7 +42,7 @@ span.badge.new.sessions:after {
 /* list reset */
 span.browser-default ul {
   margin: 0 1em;
-  
+
   li {
     list-style-type: disc;
   }
@@ -15,45 +50,45 @@ span.browser-default ul {
 
 /* landing page with animations
 main #circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 100%;
-  background: radial-gradient(ellipse at center,
-    rgba(255,255,255,.33) 0%,
-    rgba(255,255,255,0) 23.6%,
-    rgba(255,255,255,0) 38.2%,
-    rgba(255,255,255,0) 50%,
-    rgba(255,255,255,.33) 61.8%,
-    rgba(255,255,255,.33) 106.8%);
-  -webkit-filter: blur(25px);
-  -moz-filter: blur(25px);
-  -o-filter: blur(25px);
-  -ms-filter: blur(25px);
-  filter: blur(25px);
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+padding: 100%;
+background: radial-gradient(ellipse at center,
+rgba(255,255,255,.33) 0%,
+rgba(255,255,255,0) 23.6%,
+rgba(255,255,255,0) 38.2%,
+rgba(255,255,255,0) 50%,
+rgba(255,255,255,.33) 61.8%,
+rgba(255,255,255,.33) 106.8%);
+-webkit-filter: blur(25px);
+-moz-filter: blur(25px);
+-o-filter: blur(25px);
+-ms-filter: blur(25px);
+filter: blur(25px);
 
-  /* animation
-  -webkit-animation: circle-fadein 8s;
-  -moz-animation: circle-fadein 8s;
-  -o-animation: circle-fadein 8s;  
-  animation: circle-fadein 8s;
+/* animation
+-webkit-animation: circle-fadein 8s;
+-moz-animation: circle-fadein 8s;
+-o-animation: circle-fadein 8s;  
+animation: circle-fadein 8s;
 }
 @-webkit-keyframes circle-fadein {  
-  0% { opacity: 0; padding: 0%; }
-  100% { opacity: 1; padding: 100%; }
+0% { opacity: 0; padding: 0%; }
+100% { opacity: 1; padding: 100%; }
 }
 @-moz-keyframes circle-fadein {
-  0% { opacity: 0; padding: 0%; }
-  100% { opacity: 1; padding: 100%; }
+0% { opacity: 0; padding: 0%; }
+100% { opacity: 1; padding: 100%; }
 }
 @-o-keyframes circle-fadein {  
-  0% { opacity: 0; padding: 0%; }
-  100% { opacity: 1; padding: 100%; }
+0% { opacity: 0; padding: 0%; }
+100% { opacity: 1; padding: 100%; }
 }
 @keyframes circle-fadein {
-  0% { opacity: 0; padding: 0%; }
-  100% { opacity: 1; padding: 100%; }
+0% { opacity: 0; padding: 0%; }
+100% { opacity: 1; padding: 100%; }
 } */
 
 main #logo {
@@ -79,19 +114,19 @@ main #logo img {
   -o-animation: logo-fadein 3s;  
   animation: logo-fadein 3s;
 }
-@-webkit-keyframes logo-fadein {  
+  @-webkit-keyframes logo-fadein {  
   0% { opacity: 0; width: 0vw; }
   100% { opacity: 1; width: 34vw; }
 }
-@-moz-keyframes logo-fadein {
+  @-moz-keyframes logo-fadein {
   0% { opacity: 0; width: 0vw; }
   100% { opacity: 1; width: 34vw; }
 }
-@-o-keyframes logo-fadein {  
+  @-o-keyframes logo-fadein {  
   0% { opacity: 0; width: 0vw; }
   100% { opacity: 1; width: 34vw; }
 }
-@keyframes logo-fadein {
+  @keyframes logo-fadein {
   0% { opacity: 0; width: 0vw; }
   100% { opacity: 1; width: 34vw; } */
 }
@@ -113,19 +148,19 @@ main #title {
   -o-animation: title-fadein 1s;  
   animation: title-fadein 1s;
 }
-@-webkit-keyframes title-fadein {  
+  @-webkit-keyframes title-fadein {  
   0% { opacity: 1; font-size: 0vw; }
   100% { opacity: 1; font-size: 13vw; }
 }
-@-moz-keyframes title-fadein {
+  @-moz-keyframes title-fadein {
   0% { opacity: 0; font-size: 0vw; }
   100% { opacity: 1; font-size: 13vw; }
 }
-@-o-keyframes title-fadein {  
+  @-o-keyframes title-fadein {  
   0% { opacity: 0; font-size: 0vw; }
   100% { opacity: 1; font-size: 13vw; }
 }
-@keyframes title-fadein {
+  @keyframes title-fadein {
   0% { opacity: 0; font-size: 0vw; }
   100% { opacity: 1; font-size: 13vw; } */
 }
@@ -140,19 +175,19 @@ main #subtitle {
   -o-animation: subtitle-fadein 2s;  
   animation: subtitle-fadein 2s;
 }
-@-webkit-keyframes subtitle-fadein {  
+  @-webkit-keyframes subtitle-fadein {  
   0% { opacity: 0; font-size: 0vw; }
   100% { opacity: 1; font-size: 3vw; }
 }
-@-moz-keyframes subtitle-fadein {
+  @-moz-keyframes subtitle-fadein {
   0% { opacity: 0; font-size: 0vw; }
   100% { opacity: 1; font-size: 3vw; }
 }
-@-o-keyframes subtitle-fadein {  
+  @-o-keyframes subtitle-fadein {  
   0% { opacity: 0; font-size: 0vw; }
   100% { opacity: 1; font-size: 3vw; }
 }
-@keyframes subtitle-fadein {
+  @keyframes subtitle-fadein {
   0% { opacity: 0; font-size: 0vw; }
   100% { opacity: 1; font-size: 3vw; } */
 }
