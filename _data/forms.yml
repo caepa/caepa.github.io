@@ -1,21 +1,27 @@
 - type: Event Forms
   forms:
-  - title: ann-deditz-scholarship
+  - title: Ann Deditz Scholarship
+    url: http://www.caepa.org/forms/ann-deditz-scholarship
     google_url: http://goo.gl/forms/cnlR1vU8TL
     
-  - title: awards-nomination
+  - title: Awards Nomination
+    url: http://www.caepa.org/forms/awards-nomination
     google_url: http://goo.gl/forms/REA6Zhz1Lb
 
-  - title: presentation-proposal
+  - title: Presentation Proposal
+    url: http://www.caepa.org/forms/presentation-proposal
     google_url: http://goo.gl/forms/bgBBx5iBCQ
     
-  - title: vendor-registration
+  - title: Vendor Registration
+    url: http://www.caepa.org/forms/vendor-registration
     google_url: http://goo.gl/forms/ur6QNIQAiN
     
 - type: General Forms
   forms:
-  - title: board-of-directors
+  - title: Board of Directors
+    url: http://www.caepa.org/forms/board-of-directors
     google_url: http://goo.gl/forms/6e4Tn0HjrB
 
-  - title: volunteer-interests
+  - title: Volunteer Interest
+    url: http://www.caepa.org/forms/volunteer-interests
     google_url: http://goo.gl/forms/9MsB9ytg21

@@ -25,7 +25,7 @@ $( document ).ready(function() {
     // Icons
     // Navbar
     $('.button-collapse').sideNav({
-      menuWidth: 240,
+      menuWidth: 300,
       edge: 'left',
       closeOnClick: false
     });

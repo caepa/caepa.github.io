@@ -1,5 +1,5 @@
 ---
-layout: event_page
+layout: event_page_alt
 year: 2008
 
 theme: "Sharing Success: Adult Learners in Transition"

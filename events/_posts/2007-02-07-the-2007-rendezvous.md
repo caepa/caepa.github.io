@@ -1,5 +1,5 @@
 ---
-layout: event_page
+layout: event_page_alt
 year: 2007
 
 theme: "Engaging Diverse Learners"

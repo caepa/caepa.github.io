@@ -1,5 +1,5 @@
 ---
-layout: event_page
+layout: event_page_alt
 year: 2009
 
 theme: "Partnering For a Better Colorado"
