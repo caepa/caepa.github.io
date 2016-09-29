@@ -1,19 +1,4 @@
 ---
 layout: page
 title: Fact Sheets
-
-tabs: [Articles, Printable]
 ---
-<section id="tab0" class="col s12 l10 offset-l1">
-  {% capture url %}{{ page.url | remove: '/' }}{% endcapture%}
-  {% include post_card.html category = url %}
-</section>
-
-<section id="tab1" class="col s12 l10 offset-l1">
-  <div class="collection with-header">
-    <div class="collection-item">
-      <h2 class="grey-text text-darken-3 light truncate">{{ page.tabs[1] }} {{ page.title }}</h2>
-    </div>
-  </div>
-  <p class="flow-text">Coming Soon...</p>
-</section>

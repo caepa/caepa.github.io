@@ -1,19 +1,19 @@
 - title: Events
   url: http://www.caepa.org/events
   icon: event
-  color: red darken-4
+  color: red
   
 - title: Fact Sheets
   url: http://www.caepa.org/fact-sheets
   icon: info
-  color: pink darken-4
+  color: pink
 
 - title: News
   url: http://news.caepa.org
   icon: chrome_reader_mode
-  color: deep-purple darken-4  
+  color: deep-purple 
   
 - title: Forms
   url: http://www.caepa.org/forms
   icon: description
-  color: purple darken-4
+  color: purple

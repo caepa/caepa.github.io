@@ -1,5 +1,5 @@
 ---
-title: The Impact of the 2014 GED on Adult Education in Colorado
+title: "The Impact of the 2014 GED on Adult Education in Colorado"
 author: Paulette Church, MA; Past President of CAEPA
 ---
 ## Summary:

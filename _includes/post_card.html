@@ -11,11 +11,12 @@
 {% endif %}
 
 <article class="card hoverable">
+  <div id="accent" class="{{ page.color }} accent-1"></div>
   
   <div class="card-content row grey-text text-darken-3">
-    
+
     <div class="col s12 m2 center-align " style="margin:1.46rem 0 1.168rem 0;">
-      <div class="container {{ page.color_accent }} circle" style="height:76px; width:76px; padding-top:9px;">
+      <div class="container {{ page.color }} accent-1 circle" style="height:76px; width:76px; padding-top:9px;">
         <time datetime="{{ post.date | date_to_xmlschema }}">
           <span class="month grey-text text-lighten-4" style="display:block; line-height:26px; font-size:16px;">
             {{ post.date | date: "%b" }}</span>
@@ -24,19 +25,19 @@
         </time>
       </div>
     </div>
-    
+
     <div class="col s12 m10 flow-text">
       <h4 class="truncate"><a href="{{ post.url }}">{{ post.title | strip_html | strip_newlines | replace: '_',' ' }}</a></h4>
       {% if post.author %}<address>{{ post.author }}</address>{% endif %}
       <p class="flow-text" style="line-height:1.5; text-align:justify;">{{ post.content | strip_html | strip_newlines | truncatewords: 25 }}</p>
     </div>
-    
+
   </div>
-  
+
   <div class="card-action">
     <a href="{{ post.url }}"><i class="material-icons left">exit_to_app</i>read more...</a>
   </div>
-  
+
 </article>
 
 {% endfor %}

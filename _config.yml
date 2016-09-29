@@ -54,8 +54,7 @@ defaults:
   - scope:
       path: ""
     values:
-      color: grey darken-4
-      color_accent: grey darken-3
+      color: grey
   - scope:
       path: ""
       type: "posts"
@@ -67,32 +66,27 @@ defaults:
   - scope:
       path: "events"
     values:
-      color: red darken-4
-      color_accent: red darken-3
+      color: red
       icon: date_range
   - scope:
       path: "fact-sheets"
     values:
-      color: pink darken-4
-      color_accent: pink darken-3
+      color: pink
       icon: info
   - scope:
       path: "forms"
     values:
-      color: purple darken-4
-      color_accent: purple darken-3
+      color: purple
       icon: description
   - scope:
       type: "forms"
     values:
-      color: purple darken-4
-      color_accent: purple darken-3
+      color: purple
       icon: description
   - scope:
       path: "news"
     values:
-      color: deep-purple darken-4
-      color_accent:  deep-purple darken-3
+      color: deep-purple
       icon: chrome_reader_mode
   - scope:
       path: "news"

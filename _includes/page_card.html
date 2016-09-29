@@ -1,36 +1,16 @@
-<!-- card circle displays page icon // no datetime required -->
-{% for page in site.[include.items] %}
-{% if page.tags contains include.tab %}
-
-{% assign currentdate = page.date | date: "%Y" %}
-{% if currentdate != date %}
-
-<h3 class="light grey-text text-darken-1 flow-text truncate">{{ currentdate }}{% if page.tags != null %}<span class="thin"> {{ page.tags[0] | replace: '_',' ' | titleize }}</span>{% endif %}</h3>
-
-{% assign date = currentdate %}
-{% endif %}
-
-<article class="card hoverable">
-
-  <div class="card-content row grey-text text-darken-3">
-
-    <div class="col s12 m2 center-align " style="margin:1.46rem 0 1.168rem 0;">
-      <div class="container {{ page.color_accent }} circle" style="height:76px; width:76px; padding-top:9px;">
-        <i class="medium material-icons white-text" style="display:block; line-height:4rem; font-size:3rem;">{{ page.icon }}</i>
-      </div>
-    </div>
-
-    <div class="col s12 m10">
-      <h4 class="truncate"><a href="{{ page.url }}">{{ page.title | strip_html | strip_newlines | replace: '_',' ' }}</a></h4>
-      <p class="flow-text" style="line-height:1.5; text-align:justify;">{{ page.content | strip_html | strip_newlines | truncatewords: 25 }}</p>
-    </div>
+<!-- begin forms-list  -->
+{% for data in site.data.forms %}
+<div id="page-content" class="collection with-header z-depth-1">
+  <div id="accent" class="{{ page.color }} accent-1"></div>
+  <div class="collection-item">
+    <i class="material-icons left {{ page.color }}-text text-accent-1">description</i>
+    <span class="flow-text"><b>{{ data.type }}</b></span>
   </div>
-
-  <div class="card-action">
-    <a href="{{ page.url }}"><i class="material-icons left">exit_to_app</i>read more...</a>
-  </div>
-
-</article>
-
-{% endif %}
+  <!-- forms list -->
+  {% for form in data.forms %}
+  <a href="{{ form.url }}" class="title collection-item">
+    <strong>{{ form.title }}</strong>
+  </a>
+  {% endfor %}
+</div>
 {% endfor %}

@@ -1,6 +1,6 @@
 ---
 layout: forms_frame
-title: The Ann Deditz Scholarship
+title: Ann Deditz Scholarship
 
 tags: [Events, Scholarship]
 ---

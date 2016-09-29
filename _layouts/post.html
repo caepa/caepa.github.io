@@ -1,35 +1,18 @@
 ---
 layout: default
 ---
-<article class="post">
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  {% include header.html %}
+  <header class="post-header container">
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+  </header>
 
-  <div id="tab0" class="post-content section container">
-    <div class="post-meta flow-text">
-      {% if page.date %}<time datetime="{{ page.date | date_to_xmlschema}}">{{ page.date | date: "%B %-d, %Y" }}</time>{% endif %}
-      {% if page.author %}<address>{{ page.author }}</address>{% endif %}
-      {% for tag in page.tags %}<span class="chip">{{ tag }}</span>{% endfor %}
-    </div>
-    <div class="flow-text">
-      {{ content }}
-    </div>
-    <footer class="row section grey lighten-3">
-      <div class="col s12" role="button">
-        {% if page.previous.url %}
-        <a rel="prev" class="btn-flat btn-large waves-effect left" href="{{page.previous.url}}">
-          <i class="material-icons left">chevron_left</i>Previous</a>
-        {% endif %}
-        {% if page.next.url %}
-        <a rel="next" class="btn-flat btn-large waves-effect right" href="{{page.next.url}}">
-          <i class="material-icons right">chevron_right</i>Next</a>
-        {% endif %}
-      </div>
-    </footer>
+  <div class="post-content container flow-text" itemprop="articleBody">
+    {{ content }}
   </div>
-  <aside id="tab1" class="section container">
-    {% capture categories %}{{ page.categories }}{% endcapture%}
-    {% include post_card.html category = categories %}
-  </aside>
-</article>
 
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
+</article>

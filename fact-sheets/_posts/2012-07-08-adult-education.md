@@ -1,5 +1,5 @@
 ---
-title: Adult Education&#58;<br />A Good Investment in Colorado
+title: "Adult Education: A Good Investment in Colorado"
 author: Ann Leonard
 ---
 Nearly ONE MILLION Colorado adults require Adult Education training to support themselves or a family and achieve sustainable employment in Colorado's 21st century economy 

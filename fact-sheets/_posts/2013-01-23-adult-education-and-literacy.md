@@ -1,5 +1,5 @@
 ---
-title: Adult Education and Literacy&#58;<br />An Essential Investment in Colorado in 2014
+title: "Adult Education and Literacy: An Essential Investment in Colorado in 2014"
 author: Ann Leonard
 ---
 **Colorado is the only state that does not set aside state dollars for Adult Education!**
