@@ -7,7 +7,7 @@ title: null
       "color": "#212121"
     },
     "media": {
-      "url": "{{ '/img/icon-4x.png' | prepend: sitebase.url | prepend: site.url }}",
+      "url": "{{ site.icon | prepend: sitebase.url | prepend: site.url }}",
       "caption": "",
       "credit": "{{ site.name }}"
     },
