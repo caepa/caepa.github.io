@@ -1,16 +1,11 @@
 $( document ).ready(function() {
-  // make table-of-contents act like tabs
-  $('#tabs').tabs();
+  'use strict';
+  
   // reposition page-content next to table of contents
   var toc = $('#rendezvous #toc');
   // reposition page-content next to table of contents
   $('#rendezvous #page-content').css({ marginTop: -toc.outerHeight()+-20 });
-});
 
-/*global $, jQuery*/
-(function ($) {
-  'use strict';
-  $(function () {
 
     /*  Components */
     // Badges
@@ -29,11 +24,6 @@ $( document ).ready(function() {
       edge: 'left',
       closeOnClick: false
     });
-    $('.event-info').sideNav({
-      menuWidth: 300,
-      edge: 'right',
-      closeOnClick: false
-    });
     // Pagination
     // Preloader
 
@@ -46,42 +36,20 @@ $( document ).ready(function() {
     });
     // Dropdown
     // Media
-    $('.slider').slider({
-      full_width: true,
-      indicators: false,
-      transition: 500,
-      intervel: 12000,
-      height: 460
-    });
     // Models
     $('.modal-trigger').leanModal();
     // Parallax
     $('.parallax').parallax();
     // Pushpin
-    $('.tabs-wrapper').pushpin({
-      top: $('.tabs-wrapper').offset().top,
-      offset: 64
-    });
     // Scrollfire
     // Scrollspy
     // Sidenav
     // Tabs
-    $('#tabs').tabs();
+    $('#tabs').tabs(); // make table-of-contents act like tabs
     // Transitions
     // Waves
 
-  }); // end of document ready
-}(jQuery)); // end of jQuery name space
-
-$(window).on('scroll', function () {
-  var wrap = $(".tabs-wrapper").offset().top;
-  var hdr = $('header .navbar-fixed').height();
-  if ($(window).scrollTop() + 64 >= wrap) {
-    $('.site-wrapper article header').css({marginBottom: '68px'});
-  } else {
-    $('.site-wrapper article header').css({marginBottom: ''});
-  }
-});
+  });
 
 $(window).on("load resize", function () {
   var toc = $('#rendezvous #toc');

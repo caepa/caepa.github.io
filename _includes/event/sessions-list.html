@@ -45,7 +45,15 @@
     <li class="collection-item avatar">
       <!-- IMPORTANT, classes used to sort -->
       {% if data.Vendor == 'Yes' %}
-      <i class="vendor material-icons circle {{ page.color }} accent-1">store</i>
+      <span class="vendor">
+        {% if data.Twitter != null %}
+        <img class="circle" src="https://avatars.io/twitter{{ data.Twitter }}" />
+        {% elsif data.Facebook != null %}
+        <img class="circle" src="https://avatars.io/facebook{{ data.Facebook }}" />
+        {% else %}
+        <i class="material-icons circle {{ page.color }} accent-1">store</i>
+        {% endif %}
+      </span>
       {% endif %}
       <span class="session right">{{ data.Session | prepend: "Session " }}</span>
       <p class="strand"><em>{{ data.Conference-Strand }}</em></p>

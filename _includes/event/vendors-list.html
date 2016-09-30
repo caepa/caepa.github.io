@@ -5,21 +5,27 @@
   <li class="collection-header">
     <h4>{{ page.year }} Vendors</h4>
   </li>
-  
+
   {% if site.data[year]vendors == null %}
   <li class="collection-item">    
     <p class="grey-text text-darken-2 light">To be announced</p>
   </li>
-  
+
   {% else %}
-  
+
   <!-- vendor list -->  
   {% assign sorted_data = site.data[year]vendors | sort: "Organization" %}
-  
+
   {% for data in sorted_data %}
   <li class="collection-item avatar">
+    {% if data.Twitter != null %}
+    <img class="circle" src="https://avatars.io/twitter{{ data.Twitter }}" />
+    {% elsif data.Facebook != null %}
+    <img class="circle" src="https://avatars.io/facebook{{ data.Facebook }}" />
+    {% else %}
     <i class="material-icons circle {{ page.color }} accent-1">store</i>
-    <a href="{{ data.Organization-Website }}" class="flow-text" target="_blank"><b>{{ data.Organization }}</b></a>
+    {% endif %}
+    <a href="{{ data.Website }}" class="flow-text" target="_blank"><b>{{ data.Organization }}</b></a>
     <p class="title">
       <strong>{{ data.Name }}, {{ data.Job-Title }}</strong>
     </p>

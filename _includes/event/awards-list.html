@@ -16,13 +16,13 @@
   <!-- awards list -->
   {% assign sorted_data = site.data[year]awards | sort: "form" %}
 
-  {% for a in sorted_data %}
-  {% if a.timestamp != null %}
+  {% for data in sorted_data %}
+  {% if data.Accepted == "Yes" %}
   <li class="collection-item avatar">
     <i class="material-icons circle {{ page.color }} accent-1">favorite</i>
-    <p class="flow-text"><b>{{ a.form }}</b></p>
-    <span class="title"><strong>{{ a.name }}</strong></span>
-    <p>{{ a.response | strip_newlines | captialize }}</p>
+    <p class="flow-text"><b>{{ data.form }}</b></p>
+    <span class="title"><strong>{{ data.name }}</strong></span>
+    <p>{{ data.response }}</p>
   </li>
   {% endif %}
   {% endfor %}
