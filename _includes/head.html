@@ -24,17 +24,27 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
-  {% if page.url == '/' %}<script type="application/ld+json">
+  {% if page.url == '/' %}
+  <!-- homepage -->
+  <script type="application/ld+json">
   {% include seo/json_website.json %}
-  </script>{% endif %}
+  </script>
+  {% endif %}
   
-  {% if page.layout == 'post' %}<script type="application/ld+json">
+  {% if page.layout == 'post' %}
+  <!-- layout post -->
+  <script type="application/ld+json">
   {% include seo/json_article.json %}
-  </script>{% endif %}
+  </script>
+  {% endif %}
   
-  {% if page.url contains 'events/' and page.layout != 'page' %}<script type="application/ld+json">
+  {% if page.layout == 'event_page_alt' %}
+  <!-- layout event_page_alt -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="application/ld+json">
   {% include seo/json_event.json %}
-  </script>{% endif %}
+  </script>
+  {% endif %}
   
   {% if jekyll.environment == 'production' %}{% include seo/google_analytics.html %}{% endif %}
   

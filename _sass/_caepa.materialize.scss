@@ -38,6 +38,11 @@ header #toc a {
   height: 8px;
 }
 
+#schedule-one,
+#schedule-two {
+  min-height: 400px;
+}
+
 span.badge.new:after {
   content: " posts";
 }
