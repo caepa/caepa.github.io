@@ -42,8 +42,9 @@ $(document).ready(function () {
   $('#tabs').tabs(); // make table-of-contents act like tabs
   // Transitions
   // Waves
+  // ************** //
 });
-
+             
 $(window).on("load resize", function () {
   'use strict';
   var toc = $('#rendezvous #toc');
@@ -60,15 +61,17 @@ $(window).on("load resize", function () {
   }
   // google charts
   google.charts.load('current', {'packages':['timeline']});
-  google.charts.setOnLoadCallback(dayOne);  
+  google.charts.setOnLoadCallback('#landing dayOne');  
   google.charts.setOnLoadCallback(dayTwo);
 });
 
 function myFunction() {
-  // google charts
-  google.charts.load('current', {'packages':['timeline']});
-  google.charts.setOnLoadCallback(dayOne);  
-  google.charts.setOnLoadCallback(dayTwo);
+  setTimeout(function(){
+    // google charts
+    google.charts.load('current', {'packages':['timeline']});
+    google.charts.setOnLoadCallback(dayOne);  
+    google.charts.setOnLoadCallback(dayTwo);
+  }, 500);
 }
 
 /* use this to create a dynamic back button
