@@ -11,7 +11,7 @@
 
       <div class="card-content grey-text text-darken-3 flow-text">
         <span class="center-align right" style="padding-left:20px; height:6.8rem;">
-          <img class="grey lighten-3 responsive-img" alt="thumbnail" {% if page.image_path != null %} src="{{ page.image_path | prepend: site.baseurl | prepend: site.url }}" {% else %} src="{{ site.icon }}"{% endif %} style="height:100%; padding:5px;">
+          <img class="grey lighten-3 hide-on-small-only" alt="thumbnail" {% if page.image_path != null %} src="{{ page.image_path | prepend: site.baseurl | prepend: site.url }}" {% else %} src="{{ site.icon }}"{% endif %} style="height:100%; padding:5px;">
         </span>
         <h3 class="truncate"><a href="{{ page.url }}">{{ page.title }}</a></h3>
         {% if page.theme %}
@@ -41,15 +41,15 @@
       
       <div class="card-action">
         <a href="{{ data.reservations }}#sessions">
-          <span>{{ data.year }} Reservations</span>
+          <span class="truncate">{{ data.year }} Reservations</span>
         </a>
         <a href="{{ page.url }}#sessions">
-          <span>{{ data.year }} Sessions</span>
+          <span class="truncate">{{ data.year }} Sessions</span>
         </a>
         {% if page.docs != null %}
         {% for doc in page.docs %}
         <a href="{{ doc.url }}">
-          <span>{{ doc.title }}</span>
+          <span class="truncate">{{ doc.title }}</span>
         </a>
         {% endfor %}
         {% else %}        
