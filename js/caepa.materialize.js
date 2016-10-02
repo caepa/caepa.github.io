@@ -43,9 +43,28 @@ $(document).ready(function () {
   // Transitions
   // Waves
   // ************** //
+  var toc = $('#rendezvous #toc');
+  if (document.documentElement.clientWidth > 601) {
+    // change tabs to table-of-contents
+    $('#rendezvous #toc ul').removeClass("tabs").addClass("table-of-contents");
+    // reposition page-content next to table of contents
+    $('#rendezvous #page-content').animate({ marginTop: -toc.outerHeight()+-20 });
+  } else {
+    // change table-of-contents to tabs
+    $('#rendezvous #toc ul').addClass("tabs").removeClass("table-of-contents");
+    // reposition page-content next to table of contents
+    $('#rendezvous #page-content').animate({ marginTop: -toc.outerHeight()+38 });
+  }
 });
-             
-$(window).on("load resize", function () {
+
+$(window).on("load", function () {
+  // google charts
+  google.charts.load('current', {'packages':['timeline']});
+  google.charts.setOnLoadCallback(dayOne);  
+  google.charts.setOnLoadCallback(dayTwo);
+});
+
+$(window).on("resize", function () {
   'use strict';
   var toc = $('#rendezvous #toc');
   if (document.documentElement.clientWidth > 601) {
