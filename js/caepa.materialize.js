@@ -66,12 +66,12 @@ $(window).on("load resize", function () {
 });
 
 function myFunction() {
-  //setTimeout(function(){
+  setTimeout(function(){
     // google charts
     google.charts.load('current', {'packages':['timeline']});
     google.charts.setOnLoadCallback(dayOne);  
     google.charts.setOnLoadCallback(dayTwo);
-  //}, 500);
+  }, 500);
 }
 
 /* use this to create a dynamic back button
