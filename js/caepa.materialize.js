@@ -61,17 +61,17 @@ $(window).on("load resize", function () {
   }
   // google charts
   google.charts.load('current', {'packages':['timeline']});
-  google.charts.setOnLoadCallback('#landing dayOne');  
+  google.charts.setOnLoadCallback(dayOne);  
   google.charts.setOnLoadCallback(dayTwo);
 });
 
 function myFunction() {
-  setTimeout(function(){
+  //setTimeout(function(){
     // google charts
     google.charts.load('current', {'packages':['timeline']});
     google.charts.setOnLoadCallback(dayOne);  
     google.charts.setOnLoadCallback(dayTwo);
-  }, 500);
+  //}, 500);
 }
 
 /* use this to create a dynamic back button
