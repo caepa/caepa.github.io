@@ -42,6 +42,8 @@ sass:
 collections:
   forms:
     output: true
+  docs:
+    output: true
   # moved to ghost
   news:
     output: false

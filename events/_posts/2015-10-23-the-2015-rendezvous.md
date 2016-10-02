@@ -12,8 +12,8 @@ image_path:
 event_url:
 
 docs:
-  - title: The 2015 Program 
-    url: _/data/2015/2015-Rendezvous-Program.pdf
+  - title: "The 2015 Program"
+    url: "../docs/2015/2015-Rendezvous-Program.pdf"
 
 # venue:
 location: Westin Westminster
