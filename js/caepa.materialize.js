@@ -59,7 +59,7 @@ $( document ).ready(function() {
 
 });
 
-$(window).on("load resize", function () {
+$(window).on("load resize", function (e) {
   var toc = $('#rendezvous #toc');
   if (document.documentElement.clientWidth > 601) {
     // change tabs to table-of-contents
