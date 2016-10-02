@@ -52,12 +52,12 @@ $(window).on("load resize", function () {
     // change tabs to table-of-contents
     $('#rendezvous #toc ul').removeClass("tabs").addClass("table-of-contents");
     // reposition page-content next to table of contents
-    $('#rendezvous #page-content').css({ marginTop: -toc.outerHeight()+-20 });
+    $('#rendezvous #page-content').animate({ marginTop: -toc.outerHeight()+-20 });
   } else {
     // change table-of-contents to tabs
     $('#rendezvous #toc ul').addClass("tabs").removeClass("table-of-contents");
     // reposition page-content next to table of contents
-    $('#rendezvous #page-content').css({ marginTop: -toc.outerHeight()+38 });
+    $('#rendezvous #page-content').animate({ marginTop: -toc.outerHeight()+38 });
   }
   // google charts
   google.charts.load('current', {'packages':['timeline']});
