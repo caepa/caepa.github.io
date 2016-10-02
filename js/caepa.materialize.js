@@ -42,8 +42,10 @@ $(document).ready(function () {
   $('#tabs').tabs(); // make table-of-contents act like tabs
   // Transitions
   // Waves
-  // ************** //
-  // reposition page-content next to table of contents
+});
+
+$(window).on("load resize", function () {
+  'use strict';
   var toc = $('#rendezvous #toc');
   if (document.documentElement.clientWidth > 601) {
     // change tabs to table-of-contents
@@ -56,44 +58,18 @@ $(document).ready(function () {
     // reposition page-content next to table of contents
     $('#rendezvous #page-content').css({ marginTop: -toc.outerHeight()+38 });
   }
+  // google charts
+  google.charts.load('current', {'packages':['timeline']});
+  google.charts.setOnLoadCallback(dayOne);  
+  google.charts.setOnLoadCallback(dayTwo);
 });
 
 function myFunction() {
-  setTimeout(function(){
-    // google charts
-    google.charts.load('current', {'packages':['timeline']});
-    google.charts.setOnLoadCallback(dayOne);  
-    google.charts.setOnLoadCallback(dayTwo);
-  }, 1000);
+  // google charts
+  google.charts.load('current', {'packages':['timeline']});
+  google.charts.setOnLoadCallback(dayOne);  
+  google.charts.setOnLoadCallback(dayTwo);
 }
-
-$(window).on("load", function () {
-  'use strict';
-  // google charts
-  google.charts.load('current', {'packages':['timeline']});
-  google.charts.setOnLoadCallback(dayOne);  
-  google.charts.setOnLoadCallback(dayTwo);
-});
-             
-$(window).on("resize", function () {
-  'use strict';
-  var toc = $('#rendezvous #toc');
-  if (document.documentElement.clientWidth > 601) {
-    // change tabs to table-of-contents
-    $('#rendezvous #toc ul').removeClass("tabs").addClass("table-of-contents");
-    // reposition page-content next to table of contents
-    $('#rendezvous #page-content').css({ marginTop: -toc.outerHeight()+-20 });
-  } else {
-    // change table-of-contents to tabs
-    $('#rendezvous #toc ul').addClass("tabs").removeClass("table-of-contents");
-    // reposition page-content next to table of contents
-    $('#rendezvous #page-content').css({ marginTop: -toc.outerHeight()+38 });
-  }
-  // google charts
-  google.charts.load('current', {'packages':['timeline']});
-  google.charts.setOnLoadCallback(dayOne);  
-  google.charts.setOnLoadCallback(dayTwo);
-});
 
 /* use this to create a dynamic back button
 $(document).ready(function(){
