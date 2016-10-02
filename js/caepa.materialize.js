@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function () {
   'use strict';
 
   /*  Components */
@@ -42,8 +42,11 @@ $( document ).ready(function() {
   $('#tabs').tabs(); // make table-of-contents act like tabs
   // Transitions
   // Waves
-  
-  // ********* //
+});
+
+// ********* //
+$(function () {
+  'use strict';
   // reposition page-content next to table of contents
   var toc = $('#rendezvous #toc');
   if (document.documentElement.clientWidth > 601) {
@@ -57,14 +60,10 @@ $( document ).ready(function() {
     // reposition page-content next to table of contents
     $('#rendezvous #page-content').css({ marginTop: -toc.outerHeight()+38 });
   }
-  // google charts
-  google.charts.load('current', {'packages':['timeline']});
-  google.charts.setOnLoadCallback(dayOne);  
-  google.charts.setOnLoadCallback(dayTwo);
-
 });
 
-$(window).on("resize", function (e) {
+$(window).on("load resize", function (e) {
+  'use strict';
   var toc = $('#rendezvous #toc');
   if (document.documentElement.clientWidth > 601) {
     // change tabs to table-of-contents
