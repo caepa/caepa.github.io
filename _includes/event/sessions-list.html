@@ -47,9 +47,9 @@
       {% if data.Vendor == 'Yes' %}
       <span class="vendor">
         {% if data.Twitter != null %}
-        <img class="circle" src="https://avatars.io/twitter{{ data.Twitter }}" />
+        <img class="circle" src="https://avatars.io/twitter{{ data.Twitter }}" alt="vendor logo" />
         {% elsif data.Facebook != null %}
-        <img class="circle" src="https://avatars.io/facebook{{ data.Facebook }}" />
+        <img class="circle" src="https://avatars.io/facebook{{ data.Facebook }}" alt="vendor logo" />
         {% else %}
         <i class="material-icons circle {{ page.color }} accent-1">store</i>
         {% endif %}
