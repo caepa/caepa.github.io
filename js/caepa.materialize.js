@@ -14,6 +14,10 @@ $( document ).ready(function() {
     // reposition page-content next to table of contents
     $('#rendezvous #page-content').css({ marginTop: -toc.outerHeight()+38 });
   }
+  // google charts
+  google.charts.load('current', {'packages':['timeline']});
+  google.charts.setOnLoadCallback(dayOne);  
+  google.charts.setOnLoadCallback(dayTwo);
 
   /*  Components */
   // Badges
@@ -59,7 +63,7 @@ $( document ).ready(function() {
 
 });
 
-$(window).on("load resize", function (e) {
+$(window).on("resize", function (e) {
   var toc = $('#rendezvous #toc');
   if (document.documentElement.clientWidth > 601) {
     // change tabs to table-of-contents
