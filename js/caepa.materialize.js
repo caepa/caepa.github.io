@@ -48,12 +48,12 @@ $(document).ready(function () {
     // change tabs to table-of-contents
     $('#rendezvous #toc ul').removeClass("tabs").addClass("table-of-contents");
     // reposition page-content next to table of contents
-    $('#rendezvous #page-content').animate({ marginTop: -toc.outerHeight()+-20 }, slow, swing);
+    $('#rendezvous #page-content').animate({ marginTop: -toc.outerHeight()+-20 },'slow');
   } else {
     // change table-of-contents to tabs
     $('#rendezvous #toc ul').addClass("tabs").removeClass("table-of-contents");
     // reposition page-content next to table of contents
-    $('#rendezvous #page-content').animate({ marginTop: -toc.outerHeight()+38 }, slow, swing);
+    $('#rendezvous #page-content').animate({ marginTop: -toc.outerHeight()+38 },'slow');
   }
 });
 
@@ -71,12 +71,12 @@ $(window).on("resize", function () {
     // change tabs to table-of-contents
     $('#rendezvous #toc ul').removeClass("tabs").addClass("table-of-contents");
     // reposition page-content next to table of contents
-    $('#rendezvous #page-content').animate({ marginTop: -toc.outerHeight()+-20 }, slow, swing);
+    $('#rendezvous #page-content').animate({ marginTop: -toc.outerHeight()+-20 },'slow');
   } else {
     // change table-of-contents to tabs
     $('#rendezvous #toc ul').addClass("tabs").removeClass("table-of-contents");
     // reposition page-content next to table of contents
-    $('#rendezvous #page-content').animate({ marginTop: -toc.outerHeight()+38 }, slow, swing);
+    $('#rendezvous #page-content').animate({ marginTop: -toc.outerHeight()+38 },'slow');
   }
   // google charts
   google.charts.load('current', {'packages':['timeline']});
