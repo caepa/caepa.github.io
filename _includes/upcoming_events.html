@@ -3,50 +3,60 @@
 
 <div class="section row">
 
-  {% for post in site.categories.events reversed %}
-  {% if post.date > site.time %}
+  {% for page in site.categories.events reversed %}
+  {% if page.date > site.time %}
   <article class="col s12">
     <div class="card hoverable">
       <div id="accent" class="{{ page.color }} accent-1"></div>
 
       <div class="card-content grey-text text-darken-3 flow-text">
         <span class="center-align right" style="padding-left:20px; height:6.8rem;">
-          <img class="grey lighten-3 responsive-img" alt="thumbnail" {% if post.image_path != null %} src="{{ post.image_path | prepend: site.baseurl | prepend: site.url }}" {% else %} src="{{ site.icon }}"{% endif %} style="height:100%; padding:5px;">
+          <img class="grey lighten-3 responsive-img" alt="thumbnail" {% if page.image_path != null %} src="{{ page.image_path | prepend: site.baseurl | prepend: site.url }}" {% else %} src="{{ site.icon }}"{% endif %} style="height:100%; padding:5px;">
         </span>
-        <h3 class="truncate"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        {% if post.theme %}
-        <p class="truncate">{{ post.theme | strip_html | strip_newlines | replace: '_',' ' }}</p>
+        <h3 class="truncate"><a href="{{ page.url }}">{{ page.title }}</a></h3>
+        {% if page.theme %}
+        <p class="truncate">{{ page.theme | strip_html | strip_newlines | replace: '_',' ' }}</p>
         {% else %}
-        <p class="truncate">{{ post.author }}</p>
+        <p class="truncate">{{ page.author }}</p>
         {% endif %}
       </div>
       <!-- replace with schedule
 <div class="card-content grey lighten-3">
-{% if post.start_date %}
-<time datetime="{{ post.start_date | date_to_xmlschema }}"><i class="material-icons left">schedule</i>{{ post.start_date | date: "%A, %B %-d, %Y" }}</time>
+{% if page.start_date %}
+<time datetime="{{ page.start_date | date_to_xmlschema }}"><i class="material-icons left">schedule</i>{{ page.start_date | date: "%A, %B %-d, %Y" }}</time>
 {% else %}
-<time datetime="{{ post.date | date_to_xmlschema}}"><i class="material-icons left">schedule</i>{{ post.date | date: "%A, %B %-d, %Y" }}</time>
+<time datetime="{{ page.date | date_to_xmlschema}}"><i class="material-icons left">schedule</i>{{ page.date | date: "%A, %B %-d, %Y" }}</time>
 {% endif %}
 </div>
 
 <div class="card-content flow-text">
-<p style="text-align:justify;">{{ post.content | strip_html | truncatewords: 100 }}</p>
+<p style="text-align:justify;">{{ page.content | strip_html | truncatewords: 100 }}</p>
 </div>
 -->
       <div class="card-action">
-        <a href="{{ post.url }}"><i class="material-icons left">exit_to_app</i>read more...</a>
+        {% if page.docs != null %}
+        {% for doc in page.docs %}
+        <a href="{{ doc.url }}" class="collection-item">
+          <i class="material-icons left">cloud_download</i>
+          <span>{{ doc.title }}</span>
+        </a>
+        {% endfor %}
+        {% else %}        
+        <a href="{{ page.url }}"><i class="material-icons left">exit_to_app</i>read more...</a>
+        {% endif %}
       </div>      
     </div>
-    {% endif %}
-    {% endfor %}
 
     {% capture y %}{{ site.time | date: "%Y" }}{% endcapture %}
-    {% for page in site.data.rendezvous %}
-    {% if page.year == y %}
+    {% for data in site.data.rendezvous %}
+    {% if data.year == y %}
 
     {% include event/schedule.html year=y %}
-  </article>
 
+    {% endif %}
+    {% endfor %}
+    
+  </article>
   {% endif %}
   {% endfor %}
 </div>

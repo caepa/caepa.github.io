@@ -11,6 +11,10 @@ end_date: 2016-10-14
 image_path: 
 event_url: 
 
+docs:
+  - title: Bj's Fundraiser
+    url: "https://drive.google.com/open?id=0B_6uPCzjvke5cEdSR3JSWTRnaE0"
+
 # venue:
 location: Westin Westminster
 address: 10600 Westminster Blvd
