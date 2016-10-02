@@ -39,17 +39,17 @@
     {% for data in site.data.rendezvous %}
     {% if data.year == y %}
       
-      <div class="card-action">
+      <div class="card-action truncate">
         <a href="{{ data.reservations }}#sessions">
-          <span class="truncate">{{ data.year }} Reservations</span>
+          <span>{{ data.year }} Reservations</span>
         </a>
         <a href="{{ page.url }}#sessions">
-          <span class="truncate">{{ data.year }} Sessions</span>
+          <span>{{ data.year }} Sessions</span>
         </a>
         {% if page.docs != null %}
         {% for doc in page.docs %}
         <a href="{{ doc.url }}">
-          <span class="truncate">{{ doc.title }}</span>
+          <span>{{ doc.title }}</span>
         </a>
         {% endfor %}
         {% else %}        
