@@ -39,7 +39,9 @@ header #toc a {
 }
 
 #schedule-one,
-#schedule-two {
+#schedule-two,
+#schedule-one .valign-wrapper,
+#schedule-two .valign-wrapper {
   min-height: 400px;
 }
 
