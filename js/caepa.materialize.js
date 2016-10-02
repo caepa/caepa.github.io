@@ -42,11 +42,7 @@ $(document).ready(function () {
   $('#tabs').tabs(); // make table-of-contents act like tabs
   // Transitions
   // Waves
-});
-
-// ********* //
-$(function () {
-  'use strict';
+  // ************** //
   // reposition page-content next to table of contents
   var toc = $('#rendezvous #toc');
   if (document.documentElement.clientWidth > 601) {
@@ -62,7 +58,7 @@ $(function () {
   }
 });
 
-$(window).on("load resize", function (e) {
+$(window).on("load resize", function () {
   'use strict';
   var toc = $('#rendezvous #toc');
   if (document.documentElement.clientWidth > 601) {
