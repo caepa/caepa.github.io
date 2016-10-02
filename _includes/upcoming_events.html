@@ -34,14 +34,12 @@
 </div>
 -->
       <div class="card-action">
-        <a href="{{ page.url }}#sessions" class="collection-item">
-          <i class="material-icons left">list</i>
-          <span>Sessions</span>
+        <a href="{{ page.url }}#sessions">
+          <span>{{ page.year }}Sessions</span>
         </a>
         {% if page.docs != null %}
         {% for doc in page.docs %}
-        <a href="{{ doc.url }}" class="collection-item">
-          <i class="material-icons left">cloud_download</i>
+        <a href="{{ doc.url }}">
           <span>{{ doc.title }}</span>
         </a>
         {% endfor %}
