@@ -73,7 +73,7 @@ $(window).on("load", function () {
   google.charts.load('current', {'packages':['timeline']});
   google.charts.setOnLoadCallback(dayOne);  
   google.charts.setOnLoadCallback(dayTwo);
-}
+});
              
 $(window).on("resize", function () {
   'use strict';
