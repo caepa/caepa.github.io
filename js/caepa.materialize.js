@@ -67,6 +67,14 @@ function myFunction() {
   }, 1000);
 }
 
+$(window).on("load", function () {
+  'use strict';
+  // google charts
+  google.charts.load('current', {'packages':['timeline']});
+  google.charts.setOnLoadCallback(dayOne);  
+  google.charts.setOnLoadCallback(dayTwo);
+}
+             
 $(window).on("resize", function () {
   'use strict';
   var toc = $('#rendezvous #toc');
