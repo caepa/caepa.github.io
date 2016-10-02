@@ -57,7 +57,7 @@ $(document).ready(function () {
   }
 });
 
-$(window).on("load", function () {
+$('#landing-page').on('load', function () {
   // google charts
   google.charts.load('current', {'packages':['timeline']});
   google.charts.setOnLoadCallback(dayOne);  
