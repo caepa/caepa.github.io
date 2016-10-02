@@ -58,12 +58,14 @@ $(document).ready(function () {
   }
 });
 
-setTimeout(function(){
-  // google charts
-  google.charts.load('current', {'packages':['timeline']});
-  google.charts.setOnLoadCallback(dayOne);  
-  google.charts.setOnLoadCallback(dayTwo);
-}, 1000);
+function myFunction() {
+  setTimeout(function(){
+    // google charts
+    google.charts.load('current', {'packages':['timeline']});
+    google.charts.setOnLoadCallback(dayOne);  
+    google.charts.setOnLoadCallback(dayTwo);
+  }, 1000);
+}
 
 $(window).on("resize", function () {
   'use strict';
