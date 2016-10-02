@@ -1,24 +1,6 @@
 $( document ).ready(function() {
   'use strict';
 
-  // reposition page-content next to table of contents
-  var toc = $('#rendezvous #toc');
-  if (document.documentElement.clientWidth > 601) {
-    // change tabs to table-of-contents
-    $('#rendezvous #toc ul').removeClass("tabs").addClass("table-of-contents");
-    // reposition page-content next to table of contents
-    $('#rendezvous #page-content').css({ marginTop: -toc.outerHeight()+-20 });
-  } else {
-    // change table-of-contents to tabs
-    $('#rendezvous #toc ul').addClass("tabs").removeClass("table-of-contents");
-    // reposition page-content next to table of contents
-    $('#rendezvous #page-content').css({ marginTop: -toc.outerHeight()+38 });
-  }
-  // google charts
-  google.charts.load('current', {'packages':['timeline']});
-  google.charts.setOnLoadCallback(dayOne);  
-  google.charts.setOnLoadCallback(dayTwo);
-
   /*  Components */
   // Badges
   // Buttons
@@ -60,6 +42,25 @@ $( document ).ready(function() {
   $('#tabs').tabs(); // make table-of-contents act like tabs
   // Transitions
   // Waves
+  
+  // ********* //
+  // reposition page-content next to table of contents
+  var toc = $('#rendezvous #toc');
+  if (document.documentElement.clientWidth > 601) {
+    // change tabs to table-of-contents
+    $('#rendezvous #toc ul').removeClass("tabs").addClass("table-of-contents");
+    // reposition page-content next to table of contents
+    $('#rendezvous #page-content').css({ marginTop: -toc.outerHeight()+-20 });
+  } else {
+    // change table-of-contents to tabs
+    $('#rendezvous #toc ul').addClass("tabs").removeClass("table-of-contents");
+    // reposition page-content next to table of contents
+    $('#rendezvous #page-content').css({ marginTop: -toc.outerHeight()+38 });
+  }
+  // google charts
+  google.charts.load('current', {'packages':['timeline']});
+  google.charts.setOnLoadCallback(dayOne);  
+  google.charts.setOnLoadCallback(dayTwo);
 
 });
 
