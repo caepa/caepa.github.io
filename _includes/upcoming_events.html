@@ -16,6 +16,7 @@
         <h3 class="truncate"><a href="{{ page.url }}">{{ page.title }}</a></h3>
         {% if page.theme %}
         <p class="truncate">{{ page.theme | strip_html | strip_newlines | replace: '_',' ' }}</p>
+        <small class="truncate">{{ page.author }}</small>
         {% else %}
         <p class="truncate">{{ page.author }}</p>
         {% endif %}
@@ -33,9 +34,17 @@
 <p style="text-align:justify;">{{ page.content | strip_html | truncatewords: 100 }}</p>
 </div>
 -->
+
+    {% capture y %}{{ site.time | date: "%Y" }}{% endcapture %}
+    {% for data in site.data.rendezvous %}
+    {% if data.year == y %}
+      
       <div class="card-action">
+        <a href="{{ data.reservations }}#sessions">
+          <span>{{ data.year }} Reservations</span>
+        </a>
         <a href="{{ page.url }}#sessions">
-          <span>{{ page.year }} Sessions</span>
+          <span>{{ data.year }} Sessions</span>
         </a>
         {% if page.docs != null %}
         {% for doc in page.docs %}
@@ -48,10 +57,6 @@
         {% endif %}
       </div>      
     </div>
-
-    {% capture y %}{{ site.time | date: "%Y" }}{% endcapture %}
-    {% for data in site.data.rendezvous %}
-    {% if data.year == y %}
 
     {% include event/schedule.html year=y %}
 
