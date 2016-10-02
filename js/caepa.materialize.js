@@ -3,9 +3,17 @@ $( document ).ready(function() {
 
   // reposition page-content next to table of contents
   var toc = $('#rendezvous #toc');
-  // reposition page-content next to table of contents
-  $('#rendezvous #page-content').css({ marginTop: -toc.outerHeight()+-20 });
-
+  if (document.documentElement.clientWidth > 601) {
+    // change tabs to table-of-contents
+    $('#rendezvous #toc ul').removeClass("tabs").addClass("table-of-contents");
+    // reposition page-content next to table of contents
+    $('#rendezvous #page-content').css({ marginTop: -toc.outerHeight()+-20 });
+  } else {
+    // change table-of-contents to tabs
+    $('#rendezvous #toc ul').addClass("tabs").removeClass("table-of-contents");
+    // reposition page-content next to table of contents
+    $('#rendezvous #page-content').css({ marginTop: -toc.outerHeight()+38 });
+  }
 
   /*  Components */
   // Badges
