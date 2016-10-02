@@ -18,13 +18,20 @@
 
   {% for data in sorted_data %}
   <li class="collection-item avatar">
+    {% if data.Twitter != null %}
+    <img class="circle" src="https://avatars.io/twitter{{ data.twitter }}" alt="vendor logo" />
+    {% elsif data.Facebook != null %}
+    <img class="circle" src="https://avatars.io/facebook{{ data.facebook }}" alt="vendor logo" />
+    {% else %}
     <i class="material-icons circle {{ page.color }} accent-1">mic</i>
-    <span class="flow-text"><b>{{ data.Date }}</b></span>
-    <p class="title"><strong>{{ data.Name }}</strong></p>
-    <p>{{ data.Description| strip_newlines }}</p>
+    {% endif %}
+    <span class="flow-text"><b>{{ data.title }}</b></span>
+    <p class="title"><strong>{{ data.name }}</strong></p>
+    <small>{{ data.employer}}, {{ data.job-title }}</small>
+    <p>{{ data.biography | markdownify }}</p>
 
-    {% if data.Email %}
-    <a href="mailto:{{ data.Email }}" class="secondary-content">
+    {% if data.email %}
+    <a href="mailto:{{ data.email }}" class="secondary-content">
       <i class="material-icons">email</i>
     </a>
     {% endif %}

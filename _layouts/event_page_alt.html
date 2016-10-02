@@ -101,6 +101,14 @@ layout: default_alt
               <i class="material-icons left">description</i>
               <span>Rendezvous Forms</span>
             </a>
+            {% if page.docs != null %}
+            {% for doc in page.docs %}
+            <a href="{{ doc.url }}" class="collection-item">
+              <i class="material-icons left">cloud_download</i>
+              <span>{{ page.title }}</span>
+            </a>
+            {% endfor %}
+            {% endif %}
           </div>
         </div>
       </div>

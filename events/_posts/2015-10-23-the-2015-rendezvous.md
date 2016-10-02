@@ -9,7 +9,11 @@ start_date: 2015-10-23
 end_date: 2015-10-24
 
 image_path: 
-event_url: 
+event_url:
+
+docs:
+  - title: The 2015 Program 
+    url: _/data/2015/2015-Rendezvous-Program.pdf
 
 # venue:
 location: Westin Westminster
