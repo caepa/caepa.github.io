@@ -25,14 +25,16 @@
     {% else %}
     <i class="material-icons circle {{ page.color }} accent-1">store</i>
     {% endif %}
-    <a href="{{ data.Website }}" class="flow-text" target="_blank"><b>{{ data.Organization }}</b></a>
+    <a href="#{{ data.Name | append: '-' | append: data.Organization | slugify }}" class="flow-text modal-trigger"><b>{{ data.Organization }}</b></a>
     <p class="title">
-      <strong>{{ data.Name }}, {{ data.Job-Title }}</strong>
+      <strong>
+        {% if data.Name %}{{ data.Name }}{% endif %}
+        {% if data.Job-Title %}, {{ data.Job-Title }}{% endif %}
+      </strong>
     </p>
-    <p>{{ data.Description | strip_newlines }}</p>
-    {% if data.Email %}
-    <a href="mailto:{{ data.Email }}" class="secondary-content">
-      <i class="material-icons">email</i>
+    {% if data.Website %}
+    <a href="{{ data.Website }}" class="secondary-content" target="_blank">
+      <i class="material-icons">exit_to_app</i>
     </a>
     {% endif %}
   </li>

@@ -36,21 +36,26 @@ social:
 
 # Build settings
 markdown: kramdown
+
 sass:
   style: compressed
+
+future: true
+timezone: America/Denver
 
 collections:
   forms:
     output: true
   docs:
-    output: true
+    output: false
   # moved to ghost
   news:
     output: false
 
 include: ["_pages"]
-future: true
-timezone: America/Denver
+exclude: ["vendor", "_docs"]
+# Travis bundles all gems in the vendor directory on its build servers,
+# which Jekyll will mistakenly read and explode on.
 
 defaults:
   - scope:
@@ -95,7 +100,3 @@ defaults:
       type: "posts"
     values:
       permalink: /:categories/:year/:title.html
-      
-# Travis bundles all gems in the vendor directory on its build servers,
-# which Jekyll will mistakenly read and explode on.
-exclude: [vendor] 

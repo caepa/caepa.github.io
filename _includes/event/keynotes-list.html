@@ -17,19 +17,19 @@
   {% assign sorted_data = site.data[year]keynotes | sort: "Timestamp" %}
 
   {% for data in sorted_data %}
+  {% if data.Accepted == "Yes" %}
+  
   <li class="collection-item avatar">
-    {% if data.Twitter != null %}
+    {% if data.twitter != null %}
     <img class="circle" src="https://avatars.io/twitter{{ data.twitter }}" alt="vendor logo" />
-    {% elsif data.Facebook != null %}
+    {% elsif data.facebook != null %}
     <img class="circle" src="https://avatars.io/facebook{{ data.facebook }}" alt="vendor logo" />
     {% else %}
     <i class="material-icons circle {{ page.color }} accent-1">mic</i>
-    {% endif %}
-    <span class="flow-text"><b>{{ data.title }}</b></span>
-    <p class="title"><strong>{{ data.name }}</strong></p>
-    <small>{{ data.employer}}, {{ data.job-title }}</small>
-    <p>{{ data.biography | markdownify }}</p>
-
+    {% endif %}    
+    <p>{{ data.employer}}, {{ data.job-title }}</p>    
+    <a href="#{{ data.name | append: '-' | append: data.title | slugify }}" class="flow-text modal-trigger"><b>{{ data.title }}</b></a>    
+    <p class="title"><strong>{{ data.name }}</strong></p>    
     {% if data.email %}
     <a href="mailto:{{ data.email }}" class="secondary-content">
       <i class="material-icons">email</i>
@@ -37,6 +37,7 @@
     {% endif %}
 
   </li>
+  {% endif %}
   {% endfor %}
   {% endif %}
 </ul>

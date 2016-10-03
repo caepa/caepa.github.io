@@ -45,7 +45,7 @@ layout: default_alt
       <div class="col s12 m4 l3 right">
         <h5 class="hide-on-small-only">{{ page.year }}</h5>
         <ul id="tabs" class="table-of-contents">
-          <li class="tab"><a href="#details">Rendezvous</a></li>
+          <li class="tab"><a href="#details">Details</a></li>
           <li class="tab"><a href="#schedule" onclick="myFunction()">Schedule</a></li>
           <li class="tab"><a href="#awards">Awards</a></li>
           <li class="tab"><a href="#keynotes">Keynotes</a></li>
@@ -71,11 +71,13 @@ layout: default_alt
     <article id="awards">
       <div class="col s12 m8 l9">
         {% include event/awards-list.html year=y %}
+        {% include event/awards-modal.html year=y %}
       </div>
     </article>
     <article id="keynotes">
       <div class="col s12 m8 l9">
         {% include event/keynotes-list.html year=y %}
+        {% include event/keynotes-modal.html year=y %}
       </div>
     </article>
     <article id="sessions">
@@ -87,6 +89,7 @@ layout: default_alt
     <article id="vendors">
       <div class="col s12 m8 l9">
         {% include event/vendors-list.html year=y %}
+        {% include event/vendors-modal.html year=y %}
       </div>
     </article>
     <aside>
