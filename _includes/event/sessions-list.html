@@ -57,12 +57,18 @@
         {% endif %}
       </span>
       {% endif %}
-      <span class="session right">{{ data.Session | prepend: "Session " }}</span>
-      <p class="strand"><em>{{ data.Conference-Strand }}</em></p>
+      
+      <p class="strand">
+        <span class="session right">{{ data.Session | prepend: "Session " }}</span>
+        <em>{{ data.Conference-Strand }}</em>
+      </p>
       <a href="#{{ data.Timestamp | slugify }}-{{ data.Name | append: '-' | append: data.Session | slugify }}" class="modal-trigger">
         <span class="p-title flow-text"><b>{{ data.Presentation-Title }}</b></span>
       </a>
-      <p class="presenter"><strong>{{ data.Name }}</strong></p>
+      <p class="presenter">
+        <span class="session right">{{ data.Location" }}</span>
+        <strong>{{ data.Name }}</strong>
+      </p>
       <span class="hide abstract">{{ data.Presentation-Abstract | strip_newlines }}</span>
       <span class="hide description">{{ data.Presentation-Description | strip_newlines }}</span>
       <span class="hide objectives">{{ data.Objectives | markdownify }}</span>
