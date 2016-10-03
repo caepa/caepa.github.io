@@ -32,3 +32,28 @@
   {% endfor %}
   {% endif %}
 </ul>
+
+
+{% if site.data[year]scholarship != null %}
+<!-- begin awards-list  -->
+<ul class="collection z-depth-1">
+  <li id="accent" class="{{ page.color }} accent-1"></li>
+  
+  <!-- scholarship list -->
+  {% assign sorted_data = site.data[year]scholarship | sort: "Name" %}
+
+  {% for data in sorted_data %}
+  {% if data.Accepted == "Yes" %}
+  
+  <li class="collection-item avatar">
+    <i class="material-icons circle {{ page.color }} accent-1">star</i>
+    <a href="#{{ data.Timestamp | slugify}}-{{ data.Name | slugify }}" class="flow-text modal-trigger">
+      <b>Ann Deditz Scholarship Recipient</b>
+    </a>
+    <p class="title"><strong>{{ data.Name }}</strong></p>
+  </li>
+  
+  {% endif %}
+  {% endfor %}
+  {% endif %}
+</ul>

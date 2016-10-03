@@ -51,3 +51,45 @@
 {% endif %}
 {% endfor %}
 {% endif %}
+
+<!-- scholarship -->
+{% if site.data[year]scholarship != null %}
+{% for data in site.data[year]scholarship %}
+
+{% if data.Accepted == "Yes" %}
+<div id="{{ data.Timestamp | slugify}}-{{ data.Name | slugify }}" class="modal modal-fixed-footer">
+
+  <!-- awards modal -->
+  <div class="modal-content">
+    <span class="grey-text text-darken-2">
+      <p class="light">The {{ year }} Rendezvous</p>
+
+      <!-- awards organization -->
+      <h4>Ann Deditz Scholarship Recipient</h4>
+
+      <!-- scholarship  -->
+      {% if data.Email %}
+      <address><a href="mailto:{{ data.Email }}">{{ data.Name }}</a></address>
+      {% else %}
+      <em>{{ data.Name }}</em><br />
+      {% endif %}
+
+      <!-- scholarship response -->
+      {% if data.Response %}
+      <p>{{ data.Response | markdownify }}</p>
+      {% endif %}
+
+    </span>
+  </div>
+
+  <div class="modal-footer">
+    <a class="modal-action modal-close waves-effect btn-flat">Close</a>
+    {% if data.Website != null %}
+    <a href="{{ data.Website }}" class="waves-effect btn-flat" target="_blank">{{ data.Organization }}</a>
+    {% endif %}
+  </div>
+
+</div>
+{% endif %}
+{% endfor %}
+{% endif %}
