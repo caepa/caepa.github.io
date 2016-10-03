@@ -17,6 +17,7 @@
   {% assign sorted_data = site.data[year]vendors | sort: "Organization" %}
 
   {% for data in sorted_data %}
+  
   <li class="collection-item avatar">
     {% if data.Twitter != null %}
     <img class="circle" src="https://avatars.io/twitter{{ data.Twitter }}" alt="vendor logo" />
@@ -38,6 +39,7 @@
     </a>
     {% endif %}
   </li>
+  
   {% endfor %}
+  {% endif %}
 </ul>
-{% endif %}

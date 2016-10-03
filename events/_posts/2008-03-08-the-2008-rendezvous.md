@@ -11,6 +11,10 @@ end_date: 2008-03-10
 image_path: 
 event_url: 
 
+docs:
+  - title: "The 2008 Program"
+    url: "https://drive.google.com/open?id=0B3qyIxugPt-kY2VrckxsdEpvdDQ"
+
 # venue:
 location: Sheraton Denver West
 address: 360 Union Blvd

@@ -62,6 +62,7 @@ $(window).on('load',function () {
   google.charts.load('current', {'packages':['timeline']});
   google.charts.setOnLoadCallback(dayOne);  
   google.charts.setOnLoadCallback(dayTwo);
+  google.charts.setOnLoadCallback(dayPre);
 });
 
 $(window).on("resize", function () {
@@ -82,6 +83,7 @@ $(window).on("resize", function () {
   google.charts.load('current', {'packages':['timeline']});
   google.charts.setOnLoadCallback(dayOne);  
   google.charts.setOnLoadCallback(dayTwo);
+  google.charts.setOnLoadCallback(dayPre);
 });
 
 function myFunction() {
@@ -90,6 +92,7 @@ function myFunction() {
     google.charts.load('current', {'packages':['timeline']});
     google.charts.setOnLoadCallback(dayOne);  
     google.charts.setOnLoadCallback(dayTwo);
+    google.charts.setOnLoadCallback(dayPre);
   }, 500);
 }
 

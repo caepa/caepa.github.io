@@ -47,7 +47,7 @@
           <span>{{ data.year }} Sessions</span>
         </a>
         {% if page.docs != null %}
-        {% for doc in page.docs %}
+        {% for doc in page.docs limit:2 %}
         <a href="{{ doc.url }}">
           <span>{{ doc.title }}</span>
         </a>

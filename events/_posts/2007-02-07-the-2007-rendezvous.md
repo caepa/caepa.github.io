@@ -11,6 +11,10 @@ end_date: 2007-02-09
 image_path: 
 event_url: 
 
+docs:
+  - title: "The 2007 Program"
+    url: "https://drive.google.com/open?id=0B3qyIxugPt-kU1VmOG0xc2ZBd00"
+
 # venue:
 location: Omni Interlocken Resort
 address: 500 Interlocken Blvd

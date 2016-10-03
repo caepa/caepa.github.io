@@ -18,6 +18,7 @@
 
   {% for data in sorted_data %}
   {% if data.Accepted == "Yes" %}
+  
   <li class="collection-item avatar">
     <i class="material-icons circle {{ page.color }} accent-1">favorite</i>
     <a href="#{{ data.name | append: '-' | append: data.form | slugify }}" class="flow-text modal-trigger"><b>{{ data.form }}</b></a>
@@ -26,6 +27,7 @@
     <p>{{ data.city }}, Colorado</p>
     {% endif %}
   </li>
+  
   {% endif %}
   {% endfor %}
   {% endif %}

@@ -11,6 +11,10 @@ end_date: 2009-08-07
 image_path: 
 event_url: 
 
+docs:
+  - title: "The 2009 Program"
+    url: "https://drive.google.com/open?id=0B3qyIxugPt-kay1QV3pVY2JFVzQ"
+
 # venue:
 location: Beaver Run Resort
 address: 620 Village Rd

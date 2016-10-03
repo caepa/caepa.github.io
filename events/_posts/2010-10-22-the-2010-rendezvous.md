@@ -5,11 +5,16 @@ year: 2010
 theme: "The Power of Adult Learners"
 author: Jolene Goerend, CAEPA President
 
+preconference: 2010-10-21
 start_date: 2010-10-22
 end_date: 2010-10-23
 
 image_path: 
 event_url: 
+
+docs:
+  - title: "The 2010 Program"
+    url: "https://drive.google.com/open?id=0B3qyIxugPt-kQlhXcEdNSjNsLWM"
 
 # venue:
 location: Marriott Denver Tech Center

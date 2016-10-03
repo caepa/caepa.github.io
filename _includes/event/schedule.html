@@ -37,17 +37,51 @@
     </div>
   </li>
 </ul>
+
 <!-- schedule-two -->
-{% if site.data[year]schedule-2 == null %}
-<li class="collection-item">    
-  <p class="grey-text text-darken-2 light">To be announced</p>
-</li>
-{% else %}
 <ul class="collection z-depth-1">
   <li id="accent" class="{{ page.color }} accent-1"></li>
+  {% if site.data[year]schedule-2 == null %}
+  <li class="collection-item">    
+    <p class="grey-text text-darken-2 light">To be announced</p>
+  </li>
+  {% else %}
   <li class="collection-item">
     <h5>{{ page.end_date | date: "%A, %B %-d, %Y" }}</h5>
     <div id="schedule-two" style="min-height:350px;">
+      <!-- wrapper -->
+      <div class="valign-wrapper">
+        <div class="container center">
+          <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div>
+              <div class="gap-patch">
+                <div class="circle"></div>
+              </div>
+              <div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  {% endif %}
+</ul>
+
+{% if site.data[year]schedule-pre != null %}
+<!-- schedule-three -->
+<ul class="collection with-header z-depth-1">
+  <li id="accent" class="{{ page.color }} accent-1"></li>
+  <li class="collection-header">
+    <h4>{{ year }} Preconference</h4>
+  </li>
+  <li class="collection-item">
+    <h5>{{ page.preconference | date: "%A, %B %-d, %Y" }}</h5>
+    <div id="schedule-pre" style="min-height:350px;">
       <!-- wrapper -->
       <div class="valign-wrapper">
         <div class="container center">
@@ -111,6 +145,41 @@
   // schedule-two function
   function dayTwo() {
     var container = document.getElementById('schedule-two');
+    var chart = new google.visualization.Timeline(container);
+    var dataTable = new google.visualization.DataTable();
+
+    dataTable.addColumn({ type: 'string', id: 'Schedule' });
+    dataTable.addColumn({ type: 'string', id: 'Event' });
+    dataTable.addColumn({ type: 'date', id: 'Start' });
+    dataTable.addColumn({ type: 'date', id: 'End' });
+    dataTable.addRows([
+
+      {% for data in site.data[year]schedule-2 %}
+
+      [ '{{ data.Schedule }}', '{{ data.Event }}',
+       new Date({{ data.Date }}, {{ data.Start }}),
+       new Date({{ data.Date }}, {{ data.End }})
+      ]{% unless forloop.last %},{% endunless %}
+
+      {% endfor %}
+
+    ]);
+
+    var options = {
+      hAxis: {
+        format: 'h:mm'
+      },
+      timeline: {
+        showBarLabels: 'false'
+      }
+    };
+
+    chart.draw(dataTable, options);
+  }
+  
+  // schedule-pre function
+  function dayPre() {
+    var container = document.getElementById('schedule-pre');
     var chart = new google.visualization.Timeline(container);
     var dataTable = new google.visualization.DataTable();
 

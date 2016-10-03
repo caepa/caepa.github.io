@@ -12,7 +12,7 @@
 
 <article class="card hoverable">
   <div id="accent" class="{{ page.color }} accent-1"></div>
-  
+
   <div class="card-content row grey-text text-darken-3">
 
     <div class="col s12 m2 center-align " style="margin:1.46rem 0 1.168rem 0;">
@@ -37,7 +37,15 @@
   </div>
 
   <div class="card-action">
-    <a href="{{ post.url }}"><i class="material-icons left">exit_to_app</i>read more...</a>
+    {% if post.docs != null %}
+    {% for doc in post.docs limit:2 %}
+    <a href="{{ doc.url }}">
+      <span>{{ doc.title }}</span>
+    </a>
+    {% endfor %}
+    {% else %}        
+    <a href="{{ page.url }}"><i class="material-icons left">exit_to_app</i>read more...</a>
+    {% endif %}
   </div>
 
 </article>
