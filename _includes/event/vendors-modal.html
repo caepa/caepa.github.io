@@ -22,13 +22,17 @@
       {% if data.Email %}
       <address><a href="mailto:{{ data.Email }}">{{ data.Name }}</a></address>
       {% elsif data.Name %}
-      <em>{{ data.Name }}</em>
+      <em>{{ data.Name }}</em><br />
       {% endif %}
       
-      {% if data.Job-Title %}
-      <br /><small>{{ data.Job-Title }}</small>
+      <!-- vendor title -->
+      {% if data.Job-Title and data.Organization %}
+      <small>{{ data.Job-Title }}, {{ data.Organization }}</small>
+      {% elsif data.Job-Title %}
+      <small>{{ data.Job-Title }}</small>
+      {% elsif data.Organization %}
+      <small>{{ data.Organization }}</small>
       {% endif %}
-      
       
       <!-- vendor description -->
       {% if data.Description %}
