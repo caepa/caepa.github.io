@@ -29,14 +29,16 @@ price1: $100.00
 price2: $125.00
 registration: https://www.mkt.com/caepa
 ---
-Dear Colleagues:
+Friends and Colleagues:
 
-As we embark in another year of changes and growth, we are challenged to provide guidance to our educators who are always seeking more professional knowledge for our adult learners.
+On behalf of the Board of Directors and as President of CAEPA for 2016, I want to welcome you to Westminster, Colorado and to the Rendezvous Conference of 2016. 
 
-Adult educators are forever reaching for more sustaining ways to motivate and captivate our audiences.
+As we gather for the conference we look around at all the smiling faces from our colleagues, most are probably familiar and some are new. We share with one another the successes and the challenges of our past year. We also share ideas of what works and what does not. This is not only networking at its best but the connections we make are invaluable and forever- lasting. 
 
-I would encourage you to be innovative and creative in your methods of delivery. With the transition to WIOA and the partnerships being created with pathways to success, we can only imagine the uplift this will give our students.
+Teachers are the core of education and even though we are paid less than we deserve, we are still one of the most notable and respected professions in the world. We are charged to make a difference in the lives of our students. We are charged to work with our partners; so, together we can make a difference in our economic well-being. We have been challenged to become creative and innovative in our methods of delivering instruction so that our learners can stay motivated in their difficult lives. 
 
-Our strands this year are varied and flexible; yet address multiple topics. I invite you to join us; to share your knowledge, experience, and incredible creativity with our colleagues around the state.
+Our challenges are many and as we seek knowledge beyond our limits, let us reach to each other and not forget our purpose. 
 
-Thank you for sharing your wealth of knowledge to empower educators and learners, so we can, as a team, build partnerships to strengthen our communities.
+Every person who desires the opportunity to learn should be encouraged to NEVER GIVE UP... 
+
+Thank You,
