@@ -12,8 +12,41 @@ image_path:
 event_url: 
 
 docs:
-  - title: Bj's Fundraiser
+  - title: "The 2016 Program"
+    url: "https://drive.google.com/open?id=0B3qyIxugPt-kdk5vT0R1NzMySnAzeHI5M25MNmprWnNPakQ4"
+  - title: "Westin Map"
+    url: "https://drive.google.com/open?id=0B3qyIxugPt-kOXJPcDNKMUdrSms"
+  - title: "Bj's Fundraiser"
     url: "https://drive.google.com/open?id=0B_6uPCzjvke5cEdSR3JSWTRnaE0"
+
+sponsors:
+  - title: "Aztec Software"
+    twitter: "/aztecsoftware"
+    url: "http://www.aztecsoftware.com/"
+    
+  - title: "Bj's Resaurant Brewhouse"
+    twitter: "/bjsrestaurants"
+    url: "https://www.bjsrestaurants.com/"
+    ad: "https://drive.google.com/open?id=0B_6uPCzjvke5cEdSR3JSWTRnaE0"
+    
+  - title: "BurlingtonEnglish"
+    twitter: "/burlingtoneng"
+    url: "https://www.burlingtonenglish.com/"
+    ad: "https://drive.google.com/open?id=0B3qyIxugPt-kZmFUSXhzYlItV1U"
+    
+  - title: "GED Testing Services"
+    twitter: "/gedtesting"
+    url: "http://www.gedtestingservice.com/ged-testing-service"
+    
+  - title: "National Geographic Learning | Cengage"
+    twitter: "/exploreinside"
+    url: "http://ngl.cengage.com/"
+    ad: "https://drive.google.com/open?id=0B3qyIxugPt-kdTZnWGR0dVFPNWliaTBIcUlxWk94OVBhX3FN"
+    
+  - title: "DRC | CTB"
+    twitter: "/drcctb"
+    url: "http://ctb.com/ctb.com/control/main"
+    ad: "https://drive.google.com/open?id=0B3qyIxugPt-kTW42bS1ROVBLOGRiMU5Ka3B2dzRJX241TFkw"
 
 # venue:
 location: Westin Westminster
