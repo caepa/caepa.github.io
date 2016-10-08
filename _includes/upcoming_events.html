@@ -35,12 +35,10 @@
 <div class="card-content flow-text">
 <p style="text-align:justify;">{{ page.content | strip_html | truncatewords: 100 }}</p>
 </div>
--->
+-->    
+      {% for data in site.data.rendezvous %}
+      {% if data.year == y %}
 
-    
-    {% for data in site.data.rendezvous %}
-    {% if data.year == y %}
-      
       <div class="card-action truncate">
         {% if page.docs != null %}
         {% for doc in page.docs limit:3 %}
@@ -54,11 +52,18 @@
       </div>      
     </div>
 
+    <ul id="page-content" class="collection with-header z-depth-1">
+      <li id="accent" class="{{ page.color }} accent-1"></li>
+      <li class="collection-header">
+        <h4>The {{ y }} Forums</h4>
+      </li>
+    </ul>
+
     {% include event/schedule.html year=y %}
 
     {% endif %}
     {% endfor %}
-    
+
   </article>
   {% endif %}
   {% endfor %}
