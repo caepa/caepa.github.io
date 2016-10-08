@@ -1,10 +1,12 @@
 <!-- upcoming events -->
+{% capture y %}{{ site.time | date: "%Y" }}{% endcapture %}
+
 <h3 class="light grey-text text-darken-1 flow-text truncate">{{ "Upcoming Events" | titleize }}</h3>
 
 <div class="section row">
 
   {% for page in site.categories.events reversed %}
-  {% if page.date > site.time %}
+  {% if page.year == 2016 %}
   <article class="col s12">
     <div class="card hoverable">
       <div id="accent" class="{{ page.color }} accent-1"></div>
@@ -35,19 +37,13 @@
 </div>
 -->
 
-    {% capture y %}{{ site.time | date: "%Y" }}{% endcapture %}
+    
     {% for data in site.data.rendezvous %}
     {% if data.year == y %}
       
       <div class="card-action truncate">
-        <a href="{{ data.reservations }}#sessions">
-          <span>{{ data.year }} Reservations</span>
-        </a>
-        <a href="{{ page.url }}#sessions">
-          <span>{{ data.year }} Sessions</span>
-        </a>
         {% if page.docs != null %}
-        {% for doc in page.docs limit:2 %}
+        {% for doc in page.docs limit:3 %}
         <a href="{{ doc.url }}">
           <span>{{ doc.title }}</span>
         </a>

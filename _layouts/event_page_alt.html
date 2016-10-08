@@ -16,9 +16,9 @@ layout: default_alt
 {% capture y %}{{ page.year }}{% endcapture%}
 <header id="rendezvous" class="{{ page.color }} white-text" role="banner">
   <div id="top">
-    
+
     {% include navigation_alt.html %}
-    
+
     <div id="title" class="nav-wrapper">
       <h1>{{ page.theme }}</h1>
     </div>
@@ -114,6 +114,27 @@ layout: default_alt
             {% endif %}
           </div>
         </div>
+        {% if page.sponsors != null %}
+        <div class="section">
+          <div class="collection with-header">
+            <div class="collection-header"><h5>Thank You Sponsors!</h5></div>
+            {% for sponsor in page.sponsors %}
+            <div class="collection-item avatar">
+              <img src="https://avatars.io/twitter{{ sponsor.twitter }}" alt="sponsor-logo" class="circle" />
+              <span class="title"><strong>{{ sponsor.title }}</strong></span>
+              <p>
+                {% if sponsor.url %}
+                <a href="{{ sponsor.url }}" class="truncate">{{ sponsor.url }}</a>
+                {% endif %}
+              </p>
+              {% if sponsor.ad %}
+              <a href="{{ sponsor.ad }}" class="truncate">View Advertisment</a>
+              {% endif %}
+            </div>       
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
       </div>
     </aside>
   </section>
