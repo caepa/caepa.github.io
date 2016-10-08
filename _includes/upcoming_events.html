@@ -51,13 +51,14 @@
         {% endif %}
       </div>      
     </div>
-
-    <ul id="page-content" class="collection with-header z-depth-1">
-      <li id="accent" class="{{ page.color }} accent-1"></li>
-      <li class="collection-header">
-        <h4>The {{ y }} Forums</h4>
-      </li>
-    </ul>
+    
+    {% comment %}
+    <!-- restyle
+    <div id="page-content" class="collection with-header z-depth-1">
+      <div id="accent" class="{{ page.color }} accent-1"></div>
+      <a href="/forums.html" class="collection-item"><h4>The {{ y }} Forums</h4></a>
+    </div> -->
+    {% endcomment %}
 
     {% include event/schedule.html year=y %}
 
