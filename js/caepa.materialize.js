@@ -30,6 +30,7 @@ $(document).ready(function () {
   });
   // Dropdown
   // Media
+  $('.slider').slider({indicators: false});
   // Models
   $('.modal-trigger').leanModal();
   // Parallax
@@ -44,6 +45,10 @@ $(document).ready(function () {
   // Waves
   // ************** //
   var toc = $('#rendezvous #toc');
+  var sponsor = $('#rendezvous .slides');
+  // slides
+  $('#rendezvous .slider').animate({ height: sponsor.outerWidth() },'slow');  
+  $('#rendezvous .slides').animate({ height: sponsor.outerWidth() },'slow');
   if (document.documentElement.clientWidth > 601) {
     // change tabs to table-of-contents
     $('#rendezvous #toc ul').removeClass("tabs").addClass("table-of-contents");
@@ -68,6 +73,10 @@ $(window).on('load',function () {
 $(window).on("resize", function () {
   'use strict';
   var toc = $('#rendezvous #toc');
+  var sponsor = $('#rendezvous .slides');
+  // slides
+  $('#rendezvous .slider').animate({ height: sponsor.outerWidth() },'slow');  
+  $('#rendezvous .slides').animate({ height: sponsor.outerWidth() },'slow');
   if (document.documentElement.clientWidth > 601) {
     // change tabs to table-of-contents
     $('#rendezvous #toc ul').removeClass("tabs").addClass("table-of-contents");

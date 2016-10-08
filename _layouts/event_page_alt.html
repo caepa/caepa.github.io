@@ -116,22 +116,32 @@ layout: default_alt
         </div>
         {% if page.sponsors != null %}
         <div class="section">
-          <div class="collection with-header">
-            <div class="collection-header"><h5>Thank You Sponsors!</h5></div>
-            {% for sponsor in page.sponsors %}
-            <div class="collection-item avatar">
-              <img src="https://avatars.io/twitter{{ sponsor.twitter }}" alt="sponsor-logo" class="circle" />
-              <span class="title"><strong>{{ sponsor.title }}</strong></span>
-              <p>
-                {% if sponsor.url %}
-                <a href="{{ sponsor.url }}" class="truncate">{{ sponsor.url }}</a>
-                {% endif %}
-              </p>
-              {% if sponsor.ad %}
-              <a href="{{ sponsor.ad }}" class="truncate">View Advertisment</a>
-              {% endif %}
-            </div>       
-            {% endfor %}
+          <h5>Our {{ y }} Sponsors</h5>
+          <div class="slider">
+            <ul class="slides">
+              {% for sponsor in page.sponsors %}
+              <li>
+                <img src="https://avatars.io/twitter{{ sponsor.twitter }}" alt="sponsor-logo" />
+              </li>
+              <!--
+<div class="collection with-header">
+<div class="collection-header">
+<h5>Thank You Sponsors!</h5>
+</div>
+<div class="collection-item avatar">
+<img src="https://avatars.io/twitter{{ sponsor.twitter }}" alt="sponsor-logo" class="circle" />
+<span class="title"><strong>{{ sponsor.title }}</strong></span>
+<p>
+{% if sponsor.url %}
+<a href="{{ sponsor.url }}" class="truncate">{{ sponsor.url }}</a>
+{% endif %}
+</p>
+{% if sponsor.ad %}
+<a href="{{ sponsor.ad }}" class="truncate">View Advertisment</a>
+{% endif %}
+</div-->       
+              {% endfor %}
+            </ul>
           </div>
         </div>
         {% endif %}
