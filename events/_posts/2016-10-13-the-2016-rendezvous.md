@@ -12,16 +12,16 @@ image_path:
 event_url: 
 
 docs:
+  - title: "Bj's Fundraiser"
+    url: "https://drive.google.com/open?id=0B_6uPCzjvke5cEdSR3JSWTRnaE0"
   - title: "The 2016 Program"
     url: "https://drive.google.com/open?id=0B3qyIxugPt-kdk5vT0R1NzMySnAzeHI5M25MNmprWnNPakQ4"
-  - title: "Presentation Schedule"
+  - title: "Session Schedule"
     url: "https://drive.google.com/open?id=0B3qyIxugPt-kQ2lVR19Ec3QxSmlaVHZ4bWdLSkhNSDFKTHpJ"
   - title: "Westin Map"
     url: "https://drive.google.com/open?id=0B3qyIxugPt-kOXJPcDNKMUdrSms"
-  - title: "Presenter Uploads"
+  - title: "Presentation Files"
     url: "https://www.dropbox.com/sh/pmqjsmhejdn81tv/AABLEEZcKFlkOAYjgmc66FTDa?dl=0"
-  - title: "Bj's Fundraiser"
-    url: "https://drive.google.com/open?id=0B_6uPCzjvke5cEdSR3JSWTRnaE0"
 
 sponsors:
   - title: "Aztec Software"
