@@ -12,8 +12,8 @@ image_path:
 event_url: 
 
 docs:
-  # - title: "The 2016 Program"
-  #  url: "https://drive.google.com/open?id=0B3qyIxugPt-kdk5vT0R1NzMySnAzeHI5M25MNmprWnNPakQ4"
+  - title: "The 2016 Program"
+    url: "https://drive.google.com/open?id=0B3qyIxugPt-kdk5vT0R1NzMySnAzeHI5M25MNmprWnNPakQ4"
   - title: "Presentation Schedule"
     url: "https://drive.google.com/open?id=0B3qyIxugPt-kQ2lVR19Ec3QxSmlaVHZ4bWdLSkhNSDFKTHpJ"
   - title: "Westin Map"
