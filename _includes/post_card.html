@@ -39,7 +39,7 @@
   <div class="card-action">
     {% if post.docs != null %}
     {% for doc in post.docs limit:2 %}
-    <a href="{{ doc.url }}" target="_blank">
+    <a href="{{ doc.url }}">
       <span>{{ doc.title }}</span>
     </a>
     {% endfor %}

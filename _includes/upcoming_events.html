@@ -41,7 +41,7 @@
       <div class="card-action truncate">
         {% if page.docs != null %}
         {% for doc in page.docs limit:4 %}
-        <a href="{{ doc.url }}" target="_blank">
+        <a href="{{ doc.url }}">
           <span>{{ doc.title }}</span>
         </a>
         {% endfor %}
