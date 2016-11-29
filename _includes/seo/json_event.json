@@ -7,7 +7,7 @@
   "endDate":"{{ page.end_date }}",
   "url":"{{ page.url | prepend: site.baseurl | prepend: site.url }}",
   "sameas":"{{ page.event_url }}",
-  "description":"{{ page.content | strip_html | strip_newlines | truncatewords: 50 }}",
+  "description":"{{ page.content | strip_html | replace: '\n', ' ' | truncatewords: 50 }}",
   "location":{
     "@type":"Place",
     "name":"{{ page.location }}",

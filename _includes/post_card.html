@@ -31,7 +31,7 @@
         <b>{{ post.title | strip_html | strip_newlines | replace: '_',' ' }}</b>
       </a>
       {% if post.author %}<p><strong>{{ post.author }}</strong></p>{% endif %}
-      <span>{{ post.content | strip_html | strip_newlines | truncatewords: 50 }}</span>
+      <span>{{ post.content | strip_html | replace: '\n', ' ' | strip | truncatewords: 50 }}</span>
     </div>
 
   </div>
@@ -39,12 +39,12 @@
   <div class="card-action">
     {% if post.docs != null %}
     {% for doc in post.docs limit:2 %}
-    <a href="{{ doc.url }}">
+    <a href="{{ doc.url }}" target="_blank">
       <span>{{ doc.title }}</span>
     </a>
     {% endfor %}
     {% else %}        
-    <a href="{{ page.url }}"><i class="material-icons left">exit_to_app</i>read more...</a>
+    <a href="{{ post.url }}"><i class="material-icons left">exit_to_app</i>read more...</a>
     {% endif %}
   </div>
 

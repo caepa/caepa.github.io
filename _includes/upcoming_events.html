@@ -6,16 +6,16 @@
 <div class="section row">
 
   {% for page in site.categories.events reversed %}
-  {% if page.year == 2016 %}
+  {% if page.year == 2017 %}
   <article class="col s12">
     <div class="card hoverable">
       <div id="accent" class="{{ page.color }} accent-1"></div>
 
       <div class="card-content grey-text text-darken-3 flow-text">
         <span class="center-align right" style="padding-left:20px; height:6.8rem;">
-          <img class="grey lighten-3 hide-on-small-only" alt="thumbnail" {% if page.image_path != null %} src="{{ page.image_path | prepend: site.baseurl | prepend: site.url }}" {% else %} src="{{ site.icon }}"{% endif %} style="height:100%; padding:5px;">
+          <img class="grey lighten-3 hide-on-small-only" alt="thumbnail" {% if page.image_path != null %} src="{{ page.image_path }}" {% else %} src="{{ site.icon }}"{% endif %} style="height:100%; padding:5px;">
         </span>
-        <h3 class="truncate"><a href="{{ page.url }}">{{ page.title }}</a></h3>
+        <h3 class="truncate"><a href="{{ page.url }}">{{ page.title | titleize }}</a></h3>
         {% if page.theme %}
         <p class="truncate">{{ page.theme | strip_html | strip_newlines | replace: '_',' ' }}</p>
         <small class="truncate">{{ page.author }}</small>
@@ -36,13 +36,12 @@
 <p style="text-align:justify;">{{ page.content | strip_html | truncatewords: 100 }}</p>
 </div>
 -->    
-      {% for data in site.data.rendezvous %}
-      {% if data.year == y %}
+
 
       <div class="card-action truncate">
         {% if page.docs != null %}
         {% for doc in page.docs limit:4 %}
-        <a href="{{ doc.url }}">
+        <a href="{{ doc.url }}" target="_blank">
           <span>{{ doc.title }}</span>
         </a>
         {% endfor %}
@@ -58,12 +57,17 @@
       <div id="accent" class="{{ page.color }} accent-1"></div>
       <a href="/forums.html" class="collection-item"><h4>The {{ y }} Forums</h4></a>
     </div> -->
-    {% endcomment %}
-
+    
+    {% for data in site.data.rendezvous %} ## whats this for ?
+    {% if data.year == y %}
+    
+    <!-- loops site.data[year].schedule -->
     {% include event/schedule.html year=y %}
 
     {% endif %}
     {% endfor %}
+    
+    {% endcomment %}
 
   </article>
   {% endif %}

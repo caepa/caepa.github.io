@@ -13,9 +13,9 @@
   icon: chrome_reader_mode
   color: deep-purple
   
-- title: Forums
-  url: http://www.caepa.org/forums.html
-  icon: forum
+# - title: Forums
+#   url: http://www.caepa.org/forums.html
+#   icon: forum
   
 - title: Forms
   url: http://www.caepa.org/forms
