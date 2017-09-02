@@ -1,3 +1,9 @@
+---
+---
+@import "materialize";
+@import "social_icons";
+@import "variables";
+
 body {
   display: flex;
   min-height: 100vh;
@@ -11,7 +17,7 @@ main {
 
 nav .brand-logo.left {
   left: 0.75rem;
-  
+
   & img {
     height: 2.1rem;
     vertical-align: middle;
@@ -101,7 +107,7 @@ footer .ui-link {
   display: inline-flex;
   transform: translate(0%,25%);
   margin: 0 7px;
-  
+
   & img {
     height: 19px;
   }

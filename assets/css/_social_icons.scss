@@ -1,6 +1,5 @@
-/* ==========================================================================
-   _social_icons.scss
-   ========================================================================== */
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
 // codebase @ http://codepen.io/thecssguru/pen/mJpeJe
 // Creates Mixin to use any Font Awesome Class Icon Name in your $fa Map
 
@@ -67,8 +66,8 @@ $fa: (
         line-height: inherit;
         color: $button-raised-color;
         // display: block;
-        // position: absolute; 
-        // left: 50%; 
+        // position: absolute;
+        // left: 50%;
         // top: 50%;
         // transform: translate(0%,17%);
       }
