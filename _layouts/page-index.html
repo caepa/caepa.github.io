@@ -1,0 +1,17 @@
+---
+layout: default
+image: caepa/caepa-title.svg
+---
+<main id="content" class="content valign-wrapper" role="main">
+  <img src="../assets/img/{{ layout.image }}" alt="CAEPA" class="container" style="width:300px"/>
+</main>
+
+<ul id="sidenav" class="side-nav fixed">
+  <li class="title"><span class="mdc-title">{{ page.collection | capitalize }}</span></li>
+
+  <!-- replace with if statement -->
+  {% for document in site[page.collection] %} {% if document.url contains "index" %} {% continue %} {% endif %}
+  <li{% if document.url == page.url %} class="active"{% endif %}><a href="{{ document.url }}" class="truncate">{{ document.title }}</a></li>
+  {% endfor %}
+
+</ul>

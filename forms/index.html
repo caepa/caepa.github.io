@@ -1,0 +1,12 @@
+---
+layout: iframe
+title: Forms
+permalink: /forms/
+icon: description
+---
+<ul id="sidenav" class="side-nav fixed">
+  <li class="title"><span class="mdc-title">{{ page.title }}</span></li> {% for data in site.data.forms %} {% if forloop.first == false %}
+  <li><div class="divider"></div></li> {% endif %}
+  <li><span class="subheader">{{ data.title }}</a></li> {% for data in data.docs %}
+  <li><a target="frame" href="{{ data.url }}" class="waves-effect truncate"><i class="material-icons">{{ page.icon }}</i>{{ data.title }}</a></li> {% endfor %} {% endfor %}
+</ul>

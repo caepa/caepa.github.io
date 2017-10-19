@@ -1,0 +1,117 @@
+---
+layout: default
+---
+<!-- Welcome Message Structure -->
+<section id="welcome" class="modal modal-fixed-footer">
+  <div class="modal-content">
+    <h4>Letter from the President</h4>
+    {{ content }}
+    <p><strong>{{ page.author }}</strong></p>
+  </div>
+  <div class="modal-footer">
+    <a class="modal-action modal-close waves-effect btn-flat"><i class="material-icons left">close</i>Close</a>
+  </div>
+</section>
+
+{% capture y %}{{ page.year }}{% endcapture%}
+<header id="rendezvous" class="hide caepa-red white-text" role="banner">
+  <div id="title" class="nav-wrapper">
+    <h1>{{ page.theme }}</h1>
+  </div>
+</header>
+<main id="content" class="col-third content" role="main">
+
+  <section id="rendezvous" class="row">
+    <article id="details">
+      <div class="col s12">
+        {% include event/details.html year=y %}
+      </div>
+    </article>
+    <article id="schedule">
+      <div class="col s12">
+        {% include event/schedule.html year=y %}
+      </div>
+    </article>
+    <article id="awards">
+      <div class="col s12">
+        {% include event/awards-list.html year=y %} {% include event/awards-modal.html year=y %}
+      </div>
+    </article>
+    <article id="keynotes">
+      <div class="col s12">
+        {% include event/keynotes-list.html year=y %} {% include event/keynotes-modal.html year=y %}
+      </div>
+    </article>
+    <article id="sessions">
+      <div class="col s12">
+        {% include event/sessions-list.html year=y %} {% include event/sessions-modal.html year=y %}
+      </div>
+    </article>
+    <article id="vendors">
+      <div class="col s12">
+        {% include event/vendors-list.html year=y %} {% include event/vendors-modal.html year=y %}
+      </div>
+    </article>
+
+  </section>
+</main>
+
+<aside>
+  <ul id="sidenav" class="side-nav fixed">
+    <li class="title"><span class="mdc-title">{{ page.title }}</span></li>
+    <span id="tabs">
+      <li class="tab"><a href="#details">Details</a></li>
+      <li class="tab"><a href="#schedule" onclick="myFunction()">Schedule</a></li>
+      <li class="tab"><a href="#awards">Awards</a></li>
+      <li class="tab"><a href="#keynotes">Keynotes</a></li>
+      <li class="tab"><a href="#sessions">Sessions</a></li>
+      <li class="tab"><a href="#vendors">Vendors</a></li>
+    </span>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Subheader 1</a></li>
+    <li><a href="#welcome" class="modal-trigger"><i class="material-icons left">person</i><span>Letter from the President</span></a></li>
+    <li><a href="http://www.caepa.org/forums.html" class="collection-item"><i class="material-icons left">forum</i><span>Rendezvous Forum</span></a></li>
+    <li>
+      <div class="divider"></div>
+    </li> {% if page.docs != null %}
+    <li>
+      <ul class="collapsible collapsible-accordion">
+        <li>
+          <a class="collapsible-header">Documents<i class="material-icons">arrow_drop_down</i></a>
+          <div class="collapsible-body">
+            <ul> {% for doc in page.docs %}
+              <li><a href="{{ doc.url }}" class="collection-item"><i class="material-icons left">cloud_download</i><span>{{ doc.title }}</span></a></li>{% endfor %}
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li> {% endif %}
+    <li>
+      <div class="divider"></div>
+    </li> {% if page.sponsors != null %}
+    <li><a class="subheader">Our sponsers</a></li>
+    <li class="slider hide">
+      <ul class="slides"> {% for sponsor in page.sponsors %}
+        <li><img src="https://avatars.io/twitter{{ sponsor.twitter }}" alt="sponsor-logo" /></li> {% endfor %}
+      </ul>
+    </li> {% endif %}
+  </ul>
+</aside>
+
+{% comment %} <!--
+<div class="collection with-header">
+<div class="collection-header">
+<h5>Thank You Sponsors!</h5>
+</div>
+<div class="collection-item avatar">
+<img src="https://avatars.io/twitter{{ sponsor.twitter }}" alt="sponsor-logo" class="circle" />
+<span class="title"><strong>{{ sponsor.title }}</strong></span>
+<p>
+{% if sponsor.url %}
+<a href="{{ sponsor.url }}" class="truncate">{{ sponsor.url }}</a>
+{% endif %}
+</p>
+{% if sponsor.ad %}
+<a href="{{ sponsor.ad }}" class="truncate">View Advertisment</a>
+{% endif %}
+</div--> {% endcomment %}

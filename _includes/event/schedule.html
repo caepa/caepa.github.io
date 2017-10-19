@@ -7,7 +7,7 @@
   </li>
 
   {% if site.data[year]schedule-1 == null %}
-  <li class="collection-item">    
+  <li class="collection-item">
     <p class="grey-text text-darken-2 light">To be announced</p>
   </li>
 
@@ -42,7 +42,7 @@
 <ul class="collection z-depth-1">
   <li id="accent" class="{{ page.color }} accent-1"></li>
   {% if site.data[year]schedule-2 == null %}
-  <li class="collection-item">    
+  <li class="collection-item">
     <p class="grey-text text-darken-2 light">To be announced</p>
   </li>
   {% else %}
@@ -106,6 +106,7 @@
 {% endif %}
 
 <!-- google charts -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
   // schedule-one function
   function dayOne() {
@@ -176,7 +177,7 @@
 
     chart.draw(dataTable, options);
   }
-  
+
   // schedule-pre function
   function dayPre() {
     var container = document.getElementById('schedule-pre');

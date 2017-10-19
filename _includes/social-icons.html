@@ -1,0 +1,12 @@
+<div itemscope itemtype="http://schema.org/Organization">
+  <link itemprop="url" href="{{ site.url }}">
+  <ul class="social-media">
+    {% for network in site.social %} {% if network.url != null %}
+    <li>
+      <a itemprop="sameAs" class="{{ network.name }}" href="{{ network.url }}">
+        <span>{{ network.name }}</span>
+      </a>
+    </li>
+    {% endif %} {% endfor %}
+  </ul>
+</div>

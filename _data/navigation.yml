@@ -1,23 +1,32 @@
-- title: Events
-  url: http://www.caepa.org/events
+-
+  title: Bylaws
+  url: ../bylaws
+  icon: assignment
+-
+  title: Events
+  url: ../events
   icon: event
-  color: red
-  
-- title: Fact Sheets
-  url: http://www.caepa.org/fact-sheets
+-
+  title: Factsheets
+  url: ../factsheets
   icon: info
-  color: pink
-
-- title: News
+-
+  title: Forms
+  url: ../forms
+  icon: description
+-
+  title: News
   url: http://news.caepa.org
   icon: chrome_reader_mode
-  color: deep-purple
-  
-# - title: Forums
-#   url: http://www.caepa.org/forums.html
-#   icon: forum
-  
-- title: Forms
-  url: http://www.caepa.org/forms
-  icon: description
-  color: purple
+-
+  title: Document Sharing
+  url: ../sharing-documents
+  icon: folder
+-
+  title: Link Sharing
+  url: ../sharing-links
+  icon: link
+# -
+#  title: Forums
+#  url: http://www.caepa.org/forums.html
+#  icon: forum

@@ -1,0 +1,46 @@
+---
+layout: default
+title: Link Sharing
+---
+{% assign data = site.data.websites.sharing | where_exp: "data", "data.featured == true"%}
+<main>
+  <div class="row">
+    <h2 id="featured" class="mdc-display-2">Featured Websites</h2> {% for data in data %}
+    <article class="col s12 m6">
+      <div class="card small hoverable waves-effect waves-dark">
+        <a href="{{ data.url }}" target="_blank">
+          <div class="card-image">
+            <img src="http://s.wordpress.com/mshots/v1/{{ data.url }}" alt="image of {{ data.name }}" />
+          </div>
+          <div class="card-content">
+            <p class="mdc-title">{{ data.title }}<br />
+              <span class="mdc-subheading-1">{{ data.url }}</span>
+            </p>
+          </div>
+        </a>
+      </div>
+    </article> {% endfor %}
+  </div> {% assign data = site.data.websites.sharing | group_by: "tag" %} {% for data in data %}
+  <div class="row">
+    <h2 id="{{ data.name | slugify }}" class="mdc-display-2 adjust-margin">{{ data.name }}</h2> {% for data in data.items %}
+    <article class="col s12 m6">
+      <div class="card small hoverable waves-effect waves-dark">
+        <a href="{{ data.url }}" target="_blank">
+          <div class="card-image">
+            <img src="http://s.wordpress.com/mshots/v1/{{ data.url }}" alt="image of {{ data.name }}" />
+          </div>
+          <div class="card-content">
+            <p class="mdc-title">{{ data.title }}<br />
+              <span class="mdc-subheading-1">{{ data.url }}</span>
+            </p>
+          </div>
+        </a>
+      </div>
+    </article> {% endfor %}
+  </div> {% endfor %}
+</main>
+<ul id="sidenav" class="side-nav fixed">
+  <li class="title"><span class="mdc-title">{{ page.title }}</span></li>
+  <li><a href="#featured">Featured Websites</a></li> {% for data in data %}
+  <li><a href="#{{ data.name | slugify }}">{{ data.name }}</a></li> {% endfor %}
+</ul>
