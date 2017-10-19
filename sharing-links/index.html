@@ -5,7 +5,7 @@ title: Link Sharing
 {% assign data = site.data.websites.sharing | where_exp: "data", "data.featured == true"%}
 <main>
   <div class="row">
-    <h2 id="featured" class="mdc-display-2">Featured Websites</h2> {% for data in data %}
+    <h2 id="featured" class="mdc-display-2 adjust-margin">Featured Websites</h2> {% for data in data %}
     <article class="col s12 m6">
       <div class="card small hoverable waves-effect waves-dark">
         <a href="{{ data.url }}" target="_blank">
