@@ -15,6 +15,7 @@ body {
 
 main, .flex {
   flex: 1 0 auto;
+  padding-top: 64px;
 }
 
 .caepa-red {
@@ -46,7 +47,7 @@ main, .flex {
 
 
 .home main {
-  padding-left: 0;
+  padding: 64px 0 0 0;
 }
 
 main, iframe, footer .nav-wrapper {
@@ -55,7 +56,7 @@ main, iframe, footer .nav-wrapper {
 
 @media #{$medium-and-down} {
   main, iframe, footer .nav-wrapper  {
-    padding-left: 0;
+    padding: 32px 0 0 0;
   }
 }
 
