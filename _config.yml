@@ -1,10 +1,3 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
 title: CAEPA
 legal_name: Colorado Adult Education Professional Association
@@ -20,83 +13,88 @@ repository: caepa/caepa.github.io
 google_analytics_id: UA-76548901-1
 google_site_verification: 9aWiSPXxIMqz4XsA1BbxONHgHSSVeTczQFS0fJcgEZE
 
+docs_path: /assets/docs/
+img_path: /assets/img/
+
 social:
 # - name: dropbox url:  http://dropbox.com
 # - name: google-plus url:  http://plus.google.com/caepaboard
-  - name: linkedin
-    url:  https://www.linkedin.com/company/colorado-adult-education-professional-association-caepa-
+
   - name: facebook
     url:  https://www.facebook.com/caepa.co
   - name: github
     url:  http://github.com/caepa
+  - name: linkedin
+    url:  https://www.linkedin.com/company/colorado-adult-education-professional-association-caepa-
   - name: rss
-    url:  http://www.caepa.org/feed.xml
+    url:  http://news.caepa.org/feed.xml
   - name: twitter
     url:  https://twitter.com/caepa_co
 
 # Build settings
-markdown: kramdown
-
-sass:
-  style: compressed
-
 future: true
 timezone: America/Denver
+markdown: kramdown
+exclude:
+  - _docs
+include:
+  - _pages
+
+sass:
+  load_paths:
+    - assets/css
+    - assets/css/materialize/sass
+    - assets/css/mdc-typography
+  style: compressed
 
 collections:
+  bylaws:
+    output: true
+  factsheets:
+    output: true
   forms:
     output: true
-  docs:
-    output: false
-  # moved to ghost
+  home:
+    output: false # not in use
   news:
-    output: false
-
-include: ["_pages"]
-exclude: ["vendor", "_docs"]
-# Travis bundles all gems in the vendor directory on its build servers,
-# which Jekyll will mistakenly read and explode on.
+    output: false # external site
+  rendezvous:
+    output: true
 
 defaults:
   - scope:
-      path: ""
+      type: bylaws
     values:
-      color: grey
+      layout: page-collection
   - scope:
-      path: ""
-      type: "posts"
+      type: factsheets
+    values:
+      layout: page-collection
+  - scope:
+      type: forms
+    values:
+      layout: page-collection
+  - scope:
+      type: home
+    values:
+      layout: home
+      permalink: /
+  - scope:
+      type: news
+    values:
+      layout: page-collection
+  - scope:
+      type: rendezvous
+    values:
+      layout: page-rendezvous
+      permalink: /events/:title
+  - scope:
+      type: pages
+    values:
+      layout: page-collection
+  - scope:
+      type: posts
     values:
       layout: "post"
-      author: Colorado Adult Education Professional Association
-      permalink: /:categories/:title.html
-      tabs: [Article, Related Articles]
-  - scope:
-      path: "events"
-    values:
-      color: red
-      icon: date_range
-  - scope:
-      path: "fact-sheets"
-    values:
-      color: pink
-      icon: info
-  - scope:
-      path: "forms"
-    values:
-      color: purple
-      icon: description
-  - scope:
-      type: "forms"
-    values:
-      color: purple
-      icon: description
-  - scope:
-      path: "news"
-    values:
-      color: deep-purple
-      icon: chrome_reader_mode
-  - scope:
-      path: "news"
-      type: "posts"
-    values:
-      permalink: /:categories/:year/:title.html
+      author: CAEPA
+      permalink: /:categories/:title

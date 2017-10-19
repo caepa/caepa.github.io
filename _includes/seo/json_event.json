@@ -1,4 +1,4 @@
-{  
+{
   "@context":"http://schema.org",
   "@type":"Event",
   "name":"{{ page.title }}",
@@ -21,14 +21,13 @@
     }
   },
   "offers":{
-    "@type":"AggregateOffer",
-    "lowPrice":"{{ page.price1 | remove: '$' }}",
-    "highPrice":"{{ page.price2 | remove: '$' }}",
+    "@type":"Offer",
+    "Price":"{{ page.price | remove: '$' }}",
     "priceCurrency":"USD",
     "url":"{{ page.registration }}"
   },
-  "organizer":[  
-    {  
+  "organizer":[
+    {
       "@type":"Organization",
       "logo": {
         "@type":"ImageObject",
@@ -46,7 +45,7 @@
         "{{ site.baseurl | prepend: site.url }}",{% for media in site.social %}
         "{{ media.url}}"{% unless forloop.last %},{% endunless %}{% endfor %}
       ],
-      "subOrganization":[  
+      "subOrganization":[
         "COABE",
         "MPAEA"
       ]

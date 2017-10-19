@@ -1,0 +1,668 @@
+{
+  "master" : [
+    {
+      "year" : 2016,
+      "event" : "Empowering Learners through Partnerships and Innovation",
+      "start-date" : "2016-10-13T06:00:00.000Z",
+      "end-date" : "2016-10-14T06:00:00.000Z",
+      "location" : "Westin Westminster",
+      "address" : "10600 Westminster Blvd",
+      "city-state-zipcode" : "Westminster, CO 80020",
+      "phone" : "(303) 410-5000",
+      "website" : "http://www.westindenverboulder.com/",
+      "reservations" : "https://www.starwoodmeeting.com/events/start.action?id=1511022308&key=300336A7",
+      "early-bird-exp" : "TBD",
+      "early-bird-one" : 100,
+      "early-bird-multi" : 150,
+      "one-day" : 150,
+      "multi-day" : 200,
+      "lunch-only" : 30,
+      "membership" : "Included",
+      "registration" : "https://www.mkt.com/caepa",
+      "registration-mail" : "1332 Marigold Ct. Lafayette, CO 80026",
+      "era" : "CAEPA"
+    },
+    {
+      "year" : 2015,
+      "event" : "Moving Forward with Innovation, Opportunity, and Action",
+      "start-date" : "2015-10-23T06:00:00.000Z",
+      "end-date" : "2015-10-24T06:00:00.000Z",
+      "location" : "Westin Westminster",
+      "address" : "10600 Westminster Blvd",
+      "city-state-zipcode" : "Westminster, CO 80020",
+      "phone" : "(303) 410-5000",
+      "website" : "http://www.westindenverboulder.com/",
+      "reservations" : "https://www.starwoodmeeting.com/StarGroupsWeb/res?id=1405194525&key=173A4AC",
+      "early-bird-exp" : "2015-10-01T06:00:00.000Z",
+      "early-bird-one" : 75,
+      "early-bird-multi" : 100,
+      "one-day" : 125,
+      "multi-day" : 175,
+      "lunch-only" : 30,
+      "membership" : "Included",
+      "registration" : "https://www.mkt.com/caepa",
+      "registration-mail" : "1332 Marigold Ct. Lafayette, CO 80026",
+      "program-path" : "http://goo.gl/oO8mtT",
+      "era" : "CAEPA"
+    },
+    {
+      "year" : 2014,
+      "event" : "Hosted COABE National Conference in Denver",
+      "start-date" : "2015-04-21T06:00:00.000Z",
+      "end-date" : "2015-04-24T06:00:00.000Z",
+      "location" : "Hyatt Regency Denver at Colorado Convention Center",
+      "address" : "650 15th St",
+      "city-state-zipcode" : "Denver, CO 80202",
+      "phone" : "(303) 436-1234",
+      "website" : "https://denver.regency.hyatt.com/en/hotel/home.html",
+      "membership" : "Included",
+      "era" : "CAEPA"
+    },
+    {
+      "year" : 2013,
+      "event" : "Adult Education: Imagine the Possibilities",
+      "start-date" : "2013-10-18T06:00:00.000Z",
+      "end-date" : "2013-10-09T06:00:00.000Z",
+      "location" : "The Antlers Hilton",
+      "address" : "4 S Cascade Ave",
+      "city-state-zipcode" : "Colorado Springs, CO 80903",
+      "phone" : "(719) 955-5600",
+      "website" : "http://antlers.com/",
+      "era" : "CAEPA"
+    },
+    {
+      "year" : 2012,
+      "event" : "Gearing Up for Change",
+      "start-date" : "2012-10-12T06:00:00.000Z",
+      "end-date" : "2012-10-13T06:00:00.000Z",
+      "location" : "Omni Interlocken Resort",
+      "address" : "500 Interlocken Blvd",
+      "city-state-zipcode" : "Broomfield, CO 80021",
+      "phone" : "(303) 438-6600",
+      "website" : "https://www.omnihotels.com/hotels/denver-interlocken",
+      "era" : "CAEPA"
+    },
+    {
+      "year" : 2011,
+      "event" : "Maximizing Resources in Challenging Times",
+      "start-date" : "2011-10-21T06:00:00.000Z",
+      "end-date" : "2011-10-22T06:00:00.000Z",
+      "location" : "Marriott Denver Tech Center",
+      "address" : "4900 S Syracuse St",
+      "city-state-zipcode" : "Denver, CO 80237",
+      "phone" : "(303) 779-1100",
+      "website" : "https://www.denvermarriotttechcenter.com/",
+      "one-day" : 115,
+      "multi-day" : 195,
+      "era" : "CAEPA"
+    },
+    {
+      "year" : 2010,
+      "event" : "The Power of Adult Learning",
+      "start-date" : "2010-10-22T06:00:00.000Z",
+      "end-date" : "2010-10-23T06:00:00.000Z",
+      "location" : "Marriott Denver Tech Center",
+      "address" : "4900 S Syracuse St",
+      "city-state-zipcode" : "Denver, CO 80237",
+      "phone" : "(303) 779-1100",
+      "website" : "https://www.denvermarriotttechcenter.com/",
+      "multi-day" : 195,
+      "era" : "CAEPA"
+    },
+    {
+      "year" : 2009,
+      "event" : "Adult Education: Partnering for a Better Colorado",
+      "start-date" : "2009-08-05T06:00:00.000Z",
+      "end-date" : "2009-08-07T06:00:00.000Z",
+      "location" : "Beaver Run Resort",
+      "address" : "620 Village Rd",
+      "city-state-zipcode" : "Breckenridge, CO 80424",
+      "phone" : "(970) 453-6000",
+      "website" : "http://www.beaverrun.com/",
+      "multi-day" : 180,
+      "era" : "CAEPA"
+    },
+    {
+      "year" : 2008,
+      "event" : "Sharing Success: Adult Learners in Transition",
+      "start-date" : "2008-03-08T07:00:00.000Z",
+      "end-date" : "2008-03-10T06:00:00.000Z",
+      "location" : "Sheraton Denver West",
+      "address" : "360 Union Blvd",
+      "city-state-zipcode" : "Lakewood, CO 80228",
+      "phone" : "(303) 987-2000",
+      "website" : "http://www.sheratondenverwest.com/",
+      "era" : "CAEPA"
+    },
+    {
+      "year" : 2007,
+      "event" : "Engaging Diverse Learners",
+      "start-date" : "2007-02-07T07:00:00.000Z",
+      "end-date" : "2007-02-09T07:00:00.000Z",
+      "location" : "Omni Interlocken Resort",
+      "address" : "500 Interlocken Blvd",
+      "city-state-zipcode" : "Broomfield, CO 80021",
+      "phone" : "(303) 438-6600",
+      "website" : "https://www.omnihotels.com/hotels/denver-interlocken",
+      "era" : "CAEPA"
+    },
+    {
+      "year" : 2006,
+      "event" : "Leading Learners to a Higher Level",
+      "start-date" : "2006-04-26T06:00:00.000Z",
+      "end-date" : "2006-04-29T06:00:00.000Z",
+      "location" : "Adams Mark Hotel",
+      "address" : "1550 Court Place",
+      "city-state-zipcode" : "Denver, CO 80202",
+      "multi-day" : 245,
+      "era" : "CAEPA"
+    },
+    {
+      "year" : 2005,
+      "era" : "CAEPA"
+    },
+    {
+      "year" : 2004,
+      "era" : "CAEPA"
+    },
+    {
+      "year" : 2003,
+      "era" : "CAEPA"
+    },
+    {
+      "year" : 2002,
+      "era" : "CAEPA"
+    },
+    {
+      "year" : 2001,
+      "event" : "Helping Adults with Learning Disabilities",
+      "start-date" : "2001-11-03T07:00:00.000Z",
+      "end-date" : "2001-11-03T07:00:00.000Z",
+      "location" : "Tivoli Student Union",
+      "address" : "900 Auraria Pkwy",
+      "city-state-zipcode" : "Denver, CO 80204",
+      "multi-day" : "Free",
+      "era" : "CAEPA"
+    },
+    {
+      "year" : 2001,
+      "event" : "HAL (Helping Adults Learn) 2001: A Mind Odyssey",
+      "start-date" : "2001-04-20T06:00:00.000Z",
+      "end-date" : "2001-04-20T06:00:00.000Z",
+      "location" : "Red Rock Community College",
+      "address" : "13300 W 6th Ave",
+      "city-state-zipcode" : "Lakewood, CO 80228",
+      "phone" : "(303) 914-6600",
+      "website" : "http://www.rrcc.edu/",
+      "multi-day" : 95,
+      "era" : "CAEPA"
+    },
+    {
+      "year" : 1999,
+      "event" : "Prospecting for Gold in the 21st Century",
+      "start-date" : "1999-10-28T06:00:00.000Z",
+      "end-date" : "1999-10-29T06:00:00.000Z",
+      "location" : "Garden of the Gods",
+      "address" : "1805 N 30th St",
+      "city-state-zipcode" : "Colorado Springs, CO 80904",
+      "phone" : "(719) 634-6666",
+      "website" : "http://gardenofgods.com/",
+      "era" : "CAEPA"
+    },
+    {
+      "year" : 1998,
+      "event" : "The Rendezvous at Beaver Creek: A Renewal of Mind, Body, and Spirit",
+      "start-date" : "1998-05-02T06:00:00.000Z",
+      "end-date" : "1998-05-02T06:00:00.000Z",
+      "city-state-zipcode" : "Beaver Creek, CO 81620",
+      "website" : "http://www.beavercreek.com/",
+      "era" : "CAEPA"
+    },
+    {
+      "year" : 1997,
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1996,
+      "event" : "Learning and Growing Together",
+      "start-date" : "1996-10-18T06:00:00.000Z",
+      "end-date" : "1996-10-19T06:00:00.000Z",
+      "location" : "Regency Hotel",
+      "address" : "3900 Elati St",
+      "city-state-zipcode" : "Denver, CO 80216",
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1995,
+      "event" : "New Pathways to Program Success",
+      "start-date" : "1995-09-21T06:00:00.000Z",
+      "end-date" : "1995-09-22T06:00:00.000Z",
+      "location" : "Tower Executive",
+      "address" : "1406 Curtis Street",
+      "city-state-zipcode" : "Denver, CO 80203",
+      "phone" : "(303) 571-0301",
+      "website" : "http://thecurtis.com/",
+      "multi-day" : 90,
+      "membership" : 15,
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1994,
+      "event" : "Building Learning Communities",
+      "start-date" : "1994-09-29T06:00:00.000Z",
+      "end-date" : "1994-09-30T06:00:00.000Z",
+      "location" : "Ramada Inn",
+      "city-state-zipcode" : "Denver, CO",
+      "multi-day" : 80,
+      "membership" : 15,
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1993,
+      "event" : "Proactive Skills in the 90's for Adult and Community Educators",
+      "start-date" : "1993-10-28T06:00:00.000Z",
+      "end-date" : "1993-10-29T06:00:00.000Z",
+      "location" : "Embassy Suites by Hilton Colorado Springs",
+      "address" : "7290 Commerce Center Dr",
+      "city-state-zipcode" : "Colorado Springs, CO 80919",
+      "phone" : "(719) 599-9100",
+      "website" : "http://embassysuites3.hilton.com/en/hotels/colorado/embassy-suites-by-hilton-colorado-springs-COSCCES/index.html",
+      "multi-day" : 80,
+      "membership" : 15,
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1992,
+      "event" : "Colorado Collaborates, Designing Solutions for the Future",
+      "start-date" : "1992-10-01T06:00:00.000Z",
+      "end-date" : "1992-10-02T06:00:00.000Z",
+      "location" : "Embassy Suites by Hilton Colorado Springs",
+      "address" : "7290 Commerce Center Dr",
+      "city-state-zipcode" : "Colorado Springs, CO 80919",
+      "phone" : "(719) 599-9100",
+      "website" : "http://embassysuites3.hilton.com/en/hotels/colorado/embassy-suites-by-hilton-colorado-springs-COSCCES/index.html",
+      "multi-day" : 85,
+      "membership" : 15,
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1991,
+      "event" : "Professional Power from the Inside Out",
+      "start-date" : "1991-10-02T06:00:00.000Z",
+      "end-date" : "1991-10-04T06:00:00.000Z",
+      "location" : "Hyatt Regency Denver Tech Center",
+      "address" : "7800 E Tufts Ave",
+      "city-state-zipcode" : "Denver, CO 80237",
+      "phone" : "(303) 779-1234",
+      "website" : "http://denvertechcenter.regency.hyatt.com/en/hotel/home.html",
+      "multi-day" : 95,
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1990,
+      "event" : "Winning Strategies for Adult in the 1990's",
+      "start-date" : "1990-09-20T06:00:00.000Z",
+      "end-date" : "1990-09-22T06:00:00.000Z",
+      "location" : "Fort Collins Marriott",
+      "address" : "50 E Horsetooth Rd",
+      "city-state-zipcode" : "Fort Collins, CO 80525",
+      "phone" : "(970) 226-5200",
+      "website" : "http://www.marriott.com/hotels/travel/ftcco-fort-collins-marriott/",
+      "multi-day" : 70,
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1989,
+      "event" : "Providing Leadership in the 1990's",
+      "start-date" : "1989-09-22T06:00:00.000Z",
+      "end-date" : "1989-09-23T06:00:00.000Z",
+      "location" : "Hyatt Regency Denver Tech Center",
+      "address" : "7800 E Tufts Ave",
+      "city-state-zipcode" : "Denver, CO 80237",
+      "phone" : "(303) 779-1234",
+      "website" : "http://denvertechcenter.regency.hyatt.com/en/hotel/home.html",
+      "multi-day" : 60,
+      "membership" : 15,
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1988,
+      "event" : "Colorado’s Future: A Learning Society",
+      "start-date" : "1988-10-06T06:00:00.000Z",
+      "end-date" : "1988-10-08T06:00:00.000Z",
+      "location" : "Red Lion Hotel",
+      "address" : "314 W Bijou St",
+      "city-state-zipcode" : "Colorado Springs, CO 80905",
+      "multi-day" : 75,
+      "membership" : 10,
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1987,
+      "event" : "Ad-Venture Beyond Yourself",
+      "start-date" : "1987-09-25T06:00:00.000Z",
+      "end-date" : "1987-09-27T06:00:00.000Z",
+      "location" : "Iron Horse Resort",
+      "address" : "101 Iron Horse Way",
+      "city-state-zipcode" : "Winter Park, CO 80482",
+      "phone" : "(970) 726-8851",
+      "multi-day" : 65,
+      "membership" : 10,
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1986,
+      "event" : "Keys to Excellence, ’87 and Beyond",
+      "start-date" : "1986-09-25T06:00:00.000Z",
+      "end-date" : "1986-09-27T06:00:00.000Z",
+      "location" : "Fort Collins Marriott",
+      "address" : "350 E Horsetooth Rd",
+      "city-state-zipcode" : "Denver, CO",
+      "phone" : "(970) 226-5200",
+      "website" : "http://www.marriott.com/hotels/travel/ftcco-fort-collins-marriott/",
+      "multi-day" : 75,
+      "membership" : 10,
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1985,
+      "event" : "Partners for Lifelong Learning",
+      "start-date" : "1985-10-10T06:00:00.000Z",
+      "end-date" : "1985-10-12T06:00:00.000Z",
+      "location" : "Regency Hotel",
+      "address" : "3900 Elati St",
+      "city-state-zipcode" : "Denver, CO 80216",
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1984,
+      "event" : "The Winning Edge",
+      "start-date" : "1984-10-18T06:00:00.000Z",
+      "end-date" : "1984-10-19T06:00:00.000Z",
+      "location" : "Beaver Run Resort & Conference Center",
+      "address" : "620 Village Rd",
+      "city-state-zipcode" : "Breckenridge, CO 80424",
+      "phone" : "(970) 453-6000",
+      "website" : "http://www.beaverrun.com/",
+      "multi-day" : 65,
+      "membership" : 10,
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1983,
+      "event" : "Out of Many - One",
+      "start-date" : "1983-10-20T06:00:00.000Z",
+      "end-date" : "1983-10-22T06:00:00.000Z",
+      "location" : "The Westin Riverfront Resort & Spa at Beaver Creek Mountain",
+      "address" : "126 Riverfront Ln",
+      "city-state-zipcode" : "Avon, CO 81620",
+      "phone" : "(970) 790-6000",
+      "website" : "http://www.westinriverfrontbeavercreek.com/",
+      "multi-day" : 55,
+      "membership" : 10,
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1982,
+      "event" : "Joining Hands for the Future - Networking for Survival",
+      "start-date" : "1982-09-29T06:00:00.000Z",
+      "end-date" : "1982-09-29T06:00:00.000Z",
+      "location" : "Sheraton Inn",
+      "city-state-zipcode" : "Colorado Springs, CO",
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1981,
+      "event" : "Untitled",
+      "start-date" : "1981-10-01T06:00:00.000Z",
+      "end-date" : "1981-10-02T06:00:00.000Z",
+      "location" : "Falcon Inn",
+      "address" : "1865 Woodmoor Dr",
+      "city-state-zipcode" : "Monument, CO 80132",
+      "membership" : 10,
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1980,
+      "event" : "Steps to Tomorrow",
+      "start-date" : "1980-10-02T06:00:00.000Z",
+      "end-date" : "1980-10-03T06:00:00.000Z",
+      "location" : "Falcon Inn",
+      "address" : "1865 Woodmoor Dr",
+      "city-state-zipcode" : "Monument, CO 80132",
+      "multi-day" : 40,
+      "membership" : 0,
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1979,
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1978,
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1977,
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1976,
+      "event" : "Lifelong Learning - Come and See",
+      "start-date" : "1976-10-21T06:00:00.000Z",
+      "end-date" : "1976-10-22T06:00:00.000Z",
+      "location" : "Adult Education Center in Longmont",
+      "city-state-zipcode" : "Longmont, CO",
+      "multi-day" : 16,
+      "membership" : 5,
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1975,
+      "event" : "CACAE Past Imperfect, Present Indicative, Future Tense",
+      "start-date" : "1975-10-16T06:00:00.000Z",
+      "end-date" : "1975-10-17T06:00:00.000Z",
+      "location" : "Ramada Inn",
+      "city-state-zipcode" : "Denver, CO",
+      "multi-day" : 35,
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1974,
+      "event" : "Continuing Education - The Future",
+      "start-date" : "1974-10-10T06:00:00.000Z",
+      "end-date" : "1974-10-11T06:00:00.000Z",
+      "location" : "Colorado University",
+      "city-state-zipcode" : "Boulder, CO",
+      "website" : "http://www.colorado.edu/",
+      "multi-day" : 25,
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1973,
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1972,
+      "event" : "Seminar on Critical Consideration for Adult Educators in Colorado Communities",
+      "start-date" : "1972-11-30T07:00:00.000Z",
+      "end-date" : "1972-11-30T07:00:00.000Z",
+      "location" : "Colorado State University",
+      "city-state-zipcode" : "Fort Collins, CO 80523",
+      "website" : "http://www.colostate.edu/",
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1971,
+      "event" : "Continuing Ed for the Total Community",
+      "start-date" : "1971-05-24T06:00:00.000Z",
+      "end-date" : "1971-05-24T06:00:00.000Z",
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1970,
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1969,
+      "event" : "An Umbrella Organization for Adult Ed in Colorado",
+      "start-date" : "1969-05-10T06:00:00.000Z",
+      "end-date" : "1969-05-10T06:00:00.000Z",
+      "location" : "Fort Collins",
+      "city-state-zipcode" : "Fort Collins, CO",
+      "era" : "CACAE"
+    },
+    {
+      "year" : 1968,
+      "event" : "CAPSAE / CCAE",
+      "start-date" : "1968-05-04T06:00:00.000Z",
+      "end-date" : "1968-05-04T06:00:00.000Z",
+      "location" : "Colorado University",
+      "city-state-zipcode" : "Boulder, CO",
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1967,
+      "event" : "CAPSAE / CCAE",
+      "start-date" : "1967-10-26T06:00:00.000Z",
+      "end-date" : "1967-10-27T06:00:00.000Z",
+      "location" : "Colorado Department of Education",
+      "city-state-zipcode" : "Denver, CO",
+      "membership" : 2,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1966,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1965,
+      "event" : "CAPSAE (Colorado Association of Public School Adult Educators)",
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1964,
+      "event" : "CCAE (Colorado Council of Adult Education)",
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1963,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1962,
+      "event" : "Calvin Orr hired as Section Head for Adult Education in state Division of Education Beyond High School",
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1961,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1960,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1959,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1958,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1957,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1956,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1955,
+      "event" : "Roy Minnis, first Colorado State Director of Adult Education",
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1954,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1953,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1952,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1951,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1950,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1949,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1948,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1947,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1946,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1945,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1944,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1943,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1942,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1941,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1940,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1939,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1938,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1937,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1936,
+      "era" : "CAPSAE / CCAE"
+    },
+    {
+      "year" : 1935,
+      "event" : "Adult Education Council of Denver organized",
+      "era" : "CAPSAE / CCAE"
+    }
+  ]
+}
