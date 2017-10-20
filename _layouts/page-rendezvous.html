@@ -60,37 +60,25 @@ layout: default
   <ul id="sidenav" class="side-nav fixed">
     <li class="title"><span class="mdc-title">{{ page.title }}</span></li>
     <span id="tabs">
-      <li class="tab"><a href="#details">Details</a></li>
-      <li class="tab"><a href="#schedule" onclick="myFunction()">Schedule</a></li>
-      <li class="tab"><a href="#awards">Awards</a></li>
-      <li class="tab"><a href="#keynotes">Keynotes</a></li>
-      <li class="tab"><a href="#sessions">Sessions</a></li>
-      <li class="tab"><a href="#vendors">Vendors</a></li>
+      <li class="tab"><a href="#details"><i class="material-icons left">home</i>Details</a></li>
+      <li class="tab"><a href="#schedule" onclick="myFunction()"><i class="material-icons left">date_range</i>Schedule</a></li>
+      <li class="tab"><a href="#awards"><i class="material-icons left">favorite</i>Awards</a></li>
+      <li class="tab"><a href="#keynotes"><i class="material-icons left">speaker_notes</i>Keynotes</a></li>
+      <li class="tab"><a href="#sessions"><i class="material-icons left">featured_play_list</i>Sessions</a></li>
+      <li class="tab"><a href="#vendors"><i class="material-icons left">store</i>Vendors</a></li>
     </span>
     <li><div class="divider"></div></li>
-    <li><a class="subheader">Subheader 1</a></li>
+    <li><a class="subheader">Messages</a></li>
     <li><a href="#welcome" class="modal-trigger"><i class="material-icons left">person</i><span>Letter from the President</span></a></li>
     <li><a href="http://www.caepa.org/forums.html" class="collection-item"><i class="material-icons left">forum</i><span>Rendezvous Forum</span></a></li>
     <li>
       <div class="divider"></div>
     </li> {% if page.docs != null %}
-    <li>
-      <ul class="collapsible collapsible-accordion">
-        <li>
-          <a class="collapsible-header">Documents<i class="material-icons">arrow_drop_down</i></a>
-          <div class="collapsible-body">
-            <ul> {% for doc in page.docs %}
-              <li><a href="{{ doc.url }}" class="collection-item"><i class="material-icons left">cloud_download</i><span>{{ doc.title }}</span></a></li>{% endfor %}
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </li> {% endif %}
-    <li>
-      <div class="divider"></div>
-    </li> {% if page.sponsors != null %}
+    <li><a class="subheader">Documents</a></li> {% for doc in page.docs %}
+    <li><a href="{{ doc.url }}" class="collection-item"><i class="material-icons left">attachment</i><span>{{ doc.title }}</span></a></li>{% endfor %} {% endif %}
+    <li><div class="divider"></div></li> {% if page.sponsors != null %}
     <li><a class="subheader">Our sponsers</a></li>
-    <li class="slider hide">
+    <li class="slider">
       <ul class="slides"> {% for sponsor in page.sponsors %}
         <li><img src="https://avatars.io/twitter{{ sponsor.twitter }}" alt="sponsor-logo" /></li> {% endfor %}
       </ul>
