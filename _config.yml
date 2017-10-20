@@ -60,6 +60,8 @@ collections:
     output: false # external site
   rendezvous:
     output: true
+  resources:
+    output: true
 
 defaults:
   - scope:
