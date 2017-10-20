@@ -7,11 +7,11 @@ image: caepa/caepa-title.svg
 </main>
 
 <ul id="sidenav" class="side-nav fixed">
-  <li class="title"><span class="mdc-title">{{ page.collection | capitalize }}</span></li>
+  <li class="title"><span class="mdc-title">{{ page.title }}</span></li>
 
   <!-- replace with if statement -->
   {% for document in site[page.collection] %} {% if document.url contains "index" %} {% continue %} {% endif %}
-  <li{% if document.url == page.url %} class="active"{% endif %}><a href="{{ document.url }}" class="truncate">{{ document.title }}</a></li>
+  <li{% if document.url == page.url %} class="active"{% endif %}><a href="{{ document.url }}" class="truncate">{% if document.icon %}<i class="material-icons">{{ document.icon }}</i>{% endif %}{{ document.title }}</a></li>
   {% endfor %}
 
 </ul>

@@ -3,10 +3,6 @@
   url: ../bylaws
   icon: assignment
 -
-  title: Events
-  url: ../events
-  icon: event
--
   title: Factsheets
   url: ../factsheets
   icon: info
@@ -19,13 +15,13 @@
   url: http://news.caepa.org
   icon: chrome_reader_mode
 -
-  title: Document Sharing
-  url: ../sharing-documents
-  icon: folder
+  title: Rendezvous
+  url: ../events
+  icon: event
 -
-  title: Link Sharing
-  url: ../sharing-links
-  icon: link
+  title: Resource Sharing
+  url: ../resources
+  icon: extension
 # -
 #  title: Forums
 #  url: http://www.caepa.org/forums.html
