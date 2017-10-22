@@ -8,10 +8,16 @@
     url: http://goo.gl/forms/bgBBx5iBCQ
   - title: Vendor Registration
     url: http://goo.gl/forms/ur6QNIQAiN
-
 - title: General Forms
   docs:
   - title: Board of Directors
     url: http://goo.gl/forms/6e4Tn0HjrB
   - title: Volunteer Interests
     url: http://goo.gl/forms/9MsB9ytg21
+- title: Other Forms
+  docs:
+  - title: Document Sharing
+    url: https://goo.gl/forms/DBQIDyZS2uDDShJ82
+    target: _blank # This form contains features which require sign in.
+  - title: Website Sharing
+    url: https://goo.gl/forms/ZCtdRHm4mU03THWA3
