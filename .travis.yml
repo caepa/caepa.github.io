@@ -1,10 +1,22 @@
 language: ruby
 rvm:
-  - 2.1.7
+  - 2.4.0
 install: gem install bundler --no-rdoc --no-ri
 script:
   - bundle install
+  # build submodule
+  - git clone --depth=1 --no-checkout https://github.com/Dogfalo/materialize.git assets/css/materialize
+  - git submodule add --name materialize https://github.com/Dogfalo/materialize.git assets/css/materialize
+  - git submodule absorbgitdirs
+  # note there is no "submodule.sub.sparsecheckout" key
+  - git -C assets/css/materialize config core.sparseCheckout true
+  # note quoted wildcards to avoid their expansion by shell
+  - echo "sass/components/* " >> .git/modules/materialize/info/sparse-checkout
+  # update all submodules
+  - git submodule update --force --checkout
+  # build site
   - bundle exec jekyll build
+  # 
   - bundle exec htmlproofer ./_site --only-4xx
 env:
   global:
