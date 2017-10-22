@@ -13,12 +13,12 @@
     "type": "image/png"
     },
     {
-    "src": "/assets/img/caepa/iconhdpi.png",
+    "src": "/assets/img/caepa/iconmdpi.png",
     "sizes": "145x145",
     "type": "image/png"
     },
     {
-    "src": "/assets/img/caepa/iconmdpi.png",
+    "src": "/assets/img/caepa/iconhdpi.png",
     "sizes": "193x193",
     "type": "image/png"
     },
