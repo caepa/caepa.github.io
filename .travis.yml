@@ -6,7 +6,7 @@ git:
   submodules: false
 before_install:
   # build submodule
-  - git submodule update --force --checkout
+  - git submodule update --init
 install: gem install bundler --no-rdoc --no-ri
 script:
   - bundle install
