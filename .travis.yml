@@ -1,9 +1,7 @@
 language: ruby
 rvm:
   - 2.4.0
-install: gem install bundler --no-rdoc --no-ri
-script:
-  - bundle install
+before_install:
   # build submodule
   - git clone --depth=1 --no-checkout https://github.com/Dogfalo/materialize.git assets/css/materialize
   - git submodule add --name materialize https://github.com/Dogfalo/materialize.git assets/css/materialize
@@ -14,6 +12,9 @@ script:
   - echo "sass/components/* " >> .git/modules/materialize/info/sparse-checkout
   # update all submodules
   - git submodule update --force --checkout
+install: gem install bundler --no-rdoc --no-ri
+script:
+  - bundle install
   # build site
   - bundle exec jekyll build
   #
