@@ -3,7 +3,7 @@
   <ul class="social-media">
     {% for network in site.social %} {% if network.url != null %}
     <li>
-      <a itemprop="sameAs" class="{{ network.name }}" href="{{ network.url }}">
+      <a itemprop="sameAs" class="{{ network.name }}" href="{{ network.url }}" aria-label="{{ network.name }}">
         <span>{{ network.name }}</span>
       </a>
     </li>
