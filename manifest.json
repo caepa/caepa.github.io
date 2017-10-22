@@ -1,29 +1,40 @@
 {
-  "name": "CAEPA",
+  "name": "Colorado Adult Education Professional Association",
+  "short_name": "CAEPA",
   "description": "Providing Colorado Leadership in Adult Education and Literacy since 1935",
   "start_url": "index.html",
-  "theme_color": "#212121",
+  "theme_color": "#662222",
   "background_color": "ghostwhite",
   "display": "standalone",
   "icons": [
     {
-    "src": "/img/icon-1x.png",
-    "sizes": "60x60",
+    "src": "/assets/img/caepa/iconldpi.png",
+    "sizes": "97x97",
     "type": "image/png"
     },
     {
-    "src": "/img/icon-2x.png",
-    "sizes": "120x120",
+    "src": "/assets/img/caepa/iconhdpi.png",
+    "sizes": "145x145",
     "type": "image/png"
     },
     {
-    "src": "/img/icon-4x.png",
-    "sizes": "240x240",
+    "src": "/assets/img/caepa/iconmdpi.png",
+    "sizes": "193x193",
     "type": "image/png"
     },
     {
-    "src": "/img/icon-8x.png",
-    "sizes": "400x400",
+    "src": "/assets/img/caepa/xhdpi.png",
+    "sizes": "385x385",
+    "type": "image/png"
+    },
+    {
+    "src": "/assets/img/caepa/xxhdpi.png",
+    "sizes": "577x577",
+    "type": "image/png"
+    },
+    {
+    "src": "/assets/img/caepa/xxxhdpi.png",
+    "sizes": "769x769",
     "type": "image/png"
     }
   ]

@@ -3,18 +3,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="{{ site.google_site_verification }}" />
-
+  <meta name="theme-color" content="#662222"/>
+  
   <title>{% if page.title %}{{ page.title }} - {{ site.legal_name }} | {{ site.title }}{% else %}{{ site.legal_name}} - {{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.mission }}{% endif %}">
 
   {% include seo/og.html %}
   {% include seo/twitter_summary.html %}
 
-  <link rel="shortcut icon" href="{{ "/img/favicon.ico" | prepend: site.baseurl }}" />
+  <link rel="shortcut icon" href="{{ "/assets/img/favicon.ico" | prepend: site.baseurl }}" />
 
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" media="screen">
   <link rel="stylesheet" href="{{ "/assets/css/print.css" | relative_url }}" media="print">
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
   <!-- mobile tag allows page to run like native-app from homescreen -->
