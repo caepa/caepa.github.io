@@ -1,6 +1,9 @@
 language: ruby
 rvm:
   - 2.4.0
+# disable the default submodule logic
+git:
+  submodules: false
 before_install:
   # build submodule
   - git clone --depth=1 --no-checkout https://github.com/Dogfalo/materialize.git assets/css/materialize
