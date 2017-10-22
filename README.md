@@ -32,6 +32,8 @@ TODO:
 - [ ] Simplify data directory
 - [ ] Consolidate rendezvous data into singular .json files
 - [ ] Update page-rendezvous for rendezvous data merge
+- [ ] Review SEO tags
+- [ ] Add service worker
 - [ ] More to come...
 
 ## Data Directory
