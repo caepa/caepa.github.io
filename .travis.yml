@@ -6,13 +6,6 @@ git:
   submodules: false
 before_install:
   # build submodule
-  - git clone --depth=1 --no-checkout https://github.com/Dogfalo/materialize.git assets/css/materialize
-  - git submodule absorbgitdirs
-  # note there is no "submodule.sub.sparsecheckout" key
-  - git -C assets/css/materialize config core.sparseCheckout true
-  # note quoted wildcards to avoid their expansion by shell
-  - echo "sass/components/* " >> .git/modules/materialize/info/sparse-checkout
-  # update all submodules
   - git submodule update --force --checkout
 install: gem install bundler --no-rdoc --no-ri
 script:
