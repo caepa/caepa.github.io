@@ -7,7 +7,6 @@ git:
 before_install:
   # build submodule
   - git clone --depth=1 --no-checkout https://github.com/Dogfalo/materialize.git assets/css/materialize
-  - git submodule add --name materialize https://github.com/Dogfalo/materialize.git assets/css/materialize
   - git submodule absorbgitdirs
   # note there is no "submodule.sub.sparsecheckout" key
   - git -C assets/css/materialize config core.sparseCheckout true
