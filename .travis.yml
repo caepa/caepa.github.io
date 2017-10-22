@@ -7,13 +7,15 @@ git:
 before_install:
   # build submodule
   - git submodule update --init
+  # update all submodules
+  - git submodule update --force --checkout
 install: gem install bundler --no-rdoc --no-ri
 script:
   - bundle install
   # build site
   - bundle exec jekyll build
   #
-  - bundle exec htmlproofer ./_site --only-4xx
+  - bundle exec htmlproofer ./_site --allow_hash_href --external_only --only-4xx
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
