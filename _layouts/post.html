@@ -4,7 +4,7 @@ layout: page-events
 <article class="post container" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <p class="post-meta mdc-subheading-2">
+    <p class="post-meta mdc-subheading-2 adjust-margin">
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {% assign date_format = site.minima.date_format | default: "%B %-d, %Y" %}
         {{ page.date | date: date_format }}
