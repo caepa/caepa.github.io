@@ -1,6 +1,3 @@
----
-layout: page-events
----
 <article class="post container" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
@@ -16,7 +13,7 @@ layout: page-events
   </header>
 
   <div class="post-content flow-text" itemprop="articleBody">
-    {{ content }}
+    {{ page.content }}
   </div>
 
   {% if site.disqus.shortname %}

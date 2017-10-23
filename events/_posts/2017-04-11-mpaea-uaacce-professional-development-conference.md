@@ -1,9 +1,8 @@
 ---
 year: 2017
 
-title: "MPAEA / UAACCE Professional Development Conference"
-theme: Keys to Education, Motivation, and Success
-author: MPAEA in conjunction with UAACCE
+title: MPAEA / UAACCE Professional Development Conference
+author: MPAEA
 
 start_date: 2017-04-11 18:30
 end_date: 2017-04-13 16:30
@@ -31,7 +30,7 @@ docs:
   - title: "Flyer: Keyhole"
     url: /docs/MPAEA.UAACCE_register_NOW_card-keyhole.pdf
 ---
-## Event Details
+## Keys to Education, Motivation, and Success <br/> April 11-13, 2017
 
 Administrators, instructors, high school equivalency credential examiners, and others involved in the fields of adult basic education: corrections education, community education, workforce services, higher education, literacy, ESL, etc. All are welcome and encouraged to attend.
 
@@ -43,21 +42,24 @@ Administrators, instructors, high school equivalency credential examiners, and o
   * Breakout presentations
   * Wednesday breakfast and lunch
   * Thursday continental breakfast and lunch
-  {: .browser-default style="padding-left:2.5rem;"}
-  
-**<http://mpaea-uaacce-slc.eventbrite.com/>**
 
-## Group Discounts
+Printable
+: [City Card]({{"/assets/docs/MPAEA.UAACCE_register_NOW_card-city.png" | absolute_url}})
 
-**Register a group of 5 or more and receive a $10 discount on each ticket!**
-*All ticket sales are final.*
+Printable
+: [Keyhole]({{"/assets/docs/MPAEA.UAACCE_register_NOW_card-keyhole.pdf" | absolute_url}})
 
-## Special Room Rates for UAACCE Attendees
+---
+### Group Discounts
 
-The event will take place at the Radisson Hotel. We encourage you to book your rooms early. **Use this link to reserve your room and receive special UAACCE rates: <https://www.radisson.com/saltlakecity/uaacce>**
+Register a group of 5 or more and receive a $10 discount on each ticket!
+_All ticket sales are final._
 
-*NOTE: The pre-conference has been canceled, but there will be an opening social on April 11 at 6:30 p.m. Join us for music, food, and fun!*
+<http://mpaea-uaacce-slc.eventbrite.com/>
 
-<script type="application/ld+json">
-  {% include seo/json_event.json %}
-</script>
+---
+### Special Room Rates for UAACCE Attendees
+
+The event will take place at the Radisson Hotel. We encourage you to book your rooms early. [Use this link to reserve your room and receive special UAACCE rates.](https://www.radisson.com/saltlakecity/uaacce)
+
+_NOTE: The pre-conference has been canceled, but there will be an opening social on April 11 at 6:30 p.m. Join us for music, food, and fun!_
