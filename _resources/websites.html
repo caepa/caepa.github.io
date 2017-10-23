@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Websites
+title: Website Sharing
 icon: link
 form: https://goo.gl/forms/ZCtdRHm4mU03THWA3
 ---
@@ -50,10 +50,10 @@ form: https://goo.gl/forms/ZCtdRHm4mU03THWA3
 <ul id="sidenav" class="side-nav fixed">
   <li class="flex">
     <ul>
-      <li class="title"><span class="mdc-title">{{ page.title }}</span></li>
+      <li class="title"><span class="mdc-title truncate">{{ page.title }}</span></li>
       <li><a href="#featured">Featured Websites</a></li> {% for data in data %}
       <li><a href="#{{ data.name | slugify }}">{{ data.name }}</a></li> {% endfor %}
     </ul>
   </li> {% if page.form %}
-  <li><a href="{{ page.form }}" target="_blank" class="btn waves-effect">Submit {{ page.title }}</a></li> {% endif %}
+  <li><a href="{{ page.form }}" target="_blank" class="btn waves-effect">Submit {{ page.slug }}</a></li> {% endif %}
 </ul>
