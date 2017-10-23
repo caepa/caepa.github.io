@@ -14,7 +14,7 @@ image: caepa/caepa-title.svg
       <!-- replace with a universal list -->
       {% assign rendezvous = site.rendezvous %}
 
-      {% for post in rendezvous %} {% if forloop.first %}
+      {% for post in rendezvous reversed %} {% if forloop.first %}
       <li class="subheader"><span class="truncate">CAEPA Rendezvous</span></li>
       <li><a href="{{ post.url }}" class="truncate">{{ post.title }}</a></li> {% else %}
       <li><a href="{{ post.url }}" class="truncate">{{ post.title }}</a></li> {% endif %} {% endfor %}
