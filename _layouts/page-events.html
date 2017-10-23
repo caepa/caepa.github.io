@@ -1,0 +1,35 @@
+---
+layout: default
+title: Professional Learning
+image: caepa/caepa-title.svg
+---
+<main id="content" class="content" role="main">
+  {{ content }}
+</main>
+
+<ul id="sidenav" class="side-nav fixed">
+  <li class="flex">
+    <ul>
+      <li class="title"><span class="mdc-title truncate">{{ layout.title }}</span></li>
+      <!-- replace with a universal list -->
+      {% assign rendezvous = site.rendezvous %}
+
+      {% for post in rendezvous %} {% if forloop.first %}
+      <li class="subheader"><span class="truncate">CAEPA Rendezvous</span></li>
+      <li><a href="{{ post.url }}" class="truncate">{{ post.title }}</a></li> {% else %}
+      <li><a href="{{ post.url }}" class="truncate">{{ post.title }}</a></li> {% endif %} {% endfor %}
+      <!-- replace with a universal list -->
+      {% assign current = site.categories.events | where_exp: "post" , "post.date > site.time" %} {% if current %}
+      <li><div class="divider"></div></li>
+      <li class="subheader"><span class="truncate">Upcoming Events</span></li> {% for post in current %}
+      <li{% if post.url == page.url %} class="active"{% endif %}><a href="{{ post.url }}" class="truncate">{{ post.title }}</a></li> {% endfor %} {% endif %}
+      <!-- replace with a universal list -->
+      {% assign past = site.categories.events | where_exp: "post" , "post.date < site.time" %} {% if past %}
+      <li><div class="divider"></div></li>
+      <li class="subheader"><span class="truncate">Past Events</span></li> {% for post in past limit:3 %}
+      <li{% if post.url == page.url %} class="active"{% endif %}><a href="{{ post.url }}" class="truncate">{{ post.title }}</a></li> {% endfor %} {% endif %}
+    </ul>
+  </li> {% if layout.form %}
+  <li><a href="{{ layout.form }}" target="_blank" class="btn waves-effect">Submit {{ layout.title }}</a></li> {% endif %}
+
+</ul>

@@ -8,36 +8,51 @@ tabs:
     id: about
   - title: Board
     id: board
+  - title: Upcoming Event
+    id: event
 ---
-<main id="content" class="content valign-wrapper" role="main">
+<main id="welcome" class="content valign-wrapper" role="main">
   <div class="container">
-    <div id="welcome" class="center scale-transition scale-out">
-      <img src="../assets/img/{{ layout.image }}" alt="CAEPA" />
-      {% include social-icons.html %}
+    <div class="center scale-transition scale-out">
+      <img src="../assets/img/{{ layout.image }}" alt="CAEPA" /> {% include social-icons.html %}
     </div>
-    <div id="about" class="center" style="display:none;">
-      <p class="mdc-display-3 adjust-margin">CAEPA is volunteer run, and a membership supported 501(c)(3) nonprofit organization.</p>
-      <p class="flow-text">CAEPA members represent adult education and family literacy programs from across Colorado that are diverse in nature: local community and faith-based organizations, community colleges, school districts, corrections facilities, workforce districts and libraries. Altogether, CAEPA affiliates account for nearly 15,000 of Colorado's learners each year. See the <a href="../bylaws">CAEPA Bylaws</a> for detailed information.</p>
-      <p class="flow-text">CAEPA provides a context for ongoing professional dialogue and sharing in Adult Education - including advocacy, networking, lobbying, research and programming, resources, policy development, and coordination with the Colorado Department of Education, Correctional Education Association, and other public agencies.</p>
-    </div>
-    <div id="board" style="display:none;">
-      <p class="center mdc-display-3 adjust-margin">{{ site.description }}</p>
-      <div class="row">
-        <div class="col s12 m6">
-          <ul class="collection with-header">
-            <li class="collection-header"><p class="mdc-title">Executive Board</p></li>
-            <li class="collection-item">...</li>
-          </ul>
-        </div>
-        <div class="col s12 m6">
-          <ul class="collection with-header">
-            <li class="collection-header"><p class="mdc-title">Board of Directors</p></li>
-            <li class="collection-item">...</li>
-          </ul>
-        </div>
+  </div>
+</main>
+<div id="about" style="display:none;">
+  <div class="container">
+    <p class="mdc-display-2 adjust-margin">CAEPA is volunteer run, and a membership supported <nobr>501(c)(3)</nobr> nonprofit organization.</p>
+    <p class="flow-text">CAEPA members represent adult education and family literacy programs from across Colorado that are diverse in nature: local community and faith-based organizations, community colleges, school districts, corrections facilities, workforce districts
+      and libraries. Altogether, CAEPA affiliates account for nearly 15,000 of Colorado's learners each year. See the <a href="../bylaws">CAEPA Bylaws</a> for detailed information.</p>
+    <p class="flow-text">CAEPA provides a context for ongoing professional dialogue and sharing in Adult Education - including advocacy, networking, lobbying, research and programming, resources, policy development, and coordination with the Colorado Department of Education,
+      Correctional Education Association, and other public agencies.</p>
+  </div>
+</div>
+<div id="board" style="display:none;">
+  <div class="container">
+    <p class="mdc-display-2 adjust-margin">{{ site.description }}</p>
+    <div class="row">
+      <div class="col s12 m6">
+        <ul class="collection with-header">
+          <li class="collection-header">
+            <p class="mdc-title">Executive Board</p>
+          </li>
+          <li class="collection-item">Check back soon...</li>
+        </ul>
+      </div>
+      <div class="col s12 m6">
+        <ul class="collection with-header">
+          <li class="collection-header">
+            <p class="mdc-title">Board of Directors</p>
+          </li>
+          <li class="collection-item">Check back soon...</li>
+        </ul>
       </div>
     </div>
-</main>
-
+  </div>
+</div>
+<div id="event" style="display:none;">
+  {% assign current = site.categories.events | where_exp: "post" , "post.date > site.time" %} {% for page in current limit:1 %}
+  {% include post.html %} {% endfor %}
+</div>
 
 {% include mailchimp.html %}

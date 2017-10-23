@@ -13,6 +13,14 @@ body {
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
 }
 
+::selection {
+  background: #CC4D33;
+}
+
+::-moz-selection {
+  background: #CC4D33;
+}
+
 .side-nav {
   display: flex;
   flex-direction: column;
@@ -20,12 +28,6 @@ body {
 
 main, .flex {
   flex: 1 0 auto;
-}
-
-.page-collection, .home {
-  & main {
-    padding-top: 64px;
-  }
 }
 
 .home main {
@@ -39,16 +41,34 @@ main, .flex {
   background-color: #424242;
 }
 
+// mobile first css
+.navbar-fixed {
+  margin-bottom: $navbar-height-mobile;
+}
+
+.home>.navbar-fixed {
+  margin-bottom: ($navbar-height-mobile * 2);
+}
+
+.page-rendezvous>.navbar-fixed {
+  margin-bottom: 0;
+}
+
 // fullscreen sidenav
 .side-nav li.title {
   height: $navbar-height-mobile;
   line-height: $navbar-height-mobile;
   border-bottom: 1px solid #e0e0e0;
 }
+
 .side-nav li>span {
-  padding: 0 $sidenav-padding;
+  padding: 0 ($sidenav-padding * 2);
 }
+
 @media #{$medium-and-up} {
+  .navbar-fixed {
+    margin-bottom: $navbar-height;
+  }
   .side-nav li.title {
     height: $navbar-height;
     line-height: $navbar-height;
