@@ -10,7 +10,7 @@ Anyone interested in this great opportunity please register by following the lin
 For more information on the conference and presentations visit: <https://www.coabe.org/2017-virtual-conference/>
 
 Agenda
-: [Virtual Conference Agenda]({{"/assets/docs/2017-COABE-Virtual-Conference-Agenda-102017.pdf" | absolute_url}})
+: [Virtual Conference Agenda]({{"/assets/docs/COABE-2017-Virtual-Conference-Agenda.pdf" | absolute_url}})
 
 Sessions
-: [Virtual Conference Sessions]({{"/assets/docs/2017-COABE-Virtual-Conference-Session-102017.pdf" | absolute_url}})
+: [Virtual Conference Sessions]({{"/assets/docs/COABE-2017-Virtual-Conference-Session.pdf" | absolute_url}})
