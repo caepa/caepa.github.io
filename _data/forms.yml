@@ -1,23 +1,30 @@
 - title: Event Forms
   docs:
-  - title: Ann Deditz Scholarship
-    url: http://goo.gl/forms/cnlR1vU8TL
-  - title: Awards Nomination
-    url: http://goo.gl/forms/REA6Zhz1Lb
+  #- title: Ann Deditz Scholarship
+    #google_url: http://goo.gl/forms/cnlR1vU8TL
+  #- title: Awards Nomination
+    #google_url: http://goo.gl/forms/REA6Zhz1Lb
   - title: Presentation Proposal
-    url: http://goo.gl/forms/bgBBx5iBCQ
+    url: /forms/presentation-proposal
+    google_url: http://goo.gl/forms/bgBBx5iBCQ
   - title: Vendor Registration
-    url: http://goo.gl/forms/ur6QNIQAiN
+    url: /forms/vendor-registration
+    google_url: http://goo.gl/forms/ur6QNIQAiN
 - title: General Forms
   docs:
   - title: Board of Directors
-    url: http://goo.gl/forms/6e4Tn0HjrB
-  - title: Volunteer Interests
-    url: http://goo.gl/forms/9MsB9ytg21
+    url: /forms/application
+    google_url: http://goo.gl/forms/6e4Tn0HjrB
+  #- title: Volunteer Interests
+    #url: /forms/volunteer
+    #google_url: http://goo.gl/forms/9MsB9ytg21
 - title: Other Forms
   docs:
   - title: Document Sharing
-    url: https://goo.gl/forms/DBQIDyZS2uDDShJ82
-    target: _blank # This form contains features which require sign in.
+    url: /forms/add-document
+    google_url: https://goo.gl/forms/DBQIDyZS2uDDShJ82 # This form contains features which require sign in.
+  #- title: Event Sharing
+    #url: /forms/add-event
   - title: Website Sharing
-    url: https://goo.gl/forms/ZCtdRHm4mU03THWA3
+    url: /forms/add-website
+    google_url: https://goo.gl/forms/ZCtdRHm4mU03THWA3

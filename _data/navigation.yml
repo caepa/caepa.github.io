@@ -4,11 +4,11 @@
   icon: assignment
 -
   title: Factsheets
-  url: ../factsheets
+  url: /factsheets
   icon: info
 -
   title: Forms
-  url: ../forms
+  url: /forms
   icon: description
 -
   title: News
@@ -16,11 +16,11 @@
   icon: chrome_reader_mode
 -
   title: Professional Learning
-  url: ../events/the-2018-mini-conference
+  url: /events/the-2018-mini-conference
   icon: event
 -
   title: Resource Sharing
-  url: ../resources
+  url: /resources
   icon: extension
 # -
 #  title: Forums

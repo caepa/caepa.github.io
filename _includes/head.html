@@ -6,29 +6,28 @@
   <meta name="theme-color" content="#662222"/>
 
   <title>{% if page.title %}{{ page.title }} - {{ site.legal_name }} | {{ site.title }}{% else %}{{ site.legal_name}} - {{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.mission }}{% endif %}">
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
   {% include seo/og.html %}
   {% include seo/twitter_summary.html %}
 
-  <link rel="shortcut icon" href="{{ "/assets/img/favicon.ico" | absolute_url }}" />
+  <link rel="shortcut icon" href="{{ "/assets/img/favicon.ico" | relative_url }}" />
 
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | absolute_url }}" media="screen">
-  <link rel="stylesheet" href="{{ "/assets/css/print.css" | absolute_url }}" media="print">
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" media="screen">
+  <link rel="stylesheet" href="{{ "/assets/css/print.css" | relative_url }}" media="print">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
   <!-- mobile tag allows page to run like native-app from homescreen -->
   <meta name="mobile-web-app-capable" content="yes">
-  <link rel="icon" sizes="240x240" href="{{ "/assets/img/caepa/iconhdpi.png" | absolute_url }}">
-  <link rel="manifest" href="{{ '/manifest.json' | absolute_url }}">
+  <link rel="icon" sizes="240x240" href="{{ "/assets/img/caepa/iconhdpi.png" | relative_url }}">
+  <link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
 
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | absolute_url }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | relative_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | relative_url }}">
 
   {% if page.url == '/' %}
   <!-- homepage -->
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="application/ld+json">
   {% include seo/json_website.json %}
   </script>
@@ -43,7 +42,6 @@
 
   {% if page.layout == 'event_page_alt' %}
   <!-- layout event_page_alt -->
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="application/ld+json">
   {% include seo/json_event.json %}
   </script>
