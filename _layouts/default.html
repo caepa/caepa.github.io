@@ -22,11 +22,11 @@
           <li><span class="mdc-title">{% if page.collection %}{{ page.collection | capitalize }}{% else %}{{ page.title }}{% endif %}</span></li>
         </ul> {% endif %}
         <ul class="right"> {% if page.layout == "home" %}
-          <li class="hide-on-med-and-down"><a href="../bylaws">Bylaws</a></li>
+          <li class="hide-on-med-and-down"><a href="{{ "/bylaws" | relative_url }}">Bylaws</a></li>
           <li class="hide-on-med-and-down"><a href="http://news.caepa.org">News</a></li>
-          <li class="hide-on-med-and-down"><a href="../resources">Resources</a></li> {% endif %}
+          <li class="hide-on-med-and-down"><a href="{{ "/resources" | relative_url }}">Resources</a></li> {% endif %}
           <li><a class="dropdown-button" href='#' data-activates="apps"><i class="material-icons">apps</i></a></li>
-          <li><a href="{{ site.url }}"><img src="../assets/img/caepa/caepa-icon.svg" class="white circle" alt="CAEPA" /></a></li>
+          <li><a href="{{ site.url }}"><img src="{{ "/assets/img/caepa/caepa-icon.svg" | relative_url }}" class="white circle" alt="CAEPA" /></a></li>
         </ul>
       </div> {% if page.layout == "home" %}
       <div class="nav-content">
@@ -41,7 +41,10 @@
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-  <script type="text/javascript" src="/assets/js/caepa.materialize.js"></script>
+  <script type="text/javascript" src="{{ "/assets/js/initialization.js" | relative_url }}"></script>
+  {% if page.layout == "form-stepper" %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+  <script src="{{ "/assets/js/materialize-stepper.js" | relative_url }}"></script> {% endif %}
 </body>
 
 </html>
