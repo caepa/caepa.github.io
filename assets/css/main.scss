@@ -71,6 +71,12 @@ main, .flex {
   padding: 0 ($sidenav-padding * 2);
 }
 
+@media #{$large-and-up} {
+  nav span.mdc-title {
+    margin-left: 18px;
+  }
+}
+
 @media #{$medium-and-up} {
   .navbar-fixed {
     margin-bottom: $navbar-height;
