@@ -16,7 +16,7 @@
       <div class="nav-wrapper"> {% if page.layout == "home" %}
         <ul>
           <li><a class="btn modal-trigger caepa-gray" href="#mailchimp">Subscribe</a></li>
-        </ul> {% else %}
+        </ul> {% elsif page.collection %}
         <a href="#" data-activates="sidenav" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul>
           <li><span class="mdc-title">{% if page.collection %}{{ page.collection | capitalize }}{% else %}{{ page.title }}{% endif %}</span></li>

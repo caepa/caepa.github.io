@@ -25,7 +25,8 @@ social:
   - name: github
     url:  http://github.com/caepa
   - name: linkedin
-    url:  https://www.linkedin.com/company/colorado-adult-education-professional-association-caepa-
+    #new url:  https://www.linkedin.com/company/caepa-co/
+    url:  https://www.linkedin.com/company/colorado-adult-education-professional-association-caepa- # inaccessible 
   - name: rss
     url:  http://news.caepa.org/feed.xml
   - name: twitter
