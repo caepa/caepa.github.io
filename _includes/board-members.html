@@ -1,0 +1,16 @@
+<div class="container">
+  <p class="mdc-display-2 adjust-margin">{{ site.legal_name }}</p>
+
+{% assign data = site.data.board-members.Current | group_by: "Role" | sort: "name", "last" | reverse %}
+
+  <div class="row"> {% for data in data %}
+    <div class="col s12 m6">
+      <ul class="collection with-header">
+        <li class="collection-header">
+          <p class="mdc-title">{% if data.name != "" %}{{ data.name }}{% else %}Board members{% endif %}</p>
+        </li> {% for data in data.items %}
+        <li class="collection-item">{{ data.Name }}<div class="secondary-content">{{ data.Term-start }}</div></li> {% endfor %}
+      </ul>
+    </div> {% endfor %}
+  </div>
+</div>
