@@ -1,4 +1,4 @@
 ---
 layout: page-form-frame
-title: Registration
+title: Event Registration
 ---
