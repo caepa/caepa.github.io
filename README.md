@@ -31,7 +31,7 @@ TODO:
 - [ ] Move to collection directory in Jekyll v3.7.0
 - [ ] Simplify data directory
 - [ ] Consolidate rendezvous data into singular .json files
-- [ ] Update page-rendezvous for rendezvous data merge
+- [X] Update page-rendezvous for rendezvous data merge
 - [ ] Review SEO tags
 - [ ] Add service worker
 - [ ] More to come...
@@ -42,7 +42,7 @@ We use multiple google drive accounts... to each account has a set of read and w
 
 Our data is stored within our google drive account under  `_caepa.org`. To export data from drive, use add-on "export to json". Within the options, choose the correct format of json.
 
-`
+```
 Admin
 +   My Drive
 |   +-- _caepa.org ** all data files
@@ -61,7 +61,7 @@ Admin
 |   |   +-- rendezvous
 |   |   |   +-- folders contain session documents, sorted by year
 
-`
+```
 
 ## Materializecss
 ---
@@ -69,7 +69,8 @@ Install materializecss as a submodule for easy updating
 source: https://codedump.io/share/dpQHLkNt6kKj/1/how-to-do-submodule-sparse-checkout-with-git
 
 ### Install materializecss with sparse checkout submodule for quick updating
-`
+
+```
 git init
 
 # I did not find a way to add submodule in 1 step without checking out
@@ -85,7 +86,7 @@ echo "sass/components/* " >> .git/modules/materialize/info/sparse-checkout
 
 # update all submodules
 git submodule update --force --checkout
-`
+```
 
 ### Update submodule
  1. Read changelog: https://github.com/Dogfalo/materialize/releases
