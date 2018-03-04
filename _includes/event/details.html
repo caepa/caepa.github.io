@@ -80,7 +80,7 @@
     <p class="mdc-subheading-1">Payment</p>
     <p class="mdc-headline adjust-margin">Registration payment</p>
     <p>Mail-in: {{ event.register-mail }}</p>
-    <p>Online: <em><a href="{{ event.registration }}">{{ event.register-online }}</a></em></p>
+    <p>Online: <a href="{{ event.register-online }}" target="_blank">{{ event.register-online }}</a></p>
     <!-- {% include store.html %} -->
   </li>
   {% endif %} {% endfor %} {% endif %}
