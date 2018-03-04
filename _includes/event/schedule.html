@@ -6,15 +6,9 @@
     <h4>The {{ year }} Schedule</h4>
   </li>
 
-  {% if site.data[year]schedule-1 == null %}
-  <li class="collection-item">
-    <p class="grey-text text-darken-2 light">To be announced</p>
-  </li>
-
-  {% else %}
   <!-- schedule-one -->
   <li class="collection-item">
-    <h5>{{ page.start_date | date: "%A, %B %-d, %Y" }}</h5>
+    <h5>{{ page.start-date | date: "%A, %B %-d, %Y" }}</h5>
     <div id="schedule-one">
       <!-- wrapper -->
       <div class="valign-wrapper">
@@ -39,15 +33,10 @@
 </ul>
 
 <!-- schedule-two -->
+{% if site.data[year]schedule-2 %}
 <ul class="collection z-depth-1">
-  <li id="accent" class="{{ page.color }} accent-1"></li>
-  {% if site.data[year]schedule-2 == null %}
   <li class="collection-item">
-    <p class="grey-text text-darken-2 light">To be announced</p>
-  </li>
-  {% else %}
-  <li class="collection-item">
-    <h5>{{ page.end_date | date: "%A, %B %-d, %Y" }}</h5>
+    <h5>{{ page.end-date | date: "%A, %B %-d, %Y" }}</h5>
     <div id="schedule-two">
       <!-- wrapper -->
       <div class="valign-wrapper">
@@ -69,8 +58,7 @@
       </div>
     </div>
   </li>
-  {% endif %}
-</ul>
+</ul> {% endif %}
 
 <!-- google charts -->
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -109,11 +97,13 @@
     ]);
 
     var options = {
+      height: 400,
       hAxis: {
         format: 'h:mm'
       },
       timeline: {
-        showBarLabels: 'false'
+        showBarLabels: 'true',
+        showRowLabels: 'true'
       }
     };
 
@@ -144,16 +134,16 @@
     ]);
 
     var options = {
+      height: 300,
       hAxis: {
         format: 'h:mm'
       },
       timeline: {
-        showBarLabels: 'false'
+        showBarLabels: 'true',
+        showRowLabels: 'true'
       }
     };
 
     chart.draw(dataTable, options);
   }
 </script>
-
-{% endif %}

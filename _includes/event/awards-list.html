@@ -1,59 +1,30 @@
 {% assign year = include.year %}
-<!-- begin awards-list  -->
 <ul id="page-content" class="collection with-header z-depth-1">
   <li id="accent" class="{{ page.color }} accent-1"></li>
   <li class="collection-header">
     <h4>The {{ year }} Awards</h4>
   </li>
-  
-  {% if site.data[year]awards == null %}
-  <li class="collection-item">
-    <p class="grey-text text-darken-2 light">To be announced</p>
-  </li>
-  
-  {% else %}
-  
+
   <!-- awards list -->
   {% assign sorted_data = site.data[year]awards | sort: "form" %}
-
-  {% for data in sorted_data %}
-  {% if data.Accepted == "Yes" %}
-  
+  {% for data in sorted_data %} {% if data.Accepted == "Yes" %}
   <li class="collection-item avatar">
-    <i class="material-icons circle {{ page.color }} accent-1">favorite</i>
-    <a href="#{{ data.name | append: '-' | append: data.form | slugify }}" class="flow-text modal-trigger"><b>{{ data.form }}</b></a>
-    <p class="title"><strong>{{ data.name }}</strong></p>
-    {% if data.city != null %}
-    <p>{{ data.city }}, Colorado</p>
-    {% endif %}
-  </li>
-  
-  {% endif %}
-  {% endfor %}
-  {% endif %}
+    <i class="material-icons circle">favorite</i>
+    <p class="mdc-subheading-1">{{ data.form }}</p>
+    <a href="#{{ data.name | append: '-' | append: data.form | slugify }}" class="mdc-headline modal-trigger">{{ data.name }}</a> {% if data.city %}
+    <p class="mdc-subheading-2">{{ data.city }}, Colorado</p> {% endif %}
+  </li> {% endif %} {% endfor %}
 </ul>
 
-
-{% if site.data[year]scholarship != null %}
-<!-- begin awards-list  -->
+{% if site.data[year]scholarship %}
 <ul class="collection z-depth-1">
   <li id="accent" class="{{ page.color }} accent-1"></li>
-  
   <!-- scholarship list -->
   {% assign sorted_data = site.data[year]scholarship | sort: "Name" %}
-
-  {% for data in sorted_data %}
-  {% if data.Accepted == "Yes" %}
-  
+  {% for data in sorted_data %} {% if data.Accepted == "Yes" %}
   <li class="collection-item avatar">
-    <i class="material-icons circle {{ page.color }} accent-1">star</i>
-    <a href="#{{ data.Timestamp | slugify}}-{{ data.Name | slugify }}" class="flow-text modal-trigger">
-      <b>Ann Deditz Scholarship Recipient</b>
-    </a>
-    <p class="title"><strong>{{ data.Name }}</strong></p>
-  </li>
-  
-  {% endif %}
-  {% endfor %}
-  {% endif %}
-</ul>
+    <i class="material-icons circle">star</i>
+    <p class="mdc-subheading-1">Ann Deditz Scholarship Recipient</p>
+    <a href="#{{ data.Timestamp | slugify}}-{{ data.Name | slugify }}" class="mdc-headline modal-trigger">{{ data.Name }}</a>
+  </li> {% endif %} {% endfor %}
+</ul> {% endif %}

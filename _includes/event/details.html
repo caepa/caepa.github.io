@@ -1,81 +1,87 @@
-{% assign data = site.data.rendezvous-master | where: "year", page.year %}
+{% assign data = site.data.event-master | where: "year", page.year %}
 <!-- begin details  -->
 <ul id="page-content" class="collection with-header z-depth-1">
   <li id="accent" class="{{ page.color }} accent-1"></li>
 
-  {% if data %}
-  {% for event in data %}
+  {% if data %} {% for event in data %}
   <li class="collection-header">
-    <h4>The {{ event.year }} Rendezvous</h4>
+    <h1 class="mdc-display-2">{{ page.title }}</h1>
+    <p class="mdc-display-1">{{ event.event }}</p>
   </li>
 
   <!-- rendezvous -->
   <li class="collection-item avatar">
-    <i class="material-icons circle {{ page.color }} accent-1">event</i>
-    <span class="flow-text"><b>{{ event.event }}</b></span>
-    <p>{{ event.start-date | date: "%A, %B %-d, %Y" }}</p>
-    {% if event.end-date != event.start_date %}
-    <p>{{ event.end-date | date: "%A, %B %-d, %Y" }}</p>
-    {% endif %}
+    <i class="material-icons circle">event</i>
+    <p class="mdc-subheading-1">Date</p>
+    <p class="mdc-headline adjust-margin">{{ event.start-date | date: "%A, %B %-d, %Y" }}{% if event.end-date != event.start-date %} to {{ event.end-date | date: "%A, %B %-d, %Y" }}{% endif %}</p>
   </li>
-  <!-- place -->
+  <!-- location -->
   <li class="collection-item avatar">
-    <i class="material-icons circle {{ page.color }} accent-1">place</i>
-    <span class="flow-text"><b>{{ event.location }}</b></span>
+    <i class="material-icons circle">place</i>
+    <p class="mdc-subheading-1">Location</p>
+    <p class="mdc-headline adjust-margin"><a href="{{ event.website }}" target="_blank">{{ event.location }}</a></p>
     <ul>
       <li>{{ event.address }}</li>
       <li>{{ event.city-state-zipcode }}</li>
       <li>{{ event.phone }}</li>
-      <li><address><a href="{{ event.website }}">{{ event.website }}</a></address></li>
     </ul>
   </li>
-  <!-- reservations -->
+  <!-- hotel -->
   <li class="collection-item avatar">
-    <i class="material-icons circle {{ page.color }} accent-1">hotel</i>
-    <span class="flow-text"><b>Reservations</b></span>
-    <address><a href="{{ event.reservations }}">{{ event.location }}</a></address>
+    <i class="material-icons circle">hotel</i>
+    <p class="mdc-subheading-1">Hotel</p>
+    <p class="mdc-headline adjust-margin"><a href="{{ event.reservations-online }}" target="_blank">{{ event.hotel }}</a></p>
+    <ul>
+      <li>{{ event.hotel-address }}</li>
+      <li>{{ event.hotel-city-state-zipcode }}</li>
+      <li>{{ event.reservations-phone }}</li>
+      {% if event.reservations-id %}<li>Group ID: {{ event.reservations-id }}</li>{% endif %}
+    </ul>
   </li>
-  <!-- registration -->
+  <!-- registration rates -->
   <li class="collection-item avatar">
-    <i class="material-icons circle {{ page.color }} accent-1">loyalty</i>
-    <span class="flow-text"><b>Registration</b></span>
-    <p><em>Earlybird Registration Ends: {{ event.early-bird-exp | date: "%A, %B %-d, %Y" }}</em></p>
+    <i class="material-icons circle">loyalty</i>
+    <p class="mdc-subheading-1">Registration</p>
+    <p class="mdc-headline adjust-margin">Registration rates</p> <!--{% if event.discount-title %}
+    <p><em>{{ event.discount-title | append: " registration closes:"}} {{ event.discount-expire | date: "%A, %B %-d, %Y" }}</em></p> {% elsif event.registration-notes %}
+    <p><em>{{ event. registration-notes }}</em></p> {% endif %} -->
     <table class="striped responsive-table">
       <thead>
         <tr>
-          <th data-field="id"></th>
-          <th data-field="name">One-Day</th>
-          <th data-field="price">Two-Day</th>{% assign cat = include.category %}
-          <th data-field="price">Lunch-Only</th>
+          {% if event.discount-title %} <th><!-- blank --></th> {% endif %}
+          {% if event.price-1-title %} <th>{{ event.price-1-title }}</th> {% endif %}
+          {% if event.price-2-title %} <th>{{ event.price-2-title }}</th> {% endif %}
+          {% if event.price-3-title %} <th>{{ event.price-3-title }}</th> {% endif %}
+          {% if event.price-membership %} <th>Membership</th> {% endif %}
         </tr>
       </thead>
-      <tbody>
+      <tbody> {% if event.discount-title %}
         <tr>
-          <td><i class="material-icons right">loyalty</i>Earlybird</td>
-          <td>$ {{ event.early-bird-one }}</td>
-          <td>$ {{ event.early-bird-multi }}</td>
-          <td>$ {{ event.lunch-only }}</td>
-        </tr>
+          <td>{{ event.discount-title }}</td>
+          {% if event.price-1-title %} <td>{{ event.price-1-discount | prepend: "$ " }}</td> {% endif %}
+          {% if event.price-2-title %} <td>{{ event.price-2-discount | prepend: "$ " }}</td> {% endif %}
+          {% if event.price-3-title %} <td>{{ event.price-3-discount | prepend: "$ " }}</td> {% endif %}
+          {% if event.price-membership %} <td>{{ event.price-membership | prepend: "$ " }}</td> {% endif %}
+        </tr> {% endif %}
         <tr>
-          <td>Fullprice</td>
-          <td>$ {{ event.one-day }}</td>
-          <td>$ {{ event.multi-day }}</td>
-          <td>$ {{ event.lunch-only }}</td>
+          {% if event.discount-title %} <td>Regular price</td> {% endif %}
+          {% if event.price-1-title %} <td>{{ event.price-1 | prepend: "$ " }}</td> {% endif %}
+          {% if event.price-2-title %} <td>{{ event.price-2 | prepend: "$ " }}</td> {% endif %}
+          {% if event.price-3-title %} <td>{{ event.price-3 | prepend: "$ " }}</td> {% endif %}
+          {% if event.price-membership %} <td>{{ event.price-membership | prepend: "$ " }}</td> {% endif %}
         </tr>
       </tbody>
     </table>
   </li>
-  <!-- payment if event in current year-->
+  <!-- payment if event is available -->
   {% if page.availability == true %}
   <li class="collection-item avatar">
-    <i class="material-icons circle {{ page.color }} accent-1">payment</i>
-    <span class="flow-text"><b>Payment</b></span>
-    <p>Mail-in: {{ event.registration_mail }}</p>
-    <p>Online: <em><a href="{{ event.registration }}">{{ event.registration }}</a></em></p>
-    {% include store.html %}
-    <small><em>NOTE: You will be redirected to a SSL at checkout.</em></small>
+    <i class="material-icons circle">payment</i>
+    <p class="mdc-subheading-1">Payment</p>
+    <p class="mdc-headline adjust-margin">Registration payment</p>
+    <p>Mail-in: {{ event.register-mail }}</p>
+    <p>Online: <em><a href="{{ event.registration }}">{{ event.register-online }}</a></em></p>
+    <!-- {% include store.html %} -->
   </li>
-  {% endif %}
-  {% endfor %}
-  {% endif %}
+  {% endif %} {% endfor %} {% endif %}
 </ul>

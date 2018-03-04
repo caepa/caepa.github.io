@@ -6,13 +6,6 @@
     <h4>The {{ year }} Sessions</h4>
   </li>
 
-  {% if site.data[year]sessions == null %}
-  <li class="collection-item">    
-    <p class="grey-text text-darken-2 light">To be announced</p>
-  </li>
-
-  {% else %}
-
   <!-- begin session navigation -->
   <li class="collection-item">
     <div class="row">
@@ -41,8 +34,7 @@
 
   <!-- IMPORTANT, class="list" have to be at tbody -->
   <span class="list">
-    {% for data in site.data[year]sessions %}
-    {% if data.Accepted == "Yes" %}
+    {% for data in site.data[year]sessions %} {% if data.Accepted == "Yes" %}
 
     <li class="collection-item avatar">
       <!-- IMPORTANT, classes used to sort -->
@@ -57,15 +49,13 @@
         {% endif %}
       </span>
       {% endif %}
-      
-      <p>
+
+      <p class="mdc-subheading-1">
         <span class="session right">{{ data.Session | prepend: "Session " }}</span>
         <em class="strand">{{ data.Conference-Strand }}</em>
       </p>
-      <a href="#{{ data.Timestamp | slugify }}-{{ data.Name | append: '-' | append: data.Session | slugify }}" class="modal-trigger">
-        <span class="p-title flow-text"><b>{{ data.Presentation-Title }}</b></span>
-      </a>
-      <p>
+      <a href="#{{ data.Timestamp | slugify }}-{{ data.Name | append: '-' | append: data.Session | slugify }}" class="mdc-headline modal-trigger">{{ data.Presentation-Title }}</a>
+      <p class="mdc-subheading-2">
         <span class="session right">{{ data.Location" }}</span>
         <strong class="presenter">{{ data.Name }}</strong>
       </p>
@@ -74,11 +64,8 @@
       <span class="hide objectives">{{ data.Objectives | markdownify }}</span>
     </li>
 
-    {% endif %}
-    {% endfor %}
+    {% endif %} {% endfor %}
   </span>
-  
-  {% endif %}
 </ul>
 
 <!-- JS -->
@@ -92,7 +79,7 @@
 </script>
 <script>
   function changeValue(){
-    var option=document.getElementById('sort-sessions').value;	
+    var option=document.getElementById('sort-sessions').value;
     if(option=="presenter"){
       userList.sort('presenter', { order: "asc" });
     }

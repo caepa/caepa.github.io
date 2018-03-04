@@ -6,18 +6,10 @@
     <h4>The {{ year }} Vendors</h4>
   </li>
 
-  {% if site.data[year]vendors == null %}
-  <li class="collection-item">    
-    <p class="grey-text text-darken-2 light">To be announced</p>
-  </li>
-
-  {% else %}
-
-  <!-- vendor list -->  
+  <!-- vendor list -->
   {% assign sorted_data = site.data[year]vendors | sort: "Organization" %}
-
   {% for data in sorted_data %}
-  
+
   <li class="collection-item avatar">
     {% if data.Twitter != null %}
     <img class="circle" src="https://avatars.io/twitter{{ data.Twitter }}" alt="vendor logo" />
@@ -26,20 +18,13 @@
     {% else %}
     <i class="material-icons circle {{ page.color }} accent-1">store</i>
     {% endif %}
-    <a href="#{{ data.Name | append: '-' | append: data.Organization | slugify }}" class="flow-text modal-trigger"><b>{{ data.Organization }}</b></a>
-    <p class="title">
-      <strong>
+    <a href="#{{ data.Name | append: '-' | append: data.Organization | slugify }}" class="mdc-headline modal-trigger">{{ data.Organization }}</a>
+    <p class="mdc-subheading-2">
         {% if data.Name %}{{ data.Name }}{% endif %}
         {% if data.Job-Title %}, {{ data.Job-Title }}{% endif %}
-      </strong>
-    </p>
-    {% if data.Website %}
+    </p> {% if data.Website %}
     <a href="{{ data.Website }}" class="secondary-content" target="_blank">
       <i class="material-icons">exit_to_app</i>
-    </a>
-    {% endif %}
-  </li>
-  
-  {% endfor %}
-  {% endif %}
+    </a> {% endif %}
+  </li> {% endfor %}
 </ul>

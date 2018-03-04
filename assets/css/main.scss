@@ -109,7 +109,7 @@ main, iframe, footer .nav-wrapper {
 
 @media #{$medium-and-down} {
   main, iframe, footer .nav-wrapper  {
-    padding: 32px 0 0 0;
+    padding: 0 0 0 0;
   }
 }
 
@@ -164,6 +164,6 @@ dd {
 }
 
 #schedule-one, #schedule-two,
-#schedule-two .valign-wrapper, #schedule-two .valign-wrapper  {
-  min-height: 400px;
+#schedule-one .valign-wrapper, #schedule-two .valign-wrapper  {
+  height: 100%;
 }

@@ -5,7 +5,7 @@ $(document).ready(function () {
   $('.collapsible').collapsible();
   $('.dropdown-button').dropdown({constrainWidth: false, alignment: 'right', gutter: -60});
   $('.tooltipped').tooltip({delay: 25});
-  $('.slider').slider({indicators: false, height: 150});
+  $('.slider').slider({indicators: false, height: 234});
   $('.modal').modal();
   $('#tabs').tabs(); // make table-of-contents act like tabs
   $('select').material_select();
