@@ -13,3 +13,5 @@ Colorado Springs, CO 80920
 <a href="{{ "/forms/presentation-proposal" | relative_url }}" class="btn btn-large btn-block">Call for Proposals</a>
 <a href="{{ "/forms/vendor-registration" | relative_url }}" class="btn btn-large btn-block">Vendor Registration</a>
 <a href="{{ "/forms/registration" | relative_url }}" class="btn btn-large btn-block">Event Registration</a>
+
+[More Information]({{ "/events/the-2018-mini-conference" | relative_url }})

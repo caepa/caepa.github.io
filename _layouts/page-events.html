@@ -26,7 +26,7 @@ image: caepa/caepa-title.svg
       <li{% if post.url == page.url %} class="active"{% endif %}><a href="{{ post.url }}" class="truncate">{{ post.title }}</a></li> {% endfor %}
 
       <!-- replace with a universal list -->
-      {% assign rendezvous = site.rendezvous %}
+      {% assign rendezvous = site.rendezvous | where_exp: "post" , "post.availability == false" %}
 
       {% for post in rendezvous reversed %} {% if forloop.first %}
       <li><div class="divider"></div></li>
