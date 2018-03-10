@@ -6,7 +6,7 @@ $(document).ready(function () {
   $('.dropdown-button').dropdown({constrainWidth: false, alignment: 'right', gutter: -60});
   $('.tooltipped').tooltip({delay: 25});
   $('.slider').slider({indicators: false, height: 234});
-  $('.modal').modal();
+  $('.modal').modal({opacity: .7});
   $('#tabs').tabs(); // make table-of-contents act like tabs
   $('select').material_select();
   $('.scrollspy').scrollSpy();

@@ -4,54 +4,46 @@
 {% if site.data[year]vendors != null %}
 {% for data in site.data[year]vendors %}
 <div id="{{ data.Name | append: '-' | append: data.Organization | slugify }}" class="modal modal-fixed-footer">
-
-  <!-- vendor modal -->
-  <div class="modal-content">
-    <span class="grey-text text-darken-2">
-      <p class="light">The {{ year }} Rendezvous</p>
-
-      <!-- vendor website -->
-      {% if data.Website %}
-      <p><a href="{{ data.Website }}" class="light">{{ data.Website }}</a></p>
-      {% endif %}
-
-      <!-- vendor organization -->
-      <h4>{{ data.Organization }}</h4>
-
-      <!-- vendor contact -->
-      {% if data.Email %}
-      <address><a href="mailto:{{ data.Email }}">{{ data.Name }}</a></address>
-      {% elsif data.Name %}
-      <em>{{ data.Name }}</em><br />
-      {% endif %}
-      
-      <!-- vendor title -->
-      {% if data.Job-Title and data.Organization %}
-      <small>{{ data.Job-Title }}, {{ data.Organization }}</small>
-      {% elsif data.Job-Title %}
-      <small>{{ data.Job-Title }}</small>
-      {% elsif data.Organization %}
-      <small>{{ data.Organization }}</small>
-      {% endif %}
-      
-      <!-- vendor description -->
-      {% if data.Description %}
-      <p>{{ data.Description | markdownify }}</p>
-      {% endif %}
+  <div class="modal-content grey-text text-darken-2">
+    <div class="hero caepa-yellow">
+      <div class="hero-wrapper">
+        <p class="mdc-subheading-2 adjust-margin">{{ page.title }}</p>
+        <span class="mdc-display-2 white-text">{{ data.Organization }}</span>
+      </div>
+    </div>
+    <div class="row"> {% if data.Website %}
+      <p class="mdc-headline adjust-margin">
+        <a href="{{ data.Website }}">{{ data.Website }}</a>
+      </p> {% endif %}
 
       <!-- vendor description -->
-      {% if data.Additional-Representative != null %}
-      <p>{{ data.Additional-Representative }}: <span>{{ data.Representative-Names }}</span></p>
-      {% endif %}
+      {% if data.Description %} {{ data.Description | markdownify }} {% endif %}
 
-    </span>
+    </div>
+    <div class="row">
+      <div class="col s12 m8">
+        <div class="collection">
+          <div class="collection-item avatar">
+            <i class="material-icons circle">email</i>
+            <p class="mdc-subheading-1 adjust-margin"> {% if data.Email %}
+              <a href="mailto:{{ data.Email }}">{{ data.Name }}</a> {% else %} {{ data.Name }} {% endif %}
+            </p> {% if data.Job-Title %}
+            <p class="mdc-caption adjust-margin">{{ data.Job-Title }}</p> {% endif %} {% if data.Organization %}
+            <p class="mdc-caption adjust-margin">{{ data.Organization }}</p> {% endif %}
+          </div> {% if data.Additional-Representative %}
+          <div class="collection-item avatar">
+            <i class="material-icons circle white"></i>
+            <p class="mdc-subheading-1 adjust-margin">{{ data.Representative-Names }}</p>
+            <p class="mdc-caption adjust-margin">Additional Representative<p>
+          </div> {% endif %}
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="modal-footer">
+  <div class="modal-footer"> {% if data.Website %}
+    <a href="{{ data.Website }}" class="waves-effect btn-flat" target="_blank">{{ data.Organization }}</a> {% endif %}
     <a class="modal-action modal-close waves-effect btn-flat">Close</a>
-    {% if data.Website != null %}
-    <a href="{{ data.Website }}" class="waves-effect btn-flat" target="_blank">{{ data.Organization }}</a>
-    {% endif %}
   </div>
 
 </div>
