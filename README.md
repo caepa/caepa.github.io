@@ -32,6 +32,8 @@ TODO:
 - [ ] Simplify data directory
 - [ ] Consolidate rendezvous data into singular .json files
 - [X] Update page-rendezvous for rendezvous data merge
+- [ ] Consider moving event data from .csv to .json
+- [ ] Revise page layouts for events - liquid syntax to better align with form data
 - [ ] Review SEO tags
 - [ ] Add service worker
 - [ ] More to come...
