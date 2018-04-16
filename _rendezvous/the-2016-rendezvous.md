@@ -18,34 +18,34 @@ docs:
 
 sponsors:
   - title: "Aztec Software"
-    twitter: "/aztecsoftware"
+    twitter: "https://twitter.com/aztecsoftware"
     url: "http://www.aztecsoftware.com/"
 
   - title: "Bj's Resaurant Brewhouse"
-    twitter: "/bjsrestaurants"
+    twitter: "https://twitter.com/bjsrestaurants"
     url: "https://www.bjsrestaurants.com/"
     ad: "https://drive.google.com/open?id=0B_6uPCzjvke5cEdSR3JSWTRnaE0"
 
   - title: "BurlingtonEnglish"
-    twitter: "/burlingtoneng"
+    twitter: "https://twitter.com/burlingtoneng"
     url: "https://www.burlingtonenglish.com/"
     ad: "https://drive.google.com/open?id=0B3qyIxugPt-kZmFUSXhzYlItV1U"
 
   - title: "CDE Adult Education Initiatives"
-    twitter: "/codepted"
+    twitter: "https://twitter.com/codepted"
     url: "https://www.cde.state.co.us"
 
   - title: "GED Testing Services"
-    twitter: "/gedtesting"
+    twitter: "https://twitter.com/gedtesting"
     url: "http://www.gedtestingservice.com/ged-testing-service"
 
   - title: "National Geographic Learning | Cengage"
-    twitter: "/exploreinside"
+    twitter: "https://twitter.com/exploreinside"
     url: "http://ngl.cengage.com/"
     ad: "https://drive.google.com/open?id=0B3qyIxugPt-kdTZnWGR0dVFPNWliaTBIcUlxWk94OVBhX3FN"
 
   - title: "DRC | CTB"
-    twitter: "/drcctb"
+    twitter: "https://twitter.com/drcctb"
     url: "http://ctb.com/ctb.com/control/main"
     ad: "https://drive.google.com/open?id=0B3qyIxugPt-kTW42bS1ROVBLOGRiMU5Ka3B2dzRJX241TFkw"
 
