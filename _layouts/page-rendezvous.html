@@ -57,13 +57,18 @@ layout: page-events
           <li><div class="divider"></div></li> {% if page.docs != null %}
           <li><span class="mdc-subheading-2">Documents</span></li> {% for doc in page.docs %}
           <li><a href="{{ doc.url }}" class="collection-item"><i class="material-icons left">attachment</i><span>{{ doc.title }}</span></a></li>{% endfor %} {% endif %}
+        </ul>
+        <ul class="table-of-contents">
+          <li><div class="divider"></div></li> {% if page.forms != null %}
+          <li><span class="mdc-subheading-2">Forms</span></li> {% for form in page.forms %}
+          <li><a href="{{ form.url | absolute_url }}" class="collection-item"><i class="material-icons left">description</i><span>{{ form.title }}</span></a></li>{% endfor %} {% endif %}
         </ul> {% if page.sponsors %}
         <ul class="table-of-contents">
           <li><div class="divider"></div></li>
           <li><span class="mdc-subheading-2">Sponsors</span></li>
           <li class="slider">
             <ul class="slides"> {% for sponsor in page.sponsors %}
-              <li><img src="https://avatars.io/twitter{{ sponsor.twitter }}" alt="sponsor-logo" /></li> {% endfor %}
+              <li><img src="{{ sponsor.twitter | replace: 'https://twitter.com', 'https://avatars.io/twitter' }}" alt="sponsor-logo" /></li> {% endfor %}
             </ul>
           </li> {% endif %}
         </ul>

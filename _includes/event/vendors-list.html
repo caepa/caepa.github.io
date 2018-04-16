@@ -12,9 +12,9 @@
 
   <li class="collection-item avatar">
     {% if data.Twitter != null %}
-    <img class="circle" src="https://avatars.io/twitter{{ data.Twitter }}" alt="vendor logo" />
+    <img class="circle" src="{{ data.Twitter | replace: 'https://twitter.com', 'https://avatars.io/twitter' }}" alt="vendor logo" />
     {% elsif data.Facebook != null %}
-    <img class="circle" src="https://avatars.io/facebook{{ data.Facebook }}" alt="vendor logo" />
+    <img class="circle" src="{{ sponsor.Facebook | replace: 'https://facebook.com', 'https://avatars.io/facebook' }}" alt="vendor logo" />
     {% else %}
     <i class="material-icons circle {{ page.color }} accent-1">store</i>
     {% endif %}

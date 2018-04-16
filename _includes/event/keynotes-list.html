@@ -7,14 +7,13 @@
   </li>
 
   <!-- keynotes list -->
-  {% assign sorted_data = site.data[year]keynotes | sort: "Timestamp" %}
-  {% for data in sorted_data %} {% if data.Accepted == "Yes" %}
+  {% for data in site.data[year]keynotes %} {% if data.Accepted == "Yes" %}
 
   <li class="collection-item avatar">
     {% if data.twitter != null %}
-    <img class="circle" src="https://avatars.io/twitter{{ data.twitter }}" alt="vendor logo" />
+    <img class="circle" src="{{ data.twitter | replace: 'https://twitter.com', 'https://avatars.io/twitter' }}" alt="logo" />
     {% elsif data.facebook != null %}
-    <img class="circle" src="https://avatars.io/facebook{{ data.facebook }}" alt="vendor logo" />
+    <img class="circle" src="{{ sponsor.facebook | replace: 'https://facebook.com', 'https://avatars.io/facebook' }}" alt="logo" />
     {% else %}
     <i class="material-icons circle {{ page.color }} accent-1">mic</i>
     {% endif %}

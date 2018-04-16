@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="row">
-      <p class="mdc-headline adjust-margin">{{ data.Timestamp | date: "%A, %B %-d, %Y" }}</p>
+      <p class="mdc-headline adjust-margin">{{ data.Timestamp | date: "%A, %B %-d, %Y %r" }}</p>
       <p class="mdc-headline adjust-margin"> {% if data.email %}
         <a href="mailto:{{ data.email }}">{{ data.name }}</a> {% else %} {{ data.name }} {% endif %}
       </p>

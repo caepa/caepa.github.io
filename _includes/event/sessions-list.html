@@ -27,9 +27,9 @@
         </select>
         <label>Sort by:</label>
       </div>
-    </div>
+    </div><!-- remake print.css
     <button class="btn waves-effect waves-light" onclick="window.print()">
-      <i class="material-icons left">print</i>Print Full Session List</button>
+      <i class="material-icons left">print</i>Print Full Session List</button> -->
   </li>
 
   <!-- IMPORTANT, class="list" have to be at tbody -->
@@ -41,9 +41,9 @@
       {% if data.Vendor == 'Yes' %}
       <span class="vendor">
         {% if data.Twitter != null %}
-        <img class="circle" src="https://avatars.io/twitter{{ data.Twitter }}" alt="vendor logo" />
+        <img class="circle" src="{{ data.Twitter | replace: 'https://twitter.com', 'https://avatars.io/twitter' }}" alt="vendor logo" />
         {% elsif data.Facebook != null %}
-        <img class="circle" src="https://avatars.io/facebook{{ data.Facebook }}" alt="vendor logo" />
+        <img class="circle" src="{{ sponsor.Facebook | replace: 'https://facebook.com', 'https://avatars.io/facebook' }}" alt="vendor logo" />
         {% else %}
         <i class="material-icons circle {{ page.color }} accent-1">store</i>
         {% endif %}
@@ -56,7 +56,7 @@
       </p>
       <a href="#{{ data.Timestamp | slugify }}-{{ data.Name | append: '-' | append: data.Session | slugify }}" class="mdc-headline modal-trigger">{{ data.Presentation-Title }}</a>
       <p class="mdc-subheading-2">
-        <span class="session right">{{ data.Location" }}</span>
+        <span class="session right">{{ data.Location | prepend: "Room: " }}</span>
         <strong class="presenter">{{ data.Name }}</strong>
       </p>
       <span class="hide abstract">{{ data.Presentation-Abstract | strip_newlines }}</span>
