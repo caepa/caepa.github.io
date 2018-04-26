@@ -11,7 +11,6 @@ Colorado Springs, CO 80920
   {: .browser-default }
 
 <a href="{{ "/events/the-2018-mini-conference#sessions" | absolute_url }}" class="btn btn-large btn-block caepa-yellow">The 2018 Sessions</a>
-<a href="{{ "/forms/vendor-registration" | relative_url }}" class="btn btn-large btn-block">Vendor Registration</a>
 <a href="{{ "/forms/registration" | relative_url }}" class="btn btn-large btn-block">Event Registration</a>
 
 [More Information]({{ "/events/the-2018-mini-conference" | relative_url }})
