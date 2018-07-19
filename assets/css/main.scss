@@ -62,7 +62,7 @@ main, .flex {
 }
 
 // mobile first css
-.navbar-fixed {
+body:not(.iframe) .navbar-fixed {
   margin-bottom: $navbar-height-mobile;
 }
 
@@ -107,7 +107,7 @@ main, .flex {
 }
 
 @media #{$medium-and-up} {
-  .navbar-fixed {
+  body:not(.iframe) .navbar-fixed {
     margin-bottom: $navbar-height;
   }
   .page-form-frame iframe {
