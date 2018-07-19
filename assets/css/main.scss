@@ -62,12 +62,13 @@ main, .flex {
 }
 
 // mobile first css
-body:not(.iframe) .navbar-fixed {
-  margin-bottom: $navbar-height-mobile;
-}
 
 .home>.navbar-fixed {
   margin-bottom: ($navbar-height-mobile * 2);
+}
+
+body:not(.iframe) .navbar-fixed {
+  margin-bottom: $navbar-height-mobile;
 }
 
 .page-rendezvous>.navbar-fixed {
