@@ -70,26 +70,21 @@ sponsors:
 
 
 
-<div class="mdc-layout-grid__inner">
 
-  {%- for collection in site.rendezvous -%}
-  <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-    <div class="mdc-card mdc-card--outlined">
-      <div class="mdc-card__primary">
-        <h2 class="mdc-typography--headline2">{{ collection.title }}</h2>
-      </div>
-      <div class="mdc-card__secondary">
-        {{ collection.excerpt | markdownify }}
-      </div>
-      <div class="mdc-card__action-buttons">
-        <a href="{{ collection.url | absolute_url }}" class="mdc-button mdc-card__action mdc-card__action--button">Learn more</a>
-        {%- assign forms = site.forms | where_exp: "item", "item.slug == collection.form" -%}
-        {%- for form in forms -%}
-          <a href="{{ form.url | absolute_url }}" class="mdc-button mdc-card__action mdc-card__action--button">Go to form</a>
-        {%- endfor -%}
-      </div>
+{%- for collection in site.rendezvous -%}
+  <div class="mdc-card mdc-card--outlined">
+    <div class="mdc-card__primary">
+      <h2 class="mdc-typography--headline2">{{ collection.title }}</h2>
+    </div>
+    <div class="mdc-card__secondary">
+      {{ collection.excerpt | markdownify }}
+    </div>
+    <div class="mdc-card__action-buttons">
+      <a href="{{ collection.url | absolute_url }}" class="mdc-button mdc-card__action mdc-card__action--button">Learn more</a>
+      {%- assign forms = site.forms | where_exp: "item", "item.slug == collection.form" -%}
+      {%- for form in forms -%}
+        <a href="{{ form.url | absolute_url }}" class="mdc-button mdc-card__action mdc-card__action--button">Go to form</a>
+      {%- endfor -%}
     </div>
   </div>
-  {%- endfor -%}
-
-</div>
+{%- endfor -%}
