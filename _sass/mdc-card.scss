@@ -1,0 +1,52 @@
+.mdc-card {
+
+  & header {
+    color: rgba(0, 0, 0, 0.87);
+    color: var(--mdc-theme-text-primary-on-light, rgba(0, 0, 0, 0.87));
+
+    & h2 {
+      margin-bottom: 0;
+    }
+
+    & .post-meta {
+      color: rgba(0, 0, 0, 0.54);
+      color: var(--mdc-theme-text-secondary-on-light, rgba(0, 0, 0, 0.54));
+    }
+  }
+
+  // desktop
+  @media (min-width: 1024px) {
+    padding: 24px;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  // small desktop
+  @media (max-width: 1023px) and (min-width: 840px) {
+    padding: 24px;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  // tablet
+  @media (max-width: 839px) and (min-width: 480px) {
+    padding: 16px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  // phone
+  @media (max-width: 479px) {
+    padding: 16px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+---
+---
+// THEME VARIABLE
+$theme-primary: #662222;
+$theme-secondary: #424242;
+$theme-tertiary: #CC9933;
+
+// SASS PARTIALS
+@import "_social_icons";
+//@import "home";
+//@import "bylaws";
+@import "mdc-card";
+@import "mdc-drawer";
+@import "mdc-layout-grid";
+@import "mdc-menu";
+@import "mdc-tab-bar";
+@import "mdc-top-app-bar";
+@import "mdc-typography";
+
+// GLOBAL SASS
+:root {
+  --mdc-theme-primary: #662222;
+  --mdc-theme-secondary: #424242;
+  --mdc-theme-tertiary: #CC9933;
+}
+
+::selection {
+  background: $theme-tertiary;
+}
+
+::-moz-selection {
+  background: $theme-tertiary;
+}
+
+a {
+  color: $theme-primary;
+  font-weight: bold;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+main + footer {
+  display: table;
+  min-height: 100%;
+  width: 100%;
+  background-color: rgba(66,66,66,0.1);
+
+  > div {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+
+.table-content {
+  display: table;
+  min-height: 75%;
+  width: 100%;
+  background-color: rgba(66,66,66,0.1);
+
+  // first-of-type is selecting all
+  > div {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+}

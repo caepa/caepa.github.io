@@ -6,27 +6,39 @@
 
 {% if data.Accepted == "Yes" %}
 <div id="{{ data.name | append: '-' | append: data.title | slugify }}" class="modal modal-fixed-footer">
-  <div class="modal-content grey-text text-darken-2">
-    <div class="hero caepa-yellow">
-      <div class="hero-wrapper">
-        <p class="mdc-subheading-2 adjust-margin">{{ page.title }}</p>
-        <span class="mdc-display-2 white-text">{{ data.title }}</span>
-      </div>
-    </div>
-    <div class="row">
-      <p class="mdc-headline adjust-margin">{{ data.Timestamp | date: "%A, %B %-d, %Y %r" }}</p>
-      <p class="mdc-headline adjust-margin"> {% if data.email %}
-        <a href="mailto:{{ data.email }}">{{ data.name }}</a> {% else %} {{ data.name }} {% endif %}
-      </p>
 
-      <!-- keynotes employer --> {% if data.employer %}
-      <p class="mdc-caption adjust-margin">{{ data.employer }}</p> {% endif %} {% if data.job-title %}
-      <p class="mdc-caption adjust-margin">{{ data.job-title }}</p> {% endif %}
+  <!-- keynotes modal -->
+  <div class="modal-content">
+    <span class="grey-text text-darken-2">
+      <p class="light">The {{ year }} Rendezvous</p>      
+      <!-- session number -->
+      <p>{{ data.Timestamp | date: "%A, %B %-d, %Y" }}</p>
+
+      <!-- keynotes organization -->
+      <h4>{{ data.title }}</h4>
+
+      <!-- keynotes name -->
+      {% if data.email %}
+      <address><a href="mailto:{{ data.email }}">{{ data.name }}</a></address>
+      {% else %}
+      <em>{{ data.name }}</em><br />
+      {% endif %}
+
+      <!-- keynotes employer -->
+      {% if data.employer and data.job-title %}
+      <small>{{ data.employer }}, {{ data.job-title }}</small>
+      {% elsif data.employer %}
+      <small>{{ data.employer }}</small>
+      {% elsif data.job-title %}
+      <small>{{ data.job-title }}</small>
+      {% endif %}
 
       <!-- keynotes biography -->
-      {% if data.biography %} {{ data.biography | markdownify }} {% endif %}
+      {% if data.biography %}
+      <p>{{ data.biography | markdownify }}</p>
+      {% endif %}
 
-    </div>
+    </span>
   </div>
 
   <div class="modal-footer">

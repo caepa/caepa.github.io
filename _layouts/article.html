@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+
+
+{%- for collection in site[page.slug] -%}
+<article>
+
+  {%- unless forloop.first -%}
+  <h2 class="mdc-typography--headline2">{{ collection.title }}</h2>
+  {%- endunless-%}
+
+  {{ collection.content | markdownify }}
+
+</article>
+{%- endfor -%}

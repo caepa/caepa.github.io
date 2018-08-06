@@ -1,0 +1,6 @@
+.panels {
+
+  & .panel:not(.active) {
+    display: none;
+  }
+}

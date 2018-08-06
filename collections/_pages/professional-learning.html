@@ -1,0 +1,29 @@
+---
+title: Professional Learning
+---
+
+{%- assign pages = site.pages | where_exp: "item", "item.availability == true" -%}
+
+{%- for post in pages -%}
+  <article class="mdc-card mdc-card--outlined" itemscope itemtype="http://schema.org/Event">
+    <header class="post-header">
+      <h2 class="mdc-typography--headline2" itemprop="name headline">{{ post.title | escape }}</h2>
+      <span>{{ post.theme }}</span>
+      <p class="post-meta">
+        <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="startDate">
+          {%- assign date_format = site.minima.date_format | default: "%B %-d, %Y" -%}
+          {{ post.start-date | date: date_format }}
+        </time>
+        {%- if post.end-date > post.start-date -%}
+          •
+          <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="endDate">
+            {{ post.end-date | date: date_format }}
+          </time>
+        {%- endif -%}
+      </p>
+    </header>
+    <div class="mdc-card__action-buttons">
+      <a href="{{ post.url | absolute_url }}" class="mdc-button mdc-card__action mdc-card__action--button">Learn more</a>
+    </div>
+  </article>
+{%- endfor -%}

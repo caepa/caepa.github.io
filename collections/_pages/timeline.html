@@ -1,0 +1,31 @@
+---
+layout: none
+title: Timeline
+---
+<div id="timeline-embed">
+  <div id="timeline"></div>
+</div>
+<!-- 1 -->
+<link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+
+<!-- 2 -->
+<script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+
+<!-- 3 -->
+<script>
+  $(document).ready(function(){
+    var embed = document.getElementById('timeline-embed');
+    var additionalOptions = {
+      hash_bookmark: false,
+      initial_zoom: 1,
+      ga_property_id: "{{ site.google_analytics_id }}"
+    };
+    embed.style.height = getComputedStyle(document.body).height;
+    window.timeline = new TL.Timeline('timeline-embed', 'timeline.json', additionalOptions);
+    window.addEventListener('resize', function() {
+      var embed = document.getElementById('timeline-embed');
+      embed.style.height = getComputedStyle(document.body).height;
+      timeline.updateDisplay();
+    })
+  });
+</script>

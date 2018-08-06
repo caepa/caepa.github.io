@@ -1,59 +1,86 @@
 <!-- session details modals / id by presentar-session-# -->
-{% assign year = include.year %} {% if site.data[year]sessions != null %} {% for data in site.data[year]sessions %} {% if data.Accepted == "Yes" %}
-<div id="{{ data.Timestamp | slugify }}-{{ data.Name | append: '-' | append: data.Session | slugify }}" class="modal modal-fixed-footer">
-  <div class="modal-content grey-text text-darken-2">
-    <!-- session title -->
-    <div class="hero caepa-yellow">
-      <div class="hero-wrapper">
-        <p class="mdc-subheading-2 adjust-margin">{{ page.title }}</p>
-        <span class="mdc-display-2 white-text">{{ data.Presentation-Title }}</span>
-      </div>
-    </div>
-    <!-- session details -->
-    <div class="row">
-      <span class="chip right">{{ data.Conference-Strand }}</span> {% if data.Session %}
-      <p class="mdc-headline adjust-margin">{{ data.Session | prepend: "Session " }}</p> {% endif %} {% if data.Location %}
-      <p class="mdc-headline adjust-margin">{{ data.Location | prepend: "Room: "  }}</p> {% endif %}
-    </div> {% if data.Objectives %}
-    <div class="row">
-      <p class="mdc-subheading-1 adjust-margin">Objectives</p>
-      {{ data.Objectives | markdownify }}
-    </div> {% endif %} {% if data.Presentation-Abstract %}
-    <div class="row">
-      <p class="mdc-subheading-1 adjust-margin">Session abstract</p>
-      {{ data.Presentation-Abstract | markdownify }}
-    </div> {% endif %} {% if data.Presentation-Description %}
-    <div class="row">
-      <p class="mdc-subheading-1 adjust-margin">Session description</p>
-      {{ data.Presentation-Description | markdownify }}
-    </div> {% endif %}
+{% assign year = include.year %}
 
-    <!-- session presenter -->
-    <div class="row">
-      <p class="mdc-subheading-1 adjust-margin">About the presenter</p>
-      <div class="col s12 m6">
-        <div class="card-panel">
-          <p class="mdc-subheading-1 adjust-margin"> {% if data.Email %}
-            <a href="mailto:{{ data.Email }}">{{ data.Name }}</a> {% else %} {{ data.Name }} {% endif %}
-          </p> {% if data.Job-Title %}
-          <p class="mdc-caption adjust-margin">{{ data.Job-Title }}</p> {% endif %} {% if data.Employer %}
-          <p class="mdc-caption adjust-margin">{{ data.Employer }}</p> {% endif %} {% if data.Biography %}
-          <p class="mdc-body-1 adjust-margin">{{ data.Biography }}</p> {% endif %}
-        </div>
-      </div> {% if data.Co-presenter == "Yes" %}
-      <div class="col s12 m6">
-        <div class="card-panel">
-          <p class="mdc-subheading-1 adjust-margin">{{ data.Co-presenter-Name }}</p>
-          <span class="mdc-caption adjust-margin">Co-presenter</span>
-        </div>
-      </div> {% endif %}
-    </div>
+{% if site.data[year]sessions != null %}
+{% for data in site.data[year]sessions %}
+
+{% if data.Accepted == "Yes" %}
+<div id="{{ data.Timestamp | slugify }}-{{ data.Name | append: '-' | append: data.Session | slugify }}" class="modal modal-fixed-footer">
+
+  <!-- session details -->
+  <div class="modal-content">
+    <span class="grey-text text-darken-2">
+      <p class="light">The {{ year }} Rendezvous
+        <span class="chip right ">{{ data.Conference-Strand }}</span></p>
+      <!-- session number -->
+      <p>{{ data.Session | prepend: "Session " }}
+        {% if data.Location %}
+        <em>, {{ data.Location }}</em>
+        {% endif %}
+      </p>
+
+
+      <!-- session title -->
+      <h4>{{ data.Presentation-Title }}</h4>
+
+      <!-- session presentar / email -->
+      {% if data.Email %}
+      <address><a href="mailto:{{ data.Email }}">{{ data.Name }}</a></address>
+      {% else %}
+      <small>{{ data.Name }}</small><br />
+      {% endif %}
+
+      <!-- organization -->
+      {% if data.Employer and data.Job-Title %}
+      <small>{{ data.Job-Title }}, {{ data.Employer }}</small>
+      {% elsif data.Employer %}
+      <small>{{ data.Employer }}</small>
+      {% elsif data.Job-Title %}
+      <small>{{ data.Job-Title }}</small>
+      {% endif %}
+
+
+      <!-- session objectives -->
+      {% if data.Objectives %}
+      <p><strong>Objectives:</strong></p>
+      <div class="browser-default">{{ data.Objectives | markdownify }}</div>
+      {% endif %}
+
+      <!-- session abstract -->
+      {% if data.Presentation-Abstract %}
+      <p><strong>Session abstract:</strong></p>
+      <p>{{ data.Presentation-Abstract | markdownify }}</p>
+      {% endif %}
+
+      <!-- session description -->
+      {% if data.Presentation-Description %}
+      <p><strong>Session description:</strong></p>
+      <p>{{ data.Presentation-Description | markdownify }}</p>
+      {% endif %}
+
+      <!-- session presentar -->
+      {% if data.Biography %}
+      <p><strong>About the presenter:</strong></p>
+      <p>{{ data.Biography | markdownify }}</p>
+      {% endif %}
+
+      <!-- session copresenter -->
+      {% if data.Co-presenter == "Yes" %}
+      <p><strong>Co-presenter:</strong></p>
+      <p>{{ data.Co-presenter-Name }}</p>
+      {% endif %}
+
+    </span>
   </div>
 
-  <div class="modal-footer"> {% if data.Website %}
-    <a href="{{ data.Website }}" class="waves-effect btn-flat" target="_blank">{{ data.Organization }}</a> {% endif %}
+  <div class="modal-footer">
     <a class="modal-action modal-close waves-effect btn-flat">Close</a>
+    {% if data.Website != null %}
+    <a href="{{ data.Website }}" class="waves-effect btn-flat" target="_blank">{{ data.Organization }}</a>
+    {% endif %}
   </div>
 
 </div>
-{% endif %} {% endfor %} {% endif %}
+{% endif %}
+{% endfor %}
+{% endif %}

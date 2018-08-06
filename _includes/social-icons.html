@@ -1,7 +1,7 @@
 <div itemscope itemtype="http://schema.org/Organization">
   <link itemprop="url" href="{{ site.url }}">
   <ul class="social-media">
-    {% for network in site.social %} {% if network.url != null %}
+    {% for network in site.social_media %} {% if network.url != null %}
     <li>
       <a itemprop="sameAs" class="{{ network.name }}" href="{{ network.url }}" aria-label="{{ network.name }}">
         <span>{{ network.name }}</span>
