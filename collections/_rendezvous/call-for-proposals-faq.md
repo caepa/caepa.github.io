@@ -34,10 +34,12 @@ Target audience
 : Partners, Administrator, Instructor, Student
 
 Session abstract
-: In 200 words or less, please provide a brief and accurate description of the session and what participants will enjoy. Session abstracts will be published in our program and online. (1200 characters)
+: In 200 words or less, please provide a brief and accurate description of the session and what participants will learn. Session abstracts will be published in our program and online. (1200 characters)
 
 Session strand
-: Advocacy, Best Practices, College or Career Transitions, Digital Literacy, Diverse Learners, Effective Use of Data, Evidence & Research to Practice, Family Engagement, Policy and Legislation, Students and Young Ambassadors, Workforce Development, Vendors and Businesses \\
+: Advocacy, Best Practices, College or Career Transitions, Digital Literacy, Diverse Learners, Effective Use of Data, Evidence & Research to Practice, Family Engagement, Policy and Legislation, Students and Young Ambassadors, Workforce Development, Vendors and Businesses
+\\
+\\
 See: [Call for Proposals]({% link _rendezvous/call-for-proposals.md %})
 
 Additional information
@@ -53,7 +55,7 @@ We recommend that you prepare your responses in a separate document and copy/pas
 
 ## What happens after I submit my proposal?
 
-You will see a confirmation screen after you submit your proposal and receive a confirmation email. A CAEPA committee will review all proposals during the month of September. **Session leaders will be notified via email by September 15 regarding the status of their proposals.** Session leaders whose proposals are accepted will need to register at the discounted registration rate.
+You will see a confirmation screen after you submit your proposal and receive a confirmation email. A CAEPA committee will review all proposals during the month of August. **Session leaders will be notified via email by September 15 regarding the status of their proposals.** Session leaders whose proposals are accepted will need to register at the discounted registration rate.
 
 ## What technology does CAEPA provide?
 
