@@ -11,7 +11,9 @@ Qualification Requirements
   * Applicants must be currently involved in adult education or be students preparing to enter the field of adult education within the year.
   * This scholarship is open only to current CAEPA members who have not previously received this scholarship. To become a CAEPA member, please visit our [marketplace](https://www.mkt.com/caepa/item/caepa-membership).
 
-Educators from the following instructional areas are encouraged to apply: ABE, GED, ESL, Corrections, Workforce and Family Literacy. The following people are also encouraged to apply: Adult Education Volunteers and first-time conference attendees.
+Educators from the following instructional areas are encouraged to apply: ABE, GED, ESL, Corrections, Workforce and Family Literacy.
+
+The following people are also encouraged to apply: Adult Education Volunteers and first-time conference attendees.
 
 Submissions due September 1, 2018
 
