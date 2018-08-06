@@ -1,0 +1,19 @@
+<aside class="mdc-drawer mdc-drawer--persistent mdc-drawer--open">
+  <div class="mdc-drawer__drawer">
+    <header class="mdc-drawer__toolbar-spacer">
+      {%- if page.collection == "posts" -%}
+        {{ page.categories | first | capitalize }}
+      {%- else -%}
+        {{ page.collection | capitalize }}
+      {%- endif -%}
+    </header>
+    <div class="mdc-drawer__content">
+      {%- if page.collection == "posts" -%}
+        {%- include mdc-list--two-line.html content=site.posts -%}
+      {%- else -%}
+        {%- include mdc-list.html content=site.posts -%}
+      {%- endif -%}
+
+    </div>
+  </div>
+</aside>

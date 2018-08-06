@@ -1,0 +1,38 @@
+.mdc-top-app-bar {
+  background-color: $theme-primary;  
+  background-color: var(--mdc-theme-primary, $theme-primary);
+
+  & #icon {
+    margin-left: 8px;
+    padding: 8px;
+    background-color: rgba(204, 153, 51, .5);
+    border-radius: 50%;
+  }
+  // desktop
+  @media (min-width: 1024px) {
+    font-size: 30px;
+  }
+
+  // small desktop
+  @media (max-width: 1023px) and (min-width: 840px) {
+    font-size: 24px
+  }
+
+  // tablet
+  @media (max-width: 839px) and (min-width: 480px) {
+    font-size: 20px;
+
+    & .mdc-button--unelevated {
+      display: none;
+    }
+  }
+
+  // phone
+  @media (max-width: 479px) {
+    font-size: 16px;
+
+    & .mdc-button--unelevated {
+      display: none;
+    }
+  }
+}

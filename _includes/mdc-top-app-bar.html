@@ -1,0 +1,34 @@
+<header class="mdc-top-app-bar mdc-top-app-bar--fixed">
+  <div class="mdc-top-app-bar__row">
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+
+      {%- if page.layout == "default__mdc-drawer" -%}
+      <button id="menu" class="material-icons mdc-top-app-bar__navigation-icon">menu</button>
+      <span class="mdc-top-app-bar__title">
+        {%- if page.collection == "posts" -%}
+          {{ page.categories | first | upcase | replace: "-", " " }}
+        {%- elsif page.collection == "pages" -%}
+          {{ page.slug | upcase | replace: "-", " " }}
+        {%- else -%}
+          {{ page.collection | upcase | replace: "-", " " }}
+        {%- endif -%}
+      </span>
+      {%- endif -%}
+
+    </section>
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+      <a href="{{ "/bylaws" | absolute_url }}" class="mdc-button mdc-button--unelevated">Bylaws</a>
+      <a href="{{ "/news" | absolute_url }}" class="mdc-button mdc-button--unelevated">News</a>
+      <a href="{{ "/resources" | absolute_url }}" class="mdc-button mdc-button--unelevated">Resources</a>
+      <button id="apps" href="#" class="material-icons mdc-top-app-bar__action-item">apps</button>
+      <div class="mdc-menu-anchor">
+        <a href="{{ site.url }}">
+          <img id="icon" class="mdc-top-app-bar__action-item" src="{{ 'caepa-icon.svg' | prepend: '/assets/img/caepa/' | absolute_url }}" alt="CAEPA Home"/>
+        </a>
+
+        {%- include mdc-menu.html -%}
+
+      </div>
+    </section>
+  </div>
+</header>

@@ -1,0 +1,9 @@
+.mdc-menu {
+
+  & .mdc-list-item > a {
+    color: rgba(0, 0, 0, 0.87);
+    color: var(--mdc-theme-text-primary-on-background, rgba(0, 0, 0, 0.87));
+    font-weight: normal;
+    text-decoration: none;
+  }
+}

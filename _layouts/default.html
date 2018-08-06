@@ -1,50 +1,49 @@
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#" lang="{{ page.lang | default: site.lang | default: " en " }}">
 
-  {% include head.html %}
+{%- include head.html -%}
 
-<body class="{{ page.layout }}">
+<body class="mdc-typography">
 
-  {% if jekyll.environment == 'production' %}{% include seo/google_tag_manager.html %}{% endif %}
-  {% if jekyll.environment == 'production' %}{% include seo/facebook.html %}{% endif %}
+  {%- include mdc-top-app-bar.html -%}
 
-  <ul id="apps" class="dropdown-content"> {% for nav in site.data.navigation %}
-    <li class="tab"><a href="{{ nav.url }}" target="_self"><i class="material-icons">{{ nav.icon }}</i>{{ nav.title }}</a></li> {% endfor %}
-  </ul>
-  <div class="navbar-fixed">
-    <nav class="nav-extended caepa-red">
-      <div class="nav-wrapper"> {% if page.layout == "home" %}
-        <ul>
-          <li><a class="btn modal-trigger caepa-gray" href="#mailchimp">Subscribe</a></li>
-        </ul> {% elsif page.collection %}
-        <a href="#" data-activates="sidenav" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul>
-          <li><span class="mdc-title">{% if page.collection %}{{ page.collection | capitalize }}{% else %}{{ page.title }}{% endif %}</span></li>
-        </ul> {% endif %}
-        <ul class="right"> {% if page.layout == "home" %}
-          <li class="hide-on-med-and-down"><a href="{{ "/bylaws" | relative_url }}">Bylaws</a></li>
-          <li class="hide-on-med-and-down"><a href="http://news.caepa.org">News</a></li>
-          <li class="hide-on-med-and-down"><a href="{{ "/resources" | relative_url }}">Resources</a></li> {% endif %}
-          <li><a class="dropdown-button" href='#' data-activates="apps"><i class="material-icons">apps</i></a></li>
-          <li><a href="{{ site.url }}"><img src="{{ "/assets/img/caepa/caepa-icon.svg" | relative_url }}" class="white circle" alt="CAEPA" /></a></li>
-        </ul>
-      </div> {% if page.layout == "home" %}
-      <div class="nav-content">
-        <ul id="tabs" class="tabs tabs-transparent"> {% for tab in layout.tabs %}
-          <li class="tab"><a href="#{{ tab.id }}">{{ tab.title }}</a></li> {% endfor %}
-        </ul>
-      </div> {% endif %}
-    </nav>
-  </div>
+  <main class="mdc-top-app-bar--fixed-adjust" role="main">
+    <header class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+          <h1 class="mdc-typography--headline1">{{ page.title }}</h1>
+          <span>{{ page.theme }}</span>
+        </div>
+      </div>
+    </header>
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
 
-  {{ content }}
+          {{ content }}
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-  <script type="text/javascript" src="{{ "/assets/js/initialization.js" | relative_url }}"></script>
-  {% if page.layout == "form-stepper" %}
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
-  <script src="{{ "/assets/js/materialize-stepper.js" | relative_url }}"></script> {% endif %}
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+
+          {%- include social-icons.html -%}
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="https://unpkg.com/material-components-web@0.37.1/dist/material-components-web.js"></script>
+  <script type="text/javascript">
+    {%- include js/mdc-auto-init.js -%}
+    {%- include js/mdc-menu.js -%}
+  </script>
+
 </body>
-
 </html>

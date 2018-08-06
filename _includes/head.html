@@ -2,51 +2,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="google-site-verification" content="{{ site.google_site_verification }}" />
-  <meta name="theme-color" content="#662222"/>
 
-  <title>{% if page.title %}{{ page.title }} - {{ site.legal_name }} | {{ site.title }}{% else %}{{ site.legal_name}} - {{ site.title }}{% endif %}</title>
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  {%- seo -%}
 
-  {% include seo/og.html %}
-  {% include seo/twitter_summary.html %}
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@0.37.1/dist/material-components-web.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="{{ "/assets/main.css" | absolute_url }}" type="text/css" media="screen">
+  <link rel="stylesheet" href="{{ "/assets/print.css" | absolute_url }}" type="text/css" media="print">
+  <link rel="shortcut icon" href="{{ "/assets/img/favicon.ico" | absolute_url }}" />
+  <link rel="manifest" href="{{ '/manifest.json' | absolute_url }}">
 
-  <link rel="shortcut icon" href="{{ "/assets/img/favicon.ico" | relative_url }}" />
+  {%- feed_meta -%}
 
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" media="screen">
-  <link rel="stylesheet" href="{{ "/assets/css/print.css" | relative_url }}" media="print">
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-  <!-- mobile tag allows page to run like native-app from homescreen -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <link rel="icon" sizes="240x240" href="{{ "/assets/img/caepa/iconhdpi.png" | relative_url }}">
-  <link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
-
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | relative_url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | relative_url }}">
-
-  {% if page.url == '/' %}
-  <!-- homepage -->
-  <script type="application/ld+json">
-  {% include seo/json_website.json %}
-  </script>
-  {% endif %}
-
-  {% if page.layout == 'post' %}
-  <!-- layout post -->
-  <script type="application/ld+json">
-  {% include seo/json_article.json %}
-  </script>
-  {% endif %}
-
-  {% if page.layout == 'event_page_alt' %}
-  <!-- layout event_page_alt -->
-  <script type="application/ld+json">
-  {% include seo/json_event.json %}
-  </script>
-  {% endif %}
-
-  {% if jekyll.environment == 'production' %}{% include seo/google_analytics.html %}{% endif %}
+  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+    {%- include seo/google-analytics.html -%}
+  {%- endif -%}
 
 </head>

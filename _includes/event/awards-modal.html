@@ -6,27 +6,38 @@
 
 {% if data.Accepted == "Yes" %}
 <div id="{{ data.name | append: '-' | append: data.form | slugify }}" class="modal modal-fixed-footer">
-  <div class="modal-content grey-text text-darken-2">
-    <div class="hero caepa-yellow">
-      <div class="hero-wrapper">
-        <p class="mdc-subheading-2 adjust-margin">{{ page.title }}</p>
-        <span class="mdc-display-2 white-text">{{ data.form }}</span>
-      </div>
-    </div>
-    <!-- award nominee -->
-    <div class="row">
-      <p class="mdc-headline adjust-margin"> {% if data.email %}
-        <a href="mailto:{{ data.email }}">{{ data.name }}</a> {% else %} {{ data.name }} {% endif %}
-      </p> {% if data.city %}
-      <p class="mdc-caption adjust-margin">{{ data.city }}, Colorado</p> {% endif %}
+
+  <!-- awards modal -->
+  <div class="modal-content">
+    <span class="grey-text text-darken-2">
+      <p class="light">The {{ year }} Rendezvous</p>
+
+      <!-- awards organization -->
+      <h4>{{ data.form }}</h4>
+
+      <!-- award nominee -->
+      {% if data.email %}
+      <address><a href="mailto:{{ data.email }}">{{ data.name }}</a></address>
+      {% else %}
+      <em>{{ data.name }}</em><br />
+      {% endif %}
+
+      <!-- awards city -->
+      {% if data.city %}
+      <small>{{ data.city }}, Colorado</small>
+      {% endif %}
 
       <!-- awards response -->
-      {% if data.response %} {{ data.response | markdownify }} {% endif %}
+      {% if data.response %}
+      <p>{{ data.response | markdownify }}</p>
+      {% endif %}
 
       <!-- awards submitted -->
-      {% if data.Name %} <p>Submitted by: {{ data.Name }}</p> {% endif %}
+      {% if data.Name != null %}
+      <p>Submitted by: <span>{{ data.Name }}</span></p>
+      {% endif %}
 
-    </div>
+    </span>
   </div>
 
   <div class="modal-footer">
@@ -47,22 +58,28 @@
 
 {% if data.Accepted == "Yes" %}
 <div id="{{ data.Timestamp | slugify}}-{{ data.Name | slugify }}" class="modal modal-fixed-footer">
-  <div class="modal-content grey-text text-darken-2">
-    <div class="hero caepa-yellow">
-      <div class="hero-wrapper">
-        <p class="mdc-subheading-2 adjust-margin">{{ page.title }}</p>
-        <span class="mdc-display-2 white-text">Ann Deditz Scholarship Recipient</span>
-      </div>
-    </div>
-    <div class="row">
-      <p class="mdc-headline adjust-margin"> {% if data.Email %}
-        <a href="mailto:{{ data.Email }}">{{ data.Name }}</a> {% else %} {{ data.Name }} {% endif %}
-      </p>
+
+  <!-- awards modal -->
+  <div class="modal-content">
+    <span class="grey-text text-darken-2">
+      <p class="light">The {{ year }} Rendezvous</p>
+
+      <!-- awards organization -->
+      <h4>Ann Deditz Scholarship Recipient</h4>
+
+      <!-- scholarship  -->
+      {% if data.Email %}
+      <address><a href="mailto:{{ data.Email }}">{{ data.Name }}</a></address>
+      {% else %}
+      <em>{{ data.Name }}</em><br />
+      {% endif %}
 
       <!-- scholarship response -->
-      {% if data.Response %} {{ data.Response | markdownify }} {% endif %}
+      {% if data.Response %}
+      <p>{{ data.Response | markdownify }}</p>
+      {% endif %}
 
-    </div>
+    </span>
   </div>
 
   <div class="modal-footer">

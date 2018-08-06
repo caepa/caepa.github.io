@@ -1,0 +1,34 @@
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<div id="2012-chart-1"></div>
+<script>
+  google.charts.load('current', {
+    packages: ['corechart', 'bar']
+  });
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = new google.visualization.arrayToDataTable([
+      ['Education', 'Earnings'],
+      ['No H.S. Diplopma or HSE', 18500],
+      ['H.S. Diploma or HSE', 28300],
+      ['Some College or Associate Degree', 34000]
+    ]);
+    var options = {
+      chart: {
+        title: 'Impact of Education on Median Earnings in Colorado, 2011',
+        subtitle: 'Self-Sufficiency Standard for a family of three is $50,243 (Self-sufficiency for a family of one adult, one preschooler, and one school-age child in Denver County, 2011)'
+      },
+      vAxis: {
+        format: 'currency',
+      },
+      colors: ['#662222', '#424242', "#CC9933"],
+      height: 500,
+      legend: {
+        position: "none"
+      }
+    };
+
+    var materialChart = new google.charts.Bar(document.getElementById('2012-chart-1'));
+    materialChart.draw(data, options);
+  }
+</script>

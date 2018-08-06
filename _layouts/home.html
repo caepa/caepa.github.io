@@ -1,40 +1,102 @@
----
-layout: default
-image: caepa/caepa-title+.svg
-tabs:
-  - title: Welcome
-    id: welcome
-  - title: About
-    id: about
-  - title: Board
-    id: board
-  - title: Upcoming Event
-    id: event
----
-<main id="welcome" class="content valign-wrapper" role="main">
-  <div class="container">
-    <div class="center scale-transition scale-out">
-      <img src="../assets/img/{{ layout.image }}" alt="CAEPA" /> {% include social-icons.html %}
-    </div>
-  </div>
-</main>
-<div id="about" style="display:none;">
-  <div class="container">
-    <p class="mdc-display-2 adjust-margin">{{ site.legal_name }}</p>
-    <blockquote class="flow-text">{{ site.mission }}</blockquote>
-    <i class="flow-text">CAEPA is volunteer run, and a membership supported <nobr>501(c)(3)</nobr> nonprofit organization.</i>
-    <p class="flow-text">CAEPA members represent adult education and family literacy programs from across Colorado that are diverse in nature: local community and faith-based organizations, community colleges, school districts, corrections facilities, workforce districts
-      and libraries. Altogether, CAEPA affiliates account for nearly 15,000 of Colorado's learners each year. See the <a href="../factsheets">CAEPA Factsheets</a> for detailed information.</p>
-    <p class="flow-text">CAEPA provides a context for ongoing professional dialogue and sharing in Adult Education - including advocacy, networking, lobbying, research and programming, resources, policy development, and coordination with the Colorado Department of Education,
-      Correctional Education Association, and other public agencies.</p>
-  </div>
-</div>
-<div id="board" style="display:none;">
-  {% include board-members.html %}
-</div>
-<div id="event" style="display:none;">
-  {% assign current = site.categories.events | where_exp: "post" , "post.date > site.time" %} {% for page in current limit:1 %}
-  {% include post.html %} {% endfor %}
-</div>
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="{{ page.lang | default: site.lang | default: " en " }}">
 
-{% include mailchimp.html %}
+{%- include head.html -%}
+
+<body class="mdc-typography">
+
+  {%- include mdc-top-app-bar.html -%}
+
+  <header class="mdc-top-app-bar--fixed-adjust table-content">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+          <h1>
+            <img src="{{ 'caepa-title+.svg' | prepend: 'assets/img/caepa/' | absolute_url }}" alt="{{ site.title }}" />
+          </h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+
+    <section>
+      <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+            <article class="mdc-card mdc-card--outlined">
+
+              <ul id="dynamic-tab-bar" class="mdc-tab-bar" role="tablist">
+                <li id="tab1" class="mdc-tab mdc-tab--active" href="#panel1"
+                   role="tab" tabindex="0" aria-controls="panel1" aria-selected="true">Mission</li>
+                <li id="tab2" class="mdc-tab mdc-tab" href="#panel2"
+                   role="tab" tabindex="0" aria-controls="panel2" aria-selected="false">About Us</li>
+                <li id="tab3" class="mdc-tab mdc-tab" href="#panel3"
+                   role="tab" tabindex="0" aria-controls="panel3" aria-selected="false">Board of Directors</li>
+                <span class="mdc-tab-bar__indicator"></span>
+              </ul>
+
+              {%- assign about = site.home | where: 'slug', 'about' | first -%}
+              {%- assign mission = site.home | where: 'slug', 'mission' | first -%}
+              {%- assign directors = site.home | where: 'slug', 'board-members' | first -%}
+
+              <div class="panels">
+                <span id="panel1" class="panel active"
+                      role="tabpanel" aria-labelledby="tab1" aria-hidden="false">
+                  {{ mission.content }}
+                </span>
+                <span id="panel2" class="panel"
+                      role="tabpanel" aria-labelledby="tab2" aria-hidden="true">
+                  {{ about.content }}
+                </span>
+                <span id="panel3" class="panel"
+                      role="tabpanel" aria-labelledby="tab3" aria-hidden="true">
+                  {{ directors.content }}
+                </span>
+              </div>
+
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+            <h1 class="mdc-typography--headline1">Professional Learning</h1>
+
+            {%- assign page = site.pages | where: 'slug', 'professional-learning' | first -%}
+            {{ page.content }}
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+
+          {%- include social-icons.html -%}
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="https://unpkg.com/material-components-web@0.37.1/dist/material-components-web.js"></script>
+  <script type="text/javascript">
+    {%- include js/mdc-auto-init.js -%}
+    {%- include js/mdc-menu.js -%}
+    {%- include js/mdc-tab-bar.js -%}
+  </script>
+
+</body>
+</html>
