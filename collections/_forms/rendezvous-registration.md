@@ -1,5 +1,5 @@
 ---
 title: Rendezvous Registration
-google_url: https://goo.gl/forms/6SigEoNTjbyNB7UI3
-group: Professional Learning
+google_url: "https://goo.gl/forms/rIPuW7gNOY4OW2to2"
+group: "Professional Learning"
 ---
