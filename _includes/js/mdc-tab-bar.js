@@ -18,7 +18,7 @@ function updatePanel(index) {
   }
 };
 
-dynamicTabBar.listen('MDCTabBar:change', function (detail: tabs) {
+dynamicTabBar.listen('MDCTabBar:change', function ({detail: tabs}) {
   var nthChildIndex = tabs.activeTabIndex;
 
   updatePanel(nthChildIndex);
