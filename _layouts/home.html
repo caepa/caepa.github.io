@@ -27,7 +27,7 @@
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
             <article class="mdc-card mdc-card--outlined">
 
-              <ul id="dynamic-tab-bar" class="mdc-tab-bar" role="tablist">
+              <ul id="home-tab-bar" class="mdc-tab-bar" role="tablist">
                 <li id="tab1" class="mdc-tab mdc-tab--active" href="#panel1"
                    role="tab" tabindex="0" aria-controls="panel1" aria-selected="true">Mission</li>
                 <li id="tab2" class="mdc-tab mdc-tab" href="#panel2"
@@ -41,7 +41,7 @@
               {%- assign mission = site.home | where: 'slug', 'mission' | first -%}
               {%- assign directors = site.home | where: 'slug', 'board-members' | first -%}
 
-              <div class="panels">
+              <div class="panels" for="home-tab-bar">
                 <span id="panel1" class="panel active"
                       role="tabpanel" aria-labelledby="tab1" aria-hidden="false">
                   {{ mission.content }}
@@ -92,7 +92,7 @@
   </footer>
 
   <script type="text/javascript" src="https://unpkg.com/material-components-web@0.37.1/dist/material-components-web.js"></script>
-  
+
   {%- comment -%} // required for classList in older browsers (explorer 8+) {%- endcomment -%}
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.2.20171210/classList.min.js"></script>
   <script type="text/javascript">

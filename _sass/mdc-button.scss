@@ -1,0 +1,10 @@
+// internet explorer
+.mdc-button:not(:disabled) {
+  color: $theme-primary;
+}
+
+.mdc-button--raised:not(:disabled),
+.mdc-button--unelevated:not(:disabled) {
+  color: #fff;
+  background-color: $theme-primary;
+}
