@@ -1,6 +1,14 @@
 ---
 title: The Ann Deditz Scholarship
-form: "rendezvous-scholarship"
+
+forms:
+  - "rendezvous-scholarship"
+  - "rendezvous-registration"
+
+relatedItems:
+  - title: "DoubleTree Reservations"
+    url: "http://doubletree.hilton.com/en/dt/groups/personalized/D/DENNSDT-CAE-20181021/index.jhtml"
+
 ---
 The winner of the Ann Deditz scholarship will receive paid registration to the 2018 Rendezvous Conference on October 23–24, 2018. Conference registration includes a year’s membership in CAEPA, meals at the conference and parking during the event. Transportation and hotel costs are not included in the scholarship.
 
@@ -18,5 +26,3 @@ The following people are also encouraged to apply: Adult Education Volunteers an
 Submissions due September 1, 2018
 
 If you have questions, please contact <rendezvous@caepa.org>.
-
-[The Ann Deditz Scholarship Form]({% link _forms/rendezvous-scholarship.md %})

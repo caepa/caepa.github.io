@@ -1,6 +1,14 @@
 ---
 title: "Call for Proposals: FAQ"
-form: "rendezvous-proposal"
+
+forms:
+  - "rendezvous-proposal"
+  - "rendezvous-registration"
+
+relatedItems:
+  - title: "DoubleTree Reservations"
+    url: "http://doubletree.hilton.com/en/dt/groups/personalized/D/DENNSDT-CAE-20181021/index.jhtml"
+    
 ---
 Learn more about what to expect when submitting a proposal. We have gathered some of the most asked questions and tried to provide an answer.
 
@@ -60,5 +68,3 @@ You will see a confirmation screen after you submit your proposal and receive a 
 ## What technology does CAEPA provide?
 
 CAEPA provides a projector and standard cable, basic classroom tech support and wireless connectivity in each session room. We regret that we cannot provide instructor stations or laptops, flashdrives, or Mac projector DVI connectors/cables. CAEPA 2018 is a BYOD (Bring Your Own Device) event for all.
-
-[Call for Proposals: Presentation Proposal Form]({% link _forms/rendezvous-proposal.md %})

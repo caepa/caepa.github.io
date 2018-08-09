@@ -1,6 +1,14 @@
 ---
 title: "Call for Proposals"
-form: "rendezvous-proposal"
+
+forms:
+  - "rendezvous-proposal"
+  - "rendezvous-registration"
+
+relatedItems:
+  - title: "DoubleTree Reservations"
+    url: "http://doubletree.hilton.com/en/dt/groups/personalized/D/DENNSDT-CAE-20181021/index.jhtml"
+
 ---
 The Colorado Adult Education Professional Association, CAEPA, invites you to submit a proposal for the 2018 Rendezvous. This year's theme is, "From Here to Anywhere" and we have thought up a list of new session strands to take us there.
 
@@ -43,5 +51,3 @@ Workforce Development
 
 Vendors and Businesses
 : Presenting informational sessions on products and services provided for adult education programs.
-
-[Call for Proposals: Presentation Proposal Form]({% link _forms/rendezvous-proposal.md %})

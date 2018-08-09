@@ -1,6 +1,14 @@
 ---
 title: "Call for Nominations"
-form: "rendezvous-awards"
+
+forms:
+  - "rendezvous-awards"
+  - "rendezvous-registration"
+
+relatedItems:
+  - title: "DoubleTree Reservations"
+    url: "http://doubletree.hilton.com/en/dt/groups/personalized/D/DENNSDT-CAE-20181021/index.jhtml"
+    
 ---
 The Colorado Adult Education Professional Association honors outstanding achievement, innovation, and contribution to the field annually at its Rendezvous Conference. Nominations are solicited from the field-at-large.
 
@@ -19,5 +27,3 @@ If you know a great educator or volunteer in your community or have an inspiring
 Submissions due September 1, 2018
 
 If you have questions, please contact <rendezvous@caepa.org>.
-
-[go to the awards nomination form]({% link _forms/rendezvous-awards.md %})
