@@ -4,8 +4,14 @@ title: "The 2018 Pre-Rendezvous"
 theme: "Adult Education Ambassadors: Train the Trainer"
 availability: true
 
-start-date: "2018-10-22T06:00:00.000Z"
-end-date: "2018-10-22T06:00:00.000Z"
+startDate: "2018-10-22T08:00:00.000"
+
+location: "Double Tree by Hilton"
+address: "8773 Yates Drive"
+city: "Westminster"
+state: "CO"
+zipcode: "80031"
+phone: "(303) 427-4000"
 
 ---
 Ambassadors become representational leaders by developing their voices, so they can effectively represent other students and take action for social change on issues they care about.

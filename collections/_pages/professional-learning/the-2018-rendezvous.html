@@ -5,8 +5,8 @@ theme: "From Here to Anywhere: Innovation, Opportunity, and Action"
 author: "George O'Clair, CAEPA President"
 availability: true
 
-start-date: "2018-10-23T08:00:00.000"
-end-date: "2018-10-24T17:00:00.000"
+startDate: "2018-10-23T08:00:00.000"
+endDate: "2018-10-24T17:00:00.000"
 location: "Double Tree by Hilton"
 address: "8773 Yates Drive"
 city: "Westminster"
@@ -35,22 +35,22 @@ sponsors:
   #   url: "http://www.aztecsoftware.com/"
 
 ---
-<div class="event-wrapper" itemscope itemtype="http://schema.org/Event">
+<div itemscope itemtype="http://schema.org/Event">
+  <span itemprop="name" content="{{ page.title }}" />
+  <span itemprop="description" content="{{ page.theme }}" />
   <p class="post-meta">
-    <time class="event-date" datetime="{{ page.start-date | date_to_xmlschema }}" itemprop="startDate">
+    <time datetime="{{ page.startDate | date_to_xmlschema }}" itemprop="startDate">
       {%- assign date_format = site.minima.date_format | default: "%B %-d, %Y" -%}
-      {{ page.start-date | date: date_format }}
+      {{ page.startDate | date: date_format }}
     </time>
       •
-    <time class="event-date" datetime="{{ page.end-date | date_to_xmlschema }}" itemprop="endDate">
-      {{ page.end-date | date: date_format }}
+    <time datetime="{{ page.endDate | date_to_xmlschema }}" itemprop="endDate">
+      {{ page.endDate | date: date_format }}
     </time>
   </p>
-  <span class="event-title" itemprop="name" content="{{ page.title }}" />
-  <span class="event-description" itemprop="description" content="{{ page.theme }}" />
-  <div class="event-venue" itemprop="location" itemscope itemtype="http://schema.org/Place">
+  <div itemprop="location" itemscope itemtype="http://schema.org/Place">
     <span itemprop="name">{{ page.location }}</span>
-    <div class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
       <span itemprop="streetAddress">{{ page.address }}</span><br>
       <span itemprop="addressLocality">{{ page.city }}</span>,
       <span itemprop="addressRegion"> {{ page.state }}</span>
@@ -58,9 +58,9 @@ sponsors:
     </div>
   </div>
   <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-    <p class="event-price" itemprop="price" content="{{ page.price1 }}">${{ page.price1 }} {{ page.price1-title }}</p>
-    <p class="event-price" itemprop="price" content="{{ page.price2 }}">${{ page.price2 }} {{ page.price2-title }}</p>
-    <p class="event-price" itemprop="price" content="{{ page.price3 }}">${{ page.price3 }} {{ page.price3-title }}</p>
+    <p itemprop="price" content="{{ page.price1 }}">${{ page.price1 }} {{ page.price1-title }}</p>
+    <p itemprop="price" content="{{ page.price2 }}">${{ page.price2 }} {{ page.price2-title }}</p>
+    <p itemprop="price" content="{{ page.price3 }}">${{ page.price3 }} {{ page.price3-title }}</p>
     <span itemprop="priceCurrency" content="USD" />
   </div>
   <p>Instructions for payments will be sent after after registration.</p>
