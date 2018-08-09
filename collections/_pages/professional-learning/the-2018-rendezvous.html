@@ -57,12 +57,12 @@ sponsors:
       <span itemprop="postalCode"> {{ page.zipcode }}</span>
     </div>
   </div>
-  <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-    <p itemprop="price" content="{{ page.price1 }}">${{ page.price1 }} {{ page.price1-title }}</p>
-    <p itemprop="price" content="{{ page.price2 }}">${{ page.price2 }} {{ page.price2-title }}</p>
-    <p itemprop="price" content="{{ page.price3 }}">${{ page.price3 }} {{ page.price3-title }}</p>
+  <dl itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+    <dt itemprop="price" content="{{ page.price1 }}">${{ page.price1 }}</dt><dd>{{ page.price1-title }}</dd>
+    <dt itemprop="price" content="{{ page.price2 }}">${{ page.price2 }}</dt><dd>{{ page.price2-title }}</dd>
+    <dt itemprop="price" content="{{ page.price3 }}">${{ page.price3 }}</dt><dd>{{ page.price3-title }}</dd>
     <span itemprop="priceCurrency" content="USD" />
-  </div>
+  </dl>
   <p>Instructions for payments will be sent after after registration.</p>
 </div>
 
