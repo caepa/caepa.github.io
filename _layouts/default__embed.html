@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{%- include head.html -%}
+
+<body class="mdc-typography">
+
+  {%- include mdc-top-app-bar.html -%}
+
+  <iframe name="frame" src="{{ page.embed_url }}" class="mdc-top-app-bar--fixed-adjust" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+
+  <script type="text/javascript" src="https://unpkg.com/material-components-web@0.37.1/dist/material-components-web.js"></script>
+  <script type="text/javascript">
+    {%- include js/mdc-auto-init.js -%}
+    {%- include js/mdc-menu.js -%}
+  </script>
+
+</body>
+</html>

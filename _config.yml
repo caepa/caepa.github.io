@@ -80,7 +80,7 @@ collections:
   rendezvous:
     output: true
   resources:
-    output: false #
+    output: true
 
 # Front matter defaults
 defaults:
@@ -100,4 +100,9 @@ defaults:
     scope:
       type: forms
     values:
-      layout: "default__form"
+      layout: "default__embed"
+  -
+    scope:
+      type: resources
+    values:
+      layout: "default__embed"

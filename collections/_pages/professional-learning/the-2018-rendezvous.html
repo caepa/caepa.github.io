@@ -24,6 +24,14 @@ price2: "150.00"
 price3-title: "w/Mini-conference discount"
 price3: "125.00"
 
+forms:
+  - "rendezvous-registration"
+  - "application-ambassador"
+
+relatedItems:
+  - title: "DoubleTree Reservations"
+    url: "http://doubletree.hilton.com/en/dt/groups/personalized/D/DENNSDT-CAE-20181021/index.jhtml"
+
 docs:
   # - title: ""
   #   url: ""
@@ -81,10 +89,10 @@ sponsors:
       {{ collection.excerpt | markdownify }}
     </div>
     <div class="mdc-card__action-buttons">
-      <a href="{{ collection.url | absolute_url }}" class="mdc-button mdc-card__action mdc-card__action--button">Learn more</a>
-      {%- assign forms = site.forms | where_exp: "item", "item.slug == collection.form" -%}
+      <a href="{{ collection.url | absolute_url }}" class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button">Learn more</a>
+      {%- assign forms = site.forms | where_exp: "item", "item.slug == collection.forms.first" -%}
       {%- for form in forms -%}
-        <a href="{{ form.url | absolute_url }}" class="mdc-button mdc-card__action mdc-card__action--button">Go to form</a>
+        <a href="{{ form.url | absolute_url }}" class="mdc-button mdc-card__action mdc-card__action--button">{{ form.title }}</a>
       {%- endfor -%}
     </div>
   </div>

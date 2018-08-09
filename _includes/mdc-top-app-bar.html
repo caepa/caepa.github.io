@@ -4,9 +4,12 @@
 
       {%- if page.layout == "default__mdc-drawer" -%}
       <button id="menu" class="material-icons mdc-top-app-bar__navigation-icon">menu</button>
+      {%- elsif page.layout == "default__embed" -%}
       <span class="mdc-top-app-bar__title">
         {%- if page.collection == "posts" -%}
           {{ page.categories | first | upcase | replace: "-", " " }}
+        {%- elsif page.layout == "default__embed" -%}
+          {{ page.title }}
         {%- elsif page.collection == "pages" -%}
           {{ page.slug | upcase | replace: "-", " " }}
         {%- else -%}

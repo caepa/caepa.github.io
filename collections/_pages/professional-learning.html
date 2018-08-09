@@ -24,7 +24,11 @@ title: Professional Learning
       <span itemprop="name" content="{{ page.location }}" />
     </header>
     <div class="mdc-card__action-buttons">
-      <a href="{{ page.url | absolute_url }}" class="mdc-button mdc-card__action mdc-card__action--button">Learn more</a>
+      <a href="{{ page.url | absolute_url }}" class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button">Learn more</a>
+      {%- assign forms = site.forms | where_exp: "item", "item.slug == page.forms.first" -%}
+      {%- for form in forms -%}
+        <a href="{{ form.url | absolute_url }}" class="mdc-button mdc-card__action mdc-card__action--button">{{ form.title }}</a>
+      {%- endfor -%}
     </div>
   </article>
 {%- endfor -%}
