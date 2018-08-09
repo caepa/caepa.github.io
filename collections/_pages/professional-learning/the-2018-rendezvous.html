@@ -5,8 +5,8 @@ theme: "From Here to Anywhere: Innovation, Opportunity, and Action"
 author: "George O'Clair, CAEPA President"
 availability: true
 
-start-date: "2018-10-23T06:00:00.000Z"
-end-date: "2018-10-24T06:00:00.000Z"
+start-date: "2018-10-23T08:00:00.000"
+end-date: "2018-10-24T17:00:00.000"
 location: "Double Tree by Hilton"
 address: "8773 Yates Drive"
 city: "Westminster"
@@ -37,16 +37,17 @@ sponsors:
 ---
 <div class="event-wrapper" itemscope itemtype="http://schema.org/Event">
   <p class="post-meta">
-    <time class="event-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="startDate">
+    <time class="event-date" datetime="{{ page.start-date | date_to_xmlschema }}" itemprop="startDate">
       {%- assign date_format = site.minima.date_format | default: "%B %-d, %Y" -%}
       {{ page.start-date | date: date_format }}
     </time>
       •
-    <time class="event-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="endDate">
+    <time class="event-date" datetime="{{ page.end-date | date_to_xmlschema }}" itemprop="endDate">
       {{ page.end-date | date: date_format }}
     </time>
   </p>
   <span class="event-title" itemprop="name" content="{{ page.title }}" />
+  <span class="event-description" itemprop="description" content="{{ page.theme }}" />
   <div class="event-venue" itemprop="location" itemscope itemtype="http://schema.org/Place">
     <span itemprop="name">{{ page.location }}</span>
     <div class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
