@@ -2,19 +2,21 @@
 title: "Adult Education and Literacy: An Essential Investment in Colorado in 2014"
 author: Ann Leonard
 ---
-**Colorado is the only state that does not set aside state dollars for Adult Education!**
+## Colorado is the only state that does not set aside state dollars for Adult Education!
 
-  * **Adults with no High School credential:** 340,360\\
+340,360
+: **Adults with no High School credential**\\
   10.1% of Colorado’s workforce is not prepared for post-secondary education or middle-skill jobs. [^1]
-  * **Adults who do not speak English:** 157,455\\
+
+157,455
+: **Adults who do not speak English**\\
   3% of adult working population, some with post-secondary credentials, cannot fill available jobs in critical sectors. [^2]
-  * **Colorado High School Seniors not graduating "one-time":** 15,006\\
+
+15,006
+: **Colorado High School Seniors not graduating "on-time"**\\
   24.6% of the 2012 graduating class requires remediation not available in the CO Higher Education system. [^3]
-  {: .browser-default }
 
-**Yet only 3% (10,8124) of those that would benefit from services were able to enroll in 2012!** [^4]
-
-Note:  Data as of 2012
+## Yet only 3% (10,8124) of those that would benefit from services were able to enroll in 2012! [^4]
 
 -----
 
@@ -24,7 +26,6 @@ Note:  Data as of 2012
   * Lower taxable income and increased social services (each non-graduate costs CO $524,000 - lifetime average) [^6]
   * Increased recidivism and lower employment rate upon release for inmates w/out academic or vocational training. [^7]
   * 34% of Colorado’s children in non-English immigrant families live in poverty and 11% suffer extreme poverty, reducing K-12 academic success and increasing dropout rates. [^8]
-  {: .browser-default }
 
 ### Adult Education programs fill critical education gaps between High School and Higher Education with services that:
 
@@ -34,9 +35,10 @@ Note:  Data as of 2012
   * Connect families with vital resources to stop the cycle of poverty and incarceration
   * Educate citizens so they can make informed civic, financial, and health care decisions
   * Incorporate the National Common Core Standards to meet the needs of a 21st century workforce.
-  {: .browser-default }
 
-**Without appropriate funding, instructional offerings are limited, program wait lists are long, and critical industry sectors continue to hire from out-of-state due to lack of skilled workers!**
+**_Without appropriate funding, instructional offerings are limited, program wait lists are long, and critical industry sectors continue to hire from out-of-state due to lack of skilled workers!_**
+
+-----
 
 Commissioned by the Colorado Adult Education Professional Association
 
