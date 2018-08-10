@@ -1,3 +1,12 @@
+.mdc-tab--active .mdc-tab__text-label,
+.mdc-tab-indicator > .mdc-tab-indicator__content--underline {
+  color: $theme-primary;
+}
+
+.mdc-tab__ripple::before, .mdc-tab__ripple::after {
+  background-color: $theme-primary;
+}
+
 .panels {
 
   & .panel:not(.active) {

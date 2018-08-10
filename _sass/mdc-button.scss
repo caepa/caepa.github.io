@@ -3,8 +3,17 @@
   color: $theme-primary;
 }
 
+.mdc-button--outlined:not(:disabled){
+  border-color: $theme-primary;
+}
+
 .mdc-button--raised:not(:disabled),
 .mdc-button--unelevated:not(:disabled) {
   color: #fff;
+  background-color: $theme-primary;
+}
+
+.mdc-button::before,
+.mdc-button::after {
   background-color: $theme-primary;
 }

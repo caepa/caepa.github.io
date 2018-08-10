@@ -1,0 +1,65 @@
+---
+layout: home
+---
+
+{%- assign mission = site.home | where: 'slug', 'mission' | first -%}
+{%- assign about = site.home | where: 'slug', 'about' | first -%}
+{%- assign directors = site.home | where: 'slug', 'board-members' | first -%}
+
+<div id="home-tab-bar" class="mdc-tab-bar" role="tablist" aria-label="{{ site.title }}">
+  <div class="mdc-tab-scroller">
+    <div class="mdc-tab-scroller__scroll-area">
+      <div class="mdc-tab-scroller__scroll-content">
+
+        <button id="tab1" class="mdc-tab mdc-tab--active" role="tab"
+                aria-controls="panel1" aria-selected="true" tabindex="0">
+          <span class="mdc-tab__content">
+            <span class="mdc-tab__text-label">Mission</span>
+          </span>
+          <span class="mdc-tab-indicator mdc-tab-indicator--active">
+            <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+          </span>
+          <span class="mdc-tab__ripple"></span>
+        </button>
+
+        <button id="tab2" class="mdc-tab" role="tab"
+                aria-controls="panel2" aria-selected="false" tabindex="-1">
+          <span class="mdc-tab__content">
+            <span class="mdc-tab__text-label">About Us</span>
+          </span>
+          <span class="mdc-tab-indicator">
+            <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+          </span>
+          <span class="mdc-tab__ripple"></span>
+        </button>
+
+        <button id="tab3" class="mdc-tab" role="tab"
+                aria-controls="panel3" aria-selected="false" tabindex="-1">
+          <span class="mdc-tab__content">
+            <span class="mdc-tab__text-label">Board of Directors</span>
+          </span>
+          <span class="mdc-tab-indicator">
+            <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+          </span>
+          <span class="mdc-tab__ripple"></span>
+        </button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="panels" for="home-tab-bar">
+  <span id="panel1" class="panel active" role="tabpanel"
+        aria-labelledby="tab1" aria-hidden="false">
+    {{ mission.content }}
+  </span>
+  <span id="panel2" class="panel" role="tabpanel"
+        aria-labelledby="tab2" aria-hidden="false">
+    {{ about.content }}
+  </span>
+  <span id="panel3" class="panel" role="tabpanel"
+        aria-labelledby="tab3" aria-hidden="false">
+    {{ directors.content }}
+  </span>
+</div>

@@ -2,23 +2,22 @@
 title: "Board of Directors"
 ---
 
-
-
-{%- assign data = site.data.board-members | group_by: "Role" -%}
-
+{%- assign data = site.data.board-members | group_by: "Role" | reverse -%}
 <div class="mdc-list-group">
 
   {%- for data in data -%}
-  <h3 class="mdc-list-group__subheader">
+  <p class="mdc-list-group__subheader">
     {{ data.name }}
-  </h3>
+  </p>
 
   <ul class="mdc-list mdc-list--two-line mdc-list--non-interactive" aria-orientation="vertical">
 
     {%- for data in data.items -%}
     <li class="mdc-list-item">
       <span class="mdc-list-item__text">
-        {{ data.Name }}
+        <span class="mdc-list-item__primary-text">
+          {{ data.Name }}
+        </span>
         <span class="mdc-list-item__secondary-text">
           {{ data.Officer }}
         </span>

@@ -1,11 +1,8 @@
 function initTabs(el) {
 
-  var tabs = window.dynamicTabBar = new mdc.tabs.MDCTabBar(document.querySelector('#' + el));
+  var tabBar = window.dynamicTabBar = new mdc.tabBar.MDCTabBar(document.querySelector('#' + el));
   var panels = document.querySelector('[for=' + el + ']');
 
-  dynamicTabBar.tabs.forEach(function(tab) {
-    tab.preventDefaultOnClick = true;
-  });
 
   function updatePanel(index) {
     var activePanel = panels.querySelector('.panel.active');
@@ -20,9 +17,9 @@ function initTabs(el) {
     }
   };
 
-  dynamicTabBar.listen('MDCTabBar:change', function (t) {
+  dynamicTabBar.listen('MDCTabBar:activated', function (t) {
     var tabs = t.detail;
-    var nthChildIndex = tabs.activeTabIndex;
+    var nthChildIndex = tabs.index;
 
     updatePanel(nthChildIndex);
   });
