@@ -1,12 +1,12 @@
 ---
 author: Adult Education Initiatives
 image_path: /img/logos/cde_logo.png
-embed_id: 7i41Mjjazhc
+video-url: http://www.youtube.com/embed/7i41Mjjazhc
 tags: [Tech Tip Tuesday, CDE]
 ---
 Free, online backchannel chat service called TodaysMeet. Backchannel chats are great for conferences, large classrooms, or classes that are connecting from different areas / rooms.
 
-{% include youtube.html id=page.embed_id %}
+{% include embed-media.html src=page.video-url %}
 
 Items to consider while watching:
 
