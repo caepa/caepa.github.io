@@ -12,6 +12,33 @@ iframe.mdc-top-app-bar--fixed-adjust {
   display: table;
 }
 
+main + footer {
+  display: table;
+  min-height: 100%;
+  width: 100%;
+  background-color: rgba(66,66,66,0.1);
+
+  > div {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+
+.table-content {
+  display: table;
+  min-height: 75%;
+  width: 100%;
+  background-color: rgba(66,66,66,0.1);
+
+  // first-of-type is selecting all
+  > div {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+
 // large desktop
 @media (min-width: 1440px) {
 
@@ -28,6 +55,7 @@ iframe.mdc-top-app-bar--fixed-adjust {
     position: fixed;
 
     &.mdc-drawer--open + main,
+    &.mdc-drawer--open + main + footer,
     &.mdc-drawer--open + iframe {
       padding-left: 320px;
     }

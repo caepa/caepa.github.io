@@ -52,30 +52,3 @@ body {
   margin: 0;
   height: 100%;
 }
-
-main + footer {
-  display: table;
-  min-height: 100%;
-  width: 100%;
-  background-color: rgba(66,66,66,0.1);
-
-  > div {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-  }
-}
-
-.table-content {
-  display: table;
-  min-height: 75%;
-  width: 100%;
-  background-color: rgba(66,66,66,0.1);
-
-  // first-of-type is selecting all
-  > div {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-  }
-}
