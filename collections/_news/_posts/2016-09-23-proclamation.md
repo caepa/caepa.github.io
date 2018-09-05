@@ -1,6 +1,6 @@
 ADULT EDUCATION AND FAMILY LITERACY WEEK Sept. 26 – Oct. 1, 2016
 
-BY THE ==Mayor and City Council== OF THE (==name of city==, Colorado.
+BY THE ==Mayor and City Council== OF THE ==name of city==, Colorado.
 
 A PROCLAMATION
 

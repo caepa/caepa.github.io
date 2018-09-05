@@ -1,12 +1,12 @@
 ---
 author: Adult Education Initiatives
 image_path: /img/logos/cde_logo.png
-embed_id: m9btbV6Kamk
+video-url: http://www.youtube.com/embed/m9btbV6Kamk
 tags: [Tech Tip Tuesday, CDE]
 ---
 This tool will allow you to create videos/tutorials of work you are doing on your computer.
 
-{% include youtube.html id=page.embed_id %}
+{% include embed-media.html src=page.video-url %}
 
 Items to consider while watching:
 
