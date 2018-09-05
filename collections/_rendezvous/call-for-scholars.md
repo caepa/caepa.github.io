@@ -23,6 +23,6 @@ Educators from the following instructional areas are encouraged to apply: ABE, G
 
 The following people are also encouraged to apply: Adult Education Volunteers and first-time conference attendees.
 
-Submissions due September 1, 2018
+Submissions due September 15, 2018
 
 If you have questions, please contact <rendezvous@caepa.org>.
