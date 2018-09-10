@@ -42,7 +42,7 @@
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
             <h1 class="mdc-typography--headline1">Professional Learning</h1>
 
-            {%- assign page = site.pages | where: 'slug', 'professional-learning' | first | sort: 'startDate' -%}
+            {%- assign page = site.pages | where: 'slug', 'professional-learning' | first -%}
             {{ page.content }}
 
           </div>
