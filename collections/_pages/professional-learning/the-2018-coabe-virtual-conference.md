@@ -8,10 +8,6 @@ availability: true
 startDate: "2018-10-25T08:00:00.000"
 endDate: "2018-10-26T17:00:00.000"
 
-forms:
-  - "rendezvous-registration"
-  - "application-ambassador"
-
 relatedItems:
   - title: "2018 COABE Virtual Conference"
     url: "https://www.coabe.org/2018-virtual-conference/"
