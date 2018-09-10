@@ -25,10 +25,10 @@ Platinum: $2500
 Gold: $1500
 : Snack, half-page ad, gold level acknowledgment and logo exposure, vendor booth- NEW conference registration for two
 
-Silver: $750
+Silver: $1000
 : Quarter-page ad, silver level acknowledgment and logo exposure, vendor table- NEW conference registration for one
 
-Bronze: $625
+Bronze: $750
 : Quarter-page ad, bronze level acknowledgment and logo exposure, vendor table- NEW conference registration for one
 
 ## Vendors
