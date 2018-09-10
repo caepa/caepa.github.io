@@ -19,16 +19,16 @@ If you have questions, please contact <rendezvous@caepa.org>.
 
 ## Sponsorship
 
-Platinum: $4500
+Platinum: $2500
 : Breakfast/lunch, full page ad, platinum level acknowledgment and logo exposure, vendor booth- NEW conference registration for two
 
-Gold:
+Gold: $1500
 : Snack, half-page ad, gold level acknowledgment and logo exposure, vendor booth- NEW conference registration for two
 
-Silver:
+Silver: $1000
 : Quarter-page ad, silver level acknowledgment and logo exposure, vendor table- NEW conference registration for one
 
-Bronze:
+Bronze: $750
 : Quarter-page ad, bronze level acknowledgment and logo exposure, vendor table- NEW conference registration for one
 
 ## Vendors
