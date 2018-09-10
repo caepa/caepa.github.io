@@ -2,7 +2,7 @@
 title: Professional Learning
 ---
 
-{%- assign pages = site.pages | where_exp: "item", "item.availability == true" | sort: "startDate", first -%}
+{%- assign pages = site.pages | where_exp: "item", "item.availability == true" | sort: "startDate", "first" -%}
 
 {%- for page in pages -%}
   <article class="mdc-card mdc-card--outlined" itemscope itemtype="http://schema.org/Event">
