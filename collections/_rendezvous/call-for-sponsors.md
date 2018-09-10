@@ -28,7 +28,7 @@ Gold: $1500
 Silver: $750
 : Quarter-page ad, silver level acknowledgment and logo exposure, vendor table- NEW conference registration for one
 
-Bronze: $500
+Bronze: $625
 : Quarter-page ad, bronze level acknowledgment and logo exposure, vendor table- NEW conference registration for one
 
 ## Vendors
