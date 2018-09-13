@@ -12,7 +12,7 @@ relatedItems:
 ---
 Learn more about what to expect when submitting a proposal. We have gathered some of the most asked questions and tried to provide an answer.
 
-Submissions due September 15, 2018
+Submissions due October 5, 2018
 
 If you have questions, please contact <rendezvous@caepa.org>.
 
