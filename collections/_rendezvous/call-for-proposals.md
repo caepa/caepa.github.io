@@ -43,7 +43,7 @@ Family Engagement
 Policy and Legislation
 : Understanding the nuts and bolts of running programs while adhering to guiding policy and pertinent legislation.
 
-Students and Young Ambassadors
+Adult Learners and Student Ambassadors
 : Making the most of educational opportunities specific for adult learners.
 
 Workforce Development
