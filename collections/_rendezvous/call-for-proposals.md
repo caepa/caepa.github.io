@@ -12,7 +12,7 @@ relatedItems:
 ---
 The Colorado Adult Education Professional Association, CAEPA, invites you to submit a proposal for the 2018 Rendezvous. This year's theme is, "From Here to Anywhere" and we have thought up a list of new session strands to take us there.
 
-Submissions due September 15, 2018
+**Extended:** Submissions due October 5, 2018
 
 If you have questions, please contact <rendezvous@caepa.org>.
 
