@@ -39,14 +39,8 @@ docs:
   # - title: ""
   #   url: ""
 
-
-sponsors:
-  # - title: "Aztec Software"
-  #   twitter: "https://twitter.com/aztecsoftware"
-  #   url: "http://www.aztecsoftware.com/"
-
 ---
-<div itemscope itemtype="http://schema.org/Event">
+<article itemscope itemtype="http://schema.org/Event">
   <span itemprop="name" content="{{ page.title }}" />
   <span itemprop="description" content="{{ page.theme }}" />
   <p class="post-meta">
@@ -77,28 +71,30 @@ sponsors:
     <span itemprop="priceCurrency" content="USD" />
   </dl>
   <p>Requests for payment will be sent after registration and the proposal deadline in order to offer a presenter discount. Instructions for payments will be sent to the "Contact for payment" identified during registration.</p>
-</div>
+</article>
+
+<article>
+  <h2 class="mdc-typography--headline2">Thanks to our {{ page.year }} Sponsors</h2>
+  {% include mdc-image-list__sponsors.html %}
+</article>
 
 
-
-
-
-
-
-{%- for collection in site.rendezvous -%}
-  <div class="mdc-card mdc-card--outlined">
-    <div class="mdc-card__primary">
-      <h2 class="mdc-typography--headline2">{{ collection.title }}</h2>
+<article>
+  {%- for collection in site.rendezvous -%}
+    <div class="mdc-card mdc-card--outlined">
+      <div class="mdc-card__primary">
+        <h2 class="mdc-typography--headline2">{{ collection.title }}</h2>
+      </div>
+      <div class="mdc-card__secondary">
+        {{ collection.excerpt | markdownify }}
+      </div>
+      <div class="mdc-card__action-buttons">
+        <a href="{{ collection.url | absolute_url }}" class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button">Learn more</a>
+        {%- assign forms = site.forms | where_exp: "item", "item.slug == collection.forms.first" -%}
+        {%- for form in forms -%}
+          <a href="{{ form.url | absolute_url }}" class="mdc-button mdc-card__action mdc-card__action--button">{{ form.title }}</a>
+        {%- endfor -%}
+      </div>
     </div>
-    <div class="mdc-card__secondary">
-      {{ collection.excerpt | markdownify }}
-    </div>
-    <div class="mdc-card__action-buttons">
-      <a href="{{ collection.url | absolute_url }}" class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button">Learn more</a>
-      {%- assign forms = site.forms | where_exp: "item", "item.slug == collection.forms.first" -%}
-      {%- for form in forms -%}
-        <a href="{{ form.url | absolute_url }}" class="mdc-button mdc-card__action mdc-card__action--button">{{ form.title }}</a>
-      {%- endfor -%}
-    </div>
-  </div>
-{%- endfor -%}
+  {%- endfor -%}
+</article>

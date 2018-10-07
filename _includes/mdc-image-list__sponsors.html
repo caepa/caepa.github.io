@@ -1,0 +1,17 @@
+
+<ul class="mdc-image-list mdc-image-list--with-text-protection">
+
+  {%- for item in site.sponsors -%}
+  <li class="mdc-image-list__item">
+    <a href="{{ item.url }}">
+      <div class="mdc-image-list__image-aspect-container mdc-ripple-surface">
+        <img class="mdc-image-list__image" src="{{ item.twitter }}/profile_image?size=original " aria-hidden="true">
+      </div>
+      <div class="mdc-image-list__supporting">
+        <span class="mdc-image-list__label">{{ item.title }}</span>
+      </div>
+    </a>
+  </li>
+  {%- endfor -%}
+
+</ul>
