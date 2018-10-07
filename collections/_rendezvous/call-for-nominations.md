@@ -24,6 +24,6 @@ New for 2018, CAEPA is introducing an award for organization support.
 
 If you know a great educator or volunteer in your community or have an inspiring learner, please fill out and submit your nomination.
 
-Submissions due October 5, 2018
+Submissions due ~~October 5, 2018~~ **_extended date_**
 
 If you have questions, please contact <rendezvous@caepa.org>.

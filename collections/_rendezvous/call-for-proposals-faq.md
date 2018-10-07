@@ -12,7 +12,7 @@ relatedItems:
 ---
 Learn more about what to expect when submitting a proposal. We have gathered some of the most asked questions and tried to provide an answer.
 
-Submissions due October 5, 2018
+Submissions due ~~October 5, 2018~~ **_extended date_**
 
 If you have questions, please contact <rendezvous@caepa.org>.
 
@@ -63,7 +63,7 @@ We recommend that you prepare your responses in a separate document and copy/pas
 
 ## What happens after I submit my proposal?
 
-You will see a confirmation screen after you submit your proposal and receive a confirmation email. A CAEPA committee will review all proposals during the month of August. **Session leaders will be notified via email by September 15 regarding the status of their proposals.** Session leaders whose proposals are accepted will need to register at the discounted registration rate.
+You will see a confirmation screen after you submit your proposal and receive a confirmation email. A CAEPA committee will review all proposals during the month of August. **Session leaders will be notified via email beginning  ~~September 15~~ October 8 regarding the status of their proposals.** Session leaders whose proposals are accepted will need to register at the discounted registration rate.
 
 ## What technology does CAEPA provide?
 
