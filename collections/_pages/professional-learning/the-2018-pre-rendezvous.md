@@ -5,7 +5,7 @@ theme: "Adult Education Ambassadors: Train the Trainer"
 availability: true
 
 startDate: "2018-10-22T08:00:00.000"
-duration: "8:00 AM - 5:00 PM both days"
+duration: "8:00 AM - 5:00 PM"
 
 location: "Double Tree by Hilton"
 address: "8773 Yates Drive"
