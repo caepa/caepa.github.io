@@ -17,15 +17,16 @@ google_site_verification: 9aWiSPXxIMqz4XsA1BbxONHgHSSVeTczQFS0fJcgEZE
 sponsors:
   - title: "Aztec Software"
     twitter: "https://twitter.com/aztecsoftware"
-    url: "http://www.aztecsoftware.com/"
+    url: "http://www.aztecsoftware.com"
     tier: "Platinum"
   # - title: "COABE"
   #   twitter: "https://twitter.com/COABEHQ"
   #   url: "http://www.coabe.org"
   #   tier: "Bronze"
   - title: "Paxen Publishing"
+    facebook: "https://www.facebook.com/paxenpublishing"
     twitter: "https://twitter.com/PaxenPublishing"
-    url: "https://www.paxenpublishing.com/"
+    url: "https://www.paxenpublishing.com"
     tier: "Bronze"
 
 # seo
@@ -67,6 +68,7 @@ social_media:
 # See: https://jekyllrb.com/docs/configuration/#default-configuration
 future: true
 timezone: America/Denver
+material-web-components: "0.40.1"
 plugins:
   - jekyll-feed
   - jekyll-redirect-from

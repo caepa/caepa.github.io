@@ -1,16 +1,13 @@
-.mdc-drawer {
-  height: 100%;
-
-  & .mdc-drawer__content {
-    overflow-y: auto;
-    touch-action: pan-y;
+.mdc-drawer--dismissible {
+  position: fixed;
+  overflow: auto;
+  &.mdc-drawer--open ~ * {
+    padding-left: 255px;
   }
-}
 
-.mdc-drawer--persistent.mdc-drawer--open,
-.mdc-drawer--persistent .mdc-drawer__drawer {
-  width: 320px;
-
-  @media (max-width: 839px) {
+  &.mdc-drawer--open ~ iframe,
+  &.mdc-drawer--open ~ .table-content,
+  &.mdc-drawer--open ~ footer {
+    width: calc(100% - 255px);
   }
 }

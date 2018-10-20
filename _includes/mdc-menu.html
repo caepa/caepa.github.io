@@ -1,18 +1,49 @@
-<div id="apps-menu" class="mdc-menu" tabindex="-1"  data-mdc-auto-init="MDCMenu">
-  <ul class="mdc-menu__items mdc-list" role="menu" aria-hidden="true">
-    <li class="mdc-list-group__subheader">www.caepa.org</li>
-    <li class="mdc-list-item" role="menuitem" tabindex="0"><i class="material-icons mdc-list-item__graphic">assignment</i><a href="{{ "bylaws" | absolute_url }}" target="_self">Bylaws</a></li>
-    <li class="mdc-list-item" role="menuitem" tabindex="0"><i class="material-icons mdc-list-item__graphic">info</i><a href="{{ "factsheets" | absolute_url }}" target="_self">Factsheets</a></li>
-    <li class="mdc-list-item" role="menuitem" tabindex="0"><i class="material-icons mdc-list-item__graphic">description</i><a href="{{ "forms" | absolute_url}}" target="_self">Forms</a></li>
-    <li class="mdc-list-item" role="menuitem" tabindex="0"><i class="material-icons mdc-list-item__graphic">event</i><a href="{{ "professional-learning" | absolute_url }}" target="_self">Professional Learning</a></li>
-    <li class="mdc-list-item" role="menuitem" tabindex="0"><i class="material-icons mdc-list-item__graphic">extension</i><a href="{{ "resources" | absolute_url }}" target="_self">Resource Sharing</a></li>
-    <li class="mdc-list-item" role="menuitem" tabindex="0"><i class="material-icons mdc-list-item__graphic">history</i><a href="{{ "timeline" | absolute_url }}" target="_self">Timeline History</a></li>
+<div id="apps-menu" class="mdc-menu mdc-menu-surface" tabindex="-1">
+  <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
+
+    <span class="mdc-list-group__subheader">www.caepa.org</span>
+    <a class="mdc-list-item" role="menuitem" href="{{ "bylaws" | absolute_url }}" target="_self">
+      <i class="mdc-list-item__graphic material-icons">assignment</i>
+      <span class="mdc-list-item__text">Bylaws</span>
+    </a>
+    <a class="mdc-list-item" role="menuitem" href="{{ "factsheets" | absolute_url }}" target="_self">
+      <i class="mdc-list-item__graphic material-icons">info</i>
+      <span class="mdc-list-item__text">Factsheets</span>
+    </a>
+    <a class="mdc-list-item" role="menuitem" href="{{ "forms" | absolute_url}}" target="_self">
+      <i class="mdc-list-item__graphic material-icons">description</i>
+      <span class="mdc-list-item__text">Forms</span>
+    </a>
+    <a class="mdc-list-item" role="menuitem" href="{{ "professional-learning" | absolute_url }}" target="_self">
+      <i class="mdc-list-item__graphic material-icons">event</i>
+      <span class="mdc-list-item__text">Professional Learning</span>
+    </a>
+    <a class="mdc-list-item" role="menuitem" href="{{ "resources" | absolute_url }}" target="_self">
+      <i class="mdc-list-item__graphic material-icons">extension</i>
+      <span class="mdc-list-item__text">Resource Sharing</span>
+    </a>
+    <a class="mdc-list-item" role="menuitem" href="{{ "timeline" | absolute_url }}" target="_self">
+      <i class="mdc-list-item__graphic material-icons">history</i>
+      <span class="mdc-list-item__text">Timeline History</span>
+    </a>
+
+    <div class="mdc-list-divider" role="separator"></div>
+
+    <span class="mdc-list-group__subheader">news.caepa.org</span>
     <span id="news-caepa-org-menu">
-      <li class="mdc-list-divider" role="separator"></li>
-      <li class="mdc-list-group__subheader">news.caepa.org</li>
-      <li class="mdc-list-item" role="menuitem" tabindex="0"><i class="material-icons mdc-list-item__graphic">looks_one</i><a href="http://news.caepa.org" target="_self">Welcome</a></li>
-      <li class="mdc-list-item" role="menuitem" tabindex="0"><i class="material-icons mdc-list-item__graphic">looks_two</i><a href="{{ "/contribute" | prepend: "http://news.caepa.org" }}" target="_self">Contribute</a></li>
-      <li class="mdc-list-item" role="menuitem" tabindex="0"><i class="material-icons mdc-list-item__graphic">looks_3</i><a href="{{ "/subscribe" | prepend: "http://news.caepa.org" }}" target="_self">Subscribe</a></li>
+      <a class="mdc-list-item" role="menuitem" href="http://news.caepa.org" target="_self">
+        <i class="mdc-list-item__graphic material-icons">looks_one</i>
+        <span class="mdc-list-item__text">Welcome</span>
+      </a>
+      <a class="mdc-list-item" role="menuitem" href="{{ "/contribute" | prepend: "http://news.caepa.org" }}" target="_self">
+        <i class="mdc-list-item__graphic material-icons">looks_two</i>
+        <span class="mdc-list-item__text">Contribute</span>
+      </a>
+      <a class="mdc-list-item" role="menuitem" href="{{ "/subscribe" | prepend: "http://news.caepa.org" }}" target="_self">
+        <i class="mdc-list-item__graphic material-icons">looks_3</i>
+        <span class="mdc-list-item__text">Subscribe</span>
+      </a>
     </span>
+
   </ul>
 </div>
