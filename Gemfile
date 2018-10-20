@@ -5,7 +5,7 @@ require 'open-uri'
 versions = JSON.parse(open('https://pages.github.com/versions.json').read)
 
 # gem 'github-pages', versions['github-pages'], group: :jekyll_plugins
-gem 'github-pages', versions['191'], group: :jekyll_plugins
+gem 'github-pages', versions['192'], group: :jekyll_plugins
 gem 'html-proofer'
 
 # See: https://jekyllrb.com/docs/windows/#auto-regeneration
