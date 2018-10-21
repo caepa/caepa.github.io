@@ -20,7 +20,8 @@
     },
     {
       "award": "Ann Deditz Scholarship",
-      "nominee": "Diana Rangl"
+      "nominee": "Diana Rangl",
+      "nominator": "Self"
     },
     {
       "award": "Outstanding Organization in Supporting Adult Education",
@@ -256,18 +257,10 @@
       "co-leaders": "none",
       "session": "Wednesday, Session 6",
       "location": "Ballroom D 1",
-      "title": "Experiential Learning Step By Step: How to Plan and Facilitate Using This Powerful Teaching Method"
-    },
-    {
-      "name": "Leann Kaiser",
-      "vendor": "No",
-      "job-title": "Assistant Professor",
-      "employer": "Colorado State University",
-      "biography": "Drs. Leann Kaiser, Kalpana Gupta, and Jill Zarestky are Assistant Professors at Colorado State University in the Adult Education and Training master's degree specialization. They have varying areas of expertise in the field of adult education, including adult teaching and learning theory, creating inclusive learning environments, online learning, mindfulness, community based learning, and STEM education.",
-      "co-leaders": "Kalpana Gupta, Jill Zarestky",
-      "session": "Wednesday, Session 8",
-      "location": "Bentley upstairs",
-      "title": "I'm Not a “Theory” Person: Practical Ideas and Applications to Help YOU Use Theory to Improve Your Teaching"
+      "title": "Experiential Learning Step By Step: How to Plan and Facilitate Using This Powerful Teaching Method",
+      "session2": "Wednesday, Session 8",
+      "location2": "Bentley upstairs",
+      "title2": "I'm Not a “Theory” Person: Practical Ideas and Applications to Help YOU Use Theory to Improve Your Teaching"
     },
     {
       "name": "Liz Lanphear",
