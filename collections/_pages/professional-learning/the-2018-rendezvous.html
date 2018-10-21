@@ -36,9 +36,30 @@ relatedItems:
     url: "http://doubletree.hilton.com/en/dt/groups/personalized/D/DENNSDT-CAE-20181021/index.jhtml"
 
 docs:
-  # - title: ""
-  #   url: ""
-
+  -
+    title: "2018 Rendezvous"
+    image: "https://source.unsplash.com/fDzQTTDI7bs/170x220"
+    url: "/professional-learning/the-2018-rendezvous"
+  -
+    title: "PDF: Program & Schedule"
+    image: "https://drive.google.com/thumbnail?id=1deBSNHAJHI0w8qWyify1c7wwD_X9uNQR"
+    url: "/professional-learning/the-2018-rendezvous/program"
+  -
+    title: "Awards"
+    image: "https://source.unsplash.com/Xaanw0s0pMk/170x220"
+    url: "/professional-learning/the-2018-rendezvous/awards"
+  -
+    title: "Keynotes"
+    image: "https://source.unsplash.com/FpkXoY51lg8/170x220"
+    url: "/professional-learning/the-2018-rendezvous/keynotes"
+  -
+    title: "Presenters"
+    image: "https://source.unsplash.com/QrqeusbpFMM/170x220"
+    url: "/professional-learning/the-2018-rendezvous/presenters"
+  -
+    title: "Sessions"
+    image: "https://source.unsplash.com/MAYsdoYpGuk/170x220"
+    url: "/professional-learning/the-2018-rendezvous/sessions"
 ---
 <article itemscope itemtype="http://schema.org/Event">
   <span itemprop="name" content="{{ page.title }}" />
@@ -73,7 +94,10 @@ docs:
   <p>Requests for payment will be sent after registration and the proposal deadline in order to offer a presenter discount. Instructions for payments will be sent to the "Contact for payment" identified during registration.</p>
 </article>
 
-<img src="https://drive.google.com/thumbnail?id=1deBSNHAJHI0w8qWyify1c7wwD_X9uNQR">
+<h2 class="mdc-typography--headline2">Schedule</h2>
+{%- include google-charts__schedule.js -%}
+
+{%- include mdc-image-list__rendezvous.html -%}
 
 <article>
   <h2 class="mdc-typography--headline2">Thanks to our {{ page.year }} Sponsors</h2>

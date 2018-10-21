@@ -1,0 +1,66 @@
+---
+year: 2018
+title: "The 2018 Rendezvous"
+theme: "From Here to Anywhere: Innovation, Opportunity, and Action"
+docs:
+  -
+    title: "2018 Rendezvous"
+    image: "https://source.unsplash.com/fDzQTTDI7bs/170x220"
+    url: "/professional-learning/the-2018-rendezvous"
+  -
+    title: "PDF: Program & Schedule"
+    image: "https://drive.google.com/thumbnail?id=1deBSNHAJHI0w8qWyify1c7wwD_X9uNQR"
+    url: "/professional-learning/the-2018-rendezvous/program"
+  -
+    title: "Awards"
+    image: "https://source.unsplash.com/Xaanw0s0pMk/170x220"
+    url: "/professional-learning/the-2018-rendezvous/awards"
+  -
+    title: "Keynotes"
+    image: "https://source.unsplash.com/FpkXoY51lg8/170x220"
+    url: "/professional-learning/the-2018-rendezvous/keynotes"
+  -
+    title: "Presenters"
+    image: "https://source.unsplash.com/QrqeusbpFMM/170x220"
+    url: "/professional-learning/the-2018-rendezvous/presenters"
+  -
+    title: "Sessions"
+    image: "https://source.unsplash.com/MAYsdoYpGuk/170x220"
+    url: "/professional-learning/the-2018-rendezvous/sessions"
+---
+<article>
+  <h2 class="mdc-typography--headline2">Keynotes</h2>
+
+  {%- for data in site.data.the-2018-rendezvous-master.keynotes -%}
+    <div class="mdc-card mdc-card--outlined">
+
+      <ul class="mdc-list mdc-list--two-line mdc-list--non-interactive" aria-orientation="vertical">
+        <li class="mdc-list-item">
+          <span class="mdc-list-item__text">{{ data.session }}</span>
+        </li>
+      </ul>
+
+      <div class="mdc-card__primary">
+        <h3 class="mdc-typography--headline3">{{ data.name }}</h3>
+      </div>
+
+      <ul class="mdc-list mdc-list--two-line mdc-list--non-interactive" aria-orientation="vertical">
+        <li class="mdc-list-item">
+          <span class="mdc-list-item__text">
+            <span class="mdc-list-item__primary-text">{{ data.title }}</span>
+            <span class="mdc-list-item__secondary-text">{{ data.organization }}</span>
+          </span>
+        </li>
+      </ul>
+
+      <div class="mdc-card__secondary">
+        <span class="mdc-typography--headline4">Biography</span>
+        <p>{{ data.biography | markdownify }}</p>
+      </div>
+
+    </div>
+  {%- endfor -%}
+
+</article>
+
+{%- include mdc-image-list__rendezvous.html -%}
