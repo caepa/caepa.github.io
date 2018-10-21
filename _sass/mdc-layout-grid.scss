@@ -77,7 +77,7 @@ main + footer {
 }
 
 // tablet
-@media (max-width: 839px) and (min-width: 480px) {
+@media (max-width: 839px) and (min-width: 550px) { // 480px
 
   .mdc-layout-grid__cell--span-8:first-child {
     grid-column-start: 2;
@@ -86,7 +86,7 @@ main + footer {
 }
 
 // phone
-@media (max-width: 479px) {
+@media (max-width: 549px) { // 479px
 
   .mdc-layout-grid__cell--span-8:first-child {
     grid-column-start: 1;
