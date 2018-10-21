@@ -73,12 +73,18 @@ docs:
   <p>Requests for payment will be sent after registration and the proposal deadline in order to offer a presenter discount. Instructions for payments will be sent to the "Contact for payment" identified during registration.</p>
 </article>
 
+<img src="https://drive.google.com/thumbnail?id=1deBSNHAJHI0w8qWyify1c7wwD_X9uNQR">
+
 <article>
   <h2 class="mdc-typography--headline2">Thanks to our {{ page.year }} Sponsors</h2>
-  {% include mdc-image-list__sponsors.html %}
+  {% include mdc-card__sponsors.html %}
+
+  <h2 class="mdc-typography--headline2">...and to our Vendors</h2>
+  {% include mdc-list__vendors.html %}
+
 </article>
 
-
+{%- comment -%} // this articles contents is closed
 <article>
   {%- for collection in site.rendezvous -%}
     <div class="mdc-card mdc-card--outlined">
@@ -98,3 +104,4 @@ docs:
     </div>
   {%- endfor -%}
 </article>
+{%- endcomment -%}

@@ -37,6 +37,10 @@ $theme-tertiary: #CC9933;
 a {
   color: $theme-primary;
   font-weight: bold;
+
+  &.mdc-list-item__meta {
+    text-decoration: none;
+  }
 }
 
 b, strong {
