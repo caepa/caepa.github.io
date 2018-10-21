@@ -39,6 +39,17 @@ main + footer {
   }
 }
 
+.mdc-drawer--open ~ main .mdc-layout-grid__cell--span-8:first-child {
+  @media (min-width: 1024px) {
+    grid-column-start: 2;
+    grid-column-end: span 10;
+  }
+  @media (max-width: 1023px) {
+    grid-column-start: 1;
+    grid-column-end: span 8;
+  }
+}
+
 // large desktop
 @media (min-width: 1440px) {
 
@@ -50,16 +61,6 @@ main + footer {
 
 // desktop
 @media (min-width: 1024px) {
-
-  .mdc-drawer--persistent {
-    position: fixed;
-
-    &.mdc-drawer--open + main,
-    &.mdc-drawer--open + main + footer,
-    &.mdc-drawer--open + iframe {
-      padding-left: 320px;
-    }
-  }
 
   .mdc-layout-grid__cell--span-8:first-child {
     grid-column-start: 3;
