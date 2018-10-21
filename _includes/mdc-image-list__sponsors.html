@@ -5,8 +5,9 @@
   <li class="mdc-image-list__item">
     <a href="{{ item.url }}">
       <div class="mdc-image-list__image-aspect-container mdc-ripple-surface">
-        <img class="mdc-image-list__image" src="{{ item.twitter }}/profile_image?size=original" aria-hidden="true">
-        {%- comment -%}<img class="mdc-image-list__image" src="{{ item.facebook | replace: "www", "graph" }}/picture?type=large" aria-hidden="true">{%- endcomment-%}
+        <img class="mdc-image-list__image" src="{{ item.img | prepend: "assets/img/sponsors/" | relative_url }}" aria-hidden="true">
+        {%- comment -%} <img class="mdc-image-list__image" src="{{ item.twitter }}/profile_image?size=original" aria-hidden="true"> {%- endcomment -%}
+        {%- comment -%} <img class="mdc-image-list__image" src="{{ item.facebook | replace: "www", "graph" }}/picture?type=large" aria-hidden="true"> {%- endcomment -%}
       </div>
       <div class="mdc-image-list__supporting">
         <span class="mdc-image-list__label">{{ item.title }}</span>
