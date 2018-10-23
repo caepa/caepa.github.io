@@ -79,7 +79,7 @@
       [ 'Ballroom B', 'Anne Petti & Valerie Gantzler, A Tale of Two Career Pathway Programs',              new Date(2018,09,24,13,15,0),  new Date(2018,09,24,14,00,0) ],
       [ 'Ballroom B', 'Ellen Klement, Emotions in Motion',          new Date(2018,09,24,14,15,0), new Date(2018,09,24,15,00,0) ],
 
-      [ 'Ballroom C', 'Steven Gold, Universal Design',             new Date(2018,09,24,09,45,0),  new Date(2018,09,24,10,30,0) ],
+      [ 'Ballroom C', 'Cedric Lindsay & Sarah Secrist, Growth Mindset',            new Date(2018,09,24,09,45,0),  new Date(2018,09,24,10,30,0) ],
       [ 'Ballroom C', 'Marsea Wynne, Career Path-ways Navigators Meeting',          new Date(2018,09,24,10,45,0),  new Date(2018,09,24,11,30,0) ],
       [ 'Ballroom C', 'George O’Clair, Brenda Zion Education working inside a corporation',              new Date(2018,09,24,13,15,0),  new Date(2018,09,24,14,00,0) ],
 
@@ -87,8 +87,8 @@
       [ 'Ballroom CD', 'Keynote Speakers Danielle Ongart & Dr. Misty Stroud',         new Date(2018,09,24,08,30,0), new Date(2018,09,24,9,45,0) ],
       [ 'Ballroom CD', 'Lunch & Keynote Speaker Kathryn Wisner',                     new Date(2018,09,24,11,45,0), new Date(2018,09,24,13,00,0) ],
 
-      [ 'Ballroom D1', 'Cedric Lindsay & Sarah Secrist, Growth Mindset',            new Date(2018,09,24,09,45,0),  new Date(2018,09,24,10,30,0) ],
-      [ 'Ballroom D1', 'Leann Kaiser, Experiental Learning',         new Date(2018,09,24,10,45,0),  new Date(2018,09,24,11,30,0) ],
+      [ 'Ballroom D1', 'Leann Kaiser, Experiental Learning - Part I',         new Date(2018,09,24,09,45,0),  new Date(2018,09,24,10,30,0) ],
+      [ 'Ballroom D1', 'Leann Kaiser, Experiental Learning - Part II',         new Date(2018,09,24,10,45,0),  new Date(2018,09,24,11,30,0) ],
       [ 'Ballroom D1', 'Kathryn Wisner, K-12 school district lingo',             new Date(2018,09,24,13,15,0),  new Date(2018,09,24,14,00,0) ],
       [ 'Ballroom D1', 'Kathryn Wisner, ABE Programs',         new Date(2018,09,24,14,15,0), new Date(2018,09,24,15,00,0) ],
 
