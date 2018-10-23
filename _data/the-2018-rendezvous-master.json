@@ -151,7 +151,7 @@
       "biography": "Being welcomed into The Learning Source as Student Success Coach, Cedric has experience in K-12 education, Colorado Community College Systems, and Adult Education. Previously with the Adams 14 Adult Learning Center, he taught all levels of adult education and worked to further career services through developing business relationships, resume preparation, and creating student-centered workshops. Most recently, working for The Learning Source, building connections with community leaders and businesses while helping adult students increase persistence and discover their potential.",
       "co-leaders": "n/a",
       "session": "Wednesday, Session 5",
-      "location": "Ballroom D 1",
+      "location": "Ballroom C",
       "title": "Growth Mindset"
     },
     {
@@ -255,7 +255,7 @@
       "employer": "Colorado State University",
       "biography": "Leann Kaiser holds a Ph.D. in adult and post-secondary education from the University of Wyoming, a M.S. from Arizona State University, and a B.S. from the University of Wyoming. Leann's teaching and research interests encompass adult teaching and learning theory, learning transfer, experiential learning, and distance student educational experiences. Leann has taught in the fields of adult education and outdoor education at the post-secondary level since 2001. Her other professional experience includes work in natural resource education programming and public land management.",
       "co-leaders": "none",
-      "session": "Wednesday, Session 6",
+      "session": "Wednesday, Session 5 & 6",
       "location": "Ballroom D 1",
       "title": "Experiential Learning Step By Step: How to Plan and Facilitate Using This Powerful Teaching Method",
       "session2": "Wednesday, Session 8",
@@ -424,7 +424,7 @@
       "session": "Tuesday, Session 1",
       "location": "Ballroom B",
       "title": "The Cooperative Enterprise: Facilitating Multilevel & Multidisciplinary Classes",
-      "objective": "1. Identify strengths and weaknesses of teaching multilevel, multidisciplinary classes. 2. Analyze different classroom structures to fit each program’s needs. ",
+      "objective": "1. Identify strengths and weaknesses of teaching multilevel, multidisciplinary classes.\n 2. Analyze different classroom structures to fit each program’s needs. ",
       "audience": "Students, Faculty, Admin, Partners",
       "abstract": "Multi-level, multi-subject classes? Limited number of instructors? Students in need of math instruction, but restricted to a language location or schedule? Learners entering the class mid-term? These are common adult education struggles. Learn from Pikes Peak Library District Adult Education’s ongoing journey as we adapt from traditional instruction to multiple levels and subjects in a single classroom, without students feeling neglected. In this session, we will discuss program struggles and successes, apprehensions and initial resistance to this shift, and provide suggestions and resources to take this dialogue into your own programs.",
       "strand": "Best Practices, Diverse Learners, Evidence & Research to Practice"
@@ -473,7 +473,7 @@
       "session": "Tuesday, Session 1 & 2",
       "location": "Ballroom C",
       "title": "Online Learning - Yes, you can!",
-      "objective": "1) Explore the value in integrating digital literacy skills and using online learning platforms in ESL, ABE and ASE courses\n2) Identify barriers in using blended and/or distance learning models\n3) Reflect on your use of blended and/or distance learning and compare this to to the experience of adult educators at ACSD14 Adult Learning Center\n4) Identify opportunities to integrate blended and/or distance learning at your program or expand upon what you are doing",
+      "objective": "1). Explore the value in integrating digital literacy skills and using online learning platforms in ESL, ABE and ASE courses\n2. Identify barriers in using blended and/or distance learning models\n3. Reflect on your use of blended and/or distance learning and compare this to to the experience of adult educators at ACSD14 Adult Learning Center\n4. Identify opportunities to integrate blended and/or distance learning at your program or expand upon what you are doing",
       "audience": "Faculty, Admin",
       "abstract": "Is your goal to help your learners be independent and self sufficient - in and out of your classroom? If so, it is imperative that they are able to take control of their learning. In the 21st Century, one way to do this is through the effective use of portable electronic devices and computers. Participants will begin by exploring the value of integrating digital literacy skills and using online learning platforms in ESL, ABE and ASE courses. It is easy to get hung up on all the reasons why this is difficult. We will acknowledge the elephant in the room...provide a resource list for adult educators and learners to get low cost internet service and computers...and move on. We will share our program’s unique, recently implemented, approach to introducing online learning. It has been a bumpy road, but it is worth it. We will share what learners say about our approach. We will share about the platforms we use. There will be opportunity for questions and for you to share what has worked for you. End your time with us by identifying opportunities to integrate online learning at your program or expand upon what you are doing.",
       "strand": "Best Practices, Digital Literacy"
@@ -696,12 +696,27 @@
       "biography": "Being welcomed into The Learning Source as Student Success Coach, Cedric has experience in K-12 education, Colorado Community College Systems, and Adult Education. Previously with the Adams 14 Adult Learning Center, he taught all levels of adult education and worked to further career services through developing business relationships, resume preparation, and creating student-centered workshops. Most recently, working for The Learning Source, building connections with community leaders and businesses while helping adult students increase persistence and discover their potential.",
       "co-leaders": "n/a",
       "session": "Wednesday, Session 5",
-      "location": "Ballroom D 1",
+      "location": "Ballroom C",
       "title": "Growth Mindset",
-      "objective": "1.) How do we praise students?\n2.) How do we react to mistakes?\n3.) Tie achievement to effort rather than talent",
+      "objective": "1. How do we praise students?\n2. How do we react to mistakes?\n3. Tie achievement to effort rather than talent",
       "audience": "Students, Faculty, Admin",
       "abstract": "Dr. Carol S. Dweck has pioneered some of the most influential research on the concept of Growth Mindset - the influence of the way in which students are praised and interacted with that can either greatly increase/decrease persistence. As a person's outlook can change, their concept of what is possible for them can change, too. Our question now becomes: How do we use this methodology and concept to better serve adult learners? Attend this session to become more familiar with Growth/Fixed Mindsets and how student's perceptions of their mistakes and accomplishments affect their willingness to persist. ",
       "strand": "Evidence & Research to Practice"
+    },
+    {
+      "name": "Leann Kaiser",
+      "vendor": "No",
+      "job-title": "Assistant Professor",
+      "employer": "Colorado State University",
+      "biography": "Leann Kaiser holds a Ph.D. in adult and post-secondary education from the University of Wyoming, a M.S. from Arizona State University, and a B.S. from the University of Wyoming. Leann's teaching and research interests encompass adult teaching and learning theory, learning transfer, experiential learning, and distance student educational experiences. Leann has taught in the fields of adult education and outdoor education at the post-secondary level since 2001. Her other professional experience includes work in natural resource education programming and public land management.",
+      "co-leaders": "none",
+      "session": "Wednesday, Session 5 & 6",
+      "location": "Ballroom D 1",
+      "title": "Experiential Learning Step By Step: How to Plan and Facilitate Using This Powerful Teaching Method",
+      "objective": "1. Participants will be introduced to the five tenets of experiential learning and when/why to use it.\n2. Participants will engage in experiential learning activities and recognize how/were the five tenets are present in these activities.\n3. Participants will be guided in a process to help them create an experiential learning lesson for use in their own professional context.",
+      "audience": "Students, Faculty, Admin, Partners",
+      "abstract": "Experiential learning is a popular concept and many adult educators find value in using it as a teaching method. But successfully planning and facilitating experiential learning takes skill, practice, and knowledge.\n\nDuring this session the presenter will explain the five tenets of experiential learning. When and why experiential learning can be an effective facilitation method to use will also be explored. During the session, participants will have the opportunity to actually engage in experiential learning activities in order to understand, first-hand, how the five tenets can be applied in practice. Participants will also have the opportunity to begin designing their own experiential learning activity that they can utilize with learners in their own professional teaching settings.",
+      "strand": "Best Practices, Evidence & Research to Practice"
     },
     {
       "name": "Talya Clay",
@@ -768,21 +783,6 @@
       "strand": "Best Practices, College & Career Transitions, Workforce Development"
     },
     {
-      "name": "Leann Kaiser",
-      "vendor": "No",
-      "job-title": "Assistant Professor",
-      "employer": "Colorado State University",
-      "biography": "Leann Kaiser holds a Ph.D. in adult and post-secondary education from the University of Wyoming, a M.S. from Arizona State University, and a B.S. from the University of Wyoming. Leann's teaching and research interests encompass adult teaching and learning theory, learning transfer, experiential learning, and distance student educational experiences. Leann has taught in the fields of adult education and outdoor education at the post-secondary level since 2001. Her other professional experience includes work in natural resource education programming and public land management.",
-      "co-leaders": "none",
-      "session": "Wednesday, Session 6",
-      "location": "Ballroom D 1",
-      "title": "Experiential Learning Step By Step: How to Plan and Facilitate Using This Powerful Teaching Method",
-      "objective": "1. Participants will be introduced to the five tenets of experiential learning and when/why to use it.\n2. Participants will engage in experiential learning activities and recognize how/were the five tenets are present in these activities.\n3. Participants will be guided in a process to help them create an experiential learning lesson for use in their own professional context.",
-      "audience": "Students, Faculty, Admin, Partners",
-      "abstract": "Experiential learning is a popular concept and many adult educators find value in using it as a teaching method. But successfully planning and facilitating experiential learning takes skill, practice, and knowledge.\n\nDuring this session the presenter will explain the five tenets of experiential learning. When and why experiential learning can be an effective facilitation method to use will also be explored. During the session, participants will have the opportunity to actually engage in experiential learning activities in order to understand, first-hand, how the five tenets can be applied in practice. Participants will also have the opportunity to begin designing their own experiential learning activity that they can utilize with learners in their own professional teaching settings.",
-      "strand": "Best Practices, Evidence & Research to Practice"
-    },
-    {
       "name": "Dorothea Steinke",
       "vendor": "No",
       "job-title": "owner",
@@ -792,7 +792,7 @@
       "session": "Wednesday, Session 7",
       "location": "Ballroom A",
       "title": "How Big Is It?",
-      "objective": "1) Gain a better physical sense of Power of 10 relationships (positive and negative exponents) in place value.\n2) Learn the vocabulary of very small numbers and their size relationships. ",
+      "objective": "1. Gain a better physical sense of Power of 10 relationships (positive and negative exponents) in place value.\n2. Learn the vocabulary of very small numbers and their size relationships. ",
       "audience": "Students, Faculty",
       "abstract": "We measure things to know how big or small they and to know where they are. We count by “10s” (addition) and “groups of 10” (multiplication) and “groups of groups of 10” (exponents) to make the numbers more manageable when we write them. Adult learners need to understand the size relationships of exponents for science and math tests, and even more so when working in medicine, engineering and other fields. This workshop will provide examples for teaching how exponents change the size of numbers. It will also introduce the vocabulary of very small numbers.",
       "strand": "Best Practices, College & Career Transitions, Workforce Development"
@@ -855,7 +855,7 @@
       "session": "Wednesday, Session 8",
       "location": "Ballroom A",
       "title": "Engaging Learners thru Social Media & Free Marketing Tools",
-      "objective": "(1) Participants will be able to develop a basic social media plan that includes identifying an audience, objectives, content and metrics.\n(2) Participants will be able to describe how online tools (e.g. Facebook) can be used to engage learners, in and outside of the classroom.\n(3) Participants will be able to use marketing tools (e.g. MailChimp) to boost engagement, share resources and successes, and improve outcomes.\n",
+      "objective": "1. Participants will be able to develop a basic social media plan that includes identifying an audience, objectives, content and metrics.\n2. Participants will be able to describe how online tools (e.g. Facebook) can be used to engage learners, in and outside of the classroom.\n3. Participants will be able to use marketing tools (e.g. MailChimp) to boost engagement, share resources and successes, and improve outcomes.",
       "audience": "Faculty, Admin",
       "abstract": "In business, having an online presence is fundamental. It cultivates a wider audience, improves accessibility and builds trust. So how can you harness this awesome power to engage your learners (or other stakeholders) and even improve outcomes? This presentation will provide an overview of social media and free marketing tools that can be used by individuals, programs or organizations to build their online communities. Participants will get a head-start on developing a basic social media plan for their classroom or program; and participants will leave this session with practical uses for social media and innovative ways of using common technologies (such as Google)!",
       "strand": "Advocacy (Emphasis Educate and Elevate), Digital Literacy"
