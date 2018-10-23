@@ -473,7 +473,7 @@
       "session": "Tuesday, Session 1 & 2",
       "location": "Ballroom C",
       "title": "Online Learning - Yes, you can!",
-      "objective": "1). Explore the value in integrating digital literacy skills and using online learning platforms in ESL, ABE and ASE courses\n2. Identify barriers in using blended and/or distance learning models\n3. Reflect on your use of blended and/or distance learning and compare this to to the experience of adult educators at ACSD14 Adult Learning Center\n4. Identify opportunities to integrate blended and/or distance learning at your program or expand upon what you are doing",
+      "objective": "1. Explore the value in integrating digital literacy skills and using online learning platforms in ESL, ABE and ASE courses\n2. Identify barriers in using blended and/or distance learning models\n3. Reflect on your use of blended and/or distance learning and compare this to to the experience of adult educators at ACSD14 Adult Learning Center\n4. Identify opportunities to integrate blended and/or distance learning at your program or expand upon what you are doing",
       "audience": "Faculty, Admin",
       "abstract": "Is your goal to help your learners be independent and self sufficient - in and out of your classroom? If so, it is imperative that they are able to take control of their learning. In the 21st Century, one way to do this is through the effective use of portable electronic devices and computers. Participants will begin by exploring the value of integrating digital literacy skills and using online learning platforms in ESL, ABE and ASE courses. It is easy to get hung up on all the reasons why this is difficult. We will acknowledge the elephant in the room...provide a resource list for adult educators and learners to get low cost internet service and computers...and move on. We will share our program’s unique, recently implemented, approach to introducing online learning. It has been a bumpy road, but it is worth it. We will share what learners say about our approach. We will share about the platforms we use. There will be opportunity for questions and for you to share what has worked for you. End your time with us by identifying opportunities to integrate online learning at your program or expand upon what you are doing.",
       "strand": "Best Practices, Digital Literacy"
@@ -704,21 +704,6 @@
       "strand": "Evidence & Research to Practice"
     },
     {
-      "name": "Leann Kaiser",
-      "vendor": "No",
-      "job-title": "Assistant Professor",
-      "employer": "Colorado State University",
-      "biography": "Leann Kaiser holds a Ph.D. in adult and post-secondary education from the University of Wyoming, a M.S. from Arizona State University, and a B.S. from the University of Wyoming. Leann's teaching and research interests encompass adult teaching and learning theory, learning transfer, experiential learning, and distance student educational experiences. Leann has taught in the fields of adult education and outdoor education at the post-secondary level since 2001. Her other professional experience includes work in natural resource education programming and public land management.",
-      "co-leaders": "none",
-      "session": "Wednesday, Session 5 & 6",
-      "location": "Ballroom D 1",
-      "title": "Experiential Learning Step By Step: How to Plan and Facilitate Using This Powerful Teaching Method",
-      "objective": "1. Participants will be introduced to the five tenets of experiential learning and when/why to use it.\n2. Participants will engage in experiential learning activities and recognize how/were the five tenets are present in these activities.\n3. Participants will be guided in a process to help them create an experiential learning lesson for use in their own professional context.",
-      "audience": "Students, Faculty, Admin, Partners",
-      "abstract": "Experiential learning is a popular concept and many adult educators find value in using it as a teaching method. But successfully planning and facilitating experiential learning takes skill, practice, and knowledge.\n\nDuring this session the presenter will explain the five tenets of experiential learning. When and why experiential learning can be an effective facilitation method to use will also be explored. During the session, participants will have the opportunity to actually engage in experiential learning activities in order to understand, first-hand, how the five tenets can be applied in practice. Participants will also have the opportunity to begin designing their own experiential learning activity that they can utilize with learners in their own professional teaching settings.",
-      "strand": "Best Practices, Evidence & Research to Practice"
-    },
-    {
       "name": "Talya Clay",
       "vendor": "Yes",
       "organization": "National Geographic Learning",
@@ -736,6 +721,21 @@
       "audience": "Faculty",
       "abstract": "How can you prepare adult ESL students for work and academic readiness while keeping them engaged and motivated? English in Action is a standards-based, integrated language learning program featuring authentic National Geographic content. Learners will improve their English proficiency while learning 21st century skills for further education or career pathway.",
       "strand": "College & Career Transitions, Digital Literacy, Workforce Development"
+    },
+    {
+      "name": "Leann Kaiser",
+      "vendor": "No",
+      "job-title": "Assistant Professor",
+      "employer": "Colorado State University",
+      "biography": "Leann Kaiser holds a Ph.D. in adult and post-secondary education from the University of Wyoming, a M.S. from Arizona State University, and a B.S. from the University of Wyoming. Leann's teaching and research interests encompass adult teaching and learning theory, learning transfer, experiential learning, and distance student educational experiences. Leann has taught in the fields of adult education and outdoor education at the post-secondary level since 2001. Her other professional experience includes work in natural resource education programming and public land management.",
+      "co-leaders": "none",
+      "session": "Wednesday, Session 5 & 6",
+      "location": "Ballroom D 1",
+      "title": "Experiential Learning Step By Step: How to Plan and Facilitate Using This Powerful Teaching Method",
+      "objective": "1. Participants will be introduced to the five tenets of experiential learning and when/why to use it.\n2. Participants will engage in experiential learning activities and recognize how/were the five tenets are present in these activities.\n3. Participants will be guided in a process to help them create an experiential learning lesson for use in their own professional context.",
+      "audience": "Students, Faculty, Admin, Partners",
+      "abstract": "Experiential learning is a popular concept and many adult educators find value in using it as a teaching method. But successfully planning and facilitating experiential learning takes skill, practice, and knowledge.\n\nDuring this session the presenter will explain the five tenets of experiential learning. When and why experiential learning can be an effective facilitation method to use will also be explored. During the session, participants will have the opportunity to actually engage in experiential learning activities in order to understand, first-hand, how the five tenets can be applied in practice. Participants will also have the opportunity to begin designing their own experiential learning activity that they can utilize with learners in their own professional teaching settings.",
+      "strand": "Best Practices, Evidence & Research to Practice"
     },
     {
       "name": "Debbie Goldman",
