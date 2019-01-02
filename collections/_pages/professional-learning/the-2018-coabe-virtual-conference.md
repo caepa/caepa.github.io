@@ -3,7 +3,7 @@ year: "2018"
 title: "The 2018 COABE Virtual Conference"
 theme: "Collaborate with your colleagues from around the country in the virtual world!"
 author: "Danielle Ongart"
-availability: true
+availability: false
 
 startDate: "2018-10-25T08:00:00.000"
 endDate: "2018-10-26T17:00:00.000"
