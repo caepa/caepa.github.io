@@ -108,9 +108,7 @@ docs:
   </dl>
   <p>Requests for payment will be sent after registration and the proposal deadline in order to offer a presenter discount. Instructions for payments will be sent to the "Contact for payment" identified during registration.</p>
 
-  //
-  //
-  //
+
   {%- endcomment -%}
 
 </article>
