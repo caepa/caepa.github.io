@@ -41,9 +41,17 @@
         <div class="mdc-layout-grid__inner">
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
             <h1 class="mdc-typography--headline1">Adult Basic Education Authorization</h1>
+            
+            <article class="mdc-card mdc-card--outlined">
 
-            {%- assign page = site.pages | where: 'slug', 'abea' | first -%}
-            {{ page.content }}
+              {%- assign page = site.pages | where: 'slug', 'abea' | first -%}
+              {{ page.excerpt }}
+            
+              <div class="mdc-card__action-buttons">
+                <a href="{{ page.url | absolute_url }}" class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button">Learn more</a>
+                <a href="https://www.cde.state.co.us/cdeadult/instructors/abea" class="mdc-button mdc-card__action mdc-card__action--button">CDE</a>
+              </div>
+            </article>
 
           </div>
         </div>
