@@ -32,8 +32,8 @@ forms:
   - "application-ambassador"
 
 relatedItems:
-  - title: "DoubleTree Reservations"
-    url: "http://doubletree.hilton.com/en/dt/groups/personalized/D/DENNSDT-CAE-20181021/index.jhtml"
+#  - title: "DoubleTree Reservations"
+#    url: "http://doubletree.hilton.com/en/dt/groups/personalized/D/DENNSDT-CAE-20181021/index.jhtml"
 
 docs:
   -
@@ -83,9 +83,4 @@ docs:
       {{ page.endDate | date: date_format }}
     </time>
   </p>
-  
-  //
-  // cut and paste from The 2018 Rendezvous
-  //
-
 </article>
