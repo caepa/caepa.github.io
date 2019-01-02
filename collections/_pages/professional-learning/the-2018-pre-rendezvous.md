@@ -2,7 +2,7 @@
 year: 2018
 title: "The 2018 Pre-Rendezvous"
 theme: "Adult Education Ambassadors: Train the Trainer"
-availability: true
+availability: false
 
 startDate: "2018-10-22T08:00:00.000"
 duration: "8:00 AM - 5:00 PM"

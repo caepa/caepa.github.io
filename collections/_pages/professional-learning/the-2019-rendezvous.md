@@ -1,31 +1,31 @@
 ---
 year: 2018
-title: "The 2018 Rendezvous"
-theme: "From Here to Anywhere: Innovation, Opportunity, and Action"
+title: "The 2019 Rendezvous"
+theme: "SAVE THE DATE"
 author: "George O'Clair, CAEPA President"
-availability: false
+availability: true
 
-startDate: "2018-10-23T08:00:00.000"
-endDate: "2018-10-24T17:00:00.000"
-duration: "8:00 AM - 5:00 PM both days"
-location: "Double Tree by Hilton"
-address: "8773 Yates Drive"
-city: "Westminster"
-state: "CO"
-zipcode: "80031"
-phone: "(303) 427-4000"
-hotel: "Double Tree by Hilton"
-hotel-address: "8773 Yates Drive"
-hotel-city-state-zipcode: "Westminster, CO 80031"
-reservations-phone: "(303) 427-4000"
-price1-title: "Two-day registration (General)"
-price1: "175.00"
-price2-title: "w/Presenter discount"
-price2: "150.00"
-price3-title: "w/Mini-conference discount"
-price3: "125.00"
-price4-title: "One-day registration"
-price4: "87.50"
+startDate: "2019-10-10T08:00:00.000"
+endDate: "2019-10-11T17:00:00.000"
+# duration: "8:00 AM - 5:00 PM both days"
+# location: "To be announced"
+# address: "8773 Yates Drive"
+# city: "Westminster"
+# state: "CO"
+# zipcode: "80031"
+# phone: "(303) 427-4000"
+# hotel: "Double Tree by Hilton"
+# hotel-address: "8773 Yates Drive"
+# hotel-city-state-zipcode: "Westminster, CO 80031"
+# reservations-phone: "(303) 427-4000"
+# price1-title: "Two-day registration (General)"
+# price1: "175.00"
+# price2-title: "w/Presenter discount"
+# price2: "150.00"
+# price3-title: "w/Mini-conference discount"
+# price3: "125.00"
+# price4-title: "One-day registration"
+# price4: "87.50"
 
 forms:
   - "rendezvous-registration"
@@ -39,36 +39,37 @@ docs:
   -
     title: "2018 Rendezvous"
     image: "https://source.unsplash.com/fDzQTTDI7bs/220x220"
-    url: "/professional-learning/the-2018-rendezvous"
+    url: "/professional-learning/the-2019-rendezvous"
   -
     title: "PDF: Program & Schedule"
     image: "https://drive.google.com/thumbnail?id=1deBSNHAJHI0w8qWyify1c7wwD_X9uNQR"
-    url: "/professional-learning/the-2018-rendezvous/program"
+    url: "/professional-learning/the-2019-rendezvous/program"
   -
     title: "Awards"
     image: "https://source.unsplash.com/Xaanw0s0pMk/220x220"
-    url: "/professional-learning/the-2018-rendezvous/awards"
+    url: "/professional-learning/the-2019-rendezvous/awards"
   -
     title: "Keynotes"
     image: "https://source.unsplash.com/FpkXoY51lg8/220x220"
-    url: "/professional-learning/the-2018-rendezvous/keynotes"
+    url: "/professional-learning/the-2019-rendezvous/keynotes"
   -
     title: "Presenters"
     image: "https://source.unsplash.com/QrqeusbpFMM/220x220"
-    url: "/professional-learning/the-2018-rendezvous/presenters"
+    url: "/professional-learning/the-2019-rendezvous/presenters"
   -
     title: "Sessions"
     image: "https://source.unsplash.com/MAYsdoYpGuk/220x220"
-    url: "/professional-learning/the-2018-rendezvous/sessions"
+    url: "/professional-learning/the-2019-rendezvous/sessions"
   -
     title: "Session Documents"
     image: "https://source.unsplash.com/MldQeWmF2_g/220x220"
-    url: "/resources/the-2018-rendezvous"
+    url: "/resources/the-2019-rendezvous"
   -
     title: "2019 Vision"
     image: "https://source.unsplash.com/ErO0E8wZaTA/220x220"
     url: "/resources/the-2019-vision"
 ---
+
 <article itemscope itemtype="http://schema.org/Event">
   <span itemprop="name" content="{{ page.title }}" />
   <span itemprop="description" content="{{ page.theme }}" />
@@ -82,6 +83,12 @@ docs:
       {{ page.endDate | date: date_format }}
     </time>
   </p>
+  
+  {%- comment -%}
+  //
+  // remove comment as conference information becomes available
+  //
+  
   <p class="post-meta">{{ page.duration }}</p>
   <div itemprop="location" itemscope itemtype="http://schema.org/Place">
     <span itemprop="name">{{ page.location }}</span>
@@ -100,7 +107,16 @@ docs:
     <span itemprop="priceCurrency" content="USD" />
   </dl>
   <p>Requests for payment will be sent after registration and the proposal deadline in order to offer a presenter discount. Instructions for payments will be sent to the "Contact for payment" identified during registration.</p>
+
+  //
+  //
+  //
+  {%- endcomment -%}
+
 </article>
+
+
+{%- comment -%} // remove comment as conference information becomes available
 
 <h2 class="mdc-typography--headline2">Schedule</h2>
 {%- include google-charts__schedule.js -%}
@@ -116,7 +132,6 @@ docs:
 
 </article>
 
-{%- comment -%} // this articles contents is closed
 <article>
   {%- for collection in site.rendezvous -%}
     <div class="mdc-card mdc-card--outlined">
@@ -136,4 +151,6 @@ docs:
     </div>
   {%- endfor -%}
 </article>
+
+
 {%- endcomment -%}
