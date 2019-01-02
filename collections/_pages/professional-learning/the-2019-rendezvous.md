@@ -84,71 +84,8 @@ docs:
     </time>
   </p>
   
-  {%- comment -%}
   //
-  // remove comment as conference information becomes available
+  // cut and paste from The 2018 Rendezvous
   //
-  
-  <p class="post-meta">{{ page.duration }}</p>
-  <div itemprop="location" itemscope itemtype="http://schema.org/Place">
-    <span itemprop="name">{{ page.location }}</span>
-    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-      <span itemprop="streetAddress">{{ page.address }}</span><br>
-      <span itemprop="addressLocality">{{ page.city }}</span>,
-      <span itemprop="addressRegion"> {{ page.state }}</span>
-      <span itemprop="postalCode"> {{ page.zipcode }}</span>
-    </div>
-  </div>
-  <dl itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-    <dt itemprop="price" content="{{ page.price1 }}">${{ page.price1 }}</dt><dd>{{ page.price1-title }}</dd>
-    <dt itemprop="price" content="{{ page.price2 }}">${{ page.price2 }}</dt><dd>{{ page.price2-title }}</dd>
-    <dt itemprop="price" content="{{ page.price3 }}">${{ page.price3 }}</dt><dd>{{ page.price3-title }}</dd>
-    <dt itemprop="price" content="{{ page.price4 }}">${{ page.price4 }}</dt><dd>{{ page.price4-title }}</dd>
-    <span itemprop="priceCurrency" content="USD" />
-  </dl>
-  <p>Requests for payment will be sent after registration and the proposal deadline in order to offer a presenter discount. Instructions for payments will be sent to the "Contact for payment" identified during registration.</p>
-
-
-  {%- endcomment -%}
 
 </article>
-
-
-{%- comment -%} // remove comment as conference information becomes available
-
-<h2 class="mdc-typography--headline2">Schedule</h2>
-{%- include google-charts__schedule.js -%}
-
-{%- include mdc-image-list__rendezvous.html -%}
-
-<article>
-  <h2 class="mdc-typography--headline2">Thanks to our {{ page.year }} Sponsors</h2>
-  {% include mdc-card__sponsors.html %}
-
-  <h2 class="mdc-typography--headline2">...and to our Vendors</h2>
-  {% include mdc-list__vendors.html %}
-
-</article>
-
-<article>
-  {%- for collection in site.rendezvous -%}
-    <div class="mdc-card mdc-card--outlined">
-      <div class="mdc-card__primary">
-        <h2 class="mdc-typography--headline2">{{ collection.title }}</h2>
-      </div>
-      <div class="mdc-card__secondary">
-        {{ collection.excerpt | markdownify }}
-      </div>
-      <div class="mdc-card__action-buttons">
-        <a href="{{ collection.url | absolute_url }}" class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button">Learn more</a>
-        {%- assign forms = site.forms | where_exp: "item", "item.slug == collection.forms.first" -%}
-        {%- for form in forms -%}
-          <a href="{{ form.url | absolute_url }}" class="mdc-button mdc-card__action mdc-card__action--button">{{ form.title }}</a>
-        {%- endfor -%}
-      </div>
-    </div>
-  {%- endfor -%}
-</article>
-
-
-{%- endcomment -%}
