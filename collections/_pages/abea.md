@@ -8,6 +8,6 @@ The ABEA is not required in order to teach adult basic education in Colorado. It
 **ABEA courses required for the credential:**
 
  * EDU-131 (or EDAE-520) - Introduction to Adult Education
- * EDU-132 (or EDAE 620) - Planning and Delivering Instruction to Adult Learners
- * EDU-133 (or EDAE 590) - Teaching Adult Basic Education (ABE)/Adult Secondary Education (ASE)
- * EDU-134 (or EDAE 590) - Teaching English as a Second Language (ESL) to Adults
+ * EDU-132 (or EDAE-620) - Planning and Delivering Instruction to Adult Learners
+ * EDU-133 (or EDAE-530) - Teaching Adult Basic Education (ABE)/Adult Secondary Education (ASE)
+ * EDU-134 (or EDAE-540) - Teaching English as a Second Language (ESL) to Adults
