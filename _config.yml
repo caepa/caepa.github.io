@@ -85,6 +85,8 @@ sass:
 # Site collections
 collections_dir: collections
 collections:
+  abea:
+    output: false #
   bylaws:
     output: false #
   forms:

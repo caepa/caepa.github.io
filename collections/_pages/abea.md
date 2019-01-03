@@ -11,3 +11,15 @@ The ABEA is not required in order to teach adult basic education in Colorado. It
  * EDU-132 (or EDAE-620) - Planning and Delivering Instruction to Adult Learners
  * EDU-133 (or EDAE-530) - Teaching Adult Basic Education (ABE)/Adult Secondary Education (ASE)
  * EDU-134 (or EDAE-540) - Teaching English as a Second Language (ESL) to Adults
+
+{% for collection in site[page.slug] %}
+  <article>
+
+   {%- unless collection.available == FALSE -%}
+    <h2 class="mdc-typography--headline2">{{ collection.title }}</h2>
+   {%- endunless -%}
+
+   {{ collection.content | markdownify }}
+
+  </article>
+{% endfor %}
