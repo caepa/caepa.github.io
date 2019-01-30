@@ -1,8 +1,8 @@
 ---
 year: 2017
-
 title: MPAEA / UAACCE Professional Development Conference
 author: MPAEA
+availability: false
 
 start_date: 2017-04-11 18:30
 end_date: 2017-04-13 16:30
