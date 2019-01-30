@@ -3,6 +3,7 @@ year: 2019
 title: "Literacy Coalition"
 theme: "Workshops"
 author: "Dorothea Steinke, Literacy Coalition of Colorado"
+registration: "https://lccfeb2019.eventzilla.net"
 availability: true
 
 ---
