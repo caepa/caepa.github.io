@@ -1,5 +1,7 @@
 ---
 title: The 2018 Mini Conference
+availability: false
+
 ---
 **All Things Assessment: Tools and Tips for Improving Program Outcomes**
 
