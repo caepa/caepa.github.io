@@ -3,7 +3,7 @@ year: 2018
 title: "The 2018 Rendezvous"
 theme: "From Here to Anywhere"
 author: "George O'Clair, CAEPA President"
-availability: true
+availability: false
 
 docs:
   # - title: ""
