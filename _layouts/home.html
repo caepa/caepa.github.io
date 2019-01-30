@@ -67,11 +67,10 @@
             {%- assign page = site.pages | where: 'slug', 'professional-learning' | first -%}
             {{ page.content }}
             
-            {%- assign pages = site.professional-learning | where: 'availability', 'true' -%}
+            {%- assign pages = site.categories | where: 'categories', 'professional-learning' | where: 'availability', 'true' -%}
               {%- for page in pages -%}
                 <article class="mdc-card mdc-card--outlined">
-
-                  {%- assign page = site.pages | where: 'slug', 'abea' | first -%}
+                  
                   {{ page.excerpt }}
 
                   <div class="mdc-card__action-buttons">
