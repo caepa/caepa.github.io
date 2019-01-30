@@ -1,8 +1,8 @@
 ---
 title: Colfax Marathon
-
 start_date: 2016-05-14 09:00
 end_date: 2016-05-15
+availability: false
 
 image_path: /img/events/colfax_marathon.jpg
 event_url: http://www.runcolfax.org
