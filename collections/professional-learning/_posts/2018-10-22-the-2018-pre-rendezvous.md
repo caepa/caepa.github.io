@@ -2,7 +2,7 @@
 year: "2018"
 title: "The 2018 Pre-Rendezvous"
 theme: "Adult Education Ambassadors Train the Trainer"
-availability: true
+availability: false
 
 forms:
   - title: "Registration"
