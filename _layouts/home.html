@@ -70,14 +70,14 @@
             {%- assign pages = site.posts | where: 'categories', 'professional-learning' | where: 'availability', 'true' -%}
               {%- for page in pages -%}
                 <article class="mdc-card mdc-card--outlined">
-                  
-                  {{ page.excerpt }}
+                  <h2 class="mdc-typography--headline2">{{ page.title }}</h2>
+                  <span>{{ page.excerpt }}</span>
 
                   <div class="mdc-card__action-buttons">
                     <a href="{{ page.url | absolute_url }}" class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button">Learn more</a>
                     
                     {%- if page.registration -%}
-                      <a href="{{ page.register }}" class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button">Register</a>
+                      <a href="{{ page.registration }}" class="mdc-button mdc-button mdc-card__action mdc-card__action--button">Register</a>
                     {%- endif -%}
                     
                   </div>
