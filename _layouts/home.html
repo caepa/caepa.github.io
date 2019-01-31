@@ -67,7 +67,7 @@
             {%- assign page = site.pages | where: 'slug', 'professional-learning' | first -%}
             {{ page.content }}
             
-            {%- assign pages = site.categories | where: 'categories', 'professional-learning' | where: 'availability', 'true' -%}
+            {%- assign pages = site.posts | where: 'categories', 'professional-learning' | where: 'availability', 'true' -%}
               {%- for page in pages -%}
                 <article class="mdc-card mdc-card--outlined">
                   
