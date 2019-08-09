@@ -1,19 +1,19 @@
 ---
-year: 2018
+year: 2019
 title: "The 2019 Rendezvous"
-theme: "SAVE THE DATE"
+theme: "Moving It Forward"
 author: "George O'Clair, CAEPA President"
 availability: true
 
-startDate: "2019-10-10T08:00:00.000"
-endDate: "2019-10-11T17:00:00.000"
+startDate: "2019-10-11T08:00:00.000"
+endDate: "2019-10-12T17:00:00.000"
 # duration: "8:00 AM - 5:00 PM both days"
-# location: "To be announced"
-# address: "8773 Yates Drive"
-# city: "Westminster"
-# state: "CO"
-# zipcode: "80031"
-# phone: "(303) 427-4000"
+location: "Aims Community College"
+address: "5401 20th St"
+city: "Greeley"
+state: "CO"
+zipcode: "80634"
+phone: "(970) 330-8008"
 # hotel: "Double Tree by Hilton"
 # hotel-address: "8773 Yates Drive"
 # hotel-city-state-zipcode: "Westminster, CO 80031"
@@ -83,4 +83,13 @@ docs:
       {{ page.endDate | date: date_format }}
     </time>
   </p>
+  <div itemprop="location" itemscope itemtype="http://schema.org/Place">
+    <span itemprop="name">{{ page.location }}</span>
+    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+      <span itemprop="streetAddress">{{ page.address }}</span><br>
+      <span itemprop="addressLocality">{{ page.city }}</span>,
+      <span itemprop="addressRegion"> {{ page.state }}</span>
+      <span itemprop="postalCode"> {{ page.zipcode }}</span>
+    </div>
+  </div>
 </article>

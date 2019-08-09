@@ -4,7 +4,7 @@ title: "Adult Education Initiatives"
 theme: "Workshops"
 author: "Danielle Ongart, Director of Adult Education"
 registration: "https://www.surveymonkey.com/r/AEIVisioning"
-availability: true
+availability: false
 
 ---
 **Adult Education Visioning Sessions – Everyone is Welcome!**
