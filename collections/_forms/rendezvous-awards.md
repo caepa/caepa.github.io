@@ -1,5 +1,7 @@
 ---
-title: Awards Nomination Form
-embed_url: "http://goo.gl/forms/REA6Zhz1Lb"
+embed_url: "https://forms.gle/NajZT8HyJuKBjfdn7"
 group: Professional Learning
+image: "/assets/img/caepa/caepa-icon.svg"
+published: false
+title: Awards Nomination Form
 ---

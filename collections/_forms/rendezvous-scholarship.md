@@ -1,5 +1,7 @@
 ---
-title: Ann Deditz Scholarship Form
-embed_url: "http://goo.gl/forms/cnlR1vU8TL"
+embed_url: "https://forms.gle/5QJwttnvKm9PWSSi9"
 group: Professional Learning
+image: "/assets/img/caepa/caepa-icon.svg"
+published: false
+title: Ann Deditz Scholarship Form
 ---

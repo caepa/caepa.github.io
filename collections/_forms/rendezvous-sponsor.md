@@ -1,5 +1,7 @@
 ---
-title: Sponsor & Vendor Registration Form
-embed_url: "http://goo.gl/forms/ur6QNIQAiN"
+embed_url: "https://forms.gle/Ncp1JZPYnYRwG1GM8"
 group: Professional Learning
+image: "/assets/img/caepa/caepa-icon.svg"
+published: true
+title: Sponsor & Vendor Registration Form
 ---

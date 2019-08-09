@@ -1,5 +1,7 @@
 ---
-title: Board of Directors Application Form
-embed_url: "http://goo.gl/forms/6e4Tn0HjrB"
+embed_url: "https://forms.gle/gYcUeSeh5wYCg7i8A"
 group: Applications
+image: "/assets/img/caepa/caepa-icon.svg"
+published: true
+title: Board of Directors Application Form
 ---
