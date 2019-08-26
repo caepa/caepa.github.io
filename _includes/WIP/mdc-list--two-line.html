@@ -1,0 +1,17 @@
+{%- assign category = site.posts | where_exp: "post", "post.categories contains page.categories.first" -%}
+
+<nav class="mdc-list mdc-list--two-line" aria-orientation="vertical">
+
+  {%- for collection in category -%}
+    <a class="mdc-list-item" href="{{ collection.url }}">
+      <span class="mdc-list-item__text">
+        <span class="mdc-list-item__primary-text">{{ collection.title }}</span>
+        <span class="mdc-list-item__secondary-text">
+          {%- assign date_format = site.minima.date_format | default: "%B %-d, %Y" -%}
+          {{ collection.date | date: date_format }}
+        </span>
+      </span>
+    </a>
+  {%- endfor -%}
+
+</nav>
