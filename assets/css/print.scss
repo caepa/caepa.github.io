@@ -1,0 +1,57 @@
+---
+---
+@page {
+  margin: 1in;
+}
+
+@media print {
+
+  header.mdc-top-app-bar,
+  aside.mdc-drawer,
+  main[hero],
+  .mdc-fab,
+  .mdc-card__actions,
+  aside,
+  footer.site-footer {
+    display: none;
+  }
+
+  body,
+  main,
+  main .mdc-toolbar-fixed-adjust,
+  main .mdc-layout-grid,
+  section .mdc-layout-grid,
+  section .mdc-layout-grid__inner,
+  section .mdc-layout-grid,
+  section .mdc-card {
+    background: none;
+    box-shadow: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  article:before {
+    content: url(http://news.caepa.org/assets/img/caepa/caepa-title.svg);
+    display:inline-block;
+    width:2in;
+  }
+
+  article.post {
+    color: rgba(0,0,0,0.87);
+  }
+
+  a {
+    color: #662222;
+  }
+
+  a:after {
+	  content: " <" attr(href) "> ";
+  }
+
+  b, strong {
+    font-weight: 500;
+  }
+
+}
