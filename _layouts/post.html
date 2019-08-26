@@ -1,27 +1,56 @@
 ---
-layout: default__post
+layout: default
+include: "post-related-content.html"
 ---
-<article itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="mdc-typography--headline1" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%B %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
-  </header>
+{%- include mdc-top-app-bar.html -%}
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+{%- include mdc-drawer.html -%}
 
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
+<main id="main-content" class="mdc-top-app-bar--fixed-adjust" aria-label="Content">
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell--span-12">
 
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-</article>
+          <header class="post__header">
+            <p class="post__meta">
+              <time class="post__meta--dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                {{ page.date | date: date_format }}
+              </time>
+              {%- if page.author -%}
+                • <span itemscope itemtype="http://schema.org/Person">
+                    <span class="post__meta--p-author" itemprop="author">{{ page.author | escape }}</span>
+                  </span>
+              {%- endif -%}
+            </p>
+            <h1 class="post__title" itemprop="name headline">{{ page.title | escape }}</h1>
+          </header>
+
+          <div class="post__content" itemprop="articleBody">
+            {{ content }}
+          </div>
+
+          <footer class="post__footer">
+            <!-- Add share links -->
+          </footer>
+
+          <a class="post__url" href="{{ page.url | relative_url }}" hidden></a>
+
+        </div>
+      </div>
+    </div>
+
+    {%- if layout.include -%}
+    <aside id="{{ layout.include | slugify }}">
+
+      {%- include {{ layout.include }} -%}
+
+    </aside>
+    {%- endif -%}
+
+  </article>
+</main>
+
+{%- include footer.html -%}

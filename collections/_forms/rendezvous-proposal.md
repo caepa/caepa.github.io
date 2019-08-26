@@ -1,7 +1,6 @@
 ---
-embed_url: "https://forms.gle/KQc7vBBLTVmfLpDh7"
-group: Professional Learning
-image: "/assets/img/caepa/caepa-icon.svg"
+group: CAEPA Rendezvous
 published: true
+redirect_to: "https://forms.gle/KQc7vBBLTVmfLpDh7"
 title: Presentation Proposal Form
 ---

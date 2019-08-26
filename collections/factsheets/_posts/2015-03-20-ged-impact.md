@@ -34,7 +34,7 @@ What has been the impact of the new, more expensive version of the GED? Accordin
 This apparent drop of over 60% is of grave concern for incumbent workers who need this pathway to post-secondary certificate and workforce training programs leading to family sustainable wages. While data could not be found for Colorado, Washington state's data (<http://restoregedfairness.org>) would be comparable:
 
 
-{% include {{ page.chart-1 }} %}
+{% include_relative {{ page.chart-1 }} %}
 
 [Updated data: July 22, 2018](https://www.wsac.wa.gov/sites/default/files/2016.GED.Report.pdf)
 
@@ -54,7 +54,7 @@ A "2014 Legislative Report on the Skills for Jobs Act" issued by Lt. Governor Jo
 
 **Figure 1: Colorado\'s Current Educational Attainment and Projected Job Requirements**
 
-{% include {{ page.chart-2 }} %}
+{% include_relative {{ page.chart-2 }} %}
 
 Source: [American Community Survey (2011); Carnevale et al. (2013); CCHE (2012)](https://highered.colorado.gov/Publications/Reports/Legislative/Workforce/2014_SkillsforJob.pdf)
 

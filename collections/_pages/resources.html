@@ -1,0 +1,36 @@
+---
+current-view: Resource Sharing
+icon: extension
+layout: page
+permalink: /resources
+slug: resources
+title: Resource Sharing
+---
+
+{%- assign collection_groups = site[page.slug] | group_by: "group" -%}
+
+{%- for group in collection_groups -%}
+<details class="mdc-card mdc-card--outlined">
+
+  <summary class="mdc-card__primary mdc-card__primary--no-margin mdc-card__primary-action">
+    <h2 id="{{ group.name | slugify }}" class="mdc-typography mdc-typography--headline6">{{ group.name }}</h2>
+  </summary>
+
+  <span class="mdc-list-group">
+    <ul class="mdc-list mdc-list--avatar-list" aria-labelledby="{{ group.name | slugify }}">
+
+      {%- for item in group.items -%}
+      <li>
+        <a class="mdc-list-item" href="{{ item.url | relative_url }}" target="_blank" rel="external noopener noreferrer">
+          <img class="mdc-list-item__graphic material-icons material-icons-outlined" src="{{ item.image }}" aria-hidden="true" />
+          <span class="mdc-list-item__text">{{ item.title }}</span>
+          <span class="mdc-list-item__meta material-icons material-icons-outlined" aria-label="(opens in a new tab)">open_in_new</span>
+        </a>
+      </li>
+      {%- endfor -%}
+
+    </ul>
+  </span>
+
+</details>
+{%- endfor -%}

@@ -1,0 +1,50 @@
+<footer class="site-footer">
+  <div class="site-footer__section">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner mdc-layout-grid__inner--grid-2">
+        <div class="mdc-list-group">
+          <h2 id="site-footer__menu" class="mdc-list-group__subheader">Navigation</h2>
+          <ul class="mdc-list mdc-list--avatar-list" aria-labelledby="site-footer__menu">
+
+            {%- assign pages = site.pages | sort: "title" -%}
+            {%- for post in pages -%}
+            <li>
+              <a class="mdc-list-item" href="{{ post.url | absolute_url }}" {%- if forloop.first %} tabindex="0" {%- endif -%}>
+                <i class="material-icons material-icons-outlined mdc-list-item__graphic" aria-hidden="true">{{ post.icon }}</i>
+                <span class="mdc-list-item__text">{{ post.title }}</span>
+              </a>
+            </li>
+            {%- endfor -%}
+
+          </ul>
+        </div>
+        <div class="mdc-list-group">
+          <h2 id="site-footer__menu2" class="mdc-list-group__subheader">Categories</h2>
+          <ul class="mdc-list mdc-list--avatar-list" aria-labelledby="site-footer__menu2">
+
+            {%- assign categories = site.html_pages | where:"layout","post__category" | sort: "title" -%}
+            {%- for post in categories -%}
+            <li>
+              <a class="mdc-list-item" href="{{ post.url | absolute_url }}" {%- if forloop.first %} tabindex="0" {%- endif -%}>
+                <i class="material-icons material-icons-outlined mdc-list-item__graphic" aria-hidden="true">label</i>
+                <span class="mdc-list-item__text">{{ post.title }}</span>
+              </a>
+            </li>
+            {%- endfor -%}
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mdc-top-app-bar mdc-top-app-bar--bottom">
+    <div class="mdc-top-app-bar__row">
+      <div class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+
+        {%- include social-icons.html -%}
+
+      </div>
+    </div>
+  </div>
+</footer>

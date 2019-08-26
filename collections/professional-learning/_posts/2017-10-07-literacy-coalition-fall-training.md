@@ -1,8 +1,6 @@
 ---
-title: Fall Training Event
-author: Literacy Coalition
-availability: false
-
+title: "Fall Training Event"
+author: "Literacy Coalition"
 ---
 
 Join us for a morning of new ideas and networking.

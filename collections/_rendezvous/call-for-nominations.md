@@ -1,6 +1,7 @@
 ---
+layout: page
 title: "Call for Nominations"
-published: false
+published: true
 
 forms:
   - "rendezvous-awards"

@@ -1,0 +1,65 @@
+{%- assign data = site.data["event-history-master"] | where_exp: "data", "data.year == 2019" -%}
+{%- assign date_format = site.minima.date_format | default: "%A, %B %-d, %Y" -%}
+
+<li class="mdc-card mdc-card--outlined">
+
+  {%- for post in data -%}
+  <header itemscope itemtype="http://schema.org/Event" class="mdc-card__primary mdc-card__primary--no-margin">
+    <span itemprop="name" class="mdc-typography mdc-typography--overline">The {{ post.year }} Rendezvous</span>
+    <h2 itemprop="description" class="mdc-card__post-title">{{ post.theme | escape }}</h2>
+    <p class="mdc-card__post-meta">
+      <time itemprop="startDate" class="mdc-card__post-dt-published" datetime="{{ post.startDate | date_to_xmlschema }}">
+        {{ post.startDate | date: date_format }}
+      </time>
+      {%- if post.endDate -%}
+      & <time itemprop="endDate" class="mdc-card__post-dt-published" datetime="{{ post.endDate | date_to_xmlschema }}">
+          {{ post.endDate | date: date_format }}
+        </time>
+      {%- endif -%}
+    </p>
+  </header>
+  <div class="mdc-card__secondary">
+    <div itemprop="location" itemscope itemtype="http://schema.org/Place">
+      <span itemprop="name">{{ post.location }}</span>
+      <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <span itemprop="streetAddress">{{ post.streetAddress }}</span><br>
+        <span itemprop="addressLocality">{{ post.addressLocality }}</span>,
+        <span itemprop="addressRegion"> {{ post.addressRegion }}</span>
+        <span itemprop="postalCode"> {{ post.postalCode }}</span>
+      </div>
+    </div>
+    <dl itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+      <dt itemprop="price" content="{{ post.offerPrice1 }}">${{ post.offerPrice1 }}</dt><dd>{{ post.offerType1 }}</dd>
+      <dt itemprop="price" content="{{ post.offerPrice2 }}">${{ post.offerPrice2 }}</dt><dd>{{ post.offerType2 }}</dd>
+      <span itemprop="priceCurrency" content="USD" />
+    </dl>
+  </div>
+  {%- endfor -%}
+
+  <div class="mdc-list-group">
+    <h3 id="{{ 'Related Rendezvous Articles' | slugify }}" class="mdc-list-group__subheader">Related Rendezvous Articles</h3>
+    <ul class="mdc-list" aria-labelledby="{{ 'Related Rendezvous Articles' | slugify }}">
+
+      {%- for post in site.rendezvous -%}
+
+      <li class="mdc-list-divider" aria-hidden="true"></li>
+
+      <li>
+        <a class="mdc-list-item" href="{{ post.url | relative_url }}" {%- if forloop.first %} tabindex="0" {%- endif -%}>
+          <span class="mdc-list-item__text">{{ post.title | escape }}</span>
+        </a>
+      </li>
+      {%- endfor -%}
+
+      <li class="mdc-list-divider" aria-hidden="true"></li>
+
+      <li>
+        <a class="mdc-list-item" href="{% link _pages/forms.html %}">
+          <span class="mdc-list-item__text">CAEPA Rendezvous Forms</span>
+          <i class="mdc-list-item__meta material-icons material-icons-outlined" aria-hidden="true">arrow_forward</i>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+</li>

@@ -1,6 +1,6 @@
 ---
-title: The 2011 Rendezvous
-embed_url: "https://drive.google.com/a/caepa.org/embeddedfolderview?id=132xZAItWtydtYtF0kBPoMj3Lfj0x0zqt#grid"
-image: "https://source.unsplash.com/MldQeWmF2_g/220x220"
 group: "Session Documents"
+image: "https://source.unsplash.com/MldQeWmF2_g/220x220"
+redirect_to: "https://drive.google.com/a/caepa.org/embeddedfolderview?id=132xZAItWtydtYtF0kBPoMj3Lfj0x0zqt#grid"
+title: The 2011 Rendezvous
 ---

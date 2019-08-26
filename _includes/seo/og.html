@@ -1,7 +1,0 @@
-<!-- The Open Graph protocol, http://ogp.me/ -->
-<meta property="fb:app_id" content="125583084513000" />
-<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.legal_name }} | {{ site.title }}{% else %}{{ site.legal_name}} - {{ site.title }}{% endif %}" />
-<meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.mission }}{% endif %}" />
-<meta property="og:image" content="{% if page.image_path != null %}{{ page.image_path | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.logo | prepend: site.baseurl | prepend: site.url }}{% endif %}" />

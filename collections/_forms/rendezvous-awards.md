@@ -1,7 +1,6 @@
 ---
-embed_url: "https://forms.gle/NajZT8HyJuKBjfdn7"
-group: Professional Learning
-image: "/assets/img/caepa/caepa-icon.svg"
-published: false
+group: CAEPA Rendezvous
+published: true
+redirect_to: "https://forms.gle/NajZT8HyJuKBjfdn7"
 title: Awards Nomination Form
 ---

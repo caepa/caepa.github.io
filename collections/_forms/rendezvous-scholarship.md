@@ -1,7 +1,6 @@
 ---
-embed_url: "https://forms.gle/5QJwttnvKm9PWSSi9"
-group: Professional Learning
-image: "/assets/img/caepa/caepa-icon.svg"
-published: false
+group: CAEPA Rendezvous
+published: true
+redirect_to: "https://forms.gle/5QJwttnvKm9PWSSi9"
 title: Ann Deditz Scholarship Form
 ---

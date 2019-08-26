@@ -1,0 +1,108 @@
+---
+year: 2018
+title: "The 2018 Rendezvous"
+theme: "From Here to Anywhere: Innovation, Opportunity, and Action"
+docs:
+  -
+    title: "2018 Rendezvous"
+    image: "https://source.unsplash.com/fDzQTTDI7bs/220x220"
+    url: "/professional-learning/the-2018-rendezvous"
+  -
+    title: "PDF: Program & Schedule"
+    image: "https://drive.google.com/thumbnail?id=1deBSNHAJHI0w8qWyify1c7wwD_X9uNQR"
+    url: "/professional-learning/the-2018-rendezvous/program"
+  -
+    title: "Awards"
+    image: "https://source.unsplash.com/Xaanw0s0pMk/220x220"
+    url: "/professional-learning/the-2018-rendezvous/awards"
+  -
+    title: "Keynotes"
+    image: "https://source.unsplash.com/FpkXoY51lg8/220x220"
+    url: "/professional-learning/the-2018-rendezvous/keynotes"
+  -
+    title: "Presenters"
+    image: "https://source.unsplash.com/QrqeusbpFMM/220x220"
+    url: "/professional-learning/the-2018-rendezvous/presenters"
+  -
+    title: "Sessions"
+    image: "https://source.unsplash.com/MAYsdoYpGuk/220x220"
+    url: "/professional-learning/the-2018-rendezvous/sessions"
+  -
+    title: "Session Documents"
+    image: "https://source.unsplash.com/MldQeWmF2_g/220x220"
+    url: "/resources/the-2018-rendezvous"
+  -
+    title: "2019 Vision"
+    image: "https://source.unsplash.com/ErO0E8wZaTA/220x220"
+    url: "/resources/the-2019-vision"
+---
+<article>
+  <h2 class="mdc-typography--headline2">Presenters</h2>
+
+  {%- for data in site.data.the-2018-rendezvous-master.presenters -%}
+    <div class="mdc-card mdc-card--outlined">
+      <div class="mdc-card__primary">
+        <h3 class="mdc-typography--headline3">{{ data.name }}</h3>
+      </div>
+
+      {%- if data.vendor == "Yes" -%}
+      <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list mdc-list--non-interactive" aria-orientation="vertical">
+        <li class="mdc-list-item">
+          <img class="mdc-list-item__graphic" aria-hidden="true" src="{{ data.twitter | append: ".jpg" | prepend: "/assets/img/vendors/" | downcase }}" />
+          <span class="mdc-list-item__text">
+            <span class="mdc-list-item__primary-text">{{ data.organization }}</span>
+            <span class="mdc-list-item__secondary-text">{{ data.job-title }}</span>
+          </span>
+        </li>
+      </ul>
+
+      {%- else -%}
+
+      <ul class="mdc-list mdc-list--two-line mdc-list--non-interactive" aria-orientation="vertical">
+        <li class="mdc-list-item">
+          <span class="mdc-list-item__text">
+            <span class="mdc-list-item__primary-text">{{ data.employer }}</span>
+            <span class="mdc-list-item__secondary-text">{{ data.job-title }}</span>
+          </span>
+        </li>
+      </ul>
+      {%- endif -%}
+
+      <div class="mdc-card__secondary">
+        <p>{{ data.biography | markdownify }}</p>
+      </div>
+
+      <ul class="mdc-list mdc-list--two-line mdc-list--non-interactive" aria-orientation="vertical">
+        <li class="mdc-list-item">
+          <span class="mdc-list-item__text">
+            <span class="mdc-list-item__primary-text">{{ data.title }}</span>
+            <span class="mdc-list-item__secondary-text">{{ data.session }}, {{ data.location }}</span>
+          </span>
+        </li>
+
+        {%- if data.session2 -%}
+        <li class="mdc-list-item">
+          <span class="mdc-list-item__text">
+            <span class="mdc-list-item__primary-text">{{ data.title2 }}</span>
+            <span class="mdc-list-item__secondary-text">{{ data.session2 }}, {{ data.location2 }}</span>
+          </span>
+        </li>
+        {%- endif -%}
+
+        {%- if data.session3 -%}
+        <li class="mdc-list-item">
+          <span class="mdc-list-item__text">
+            <span class="mdc-list-item__primary-text">{{ data.title3 }}</span>
+            <span class="mdc-list-item__secondary-text">{{ data.session3 }}, {{ data.location3 }}</span>
+          </span>
+        </li>
+        {%- endif -%}
+
+      </ul>
+
+    </div>
+  {%- endfor -%}
+
+</article>
+
+{%- include_relative mdc-image-list__rendezvous.html -%}

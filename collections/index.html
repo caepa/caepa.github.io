@@ -1,0 +1,36 @@
+---
+layout: default
+permalink: /
+title: CAEPA
+---
+
+{%- include mdc-top-app-bar.html -%}
+
+{%- include mdc-drawer.html -%}
+
+<header class="mdc-top-app-bar--fixed-adjust">
+  <div class="site-header">
+    <div class="mdc-layout-grid">
+      <h1 aria-hidden="true" hidden>{{ site.title }}</h1>
+      <img src="{{ 'caepa-title+.svg' | prepend: '/assets/img/caepa/' | absolute_url }}" alt="{{ site.title }}" />
+    </div>
+  </div>
+</header>
+
+<main id="main-content" class="mdc-layout-grid" aria-label="Content">
+  <ul class="mdc-layout-grid__inner mdc-layout-grid__inner--grid-1" aria-labelledby="{{ page.title | slugify }}">
+
+    {%- include_relative _home/mission.html -%}
+
+    {%- include_relative _home/rendezvous.html -%}
+
+    {%- include_relative _home/adult-education.html -%}
+
+    {%- include_relative _home/post-categories.html -%}
+
+    {%- include_relative _home/sponsors.html -%}
+
+  </ul>
+</main>
+
+{%- include footer.html -%}

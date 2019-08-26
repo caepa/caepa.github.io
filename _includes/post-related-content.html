@@ -1,0 +1,89 @@
+{%- assign posts = page.categories | first -%}
+
+{%- for post in site.categories[posts] -%}
+  {%- if post.url == page.url -%}
+    {%- assign post_index0 = forloop.index0 -%}
+    {%- assign post_index1 = forloop.index0 | plus:1 -%}
+    {%- assign post_index2 = forloop.index0 | plus:2-%}
+  {%- endif -%}
+{%- endfor -%}
+
+<div class="mdc-layout-grid">
+  <h2 id="{{ page.list_title | default: 'Related Articles' }}" class="related-content__title">{{ page.list_title | default: "Related Articles" }}</h2>
+  <ul class="mdc-layout-grid__inner mdc-layout-grid__inner--grid-2" aria-labelledby="{{ page.list_title | default: 'Related Articles' }}">
+
+    {%- for post in site.categories[posts] -%}
+    {%- if post_index0 == forloop.index | plus:1 -%}
+    {%- assign next_post = true -%}
+    <li class="mdc-card mdc-card--outlined">
+
+      <header class="mdc-card__primary mdc-card__primary--no-margin">
+        <span class="mdc-typography mdc-typography--overline">{{ post.categories }}</span>
+        <h3 id="{{ post.title | slugify }}" class="mdc-card__post-title mdc-typography mdc-typography--headline6">{{ post.title | escape }}</h3>
+      </header>
+
+      <div class="mdc-card__secondary mdc-card__secondary--no-margin mdc-typography mdc-typography--body1">
+        {{ post.content | markdownify | strip_html | truncatewords:25 }}
+      </div>
+
+      <footer class="mdc-card__actions">
+        <div class="mdc-card__action-buttons">
+          <a href="{{ post.url | absolute_url }}" class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button" aria-labelledby="{{ post.title | slugify }}">
+            <span class="mdc-button__label">Read Article</span>
+            <i class="mdc-button__icon material-icons material-icons-outlined" aria-hidden="true">arrow_forward</i>
+          </a>
+        </div>
+      </footer>
+
+    </li>
+
+    {%- elsif post_index1 == forloop.index0 | minus:1 -%}
+    <li class="mdc-card mdc-card--outlined">
+
+      <header class="mdc-card__primary mdc-card__primary--no-margin">
+        <span class="mdc-typography mdc-typography--overline">{{ post.categories }}</span>
+        <h2 id="{{ post.title | slugify }}" class="mdc-card__post-title mdc-typography mdc-typography--headline6">{{ post.title | escape }}</h2>
+      </header>
+
+      <div class="mdc-card__secondary mdc-card__secondary--no-margin mdc-typography mdc-typography--body1">
+        {{ post.content | markdownify | strip_html | truncatewords:25 }}
+      </div>
+
+      <footer class="mdc-card__actions">
+        <div class="mdc-card__action-buttons">
+          <a href="{{ post.url | absolute_url }}" class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button" aria-labelledby="{{ post.title | slugify }}">
+            <span class="mdc-button__label">Read Article</span>
+            <i class="mdc-button__icon material-icons material-icons-outlined" aria-hidden="true">arrow_forward</i>
+          </a>
+        </div>
+      </footer>
+
+    </li>
+
+    {%- elsif post_index2 == forloop.index0 | minus:2 and next_post != true -%}
+    <li class="mdc-card mdc-card--outlined">
+
+      <header class="mdc-card__primary mdc-card__primary--no-margin">
+        <span class="mdc-typography mdc-typography--overline">{{ post.categories }}</span>
+        <h2 id="{{ post.title | slugify }}" class="mdc-card__post-title mdc-typography mdc-typography--headline6">{{ post.title | escape }}</h2>
+      </header>
+
+      <div class="mdc-card__secondary mdc-card__secondary--no-margin mdc-typography mdc-typography--body1">
+        {{ post.content | markdownify | strip_html | truncatewords:25 }}
+      </div>
+
+      <footer class="mdc-card__actions">
+        <div class="mdc-card__action-buttons">
+          <a href="{{ post.url | absolute_url }}" class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button" aria-labelledby="{{ post.title | slugify }}">
+            <span class="mdc-button__label">Read Article</span>
+            <i class="mdc-button__icon material-icons material-icons-outlined" aria-hidden="true">arrow_forward</i>
+          </a>
+        </div>
+      </footer>
+
+    </li>
+    {%- endif -%}
+    {%- endfor -%}
+
+  </ul>
+</div>

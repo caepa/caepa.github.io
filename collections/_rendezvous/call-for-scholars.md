@@ -1,6 +1,7 @@
 ---
+layout: page
 title: The Ann Deditz Scholarship
-published: false
+published: true
 
 forms:
   - "rendezvous-scholarship"

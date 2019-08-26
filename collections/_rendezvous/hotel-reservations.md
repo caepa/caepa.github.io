@@ -1,4 +1,5 @@
 ---
+layout: page
 title: "Hotel Reservations"
 published: true
 ---

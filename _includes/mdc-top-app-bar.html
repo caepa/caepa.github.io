@@ -1,40 +1,50 @@
-{%- comment -%} // temporary until mdc-menu bugs fixed {%- endcomment -%}
-{%- include mdc-drawer__menu.html -%}
-
-<header class="mdc-top-app-bar">
+<nav class="mdc-top-app-bar" aria-label="{{ page.navigation }}" data-mdc-auto-init="MDCTopAppBar">
   <div class="mdc-top-app-bar__row">
-    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+    <span class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
 
-      {%- if page.layout == "default__mdc-drawer" -%}
-      <button id="menu" class="material-icons mdc-top-app-bar__navigation-icon">menu</button>
-      {%- elsif page.layout == "default__embed" -%}
-      <span class="mdc-top-app-bar__title">
-        {%- if page.collection == "posts" -%}
-          {{ page.categories | first | upcase | replace: "-", " " }}
-        {%- elsif page.layout == "default__embed" -%}
-          {{ page.title }}
-        {%- elsif page.collection == "pages" -%}
-          {{ page.slug | upcase | replace: "-", " " }}
-        {%- else -%}
-          {{ page.collection | upcase | replace: "-", " " }}
-        {%- endif -%}
-      </span>
+      {%- if page.navigation -%}
+      <button class="material-icons material-icons-outlined mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="open {{ page.navigation }} menu" aria-haspopup=”true”>menu</button>
       {%- endif -%}
 
-    </section>
-    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-      <a href="{{ "/bylaws" | absolute_url }}" class="mdc-button mdc-button--unelevated">Bylaws</a>
-      <a href="http://news.caepa.org" class="mdc-button mdc-button--unelevated">News</a>
-      <a href="{{ "/resources" | absolute_url }}" class="mdc-button mdc-button--unelevated">Resources</a>
-      <div class="mdc-menu-surface--anchor">
-        <button id="apps" href="#" class="material-icons mdc-top-app-bar__action-item">apps</button>
+      <span class="mdc-top-app-bar__brand" aria-hidden="true">
+        <img class="mdc-top-app-bar__logo" src="{{ page.image | default: 'caepa-title.svg' | prepend: '/assets/img/caepa/' }}" alt="CAEPA" />
+        <span class="mdc-top-app-bar__title">{{ page.current-view }}</span>
+      </span>
+    </span>
+    <span class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="menubar" aria-label="{{ site.title }}">
 
-        {%- include mdc-menu.html -%}
-
-      </div>
-      <a href="{{ site.url }}">
-        <img id="icon" class="mdc-top-app-bar__action-item" src="{{ 'caepa-icon.svg' | prepend: '/assets/img/caepa/' | absolute_url }}" alt="CAEPA Home"/>
+      {% assign data = site.data.navigation | where:"button",true %}
+      {%- for data in data -%}
+      <a class="mdc-top-app-bar__action-item mdc-button" href="{{ data.url | absolute_url }}" role=”menuitem” aria-label="{{ data.title }}">
+        <span class="mdc-button__label">{{ data.title }}</span>
       </a>
-    </section>
+      {%- endfor -%}
+
+      <div id="navigation-anchor" class="mdc-menu-surface--anchor">
+        <button id="navigation-button" class="material-icons material-icons-outlined mdc-top-app-bar__action-item mdc-icon-button" aria-label="open main menu" aria-haspopup=”true”>apps</button>
+        <div id="navigation-menu" class="mdc-menu mdc-menu-surface"
+             itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+          <ul class="mdc-list mdc-list--avatar-list" role="menu" aria-hidden="false" aria-orientation="vertical" tabindex="0">
+
+            <li itemprop="name">
+              <a itemprop="url" class="mdc-list-item" href="{{ site.url | absolute_url }}" role="menuitem">
+                <img class="mdc-list-item__graphic" src="{{ page.image | default: 'caepa-icon.svg' | prepend: '/assets/img/caepa/' }}" alt="CAEPA" style="height: 24px;" aria-hidden="true" />
+                <img class="mdc-list-item__text" src="{{ page.image | default: 'caepa-title.svg' | prepend: '/assets/img/caepa/' }}" alt="CAEPA" style="height: 16px;" />
+              </a>
+            </li>
+
+            {%- for data in site.data.navigation -%}
+            <li itemprop="name">
+              <a itemprop="url" class="mdc-list-item" href="{{ data.url | absolute_url }}" role="menuitem">
+                <i class="material-icons material-icons-outlined mdc-list-item__graphic" aria-hidden="true">{{ data.icon }}</i>
+                <span class="mdc-list-item__text">{{ data.title }}</span>
+              </a>
+            </li>
+            {%- endfor -%}
+
+          </ul>
+        </div>
+      </div>
+    </span>
   </div>
-</header>
+</nav>

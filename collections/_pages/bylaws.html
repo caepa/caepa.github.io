@@ -1,4 +1,47 @@
 ---
-layout: article
+current-view: bylaws
+layout: default
 title: CAEPA Bylaws
+icon: assignment
 ---
+
+{%- include mdc-top-app-bar.html -%}
+
+{%- include mdc-drawer.html -%}
+
+<main id="main-content" class="mdc-top-app-bar--fixed-adjust" aria-label="Content">
+
+  <article>
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell--span-12">
+          <h1>{{ page.title }}</h1>
+
+          {%- for collection in site[page.slug] -%}
+
+          {%- if forloop.first -%}
+          {{ collection.content }}
+
+          {%- else -%}
+          <details class="mdc-card mdc-card--outlined">
+
+            <summary class="mdc-card__primary mdc-card__primary--no-margin mdc-card__primary-action">
+              <h2 class="mdc-typography mdc-typography--headline6">{{ collection.title }}</h2>
+            </summary>
+
+            <span class="mdc-card__secondary">
+              {{ collection.content }}
+            </span>
+
+          </details>
+          {%- endif -%}
+          {%- endfor -%}
+
+        </div>
+      </div>
+    </div>
+  </article>
+
+</main>
+
+{%- include footer.html -%}

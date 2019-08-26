@@ -1,0 +1,50 @@
+<li class="mdc-list-group">
+  <h2 id="{{ 'Categories' | slugify }}" class="mdc-list-group__subheader">Categories</h2>
+  <ul class="mdc-list" aria-labelledby="{{ 'Categories' | slugify }}">
+
+    {%- assign categories = site.html_pages | where:"layout","post__category" | sort: "title" -%}
+    {%- for post in categories -%}
+    <li>
+      <details class="mdc-card mdc-card--outlined">
+
+        <summary class="mdc-card__primary mdc-card__primary--no-margin mdc-card__primary-action">
+          <h3 id="{{ post.title | slugify }}" class="mdc-typography mdc-typography--headline6">{{ post.title }}</h3>
+        </summary>
+
+        <span class="mdc-card__secondary">
+          <p class="mdc-typography mdc-typography--body1">A collection of <a href="{{ post.url }}">{{ site.categories[post.slug] | size }} articles in {{ post.title }}</a></p>
+
+          <ul class="mdc-layout-grid__inner mdc-layout-grid__inner--grid-2" aria-labelledby="{{ post.title | slugify }}">
+
+            {%- for post in site.categories[post.slug] limit:2 -%}
+            <li class="mdc-card mdc-card--outlined">
+
+              <header class="mdc-card__primary mdc-card__primary--no-margin">
+                <span class="mdc-typography mdc-typography--overline">{{ post.categories }}</span>
+                <h4 id="{{ post.title | slugify }}" class="mdc-card__post-title mdc-typography mdc-typography--headline6">{{ post.title | escape }}</h4>
+              </header>
+
+              <div class="mdc-card__secondary mdc-card__secondary--no-margin mdc-typography mdc-typography--body1">
+                {{ post.content | markdownify | strip_html | truncatewords:25 }}
+              </div>
+
+              <footer class="mdc-card__actions">
+                <div class="mdc-card__action-buttons">
+                  <a href="{{ post.url | absolute_url }}" class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button" aria-labelledby="{{ post.title | slugify }}">
+                    <span class="mdc-button__label">Read Article</span>
+                    <i class="mdc-button__icon material-icons material-icons-outlined" aria-hidden="true">arrow_forward</i>
+                  </a>
+                </div>
+              </footer>
+
+            </li>
+            {%- endfor -%}
+
+          </ul>
+        </span>
+      </details>
+    </li>
+    {%- endfor -%}
+
+  </ul>
+</li>

@@ -1,4 +1,5 @@
 ---
+layout: page
 title: "Call for Proposals: FAQ"
 published: true
 

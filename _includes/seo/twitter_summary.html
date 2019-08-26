@@ -1,6 +1,0 @@
-<!-- https://dev.twitter.com/cards/overview -->
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@caepa_co" />
-<meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {{ site.legal_name }} | {{ site.title }}{% else %}{{ site.legal_name}} - {{ site.title }}{% endif %}" />
-<meta name="twitter:image" content="{% if page.image_path != null %}{{ page.image_path | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.logo | prepend: site.baseurl | prepend: site.url }}{% endif %}" />
-<meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.mission }}{% endif %}" />

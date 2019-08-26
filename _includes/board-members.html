@@ -1,0 +1,30 @@
+{%- assign data = site.data.board-members-current | group_by: "Role" | sort: "name" | reverse-%}
+{%- assign image = "https://material.io/resources/icons/static/icons/sharp-portrait-24px.svg" -%}
+
+<div class="mdc-layout-grid">
+
+  <h2>Board of Directors</h2>
+
+  {%- for data in data -%}
+  <h3 id="{{ data.name | slugify }}">{{ data.name }}</h3>
+
+  <ul class="mdc-layout-grid__inner mdc-layout-grid__inner--grid-3" aria-labelledby="{{ data.name | slugify }}">
+
+    {%- for data in data.items -%}
+    <li class="mdc-card mdc-card--outlined">
+      <div class="mdc-card__media mdc-card__media--square"
+           style="background-image: url({{ data.Image | default: 'portrait.svg' | prepend: '/assets/img/members/' }});">
+        <div class="mdc-card__media-content">
+          <div class="mdc-card__primary mdc-card__primary--no-margin">
+            <p class="mdc-card__title mdc-typography--headline6">{{ data.Name }}</p>
+            <p class="mdc-card__subtitle mdc-typography--subtitle2">{{ data.Officer }}</p>
+          </div>
+        </div>
+      </div>
+    </li>
+    {%- endfor -%}
+
+  </ul>
+  {%- endfor -%}
+
+</div>

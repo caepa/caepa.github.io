@@ -1,19 +1,35 @@
-<aside class="mdc-drawer mdc-drawer--persistent mdc-drawer--open">
-  <div class="mdc-drawer__drawer">
-    <header class="mdc-drawer__toolbar-spacer">
-      {%- if page.collection == "posts" -%}
-        {{ page.categories | first | capitalize }}
-      {%- else -%}
-        {{ page.collection | capitalize }}
-      {%- endif -%}
-    </header>
-    <div class="mdc-drawer__content">
-      {%- if page.collection == "posts" -%}
-        {%- include mdc-list--two-line.html content=site.posts -%}
-      {%- else -%}
-        {%- include mdc-list.html content=site.posts -%}
-      {%- endif -%}
+{%- capture current_view -%}
 
-    </div>
+{%- if page.navigation -%} {{ page.navigation }} {%- endif -%}
+{%- if page.categories -%} {{ page.categories }} {%- endif -%}
+{%- if page.collection -%} {{ page.slug }} {%- endif -%}
+
+{%- endcapture -%}
+
+
+{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+<aside class="mdc-drawer mdc-drawer--modal">
+  <div class="mdc-drawer__content">
+    <nav class="mdc-list mdc-list--two-line">
+
+      {%- for post in current_view -%}
+      <a class="mdc-list-item mdc-list-item--activated" href="{{ post.url }}" aria-current="page">
+        <span class="mdc-list-item__text">
+          <span class="mdc-list-item__primary-text">{{ post.title | escape }}</span>
+          <span class="mdc-list-item__secondary-text">
+            <time datetime="{{ post.date | date_to_xmlschema }}">
+              {{ post.date | date: date_format }}
+            </time>
+            {%- if post.author -%}
+            • <span>{{ post.author | escape }}</span>
+            {%- endif -%}
+          </span>
+        </span>
+      </a>
+      {%- endfor -%}
+
+    </nav>
   </div>
 </aside>
+
+<div class="mdc-drawer-scrim"></div>

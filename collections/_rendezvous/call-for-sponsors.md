@@ -1,4 +1,5 @@
 ---
+layout: page
 title: "Call for Sponsors & Vendors"
 published: true
 

@@ -2,11 +2,11 @@
 logo:
 title: Colorado Adult Education Professional Association
 description: | # Scalar content can be written in block notation, | Literal style , > Folded style
-  Providing Colorado Leadership in Adult Education and Literacy since 1935.
   The Colorado Adult Education Professional Association, CAEPA, provides leadership to the field of adult education and family literacy by offering opportunities for professional development, advocacy, and resource sharing to improve the quality of life for every Coloradan.
+byline: Providing Colorado Leadership in Adult Education and Literacy since 1935.
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.caepa.org"
+url: "https://www.caepa.org"
 
 repository: caepa/caepa.github.io
 email: admin@caepa.org
@@ -44,8 +44,8 @@ social:
   links:
     - https://www.facebook.com/caepa.co
     - http://github.com/caepa
-    # - https://www.linkedin.com/company/caepa-co
-    - https://www.linkedin.com/company/colorado-adult-education-professional-association-caepa- # currently inaccessible
+    - https://www.linkedin.com/company/caepa-co
+  # - https://www.linkedin.com/company/colorado-adult-education-professional-association-caepa- # inaccessible
     - https://twitter.com/caepa_co
     - http://news.caepa.org/feed.xml
 
@@ -58,12 +58,12 @@ social_media:
   - name: facebook
     url:  https://www.facebook.com/caepa.co
   - name: github
-    url:  http://github.com/caepa
+    url:  https://github.com/caepa
   - name: linkedin
-  #   url:  https://www.linkedin.com/company/caepa-co/
-    url:  https://www.linkedin.com/company/colorado-adult-education-professional-association-caepa- # inaccessible
+    url:  https://www.linkedin.com/company/caepa-co/
+  # url:  https://www.linkedin.com/company/colorado-adult-education-professional-association-caepa- # inaccessible
   - name: rss
-    url:  http://news.caepa.org/feed.xml
+    url:  https://www.caepa.org/feed.xml
   - name: twitter
     url:  https://twitter.com/caepa_co
 
@@ -71,12 +71,18 @@ social_media:
 # See: https://jekyllrb.com/docs/configuration/#default-configuration
 future: true
 timezone: America/Denver
-material-web-components: "0.40.1"
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-seo-tag
+feed:
+  categories:
+    - news
+    - events
+    - updates
+  collections:
+    - rendezvous
 sass:
   #load_paths:
   #  - assets/css
@@ -85,16 +91,12 @@ sass:
 # Site collections
 collections_dir: collections
 collections:
-  abea:
-    output: false #
   bylaws:
     output: false #
   forms:
     output: true
   home:
     output: false #
-  news:
-    output: false # external site
   pages:
     output: true
     permalink: /:path
@@ -117,13 +119,3 @@ defaults:
       layout: "post"
       author: CAEPA
       permalink: /:categories/:title
-  -
-    scope:
-      type: forms
-    values:
-      layout: "default__embed"
-  -
-    scope:
-      type: resources
-    values:
-      layout: "default__embed"

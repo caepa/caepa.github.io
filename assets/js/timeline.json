@@ -1,0 +1,62 @@
+---
+layout: none
+title: default
+---
+
+{%- assign data = site.data["event-history-master"] | where_exp: "data", "data.theme != null" -%}
+
+{
+  "title": {
+    "background": {
+      "color": "#212121"
+    },
+    "media": {
+      "url": "{{ "caepa-icon.svg" | prepend: "assets/img/caepa/" | absolute_url }}",
+      "caption": "",
+      "credit": "{{ site.title }}"
+    },
+    "text": {
+      "headline": "Event History",
+      "text": "<p>{{ site.title }}</p>"
+    },
+    "display_date": "1935 - present"
+  },
+  "events": [
+
+    {%- for event in data -%}
+    {
+      "group": "{{ event.era }}",
+      "media": {
+        "url": "",
+        "caption": "",
+        "credit": ""
+      },
+
+      {%- if event.startDate %}
+      "start_date": {
+        "month": "{{ event.startDate | date: "%m" }}",
+        "day": "{{ event.startDate | date: "%-d" }}",
+        "year": "{{ event.startDate | date: "%Y" }}"
+      },{%- else %}
+      "start_date": {
+        "year": "{{ event.year }}"
+      },
+      {%- endif -%}
+
+      {%- if event.endDate %}
+      "end_date": {
+        "month": "{{ event.endDate | date: "%m" }}",
+        "day": "{{ event.endDate | date: "%-d" }}",
+        "year": "{{ event.endDate | date: "%Y" }}"
+      },
+      {%- endif -%}
+
+      "text": {
+        "headline": "{{ event.theme | escape }}",
+        "text": "<p>{{ event.location }}<br />{{ event.streetAddress }}<br />{{ event.addressLocality }}</p>{% if event.offerType1 %}<p>{{ event.offerType1 }}: ${{ event.offerPrice1 }}</p>{% endif %}{% if event.offerType2 %}<p>{{ event.offerType2 }}: ${{ event.offerPrice2 }}</p>{% endif %}{% if event.offerMembership %}<p>Membership Dues: ${{ event.offerMembership }}</p>{% endif %}"
+      }
+    }
+    {%- unless forloop.last -%},{%- endunless -%}
+    {%- endfor -%}
+  ]
+}

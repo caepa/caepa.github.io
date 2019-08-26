@@ -1,12 +1,12 @@
 [
   {
     "google_url": "https://forms.gle/43yaeN5NiAgwrmb6A",
-    "title": "Adult Learners & Student Ambassadors",
+    "title": "Adult Learners & Student Ambassadors Application",
     "url": "/forms/application-ambassador"
   },
   {
     "google_url": "https://forms.gle/gYcUeSeh5wYCg7i8A",
-    "title": "Board of Directors",
+    "title": "Board of Directors Application",
     "url": "/forms/application-director"
   },
   {
@@ -21,7 +21,7 @@
   },
   {
     "google_url": "https://forms.gle/wKXGQ9dHa9qxHKwD6",
-    "title": "Professional Learning Registration",
+    "title": "CAEPA Rendezvous Registration",
     "url": "/forms/rendezvous-registration"
   },
   {
@@ -31,7 +31,7 @@
   },
   {
     "google_url": "https://forms.gle/Ncp1JZPYnYRwG1GM8",
-    "title": "Vendor Registration",
+    "title": "Sponsor & Vendor Registration",
     "url": "/forms/rendezvous-sponsor"
   }
 ]
