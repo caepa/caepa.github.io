@@ -8,13 +8,53 @@ Providing Colorado Leadership in Adult Education and Literacy since 1935
 The Colorado Adult Education Professional Association, CAEPA, provides leadership to the field of adult education and family literacy by offering opportunities for professional development, advocacy, and resource sharing to improve the quality of life for every Coloradan.
 
 
-## Site Resources
+# Site Resources
 
 Our site is built using jekyll, a static site generator. Documentation at: http://jekyllrb.com.
 
 Free hosting with github pages: https://pages.github.com/.
 
-We use Materializecss as our css library, imported through a git submodule as a sass directory, see below. Documentation at: http://materializecss.com.
+---
+Built with Material Components for the web
+
+Material Components for the web (MDC Web) helps developers execute [Material Design](https://www.material.io).
+
+How-to update CSS `assets/css/main.css`
+
+**WATCH FOR BREAKING CHANGES**
+[CHANGELOG: material-components-web](https://github.com/material-components/material-components-web/blob/master/CHANGELOG.md)
+
+Check for outdated packages and update
+```
+npm outdated
+npm update --save-dev &&
+npm ci
+```
+
+Update CSS packages
+```
+npm install normalize-scss@latest --save &&
+npm install @primer/css@latest --save &&
+npm install material-components-web@latest --save &&
+npm ci &&
+npm start
+```
+
+Reset and install dependencies as specified in ```package-lock.json``` only
+```
+npm ci
+```
+
+Run ```webpack.config.js``` to rebuild ```main.css```
+```
+npm start
+```
+
+Reset node_modules
+```
+rm -rf node_modules
+npm install --save-dev
+```
 
 
 # Site Build
