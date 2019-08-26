@@ -1,0 +1,44 @@
+[
+  {
+    "button": false,
+    "icon": "label",
+    "title": "ABEA (Certification)",
+    "url": "/abea"
+	},
+	{
+    "button": true,
+    "icon": "assignment",
+    "title": "CAEPA Bylaws",
+    "url": "/bylaws"
+	},
+	{
+    "button": false,
+    "icon": "label",
+    "title": "Factsheets",
+    "url": "/factsheets"
+	},
+	{
+    "button": true,
+    "icon": "description",
+    "title": "Forms",
+    "url": "/forms"
+	},
+	{
+    "button": false,
+    "icon": "label",
+    "title": "News",
+    "url": "/news"
+	},
+	{
+    "button": false,
+    "icon": "label",
+    "title": "Professional Learning",
+    "url": "/professional-learning"
+	},
+	{
+    "button": true,
+    "icon": "extension",
+    "title": "Resource Sharing",
+    "url": "/resources"
+	}
+]
