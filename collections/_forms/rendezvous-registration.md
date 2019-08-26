@@ -1,5 +1,6 @@
 ---
-title: Rendezvous Registration Form
-embed_url: "https://goo.gl/forms/rIPuW7gNOY4OW2to2"
-group: "Professional Learning"
+group: CAEPA Rendezvous
+published: true
+redirect_to: "https://forms.gle/wKXGQ9dHa9qxHKwD6"
+title: CAEPA Rendezvous Registration Form
 ---

@@ -1,0 +1,17 @@
+{%- for data in site.data.the-2018-rendezvous-master.sponsors -%}
+<div class="mdc-card mdc-card--outlined">
+  <div class="mdc-card__media mdc-card__media--{{ data.organization | slugify }} mdc-card__media--16-9">
+    <div class="mdc-card__media-content">{{ data.sponsorship-tier }}</div>
+  </div>
+  <a href="mailto:{{ data.email }}">{{ data.vendor }}</a>
+  {{ data.description }}
+  <div class="mdc-card__actions">
+    <div class="mdc-card__action-buttons">
+      <a class="mdc-button mdc-card__action mdc-card__action--button" href="{{ data.website }}">{{ data.website }}</a>
+    </div>
+    <div class="mdc-card__action-icons">
+      <a class="mdc-icon-button mdc-card__action mdc-card__action--icon" title="Share" href="https://twitter.com/{{ data.twitter }}"><i class="fa fa-twitter"></i></a>
+    </div>
+  </div>
+</div>
+{%- endfor -%}

@@ -1,18 +1,14 @@
 ---
+layout: page
 title: "Call for Proposals: FAQ"
+published: true
 
 forms:
   - "rendezvous-proposal"
   - "rendezvous-registration"
-
-relatedItems:
-  - title: "DoubleTree Reservations"
-    url: "http://doubletree.hilton.com/en/dt/groups/personalized/D/DENNSDT-CAE-20181021/index.jhtml"
-
 ---
-Learn more about what to expect when submitting a proposal. We have gathered some of the most asked questions and tried to provide an answer.
 
-Submissions due ~~October 5, 2018~~ **_extended date_**
+Learn more about what to expect when submitting a proposal. We have gathered some of the most asked questions and tried to provide an answer.
 
 If you have questions, please contact <rendezvous@caepa.org>.
 
@@ -45,7 +41,7 @@ Session abstract
 : In 200 words or less, please provide a brief and accurate description of the session and what participants will learn. Session abstracts will be published in our program and online. (1200 characters)
 
 Session strand
-: Advocacy, Best Practices, College or Career Transitions, Digital Literacy, Diverse Learners, Effective Use of Data, Evidence & Research to Practice, Family Engagement, Policy and Legislation, Students and Young Ambassadors, Workforce Development, Vendors and Businesses
+: Best Practices, College or Career Transitions, Digital Literacy, Diverse Learners, Evidence & Research to Practice, Low Level Learners, Adult Learners and Student Ambassadors, Workforce Development, Vendors and Businesses
 \\
 \\
 See: [Call for Proposals]({% link _rendezvous/call-for-proposals.md %})
@@ -55,7 +51,7 @@ Additional information
 
 ## How long are sessions? or How much time will I have for a session?
 
-Session lengths will be **45 minutes** in length, subject to program committee decisions and scheduling logistics.
+Session blocks will be **75 minutes** in length, subject to program committee decisions and scheduling logistics.
 
 ## What if I get started on the proposal form and cannot finish it in one sitting?
 
@@ -63,8 +59,8 @@ We recommend that you prepare your responses in a separate document and copy/pas
 
 ## What happens after I submit my proposal?
 
-You will see a confirmation screen after you submit your proposal and receive a confirmation email. A CAEPA committee will review all proposals during the month of August. **Session leaders will be notified via email beginning  ~~September 15~~ October 8 regarding the status of their proposals.** Session leaders whose proposals are accepted will need to register at the discounted registration rate.
+You will see a confirmation screen after you submit your proposal and receive a confirmation email. A CAEPA committee will review all proposals during the month of August. **Session leaders will be notified via email regarding the status of their proposals.** If selected, we will ask for a Session leader biography.
 
 ## What technology does CAEPA provide?
 
-CAEPA provides a projector and standard cable, basic classroom tech support and wireless connectivity in each session room. We regret that we cannot provide instructor stations or laptops, flashdrives, or Mac projector DVI connectors/cables. CAEPA 2018 is a BYOD (Bring Your Own Device) event for all.
+CAEPA provides a projector and standard cable, basic classroom tech support and wireless connectivity in each session room. We regret that **we cannot** provide instructor stations or laptops, flash drives, or Mac projector DVI connectors/cables. **CAEPA is a BYOD (Bring Your Own Device) event for all.**

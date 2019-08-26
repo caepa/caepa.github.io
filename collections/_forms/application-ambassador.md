@@ -1,5 +1,6 @@
 ---
-title: Ambassadors Application Form
-embed_url: "https://goo.gl/forms/DqjLea1oeNxkL5Cs1"
 group: Applications
+published: true
+redirect_to: "https://forms.gle/43yaeN5NiAgwrmb6A"
+title: Adult Learners & Student Ambassadors Application Form
 ---

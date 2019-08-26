@@ -1,8 +1,6 @@
 ---
-title: COABE’s 2017 Virtual Conference
-author: Adult Education Initiatives
-availability: false
-
+title: "COABE’s 2017 Virtual Conference"
+author: "Adult Education Initiatives"
 ---
 
 As a partnership with CAEPA, The Colorado Department of Education’s Office of Adult Education Initiatives purchased a state registration to the 2017 COABE’s Virtual Conference for adult education programs across the state! This opportunity allows your staff access to new COABE professional learning opportunities for FREE.

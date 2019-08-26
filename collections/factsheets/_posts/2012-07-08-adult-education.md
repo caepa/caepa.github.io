@@ -57,7 +57,7 @@ Adult education programs serve individuals, 17 years of age and older, who are i
 
 **_Closing the wage gap between current wages and self-sufficiency requires raising incomes by enhancing skills and improving access to jobs that pay self-sufficiency wages and have career potential._**
 
-{% include {{ page.chart-1 }} %}
+{% include_relative {{ page.chart-1 }} %}
 
 The Self-Sufficiency Standard For Colorado 2011.[^17]
 

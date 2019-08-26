@@ -1,23 +1,16 @@
 ---
+layout: page
 title: "Call for Proposals"
+published: true
 
 forms:
   - "rendezvous-proposal"
   - "rendezvous-registration"
-
-relatedItems:
-  - title: "DoubleTree Reservations"
-    url: "http://doubletree.hilton.com/en/dt/groups/personalized/D/DENNSDT-CAE-20181021/index.jhtml"
-
 ---
-The Colorado Adult Education Professional Association, CAEPA, invites you to submit a proposal for the 2018 Rendezvous. This year's theme is, "From Here to Anywhere" and we have thought up a list of new session strands to take us there.
 
-Submissions due ~~October 5, 2018~~ **_extended date_**
+The Colorado Adult Education Professional Association, CAEPA, invites you to submit a proposal for the 2019 Rendezvous. This year’s theme is, “Moving It Forward” and we have thought up a list of new session strands to take us there. Session blocks will be **75 minutes** in length.
 
 If you have questions, please contact <rendezvous@caepa.org>.
-
-Advocacy (Emphasis Educate and Elevate)
-: Identifying the programs and campaigns with the objective to increase access to adult education.
 
 Best Practices
 : Sharing peer to peer lessons that effectively target best practices in the classroom.
@@ -29,19 +22,13 @@ Digital Literacy
 : Utilize a digital village within a computer classroom designed with specific and designated round tables geared for quality discussion and instruction.
 
 Diverse Learners
-: Providing instruction to meet the needs of learners from diverse backgrounds, varying academic and economic levels, and linguistic differences.
-
-Effective Use of Data
-: Extracting data from student assessments in order to best inform instruction.
+: Providing instruction to meet the needs of learners from diverse backgrounds, varying academic and economic levels, and linguistic differences; including corrections, substance abuse, trauma survivors, etc.
 
 Evidence and Research to Practice
 : Discerning proven methodology from evidence and research for classroom implementation in day to day practices.
 
-Family Engagement
-: Increasing efficacy of educational programming by fostering family engagement.
-
-Policy and Legislation
-: Understanding the nuts and bolts of running programs while adhering to guiding policy and pertinent legislation.
+Low Literacy levels
+: ELA and ABE
 
 Adult Learners and Student Ambassadors
 : Making the most of educational opportunities specific for adult learners.
