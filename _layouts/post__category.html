@@ -1,0 +1,111 @@
+---
+layout: default
+---
+
+{%- include mdc-top-app-bar.html -%}
+
+{%- include mdc-drawer.html -%}
+
+<main id="main-content" class="mdc-top-app-bar--fixed-adjust" aria-label="Content">
+  <article class="post">
+    <div class="mdc-layout-grid">
+
+      <header class="post-header">
+        <h1 id="{{ page.title | slugify }}" class="post-title">{{ page.title | escape }}</h1>
+      </header>
+
+      <div class="post-content">
+        {{ content }}
+      </div>
+
+    </div>
+
+    <div class="mdc-layout-grid">
+      <ul id="categories" class="mdc-layout-grid__inner mdc-layout-grid__inner--grid-2-quilted" aria-labelledby="{{ page.title | slugify }}">
+
+        {% for post in site.categories[page.slug] limit:1 %}
+        <li class="mdc-card mdc-card--outlined">
+
+          <header class="mdc-card__primary mdc-card__primary--no-margin">
+            <span class="mdc-typography mdc-typography--overline">{{ post.categories }}</span>
+            <h2 id="{{ post.title | slugify }}" class="mdc-card__post-title">{{ post.title | escape }}</h2>
+          </header>
+
+          <div class="mdc-card__secondary mdc-card__secondary--no-margin">
+            {{ post.content | markdownify | strip_html | truncatewords:50 }}
+          </div>
+
+          <footer class="mdc-card__actions">
+            <div class="mdc-card__action-buttons">
+              <a href="{{ post.url | absolute_url }}" class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button" aria-labelledby="{{ post.title | slugify }}">
+                <span class="mdc-button__label">Read Article</span>
+                <i class="mdc-button__icon material-icons material-icons-outlined" aria-hidden="true">arrow_forward</i>
+              </a>
+            </div>
+          </footer>
+
+        </li>
+        {% endfor %}
+
+        {% for post in site.categories[page.slug] offset:1 limit:2 %}
+        <li class="mdc-card mdc-card--outlined">
+
+          <header class="mdc-card__primary mdc-card__primary--no-margin">
+            <span class="mdc-typography mdc-typography--overline">{{ post.categories }}</span>
+            <h2 id="{{ post.title | slugify }}" class="mdc-card__post-title mdc-typography mdc-typography--headline6">{{ post.title | escape }}</h2>
+          </header>
+
+          <div class="mdc-card__secondary mdc-card__secondary--no-margin mdc-typography mdc-typography--body1">
+            {{ post.content | markdownify | strip_html | truncatewords:25 }}
+          </div>
+
+          <footer class="mdc-card__actions">
+            <div class="mdc-card__action-buttons">
+              <a href="{{ post.url | absolute_url }}" class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button" aria-labelledby="{{ post.title | slugify }}">
+                <span class="mdc-button__label">Read Article</span>
+                <i class="mdc-button__icon material-icons material-icons-outlined" aria-hidden="true">arrow_forward</i>
+              </a>
+            </div>
+          </footer>
+
+        </li>
+        {% endfor %}
+
+        {%- if site.categories[page.slug].size > 3 -%}
+        <li class="mdc-list-group mdc-card mdc-card--outlined">
+          <h2 id="{{ 'Older ' | append: page.title | slugify }}" class="mdc-list-group__subheader">{{ "Older " | append: page.title }}</h2>
+          <ul class="mdc-list mdc-list--two-line" aria-labelledby="{{ 'Older ' | append: page.title | slugify }}">
+
+            {%- for post in site.categories[page.slug] offset:3 limit:7 -%}
+
+            <li class="mdc-list-divider" role="separator" aria-hidden="true"></li>
+
+            <li>
+              <a class="mdc-list-item" href="{{ post.url | relative_url }}" aria-labelledby="{{ post.title | slugify }}" {%- if forloop.first %} tabindex="0" {%- endif -%}>
+
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                <span class="mdc-list-item__text">
+                  <span id="{{ post.title | slugify }}" class="mdc-list-item__primary-text">{{ post.title | escape }}</span>
+                  <span class="mdc-list-item__secondary-text" aria-hidden="true">
+                    <time datetime="{{ post.date | date_to_xmlschema }}">
+                      {{ post.date | date: date_format }}
+                    </time>
+                    • <span>{{ post.content | markdownify | strip_html | truncatewords:25 }}</span>
+                  </span>
+                </span>
+
+              </a>
+            </li>
+            {%- endfor -%}
+
+          </ul>
+        </li>
+        {%- endif -%}
+
+      </ul>
+    </div>
+
+  </article>
+</main>
+
+{%- include footer.html -%}

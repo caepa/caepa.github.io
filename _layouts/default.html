@@ -1,58 +1,66 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns#" lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" prefix="og: http://ogp.me/ns#">
 
 {%- include head.html -%}
 
 <body class="mdc-typography">
 
-  {%- include mdc-top-app-bar.html -%}
+  <a class="mdc-button mdc-button--raised mdc-button--skiplink" href="#main-content">
+    <span class="mdc-button__label">Skip to main content</span>
+  </a>
 
-  <main class="mdc-top-app-bar--fixed-adjust" role="main">
-    <header class="mdc-layout-grid">
-      <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
-          <h1 class="mdc-typography--headline1">{{ page.title }}</h1>
-          <span>{{ page.theme }}</span>
-        </div>
-      </div>
-    </header>
-    <div class="mdc-layout-grid">
-      <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+  {{ content }}
 
-          {{ content }}
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<!--script src="{{ "/assets/js/main.js" | relative_url }}"></script-->
+<script>
+  window.mdc.autoInit();
 
-        </div>
-      </div>
-    </div>
-    <aside class="mdc-layout-grid">
-      <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+  const drawer = new mdc.drawer.MDCDrawer(document.querySelector('.mdc-drawer--modal'));
+  var el = document.querySelector('.mdc-top-app-bar__navigation-icon');
+  if (el) {
+    el.addEventListener('click', function(evt) {
+      evt.preventDefault();
+      drawer.open = true;
+    });
+  }
 
-          {%- include mdc-image-list__professional-learning.html -%}
+  const menu = new mdc.menu.MDCMenu(document.querySelector('#navigation-menu'));
+  var el = document.querySelector('#navigation-button');
+  if (el) {
+    el.addEventListener('click', function(evt) {
+      evt.preventDefault();
+      menu.open = !menu.open;
+      menu.setAnchorCorner(mdc.menu.Corner.BOTTOM_LEFT);
+    });
+  }
 
-        </div>
-      </div>
-    </aside>
-  </main>
+  const buttons = document.querySelectorAll('.mdc-button, .mdc-card__primary-action, .mdc-list-item, .mdc-image-list__image-aspect-container');
+  for (var i = 0, button; button = buttons[i]; i++) {
+    mdc.ripple.MDCRipple.attachTo(button);
+  };
 
-  <footer>
-    <div class="mdc-layout-grid">
-      <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+  const lists = document.querySelectorAll('[role="listbox"]');
+  for (var i = 0, list; list = lists[i]; i++) {
+    mdc.list.MDCList.attachTo(list);
+    list.singleSelection = true;
+  };
 
-          {%- include social-icons.html -%}
+  const details = Array.from(document.querySelectorAll("details"));
+  details.forEach((targetDetail) => {
+    targetDetail.addEventListener("click", () => {
+      details.forEach((detail) => {
+        if (detail !== targetDetail) {
+          detail.removeAttribute("open");
+        }
+      });
+    });
+  });
 
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script type="text/javascript" src="https://unpkg.com/material-components-web@{{ site.material-web-components }}/dist/material-components-web.js"></script>
-  <script type="text/javascript">
-    {%- include js/mdc-auto-init.js -%}
-    {%- include js/mdc-drawer.js -%}
-  </script>
+  //<!-- breaks out of scrollable element -->
+  //var scroll = document.querySelector('.mdc-list-item--activated');
+  //scroll.scrollIntoView({block:'center'});
+</script>
 
 </body>
 </html>
