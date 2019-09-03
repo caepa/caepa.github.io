@@ -29,8 +29,11 @@
       </div>
     </div>
     <dl itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-      <dt itemprop="price" content="{{ post.offerPrice1 }}">${{ post.offerPrice1 }}</dt><dd>{{ post.offerType1 }}</dd>
-      <dt itemprop="price" content="{{ post.offerPrice2 }}">${{ post.offerPrice2 }}</dt><dd>{{ post.offerType2 }}</dd>
+      {%- if post.offerPrice1 -%}<dt itemprop="price" content="{{ post.offerPrice1 }}">${{ post.offerPrice1 }}</dt><dd>{{ post.offerType1 }}</dd>{%- endif -%}
+      {%- if post.offerPrice2 -%}<dt itemprop="price" content="{{ post.offerPrice2 }}">${{ post.offerPrice2 }}</dt><dd>{{ post.offerType2 }}</dd>{%- endif -%}
+      {%- if post.offerPrice3 -%}<dt itemprop="price" content="{{ post.offerPrice3 }}">${{ post.offerPrice3 }}</dt><dd>{{ post.offerType3 }}</dd>{%- endif -%}
+      {%- if post.offerPrice4 -%}<dt itemprop="price" content="{{ post.offerPrice4 }}">${{ post.offerPrice4 }}</dt><dd>{{ post.offerType4 }}</dd>{%- endif -%}
+      {%- if post.offerPrice5 -%}<dt itemprop="price" content="{{ post.offerPrice5 }}">${{ post.offerPrice5 }}</dt><dd>{{ post.offerType5 }}</dd>{%- endif -%}
       <span itemprop="priceCurrency" content="USD" />
     </dl>
   </div>
