@@ -3,7 +3,9 @@
     <span class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
 
       {%- if page.navigation -%}
-      <button class="material-icons material-icons-outlined mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="open {{ page.navigation }} menu" aria-haspopup=”true”>menu</button>
+      <button class="mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="open {{ page.navigation }} menu" aria-haspopup=”true”>
+        <i class="mdc-button__icon material-icons material-icons-outlined" aria-hidden="true">menu</i>
+      </button>
       {%- endif -%}
 
       <span class="mdc-top-app-bar__brand" aria-hidden="true">
@@ -11,17 +13,22 @@
         <span class="mdc-top-app-bar__title">{{ page.current-view }}</span>
       </span>
     </span>
+
     <span class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="menubar" aria-label="{{ site.title }}">
 
       {% assign data = site.data.navigation | where:"button",true %}
       {%- for data in data -%}
-      <a class="mdc-top-app-bar__action-item mdc-button" href="{{ data.url | absolute_url }}" role=”menuitem” aria-label="{{ data.title }}">
+      <a class="mdc-top-app-bar__action-item mdc-button" href="{{ data.url | absolute_url }}" role=”menuitem”>
         <span class="mdc-button__label">{{ data.title }}</span>
       </a>
       {%- endfor -%}
 
       <div id="navigation-anchor" class="mdc-menu-surface--anchor">
-        <button id="navigation-button" class="material-icons material-icons-outlined mdc-top-app-bar__action-item mdc-icon-button" aria-label="open main menu" aria-haspopup=”true”>apps</button>
+
+        <button id="navigation-button" class="mdc-top-app-bar__action-item mdc-icon-button" role=”menuitem” aria-label="open main menu" aria-haspopup=”true”>
+          <i class="mdc-button__icon material-icons material-icons-outlined" aria-hidden="true">apps</i>
+        </button>
+
         <div id="navigation-menu" class="mdc-menu mdc-menu-surface"
              itemscope itemtype="http://www.schema.org/SiteNavigationElement">
           <ul class="mdc-list mdc-list--avatar-list" role="menu" aria-hidden="false" aria-orientation="vertical" tabindex="0">
@@ -44,7 +51,9 @@
 
           </ul>
         </div>
+
       </div>
     </span>
+    
   </div>
 </nav>
