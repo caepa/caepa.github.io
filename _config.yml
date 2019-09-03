@@ -78,9 +78,10 @@ plugins:
   - jekyll-seo-tag
 feed:
   categories:
+    - abea
+    - factsheets
     - news
-    - events
-    - updates
+    - professional-learning
   collections:
     - rendezvous
 sass:
