@@ -3,9 +3,8 @@
     <span class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
 
       {%- if page.navigation -%}
-      <button class="mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="open {{ page.navigation }} menu" aria-haspopup=”true”>
-        <i class="mdc-button__icon material-icons material-icons-outlined" aria-hidden="true">menu</i>
-      </button>
+      <button class="mdc-top-app-bar__navigation-icon mdc-icon-button material-icons material-icons-outlined"
+              aria-label="open {{ page.navigation }} menu" aria-hidden="true" aria-haspopup=”true”>menu</button>
       {%- endif -%}
 
       <span class="mdc-top-app-bar__brand" aria-hidden="true">
@@ -25,9 +24,8 @@
 
       <div id="navigation-anchor" class="mdc-menu-surface--anchor">
 
-        <button id="navigation-button" class="mdc-top-app-bar__action-item mdc-icon-button" role=”menuitem” aria-label="open main menu" aria-haspopup=”true”>
-          <i class="mdc-button__icon material-icons material-icons-outlined" aria-hidden="true">apps</i>
-        </button>
+        <button id="navigation-button" class="mdc-top-app-bar__action-item mdc-icon-button material-icons material-icons-outlined"
+                role=”menuitem” aria-label="open main menu" aria-hidden="true" aria-haspopup=”true”>apps</button>
 
         <div id="navigation-menu" class="mdc-menu mdc-menu-surface"
              itemscope itemtype="http://www.schema.org/SiteNavigationElement">
@@ -54,6 +52,6 @@
 
       </div>
     </span>
-    
+
   </div>
 </nav>
