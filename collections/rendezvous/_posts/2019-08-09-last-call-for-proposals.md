@@ -8,7 +8,9 @@ We hope you are enjoying your summer and looking forward to fall sessions. Our c
 
 CAEPA 2019 Rendezvous conference will be Friday, October 11th and Saturday, October 12th at Aims Community College in Greeley.
 
-Proposals are due: August 15th, 2019
+~~Proposals are due: August 15th, 2019~~
+
+Proposals are due: September 15th, 2019
 
 We look forward to seeing what the brilliant educators in Colorado have to share!
 
