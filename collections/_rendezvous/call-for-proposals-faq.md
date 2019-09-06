@@ -26,7 +26,7 @@ Session leader biography
 : Please provides a brief summary of your education, work history and experience that is relevant to your presentation topic and written in the third person. If the session will include co-leaders, provide a bio for each. If the session will have more than three session co-leaders, provide a bio for the primary leader and a general description of the remaining team members. Biographies will be published in our program and online. (600 characters)
 
 Session information
-: We will ask for your availability and how many session blocks your proposal requires. Session blocks are 45 minutes in length.
+: We will ask for your availability and how many session blocks your proposal requires. **Session blocks are 75 minutes in length.**
 
 Session title
 : Many people decide to go to a session based on title alone. Please provide a descriptive session title that is catchy, and accurately reflects the content of the session.
