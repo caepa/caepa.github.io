@@ -1,5 +1,6 @@
 ---
 author: "Galen Mitchell"
+published: false
 ---
 
 The Office of Adult Education Initiatives is pleased to announce that we will be offering our free EDU-131 – Introduction to Adult Education course again this spring. The course will be run by our Instructional Support and Professional Learning Coordinator Galen Mitchell, and will only be available to instructors at programs that currently receive AEFLA funding, and who either:
