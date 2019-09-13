@@ -3,9 +3,10 @@ layout: page
 title: "Call for Proposals: FAQ"
 published: true
 
-forms:
-  - "rendezvous-proposal"
-  - "rendezvous-registration"
+include: mdc-button--call-to-action.html
+call-to-action:
+  - url: "forms/rendezvous-proposal"
+    label: "Presentation Proposal Form"
 ---
 
 Learn more about what to expect when submitting a proposal. We have gathered some of the most asked questions and tried to provide an answer.

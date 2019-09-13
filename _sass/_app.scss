@@ -257,6 +257,24 @@ details:not([open]) {
 }
 
 /////
+#mdc-button-call-to-action-html {
+  @include mdc-theme-prop(background-color, rgba(66,66,66,0.1));
+
+  & .mdc-layout-grid {
+    height: 150px;
+
+    & .mdc-layout-grid__inner {
+      height: 100%;
+    }
+  }
+
+  & .mdc-button {
+    @include mdc-theme-prop(background-color, $mdc-theme-tertiary);
+    align-self: center;
+  }
+}
+
+/////
 #post-related-content-html {
   @include mdc-theme-prop(background-color, rgba(66,66,66,0.1));
 

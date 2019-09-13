@@ -3,9 +3,10 @@ layout: page
 title: "Call for Proposals"
 published: true
 
-forms:
-  - "rendezvous-proposal"
-  - "rendezvous-registration"
+include: mdc-button--call-to-action.html
+call-to-action:
+  - url: "forms/rendezvous-proposal"
+    label: "Presentation Proposal Form"
 ---
 
 The Colorado Adult Education Professional Association, CAEPA, invites you to submit a proposal for the 2019 Rendezvous. This year’s theme is, “Moving It Forward” and we have thought up a list of new session strands to take us there. Session blocks will be **75 minutes** in length.

@@ -1,0 +1,10 @@
+<div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner mdc-layout-grid__inner--grid-1">
+    {%- for include in page.call-to-action -%}
+    <a class="mdc-button mdc-button--raised" href="{{ include.url | absolute_url }}">
+      <span class="mdc-button__label">{{ include.label }}</span>
+      <i class="mdc-button__icon material-icons material-icons-outlined" aria-hidden="true">arrow_forward</i>
+    </a>
+    {%- endfor -%}
+  </div>
+</div>

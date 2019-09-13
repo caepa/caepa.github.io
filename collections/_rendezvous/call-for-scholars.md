@@ -3,9 +3,10 @@ layout: page
 title: The Ann Deditz Scholarship
 published: true
 
-forms:
-  - "rendezvous-scholarship"
-  - "rendezvous-registration"
+include: mdc-button--call-to-action.html
+call-to-action:
+  - url: "forms/rendezvous-scholarship"
+    label: "Ann Deditz Scholarship Form"
 ---
 
 The winner of the Ann Deditz scholarship will receive paid registration to the Rendezvous Conference. Conference registration includes a year’s membership in CAEPA, meals at the conference and parking during the event. Transportation and hotel costs are not included in the scholarship.

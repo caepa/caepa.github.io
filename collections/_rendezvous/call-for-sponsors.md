@@ -3,9 +3,10 @@ layout: page
 title: "Call for Sponsors & Vendors"
 published: true
 
-forms:
-  - "rendezvous-sponsor"
-  - "rendezvous-registration"
+include: mdc-button--call-to-action.html
+call-to-action:
+  - url: "forms/rendezvous-sponsor"
+    label: "Sponsor & Vendor Registration Form"
 ---
 
 CAEPA sponsors and vendors play a key role in a variety of activities at the conference. Thank you for your interest in becoming a vendor or sponsor.

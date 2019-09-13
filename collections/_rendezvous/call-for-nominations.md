@@ -3,9 +3,10 @@ layout: page
 title: "Call for Nominations"
 published: true
 
-forms:
-  - "rendezvous-awards"
-  - "rendezvous-registration"
+include: mdc-button--call-to-action.html
+call-to-action:
+  - url: "forms/rendezvous-awards"
+    label: "Awards Nomination Form"
 ---
 
 The Colorado Adult Education Professional Association honors outstanding achievement, innovation, and contribution to the field annually at its Rendezvous Conference. Nominations are solicited from the field-at-large.

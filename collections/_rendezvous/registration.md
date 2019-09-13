@@ -3,8 +3,10 @@ layout: page
 title: "Registration and Payments"
 published: true
 
-forms:
-  - "rendezvous-proposal"
+include: mdc-button--call-to-action.html
+call-to-action:
+  - url: "forms/rendezvous-registration"
+    label: "CAEPA Rendezvous Registration Form"
 ---
 
 Included with Registration
