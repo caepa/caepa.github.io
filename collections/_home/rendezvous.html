@@ -39,6 +39,12 @@
   </div>
   {%- endfor -%}
 
+  <div class="mdc-card__actions">
+    <a class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button" href="{{ 'rendezvous#sessions' | absolute_url }}">
+      <span class="mdc-button__label">View Session List</span>
+    </a>
+  </div>
+
   <div class="mdc-list-group">
     <h3 id="{{ 'Related Rendezvous Articles' | slugify }}" class="mdc-list-group__subheader">Related Rendezvous Articles</h3>
     <ul class="mdc-list" aria-labelledby="{{ 'Related Rendezvous Articles' | slugify }}">
