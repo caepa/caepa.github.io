@@ -82,7 +82,7 @@ call-to-action:
 
 
 {%- assign data = site.data["2019-rendezvous-master"].sessions | sort: "Title" -%}
-<h2>2019 Rendezvous Sessions</h2>
+<h2 id="sessions">2019 Rendezvous Sessions</h2>
 
 {%- for data in data -%}
 <details class="mdc-card mdc-card--outlined">
