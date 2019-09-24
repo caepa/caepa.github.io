@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Call for Nominations"
+title: "Call for Award Nominations"
 published: true
 
 include: mdc-button--call-to-action.html
