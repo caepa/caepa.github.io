@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Call for Proposals"
-published: true
+published: false
 
 include: mdc-button--call-to-action.html
 call-to-action:
