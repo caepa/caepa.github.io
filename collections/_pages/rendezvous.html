@@ -52,7 +52,17 @@ call-to-action:
   </div>
   {%- endfor -%}
 
+  <div class="mdc-card__actions">
+    <a class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button" href="{{ 'rendezvous#sessions' | absolute_url }}">
+      <span class="mdc-button__label">View Session List</span>
+    </a>
+    <a class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button" href="https://drive.google.com/open?id=0B0aYPMWNnNeSNWZiTHQ0TnN3SVJPSXlpZGpNa0NsenhpenlR">
+      <span class="mdc-list-item__text">View Conference Schedule</span>
+    </a>
+  </div>
+
   <div class="mdc-list-group">
+
     <h3 id="{{ 'Related Rendezvous Articles' | slugify }}" class="mdc-list-group__subheader">Related Rendezvous Articles</h3>
     <ul class="mdc-list" aria-labelledby="{{ 'Related Rendezvous Articles' | slugify }}">
 
@@ -81,8 +91,35 @@ call-to-action:
 </div>
 
 
+<h3 id="{{ 'Our Sponsors' | slugify }}">2019 Rendezvous Sponsors</h3>
+
+<ul class="mdc-image-list mdc-image-list--with-text-protection"  aria-labelledby="{{ 'Our Sponsors' | slugify }}">
+
+  {%- for item in site.sponsors -%}
+  <li class="mdc-image-list__item">
+    <a href="{{ item.url }}">
+      <div class="mdc-image-list__image-aspect-container mdc-ripple-surface">
+        <img class="mdc-image-list__image" src="{{ item.img | prepend: 'assets/img/sponsors/' | absolute_url | downcase }}" aria-hidden="true">
+        {%- comment -%} <img class="mdc-image-list__image" src="{{ item.twitter }}/profile_image?size=original" aria-hidden="true"> {%- endcomment -%}
+        {%- comment -%} <img class="mdc-image-list__image" src="{{ item.facebook | replace: "www", "graph" }}/picture?type=large" aria-hidden="true"> {%- endcomment -%}
+      </div>
+      <div class="mdc-image-list__supporting">
+        <span class="mdc-image-list__label">{{ item.title }}</span>
+      </div>
+    </a>
+  </li>
+  {%- endfor -%}
+
+</ul>
+
 {%- assign data = site.data["2019-rendezvous-master"].sessions | sort: "Title" -%}
-<h2 id="sessions">2019 Rendezvous Sessions</h2>
+<h3 id="sessions">2019 Rendezvous Sessions</h3>
+
+<p>
+  <a class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button" href="https://drive.google.com/open?id=0B0aYPMWNnNeSNWZiTHQ0TnN3SVJPSXlpZGpNa0NsenhpenlR">
+    <span class="mdc-list-item__text">View Conference Schedule</span>
+  </a>
+</p>
 
 {%- for data in data -%}
 <details class="mdc-card mdc-card--outlined">
@@ -120,3 +157,29 @@ call-to-action:
 
 </details>
 {%- endfor -%}
+
+{%- assign data = site.data["2019-rendezvous-master"].vendors | sort: "Organization" -%}
+<h3 id="sessions">2019 Rendezvous Vendors</h3>
+
+<ul class="mdc-list mdc-list--two-line mdc-list--avatar-list">
+
+  {% for data in data -%}
+
+  <li>
+    <a class="mdc-list-item" href="{{ data.Website }}">
+      <img class="mdc-list-item__graphic" src="{{ data.Logo | prepend: 'assets/img/vendors/' | absolute_url }}" />
+      <span class="mdc-list-item__text">
+        <span class="mdc-list-item__primary-text">{{ data.Organization }}</span>
+        <span class="mdc-list-item__secondary-text">{{ data.Name }}</span>
+      </span>
+      <span class="mdc-list-item__meta material-icons" aria-hidden="true">exit_to_app</span>
+    </a>
+
+    {% unless forloop.last -%}
+    <hr class="mdc-list-divider" />
+    {% endunless -%}
+
+  </li>
+  {% endfor -%}
+
+</ul>
