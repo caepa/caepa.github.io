@@ -1,5 +1,13 @@
 [
   {
+    "theme": "To be announced",
+    "year": 2020,
+    "startDate": "2020-10-15T06:00:00.000Z",
+    "endDate": "2020-10-16T06:00:00.000Z",
+    "location": "To be announced",
+    "offerPrice1": "$TBA"
+  },
+  {
     "theme": "Moving It Forward",
     "year": 2019,
     "startDate": "2019-10-11T06:00:00.000Z",
@@ -26,6 +34,7 @@
     "offerType3": "One Day Registration",
     "offerPrice3": 100,
     "offerMembership": 30,
+    "registrationNotes": "One- and Two-Day Registration include membership dues",
     "era": "CAEPA"
   },
   {
