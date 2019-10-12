@@ -1,4 +1,4 @@
-{%- assign data = site.data["event-history-master"] | where_exp: "data", "data.year == 2019" -%}
+{%- assign data = site.data["event-history-master"] | where_exp: "data", "data.year == 2020" -%}
 {%- assign date_format = site.minima.date_format | default: "%A, %B %-d, %Y" -%}
 
 <li class="mdc-card mdc-card--outlined">
@@ -38,7 +38,8 @@
     </dl>
   </div>
   {%- endfor -%}
-
+  
+  {%- comment -%} REMOVE COMMENT FOR BUTTONS
   <div class="mdc-card__actions">
     <a class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button" href="{{ 'rendezvous#sessions' | absolute_url }}">
       <span class="mdc-button__label">View Session List</span>
@@ -47,6 +48,7 @@
       <span class="mdc-list-item__text">View Conference Schedule</span>
     </a>
   </div>
+  {%- endcomment -%}
 
   <div class="mdc-list-group">
     <h3 id="{{ 'Related Rendezvous Articles' | slugify }}" class="mdc-list-group__subheader">Related Rendezvous Articles</h3>
