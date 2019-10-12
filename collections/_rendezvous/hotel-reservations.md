@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Hotel Reservations"
-published: true
+published: false
 ---
 
 Hotel
