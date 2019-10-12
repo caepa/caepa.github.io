@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Registration and Payments"
-published: true
+published: false
 
 include: mdc-button--call-to-action.html
 call-to-action:
