@@ -5,6 +5,10 @@
     "startDate": "2020-10-15T06:00:00.000Z",
     "endDate": "2020-10-16T06:00:00.000Z",
     "location": "To be announced",
+    "streetAddress": "To be announced",
+    "addressLocality": "Denver",
+    "addressRegion": "CO",
+    "postalCode": 80204,
     "offerPrice1": "$TBA"
   },
   {
