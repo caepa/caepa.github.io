@@ -1,4 +1,7 @@
-{%- assign data = site.data.board-members-current | group_by: "Role" | sort: "name" | reverse-%}
+{%- assign partial1 = site.data.board-members-current | group_by: "Role" | reverse | shift -%}
+{%- assign partial2 = site.data.board-members-current | group_by: "Role" | reverse | pop:2 -%}
+{%- assign data = partial1 | concat: partial2 -%}
+
 {%- assign image = "https://material.io/resources/icons/static/icons/sharp-portrait-24px.svg" -%}
 
 <div class="mdc-layout-grid">

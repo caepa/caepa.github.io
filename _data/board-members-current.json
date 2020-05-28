@@ -1,100 +1,91 @@
 [
   {
-    "Name": "April Menzies",
-    "Term-start": 2018,
-    "Role": "Directors"
-  },
-  {
-    "Name": "Danielle Ongart",
-    "Term-start": 2017,
-    "Role": "Adult Education Initiatives",
-    "Officer": "CDE Liason"
-  },
-  {
-    "Name": "Ellen Klement",
-    "Term-start": 2017,
-    "Role": "Directors"
-  },
-  {
-    "Name": "Gaye Horne",
-    "Term-start": 2017,
-    "Role": "Adult Education Initiatives",
-    "Officer": "CDE Liason"
-  },
-  {
-    "Name": "George Oclair",
-    "Term-start": 2010,
-    "Role": "Executive Officers",
-    "Officer": "President"
-  },
-  {
-    "Name": "Jacquelyn Gaiters-Jordan",
-    "Term-start": 2018,
-    "Role": "Directors"
-  },
-  {
-    "Name": "Jason Kilpatrick",
-    "Term-start": 2014,
-    "Role": "Executive Officers",
-    "Officer": "Co-President"
-  },
-  {
-    "Name": "Karen Carr",
-    "Term-start": 2010,
-    "Role": "Executive Officers",
-    "Officer": "Treasurer"
-  },
-  {
-    "Name": "Kathryn Wisner",
-    "Term-start": 2017,
-    "Role": "Executive Officers",
-    "Officer": "Co-Treasurer"
-  },
-  {
-    "Name": "Laurie Kierstead-Joseph",
-    "Term-start": 2018,
-    "Role": "Directors"
-  },
-  {
-    "Name": "Leigh Burrows",
-    "Term-start": 2018,
-    "Role": "Directors"
-  },
-  {
-    "Name": "Nadine Kerstetter",
-    "Term-start": 2017,
-    "Role": "Executive Officers",
-    "Officer": "Secretary"
-  },
-  {
-    "Name": "Nicolas Pares",
-    "Term-start": 2018,
-    "Role": "Directors"
-  },
-  {
-    "Name": "Rachel Nichols",
-    "Term-start": 2018,
+    "Name": "Eric Clark",
+    "Term-start": "2019-08-29T06:00:00.000Z",
     "Role": "Directors"
   },
   {
     "Name": "Steven Gold",
-    "Term-start": 2018,
+    "Term-start": "2019-08-29T06:00:00.000Z",
+    "Role": "Directors",
+    "Committee": "Advocacy Committee"
+  },
+  {
+    "Name": "Reggie Gwinn",
+    "Term-start": "2020-04-20T06:00:00.000Z",
     "Role": "Directors"
   },
   {
-    "Name": "Teona Shainidze Krebs",
-    "Term-start": 2017,
+    "Name": "Londell Jackson",
+    "Term-start": "2019-08-29T06:00:00.000Z",
     "Role": "Directors"
   },
   {
-    "Name": "Tiffany Pippin",
-    "Term-start": 2017,
-    "Role": "Executive Officers",
-    "Officer": "Co-Treasurer"
+    "Name": "Tara Keily",
+    "Term-start": "2020-01-24T07:00:00.000Z",
+    "Role": "Directors"
+  },
+  {
+    "Name": "Ellen Klement",
+    "Term-start": "2017-07-01T06:00:00.000Z",
+    "Role": "Directors"
+  },
+  {
+    "Name": "Stephanie Lindberg",
+    "Term-start": "2020-04-20T06:00:00.000Z",
+    "Role": "Directors"
   },
   {
     "Name": "Yvette Myrick",
-    "Term-start": 2017,
+    "Term-start": "2017-07-01T06:00:00.000Z",
+    "Role": "Directors",
+    "Committee": "Advocacy Committee"
+  },
+  {
+    "Name": "Nicolas Pares",
+    "Term-start": "2018-07-30T06:00:00.000Z",
     "Role": "Directors"
+  },
+  {
+    "Name": "Karen Carr",
+    "Term-start": "2010-07-01T06:00:00.000Z",
+    "Role": "Executive Committee",
+    "Officer": "Treasurer"
+  },
+  {
+    "Name": "Nadine Kerstetter",
+    "Term-start": "2016-10-13T06:00:00.000Z",
+    "Role": "Executive Committee",
+    "Officer": "Secretary"
+  },
+  {
+    "Name": "Jason Kilpatrick",
+    "Term-start": "2014-07-01T06:00:00.000Z",
+    "Role": "Executive Committee",
+    "Officer": "President"
+  },
+  {
+    "Name": "George Oclair",
+    "Term-start": "2010-07-01T06:00:00.000Z",
+    "Role": "Executive Committee",
+    "Officer": "Past-president"
+  },
+  {
+    "Name": "Gaye Horne",
+    "Term-start": "2017-07-01T06:00:00.000Z",
+    "Role": "Liasons",
+    "Officer": "CDE AEI Liason"
+  },
+  {
+    "Name": "Laurie Kierstead-Joseph",
+    "Term-start": "2018-07-01T06:00:00.000Z",
+    "Role": "Liasons",
+    "Officer": "COABE Liason"
+  },
+  {
+    "Name": "Danielle Ongart",
+    "Term-start": "2017-07-01T06:00:00.000Z",
+    "Role": "Liasons",
+    "Officer": "CDE AEI Liason"
   }
 ]
